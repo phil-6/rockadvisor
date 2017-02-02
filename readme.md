@@ -1,33 +1,75 @@
-***Basic Laravel Installation only***
+# Rock Advisor Web #
 
-## About Laravel
+Description goes here.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+## Getting a Development Version Running ##
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+This uses vagrant (and VirtualBox) to setup a virtual machine which will host the development application.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+* install VirtualBox
+* install Vagrant
+* get homestead vagrant box:
 
-## Learning Laravel
+        vagrant box add laravel/homestead
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+* clone project:
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+        git clone ...
+        cd rockadvisorweb
 
-## Contributing
+* Get Composer if you need it:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+        php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+        php -r "if (hash_file('SHA384', 'composer-setup.php') === 'e115a8dc7871f15d853148a7fbac7da27d6c0030b848d9b3dc09e2a0388afed865e6a3d6b3c0fad45c48e2b5fc1196ae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+        php composer-setup.php
+        php -r "unlink('composer-setup.php');"
 
-## Security Vulnerabilities
+* Install composer packages for rockadvisorweb:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+        php composer.phar install --no-scripts
+        php composer.phar install
 
-## License
+* Configure homestead configuration files for the vagrant box:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+        php vendor/bin/homestead make
+
+* Launch vagrant box:
+
+        vagrant up
+
+* Copy (and modify) sample .env.exmaple file to .env
+
+        cp .env.example .env
+
+* Generate fresh application key (in .env):
+
+        php artisan key:generate
+
+* SSH into virtual machine:
+
+        vagrant ssh
+
+    * Change to the development directory:
+
+            cd rockadvisorweb
+
+    * Set up database:
+
+            php artisan migrate
+
+    * Seed database:
+
+            php artisan db:seed
+
+        or
+
+            php artisan db:seed --class=ExampleDataDatabaseSeeder
+
+* Exit SSH session
+* Visit:
+        http://rockadvisorweb-dev
+
+## Libraries ##
+
+The rockadvisorweb uses the following (html/css/js) libraries:
+* None
