@@ -73,3 +73,10 @@ This uses vagrant (and VirtualBox) to setup a virtual machine which will host th
 
 The rockadvisorweb uses the following (html/css/js) libraries:
 * None
+
+
+If you get permission denied errors run:
+
+        php artisan cache:clear 
+        chmod -R 777 app/storage 
+        composer dump-autoload
