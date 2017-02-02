@@ -19,6 +19,7 @@ This uses vagrant (and VirtualBox) to setup a virtual machine which will host th
 ## Getting a Development Version Running ##
 
 * clone project:
+
         git clone ...
         cd rockadvisorweb
 
