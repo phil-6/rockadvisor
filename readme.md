@@ -74,6 +74,13 @@ This uses vagrant (and VirtualBox) to setup a virtual machine which will host th
 The rockadvisorweb uses the following (html/css/js) libraries:
 * None
 
+## Other Bits ##
+
+You will need to change your hosts file to include the line
+
+        192.168.10.10    rockadvisorweb-dev
+
+This file is found at `c:\Windows\System32\Drivers\etc\hosts`
 
 If you get permission denied errors run:
 
