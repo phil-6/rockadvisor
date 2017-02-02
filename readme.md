@@ -14,7 +14,7 @@ This uses vagrant (and VirtualBox) to setup a virtual machine which will host th
         vagrant box add laravel/homestead
 
 * PHP -- so you can run composer.
-* (Optional) Get Composer and install it **globally** from: [https://getcomposer.org/download/](https://getcomposer.org/download/). If you install this globally then you need to slightly tweak the composer lines below.
+* (Optional) Get Composer and install it **globally** from: [https://getcomposer.org/download/](https://getcomposer.org/download/). If you install this globally then you need to slightly tweak the composer lines below. You will not need the text `php composer` at the start of the commands.
 
 ## Getting a Development Version Running ##
 
@@ -68,14 +68,16 @@ This uses vagrant (and VirtualBox) to setup a virtual machine which will host th
 
 * Exit SSH session
 * Visit:
-        http://rockadvisorweb-dev
+        http://rockadvisorweb-dev (you will need to edit your hosts file - see below)
 
 ## Libraries ##
 
 The rockadvisorweb uses the following (html/css/js) libraries:
 * None
 
-## Other Bits ##
+## Editing Your Hosts File ##
+
+You can access the nice "fake" URL by editing your hosts file. This basically stops your operating system doing a normal DNS lookup - you hard code the IP address of this "fake URL". You will only need to do this once.
 
 You will need to change your hosts file to include the line
 
@@ -83,8 +85,10 @@ You will need to change your hosts file to include the line
 
 This file is found at `c:\Windows\System32\Drivers\etc\hosts`
 
-If you get permission denied errors run:
+## Permission Problems ##
+
+If you get permission denied errors try running:
 
         php artisan cache:clear 
         chmod -R 777 app/storage 
-        composer dump-autoload
+        php composer dump-autoload
