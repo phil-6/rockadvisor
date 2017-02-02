@@ -14,7 +14,7 @@ This uses vagrant (and VirtualBox) to setup a virtual machine which will host th
         vagrant box add laravel/homestead
 
 * PHP -- so you can run composer.
-* (Optional) Get Composer and install it globally from: [https://getcomposer.org/download/](https://getcomposer.org/download/). If you install this globally then you need to slightly tweak the composer lines below.
+* (Optional) Get Composer and install it **globally** from: [https://getcomposer.org/download/](https://getcomposer.org/download/). If you install this globally then you need to slightly tweak the composer lines below.
 
 ## Getting a Development Version Running ##
 
@@ -23,7 +23,7 @@ This uses vagrant (and VirtualBox) to setup a virtual machine which will host th
         git clone ...
         cd rockadvisorweb
 
-* Skip this step if you installed Composer globally. You now need to download Composer so that you can run it from the project folder. Get Composer if you need it from: [https://getcomposer.org/download/](https://getcomposer.org/download/).
+* **Skip** this step if you installed Composer **globally**. You now need to download Composer so that you can run it **locally** from the project folder. Get Composer if you need it from: [https://getcomposer.org/download/](https://getcomposer.org/download/).
 
 * Install composer packages for rockadvisorweb:
 
