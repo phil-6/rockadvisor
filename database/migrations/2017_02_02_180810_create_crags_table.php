@@ -17,14 +17,14 @@ class CreateCragsTable extends Migration
 			$table->increments('id');
 			$table->float("lat");
 			$table->float("long");
-            $table->string("crag_name");
-            $table->text("crag_desc");
-            $table->int("tidal_range");
-            $table->char("orientation",3);
-            $table->int("approach_time");
-            $table->bool("seepage");
-            $table->bool("midges");
-            $table->bool("sheltered");
+            $table->string("name");
+            $table->text("description");
+            $table->integer('tidal_range')->unsigned();
+            $table->char("orientation", 3);
+            $table->integer('approach_time')->unsigned();
+            $table->boolean("seepage");
+            $table->boolean("midges");
+            $table->boolean("sheltered");
             //$table->int("area_id"); //foreign key
 
 			$table->timestamps();
