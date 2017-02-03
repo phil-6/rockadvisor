@@ -13,8 +13,8 @@ This uses vagrant (and VirtualBox) to setup a virtual machine which will host th
 
         vagrant box add laravel/homestead
 
-* PHP -- so you can run composer. [http://php.net/]
-* or PHP though XAMPP. [https://www.apachefriends.org/index.html] **Do this if using Windows**
+* PHP -- so you can run composer. [http://php.net/](http://php.net/)
+* or PHP though XAMPP. [https://www.apachefriends.org/index.html](test) **Do this if using Windows**
 * (Optional) Get Composer and install it **globally** from: [https://getcomposer.org/download/](https://getcomposer.org/download/). If you install this globally then you need to slightly tweak the composer lines below. You will not need the text `php composer` at the start of the commands.
 * (Optional) to avoid some headaches with ssh keys on Windows get SourceTree [https://www.sourcetreeapp.com/]
 
