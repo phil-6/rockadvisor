@@ -15,10 +15,10 @@ class CreateCragsTable extends Migration
     {
         Schema::create('crags', function (Blueprint $table){
 			$table->increments('id');
-			$table->float("lat");
-			$table->float("long");
             $table->string("name");
             $table->text("description");
+			$table->float("lat");
+			$table->float("long");
             $table->integer('tidal_range')->unsigned();
             $table->char("orientation", 3);
             $table->integer('approach_time')->unsigned();
