@@ -2,6 +2,6 @@
 
 @section('content')
 
-<p>Home Page Content Goes here</p>
+<a href="{{ route('Areas.index') }}">View Areas</a>
 
 @stop
