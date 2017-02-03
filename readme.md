@@ -14,7 +14,8 @@ This uses vagrant (and VirtualBox) to setup a virtual machine which will host th
         vagrant box add laravel/homestead
 
 * PHP -- so you can run composer. [http://php.net/](http://php.net/)
-* or PHP though XAMPP. [XAMPP Download Page](https://www.apachefriends.org/index.html) **Do this if using Windows**
+    or 
+* PHP though XAMPP. [XAMPP Download Page](https://www.apachefriends.org/index.html) **Do this if using Windows**
 * (Optional) Get Composer and install it **globally** from: [Composer Download Page](https://getcomposer.org/download/). If you install this globally then you need to slightly tweak the composer lines below. You will not need the text `php composer` at the start of the commands.
 * (Optional) to avoid some headaches with ssh keys on Windows get [SourceTree](https://www.sourcetreeapp.com/)
 
@@ -24,24 +25,33 @@ This uses vagrant (and VirtualBox) to setup a virtual machine which will host th
 
         git clone ...
         cd rockadvisorweb
+
     or
 
 * using the SourceTree GUI:
 
         Clone / New
-        Source Path / URL == HTTPS link from BitBucket - EG [https://ElasticParsley@bitbucket.org/rockadvisorteam/rockadvisorweb.git](https://ElasticParsley@bitbucket.org/rockadvisorteam/rockadvisorweb.git)
+        Source Path / URL == HTTPS link from BitBucket - EG "https://ElasticParsley@bitbucket.org/rockadvisorteam/rockadvisorweb.git"
         Destination Path == Development Directory of your choice.
         Clone
 
-* **Skip** this step if you installed Composer **globally**. You now need to download Composer so that you can run it **locally** from the project folder. Get Composer if you need it from: [https://getcomposer.org/download/](https://getcomposer.org/download/).
 
-* Install composer packages for rockadvisorweb:
+
+* **Skip** this step if you installed Composer **globally**. 
+
+    * You now need to download Composer so that you can run it **locally** from the project folder. 
+    * Get Composer if you need it from: [https://getcomposer.org/download/](https://getcomposer.org/download/).
+
+### Install composer packages for rockadvisorweb:###
 * Open GitBash in rockadvisorweb directory:
 
         php composer.phar install --no-scripts
         php composer.phar install
     or
+        
         composer install
+
+    This creates the "vendors" folder.
 
 * Configure homestead configuration files for the vagrant box:
 
