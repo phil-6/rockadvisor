@@ -11,7 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         $this->call(CragsTableSeeder::class);
          $this->call(AreasTableSeeder::class);
+         $this->call(CragsTableSeeder::class);
     }
 }

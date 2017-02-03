@@ -25,9 +25,14 @@ class CreateCragsTable extends Migration
             $table->boolean("seepage");
             $table->boolean("midges");
             $table->boolean("sheltered");
-            //$table->int("area_id"); //foreign key
+            
+            $table->integer('area_id')->unsigned();
 
 			$table->timestamps();
+
+            $table->foreign('area_id')->references('id')->
+                on('areas')->onDelete('cascade');
+
 		});
 		
     }

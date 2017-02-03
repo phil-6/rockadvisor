@@ -25,6 +25,7 @@ class CragsTableSeeder extends Seeder
         $c->seepage = 0;
         $c->midges = true;
         $c->sheltered = true;
+        $c->area_id = 1;
         $c->save();
 
         $c = new Crag();
@@ -38,6 +39,7 @@ class CragsTableSeeder extends Seeder
         $c->seepage = 0;
         $c->midges = false;
         $c->sheltered = true;
+        $c->area_id = 1;
         $c->save();
 
         $c = new Crag();
@@ -51,6 +53,7 @@ class CragsTableSeeder extends Seeder
         $c->seepage = 0;
         $c->midges = true;
         $c->sheltered = false;
+        $c->area_id = 2;
         $c->save();
     }
 }
