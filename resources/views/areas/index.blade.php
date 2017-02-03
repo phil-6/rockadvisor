@@ -6,7 +6,7 @@
 
 	<ul>
 		@foreach ($areas as $area)
-			<li>{{ $area->name }}</li>
+			<li><a href="{{ route('Areas.show', ['areaId' => $area->id])}}">{{ $area->name }}</a></li>
 		@endforeach
 	</ul>
 @stop

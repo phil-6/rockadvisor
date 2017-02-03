@@ -42,12 +42,13 @@ class AreasController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  Area  $area
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Area $area)
     {
-        //
+        $crags = $area->crags;
+        return view('areas.show', compact('area', 'crags'));
     }
 
     /**
