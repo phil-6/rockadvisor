@@ -15,7 +15,18 @@ class CreateCragsTable extends Migration
     {
         Schema::create('crags', function (Blueprint $table){
 			$table->increments('id');
-			$table->string("name");
+			$table->float("lat");
+			$table->float("long");
+            $table->string("crag_name");
+            $table->text("crag_desc");
+            $table->int("tidal_range");
+            $table->char("orientation",3);
+            $table->int("approach_time");
+            $table->bool("seepage");
+            $table->bool("midges");
+            $table->bool("sheltered");
+            //$table->int("area_id"); //foreign key
+
 			$table->timestamps();
 		});
 		
