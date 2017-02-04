@@ -13,5 +13,6 @@ class DatabaseSeeder extends Seeder
     {
          $this->call(AreasTableSeeder::class);
          $this->call(CragsTableSeeder::class);
+         $this->call(RoutesTableSeeder::class);
     }
 }
