@@ -17,7 +17,7 @@ class CreateRoutesTable extends Migration
            $table->increments('id');
            $table->string ("name");
            $table->text("description");
-           $table->int("length");
+           $table->integer("length")->unsigned();
 
            //$table->integer("grade_id")->unsigned();
            $table->integer("crag_id")->unsigned();

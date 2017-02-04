@@ -12,7 +12,7 @@ class RoutesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB:table('routes')->delete();
+        DB::table('routes')->delete();
 
         $r = new Route();
         $r->name = "Great Chimney";
