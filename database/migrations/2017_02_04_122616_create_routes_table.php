@@ -19,10 +19,13 @@ class CreateRoutesTable extends Migration
            $table->text("description");
            $table->int("length");
 
+           //$table->integer("grade_id")->unsigned();
            $table->integer("crag_id")->unsigned();
 
            $table->timestamps();
 
+           //$table->foreign('grade_id')->references('id')->
+                //on('grades')->onDelete('cascade');
            $table->foreign('crag_id')->references('id')->
                on('crags')->onDelete('cascade');
 
