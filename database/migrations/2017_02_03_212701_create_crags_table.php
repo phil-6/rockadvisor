@@ -15,8 +15,8 @@ class CreateCragsTable extends Migration
     {
         Schema::create('crags', function (Blueprint $table){
 			$table->increments('id');
-            $table->float("lat");
-            $table->float("long");
+            $table->double("lat",11,8);
+            $table->double("long",11,8);
             $table->string("name");
             $table->text("description");
             $table->integer('tidal_range')->unsigned();
