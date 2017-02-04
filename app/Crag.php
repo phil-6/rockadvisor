@@ -17,4 +17,12 @@ class Crag extends Model
     {
         return $this->belongsTo('App\Area', 'area_id', 'id');
     }
+
+    /**
+     * Get the routes for the crag.
+     */
+    public function routes()
+    {
+        return $this->hasMany('App\Route', 'crag_id', 'id')->orderBy('name');
+    }
 }

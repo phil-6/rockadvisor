@@ -11,10 +11,11 @@ class Route extends Model
     protected $fillable = [];
 
     /**
-     * Get the area that this crag is part of.
+     * Get the crag that this route is part of.
      */
-    /*public function area()
+    public function crag()
     {
-        return $this->belongsTo('App\Area', 'area_id', 'id');
-    }*/
+        return $this->belongsTo('App\Crag', 'crag_id', 'id');
+    }
+
 }
