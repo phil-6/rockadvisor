@@ -15,9 +15,12 @@ class CreateGradesTable extends Migration
     {
         Schema::create('grades', function (Blueprint $table){
            $table->increments('id');
-           $table->string('type');
+           $table->integer('score');
            $table->string('system');
-           $table->string('score');
+           $table->string('type');
+           $table->char('technical_grade');
+           $table->string('severity_grade');
+
         });
     }
 
