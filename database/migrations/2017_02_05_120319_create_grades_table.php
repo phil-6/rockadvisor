@@ -18,8 +18,8 @@ class CreateGradesTable extends Migration
            $table->integer('score');
            $table->string('system');
            $table->string('type');
-           $table->char('technical_grade');
-           $table->string('severity_grade');
+           $table->char('technical_grade', 10);
+           $table->char('severity_grade', 10);
 
         });
     }

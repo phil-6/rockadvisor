@@ -17,5 +17,5 @@ class Grade
 
     protected $fillable = [];
 
-    
+
 }
