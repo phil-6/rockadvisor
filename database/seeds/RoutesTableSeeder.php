@@ -21,8 +21,8 @@ class RoutesTableSeeder extends Seeder
         taking care with blocks at the top";
         $r->length = 23;
         //$r->grade_id = ??; //vs, 4b
-		 //$r->topo_id = ??; 
-		 $r->crag_id = 1;
+        //$r->topo_id = ??;
+        $r->crag_id = 1;
         $r->save();
 
         $r = new Route();
@@ -33,7 +33,7 @@ class RoutesTableSeeder extends Seeder
         $r->length = 18;
         //$r->grade_id = ??; //hvs, 4c
         //$r->topo_id = ??; 
-		 $r->crag_id = 1;
+        $r->crag_id = 1;
         $r->save();
 
         $r = new Route();
