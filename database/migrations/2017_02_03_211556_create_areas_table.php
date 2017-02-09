@@ -16,12 +16,12 @@ class CreateAreasTable extends Migration
         Schema::create('areas', function (Blueprint $table){
             $table->increments('id');
             $table->string("name");
-            $table->integer("area_id")->unsigned()->nullable();
+            $table->integer("parentArea")->unsigned()->nullable();
 
             $table->timestamps();
 
-            $table->foreign("area_id")->references('id')->
-                on('areas')->onDelete('cascade');
+            $table->foreign("parentArea")->references('id')->
+                on('areas')->onDelete('restrict');
         });
         
     }
