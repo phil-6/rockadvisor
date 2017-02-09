@@ -13,7 +13,12 @@ class CreateRouteTypeSystemTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('routeTypeSystem', function (Blueprint $table){
+            $table->increments('id');
+            $table->string('name');
+
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,7 @@ class CreateRouteTypeSystemTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('routeTypeSystem');
     }
+
 }
