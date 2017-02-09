@@ -14,12 +14,19 @@ class CreateGradesTable extends Migration
     public function up()
     {
         Schema::create('grades', function (Blueprint $table){
-           $table->increments('id');
-           $table->integer('score');
-           $table->string('system');
-           $table->string('type');
-           $table->char('technical_grade', 10);
-           $table->char('severity_grade', 10);
+            $table->increments('id');
+            $table->integer('routeTypeId')->unsigned();
+            $table->char('technical_grade', 10)->nullable();
+            $table->char('severity_grade', 10)->nullable();
+            $table->integer('score')->unsigned()->nullable();
+
+            //system timestamps
+            $table->timestamps();
+
+            //foreign key reference
+            $table->foreign('routeTypeId')->references('id')->
+                on('routeType')->onDelete('restrict');
+
 
         });
     }
