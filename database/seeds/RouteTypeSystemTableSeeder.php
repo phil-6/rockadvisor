@@ -11,6 +11,40 @@ class RouteTypeSystemTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('routeTypeSystem')->delete();
+
+        $rts = new RouteTypeSystem();
+        $rts->name = "British";
+        $rts->save();
+
+        $rts = new RouteTypeSystem();
+        $rts->name = "French";
+        $rts->save();
+
+        $rts = new RouteTypeSystem();
+        $rts->name = "V-Grades";
+        $rts->save();
+
+        $rts = new RouteTypeSystem();
+        $rts->name = "Font";
+        $rts->save();
+
+        $rts = new RouteTypeSystem();
+        $rts->name = "USA";
+        $rts->save();
+
+        $rts = new RouteTypeSystem();
+        $rts->name = "Australian";
+        $rts->save();
+
+        $rts = new RouteTypeSystem();
+        $rts->name = "Nordic";
+        $rts->save();
+
+        $rts = new RouteTypeSystem();
+        $rts->name = "UIAA";
+        $rts->save();
+
+
     }
 }
