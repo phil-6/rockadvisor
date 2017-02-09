@@ -25,4 +25,12 @@ class Crag extends Model
     {
         return $this->hasMany('App\Route', 'crag_id', 'id')->orderBy('name');
     }
+
+    /**
+     * Get the routes for the crag.
+     */
+//    public function grades()
+//    {
+//        return $this->hasManyThrough('App\Route', 'crag_id', 'id');
+//    }
 }
