@@ -27,7 +27,7 @@ class Crag extends Model
     }
 
     /**
-     * Get the routes for the crag.
+     * Get the grades for the crag.
      */
 //    public function grades()
 //    {
