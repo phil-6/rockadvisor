@@ -13,7 +13,16 @@ class CreateToposTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('topos', function (Blueprint $table){
+            //primary key
+            $table->increments('id');
+
+            $table->string('url');
+
+            //system timestamps
+            $table->timestamps();
+
+        });
     }
 
     /**
@@ -23,6 +32,6 @@ class CreateToposTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('topos');
     }
 }

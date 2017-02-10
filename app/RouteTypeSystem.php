@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class RouteTypeSystem extends Model
 {
-    protected $table = 'areas';
+    protected $table = 'routeTypeSystems';
 
     protected $fillable = [];
 }
