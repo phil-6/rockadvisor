@@ -13,25 +13,25 @@ class RouteTypeTableSeeder extends Seeder
     {
         DB:Table('routeType')->delete();
 
-        //British Trad
+        //British Trad id=1
         $rt = new RouteType();
         $rt->routeTypeSystemId = 1;
         $rt->routeTypeNameId = 1;
         $rt->save();
 
-        //French Sport
+        //French Sport id=2
         $rt = new RouteType();
         $rt->routeTypeSystemId = 2;
         $rt->routeTypeNameId = 2;
         $rt->save();
 
-        //V Bouldering
+        //V Bouldering id=3
         $rt = new RouteType();
         $rt->routeTypeSystemId = 3;
         $rt->routeTypeNameId = 3;
         $rt->save();
 
-        //Font Bouldering
+        //Font Bouldering id=4
         $rt = new RouteType();
         $rt->routeTypeSystemId = 4;
         $rt->routeTypeNameId = 3;
