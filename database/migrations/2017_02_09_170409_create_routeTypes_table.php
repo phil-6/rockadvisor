@@ -18,7 +18,7 @@ class CreateRouteTypeTable extends Migration
             $table->increments('id');
 
             //foreign keys
-            $table->integer('routeTypeSystemId')->unsigned();
+            $table->integer('routeTypeSystemId')->unsigned()->nullable();
             $table->integer('routeTypeNameId')->unsigned();
 
             //system timestamps
