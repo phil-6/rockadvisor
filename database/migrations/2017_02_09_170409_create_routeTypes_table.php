@@ -13,7 +13,7 @@ class CreateRouteTypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('RouteType', function (Blueprint $table){
+        Schema::create('RouteTypes', function (Blueprint $table){
             //primary key
             $table->increments('id');
 
@@ -26,9 +26,9 @@ class CreateRouteTypeTable extends Migration
 
             //foreign key references
             $table->foreign('routeTypeSystemId')->references('id')->
-                on('routeTypeSystem')->onDelete('restrict');
+                on('routeTypeSystems')->onDelete('restrict');
             $table->foreign('routeTypeNameId')->references('id')->
-                on('routeTypeName')->onDelete('restrict');
+                on('routeTypeNames')->onDelete('restrict');
 
 
 
@@ -42,6 +42,6 @@ class CreateRouteTypeTable extends Migration
      */
     public function down()
     {
-        Schema::drop('RouteType');
+        Schema::drop('RouteTypes');
     }
 }
