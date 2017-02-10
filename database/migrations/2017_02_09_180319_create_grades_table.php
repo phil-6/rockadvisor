@@ -25,7 +25,7 @@ class CreateGradesTable extends Migration
 
             //foreign key reference
             $table->foreign('routeTypeId')->references('id')->
-                on('routeType')->onDelete('restrict');
+                on('routeTypes')->onDelete('restrict');
 
 
         });
