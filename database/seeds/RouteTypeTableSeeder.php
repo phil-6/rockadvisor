@@ -11,7 +11,7 @@ class RouteTypeTableSeeder extends Seeder
      */
     public function run()
     {
-        DB:Table('routeType')->delete();
+        DB:Table('routeTypes')->delete();
 
         //British Trad id=1
         $rt = new RouteType();

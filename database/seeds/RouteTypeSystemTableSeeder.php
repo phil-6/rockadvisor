@@ -11,7 +11,7 @@ class RouteTypeSystemTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('routeTypeSystem')->delete();
+        DB::table('routeTypeSystems')->delete();
 
         $rts = new RouteTypeSystem();
         $rts->name = "British";

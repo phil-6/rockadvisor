@@ -19,14 +19,14 @@ class CreateRoutesTable extends Migration
            $table->text("description");
            $table->integer("length")->unsigned();
 
-           //$table->integer("topo_id")->unsigned();
-           $table->integer("grade_id")->unsigned();
+           $table->integer("topo_id")->unsigned()->nullable()->default(null);
+           $table->integer("grade_id")->unsigned()->nullable()->default(null);
            $table->integer("crag_id")->unsigned();
 
            $table->timestamps();
 
-           //$table->foreign('topo_id')->references('id')->
-                //on('topos')->onDelete('cascade');
+           $table->foreign('topo_id')->references('id')->
+                on('topos')->onDelete('cascade');
            $table->foreign('grade_id')->references('id')->
                 on('grades')->onDelete('restrict');
            $table->foreign('crag_id')->references('id')->

@@ -11,7 +11,7 @@ class RouteTypeNameTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('routeTypeName')->delete();
+        DB::table('routeTypeNames')->delete();
 
         $rtn = new RouteTypeName();
         $rtn->name = "Trad";
