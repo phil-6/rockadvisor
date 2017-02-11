@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Auth\Access\Response;
 use Illuminate\Http\Request;
 use App\Area;
 
@@ -14,8 +15,7 @@ class AreasController extends Controller
      */
     public function index()
     {
-        $areas = Area::orderBy('name')->get();
-        return view('areas.index', compact('areas'));
+        return Response::json(Area::get());
     }
 
     /**
@@ -36,7 +36,13 @@ class AreasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Area::create(array(
+            'name' => Input::get('name'),
+            //Not sure if this line will work
+            //Expected behaviour is to look for an area that matches the parentArea
+            //String and return its ID.
+            'parentArea' => Input::getParentArea('parentArea')
+        ));
     }
 
     /**
@@ -47,8 +53,7 @@ class AreasController extends Controller
      */
     public function show(Area $area)
     {
-        $crags = $area->crags;
-        return view('areas.show', compact('area', 'crags'));
+
     }
 
     /**
@@ -82,6 +87,8 @@ class AreasController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Area::destroy($id);
+
+        return Response::json(array('success' => true));
     }
 }

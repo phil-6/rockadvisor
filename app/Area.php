@@ -25,6 +25,7 @@ class Area extends Model
         return $this->belongsTo('App\Area', 'area_id', 'id');
     }
 
+
     /**
      * Get the areas that this area is a parent of.
      */
@@ -32,6 +33,6 @@ class Area extends Model
     public function getChildAreas()
     {
         return $this->hasMany('App\Area', 'area_id', 'id');
-    }//how do we extend this to recursively include all children?
+    }
 
 }
