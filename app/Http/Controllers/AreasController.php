@@ -15,18 +15,13 @@ class AreasController extends Controller
      */
     public function index()
     {
-        return Response::json(Area::get());
+        $areas = Area::orderBy('name')->get();
+        return view('areas.index', compact('areas'));
     }
 
-    /**
-     * Get a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function api_index()
     {
-        $areas = Area::orderBy('name')->get();
-        return response()->json($areas);
+        return Response::json(Area::get());
     }
 
     /**
@@ -45,14 +40,17 @@ class AreasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+
+    public function store()
+    {
+        //
+    }
+
+    public function api_store(Request $request)
     {
         Area::create(array(
             'name' => Input::get('name'),
-            //Not sure if this line will work
-            //Expected behaviour is to look for an area that matches the parentArea
-            //String and return its ID.
-            'parentArea' => Input::getParentArea('parentArea')
+            'parentArea' => Input::get('parentArea')
         ));
     }
 
@@ -96,7 +94,13 @@ class AreasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function destroy($id)
+    {
+        //
+    }
+
+    public function api_destroy($id)
     {
         Area::destroy($id);
 
