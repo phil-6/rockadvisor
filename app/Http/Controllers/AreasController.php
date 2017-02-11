@@ -19,6 +19,17 @@ class AreasController extends Controller
     }
 
     /**
+     * Get a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function api_index()
+    {
+        $areas = Area::orderBy('name')->get();
+        dd($areas);
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
