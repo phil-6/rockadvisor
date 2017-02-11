@@ -15,14 +15,14 @@ class Area extends Model
      */
     public function crags()
     {
-        return $this->hasMany('App\Crag', 'area_id', 'id')->orderBy('name');
+        return $this->hasMany('App\Crag', 'parentArea', 'id')->orderBy('name');
     }
     /**
      * Get the area that this area is part of.
      */
     public function getParentArea()
     {
-        return $this->belongsTo('App\Area', 'area_id', 'id');
+        return $this->belongsTo('App\Area', 'parentArea', 'id');
     }
 
 
@@ -32,7 +32,7 @@ class Area extends Model
 
     public function getChildAreas()
     {
-        return $this->hasMany('App\Area', 'area_id', 'id');
+        return $this->hasMany('App\Area', 'parentArea', 'id');
     }
 
 }
