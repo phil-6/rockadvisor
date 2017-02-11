@@ -26,7 +26,7 @@ class AreasController extends Controller
     public function api_index()
     {
         $areas = Area::orderBy('name')->get();
-        dd($areas);
+        return response()->json($areas);
     }
 
     /**
