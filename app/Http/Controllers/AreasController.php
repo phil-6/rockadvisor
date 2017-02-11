@@ -41,7 +41,7 @@ class AreasController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function store()
+    public function store(Request $request)
     {
         //
     }

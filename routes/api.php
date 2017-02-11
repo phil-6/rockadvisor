@@ -41,10 +41,11 @@ Route::group(array('prefix' => 'api'), function() {
 
 });
 
-// CATCH ALL ROUTE =============================
+/*// CATCH ALL ROUTE =============================
 // all routes that are not home or api will be redirected to the frontend
 // this allows angular to route them
 // Ref: https://scotch.io/tutorials/create-a-laravel-and-angular-single-page-comment-application
 App::missing(function($exception) {
     return View::make('api_index');
-});
+});*/
+// This breaks everything.
