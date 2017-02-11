@@ -11,7 +11,7 @@ class GradesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB:table('grades')->delete();
+        DB::table('grades')->delete();
 
 
 

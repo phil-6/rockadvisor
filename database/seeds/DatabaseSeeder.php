@@ -14,9 +14,9 @@ class DatabaseSeeder extends Seeder
          $this->call(AreasTableSeeder::class);
          $this->call(CragsTableSeeder::class);
          $this->call(RoutesTableSeeder::class);
-         $this->call(RouteTypeNameTableSeeder::class);
-         $this->call(RouteTypeSystemTableSeeder::class);
-         $this->call(RouteTypeTableSeeder::class);
+         $this->call(RouteTypeNamesTableSeeder::class);
+         $this->call(RouteTypeSystemsTableSeeder::class);
+         $this->call(RouteTypesTableSeeder::class);
          $this->call(GradesTableSeeder::class);
     }
 }

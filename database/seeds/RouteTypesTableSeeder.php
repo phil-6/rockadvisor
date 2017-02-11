@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\RouteType;
 
-class RouteTypeTableSeeder extends Seeder
+class RouteTypesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +12,7 @@ class RouteTypeTableSeeder extends Seeder
      */
     public function run()
     {
-        DB:Table('routeTypes')->delete();
+        DB::table('routeTypes')->delete();
 
         //British Trad id=1
         $rt = new RouteType();

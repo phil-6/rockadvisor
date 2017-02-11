@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\RouteTypeSystem;
 
-class RouteTypeSystemTableSeeder extends Seeder
+class RouteTypeSystemsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
