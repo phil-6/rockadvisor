@@ -19,9 +19,16 @@ class AreasController extends Controller
         return view('areas.index', compact('areas'));
     }
 
-    public function api_index()
+    public function api_index($id = null)
     {
-        return Response::json(Area::get());
+        //not sure if this works but it looks cool
+        //return Response::json(Area::get());
+
+        if ($id == null) {
+            return Area::orderBy('id', 'asc')->get();
+        } else {
+            return $this->show($id);
+        }
     }
 
     /**
@@ -48,10 +55,19 @@ class AreasController extends Controller
 
     public function api_store(Request $request)
     {
-        Area::create(array(
+        $area = new Area;
+
+        $area->name = $request->input('name');
+        $area->parentArea = $request->input('parentArea');
+        $area->save();
+
+        return 'Area successfully created with id' . $area->id;
+
+        //Not sure if this will work
+        /*Area::create(array(
             'name' => Input::get('name'),
             'parentArea' => Input::get('parentArea')
-        ));
+        ));*/
     }
 
     /**
@@ -63,6 +79,11 @@ class AreasController extends Controller
     public function show(Area $area)
     {
 
+    }
+
+    public function api_show(Area $area)
+    {
+        return Employee::find($area);
     }
 
     /**
@@ -88,6 +109,18 @@ class AreasController extends Controller
         //
     }
 
+    public function api_update(Request $request, $id)
+    {
+        $area = Area::find($id);
+
+        $area->name = $request->input('name');
+        $area->parentArea = $request->input('parentArea');
+
+        $area->save();
+
+        return "Success updating area #" . $area->id;
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -100,10 +133,16 @@ class AreasController extends Controller
         //
     }
 
-    public function api_destroy($id)
+    public function api_destroy(Request $request)
     {
-        Area::destroy($id);
+        $area = Area::find($request->input('id'));
 
-        return Response::json(array('success' => true));
+        $area->delete();
+
+        return "Area record successfully deleted #" . $request->input('id');
+
+//        Not sure if this will work
+//        Area::destroy($id);
+//        return Response::json(array('success' => true));
     }
 }
