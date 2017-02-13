@@ -29,3 +29,7 @@ Route::get('areas',
     ]
 );
 
+Route::get('/api/v1/areas/{id?}', 'areas@api_index');
+Route::post('/api/v1/areas', 'areas@api_store');
+Route::post('/api/v1/areas/{id}', 'areas@api_update');
+Route::delete('/api/v1/areas/{id}', 'areas@api_destroy');
