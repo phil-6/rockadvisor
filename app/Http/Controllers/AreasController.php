@@ -105,9 +105,8 @@ class AreasController extends Controller
         //
     }
 
-    public function api_update(Request $request, $id)
+    public function api_update($area)
     {
-        $area = Area::find($id);
 
         $area->name = $request->input('name');
         $area->parentArea = $request->input('parentArea');
