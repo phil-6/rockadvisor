@@ -13,22 +13,23 @@ class AreasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $areas = Area::orderBy('name')->get();
-        return view('areas.index', compact('areas'));
-    }
+    // public function index()
+    // {
+    //     $areas = Area::orderBy('name')->get();
+    //     return view('areas.index', compact('areas'));
+    // }
 
-    public function api_index($id = null)
+    public function api_index()
     {
-        //not sure if this works but it looks cool
-        //return Response::json(Area::get());
-
-        if ($id == null) {
-            return Area::orderBy('id', 'asc')->get();
-        } else {
-            return $this->show($id);
+        $data = [];
+        $areas = Area::all();
+        foreach ($areas as  $area) {
+            $record = ["id" => $area->id, "name" => $area->name, "parentName" => $area->getParentAreaName(), "parentId" => $area->parentArea];
+            $data[] = $record;
         }
+
+        return response()->json($data);
+        
     }
 
     /**
@@ -76,14 +77,13 @@ class AreasController extends Controller
      * @param  Area  $area
      * @return \Illuminate\Http\Response
      */
-    public function show(Area $area)
-    {
+    // public function show(Area $area)
+    //
+    // }
 
-    }
-
-    public function api_show(Area $area)
+    public function api_show($area)
     {
-        return Employee::find($area);
+        return response()->json($area);
     }
 
     /**
@@ -128,21 +128,14 @@ class AreasController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function destroy($id)
-    {
-        //
-    }
+    // public function destroy($id)
+    // {
+    //     //
+    // }
 
-    public function api_destroy(Request $request)
+    public function api_destroy($area)
     {
-        $area = Area::find($request->input('id'));
-
         $area->delete();
-
-        return "Area record successfully deleted #" . $request->input('id');
-
-//        Not sure if this will work
-//        Area::destroy($id);
-//        return Response::json(array('success' => true));
+        return response()->json(array('success' => true));
     }
 }

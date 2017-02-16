@@ -26,6 +26,17 @@ class Area extends Model
     }
 
 
+    public function getParentAreaName()
+    {
+        if ($this->parentArea) {
+                return $this->getParentArea -> name;
+        }
+
+        return null;
+    }
+
+
+
     /**
      * Get the areas that this area is a parent of.
      */

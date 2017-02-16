@@ -17,17 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
-
-
-
-Route::get('areas',
-    ['as' => 'api:Areas.index',
-        'uses' => 'AreasController@api_index'
-    ]
-);
-
-Route::get('/api/v1/areas/{id?}', 'areas@api_index');
-Route::post('/api/v1/areas', 'areas@api_store');
-Route::post('/api/v1/areas/{id}', 'areas@api_update');
-Route::delete('/api/v1/areas/{id}', 'areas@api_destroy');
+Route::get('areas', 			'AreasController@api_index');
+Route::get('areas/{areaId}', 	'AreasController@api_show');
+Route::post('areas', 			'AreasController@api_store');
+Route::post('areas/{areaId}', 		'AreasController@api_update');
+Route::delete('areas/{areaId}', 	'AreasController@api_destroy');
