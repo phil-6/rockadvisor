@@ -22,3 +22,9 @@ Route::get('areas/{areaId}', 	'AreasController@api_show');
 Route::post('areas', 			'AreasController@api_store');
 Route::post('areas/{areaId}', 		'AreasController@api_update');
 Route::delete('areas/{areaId}', 	'AreasController@api_destroy');
+
+Route::get('crags', 			'CragsController@api_index');
+Route::get('crags/{cragId}', 	'CragsController@api_show');
+Route::post('crags', 			'CragsController@api_store');
+Route::post('crags/{cragId}', 		'CragsController@api_update');
+Route::delete('crags/{cragId}', 	'CragsController@api_destroy');

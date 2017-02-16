@@ -28,6 +28,7 @@ class RouteServiceProvider extends ServiceProvider
 
         parent::boot();
         Route::model('areaId', Area::class);
+        Route::model('cragId', Crag::class);
     }
 
     /**

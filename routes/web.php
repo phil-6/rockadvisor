@@ -12,9 +12,6 @@
 */
 
 
-Route::get('/cool', function() {
-    return View::make('cool');
-});
 
 Route::get('/', function() {
     return View::make('main');
