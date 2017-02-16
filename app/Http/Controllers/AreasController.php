@@ -62,13 +62,9 @@ class AreasController extends Controller
         $area->parentArea = $request->input('parentArea');
         $area->save();
 
-        return 'Area successfully created with id' . $area->id;
+        return response()->json(array('success' => true));
 
-        //Not sure if this will work
-        /*Area::create(array(
-            'name' => Input::get('name'),
-            'parentArea' => Input::get('parentArea')
-        ));*/
+
     }
 
     /**
@@ -118,7 +114,8 @@ class AreasController extends Controller
 
         $area->save();
 
-        return "Success updating area #" . $area->id;
+        return response()->json(array('success' => true));
+
     }
 
     /**
