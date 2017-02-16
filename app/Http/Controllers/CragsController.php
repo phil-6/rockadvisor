@@ -6,8 +6,11 @@
  * Time: 14:16
  */
 
-namespace app\Http\Controllers;
+namespace App\Http\Controllers;
 
+use Illuminate\Auth\Access\Response;
+use Illuminate\Http\Request;
+use App\Crag;
 
 class CragsController extends Controller
 {
@@ -25,7 +28,7 @@ class CragsController extends Controller
     public function api_index()
     {
         $data = [];
-        $crags = Crags::all();
+        $crags = Crag::all();
         foreach ($crags as  $crag) {
             $record = ["id" => $crag->id, "name" => $crag->name];
             $data[] = $record;
