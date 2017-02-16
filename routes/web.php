@@ -12,6 +12,10 @@
 */
 
 
+Route::get('/cool', function() {
+    return View::make('cool');
+});
+
 Route::get('/', function() {
-    View::make('index'); // will return app/views/index.php
+    return View::make('main');
 });
