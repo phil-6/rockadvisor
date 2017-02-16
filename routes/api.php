@@ -18,9 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/', function() {
-    View::make('index'); // will return app/views/index.php
-});
+
 
 
 Route::get('areas',
