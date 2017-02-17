@@ -124,21 +124,19 @@ class CragsController extends Controller
         //
     }
 
-    public function api_update(Request $request, $id)
+    public function api_update($crag)
     {
-        $crag = Crag::find($id);
-
-        $crag->lat = $request->input('lat');
-        $crag->lng =  $request->input('lng');
-        $crag->name = $request->input('name');
-        $crag->description = $request->input('description');
-        $crag->tidal_range = $request->input('tidal_range');
-        $crag->orientation = $request->input('orientation');
-        $crag->approach_time = $request->input('approach_time');
-        $crag->seepage = $request->input('seepage');
-        $crag->midges = $request->input('midges');
-        $crag->sheltered = $request->input('sheltered');
-        $crag->area_id = $request->input('area_id');
+        $crag->lat = Request::input('lat');
+        $crag->lng =  Request::input('lng');
+        $crag->name = Request::input('name');
+        $crag->description = Request::input('description');
+        $crag->tidal_range = Request::input('tidal_range');
+        $crag->orientation = Request::input('orientation');
+        $crag->approach_time = Request::input('approach_time');
+        $crag->seepage = Request::input('seepage');
+        $crag->midges = Request::input('midges');
+        $crag->sheltered = Request::input('sheltered');
+        $crag->area_id = Request::input('area_id');
 
         $crag->save();
 

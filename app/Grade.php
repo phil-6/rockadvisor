@@ -11,7 +11,7 @@ namespace app;
 use Illuminate\Database\Eloquent\Model;
 
 
-class Grade
+class Grade extends Model
 {
     protected $table = 'grades';
 

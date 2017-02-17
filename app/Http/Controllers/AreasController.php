@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Auth\Access\Response;
 use Illuminate\Http\Request;
+
 use App\Area;
 
 class AreasController extends Controller
@@ -108,8 +109,8 @@ class AreasController extends Controller
     public function api_update($area)
     {
 
-        $area->name = $request->input('name');
-        $area->parentArea = $request->input('parentArea');
+        $area->name = Request::input('name');
+        $area->parentArea = Request::input('parentArea');
 
         $area->save();
 
