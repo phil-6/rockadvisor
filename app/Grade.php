@@ -18,4 +18,16 @@ class Grade extends Model
     protected $fillable = [];
 
 
+    /**
+     * Get all grades of a particular type.
+     */
+//    public function getGradesOfType($gradeType)
+//    {
+//        if (£gradeType->"Trad")
+//        {
+//            return
+//        }
+//
+//        return null;
+//    }
 }

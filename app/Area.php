@@ -25,10 +25,13 @@ class Area extends Model
         return $this->belongsTo('App\Area', 'parentArea', 'id');
     }
 
-
+    /**
+     * Get the area that this area is part of.
+     */
     public function getParentAreaName()
     {
-        if ($this->parentArea) {
+        if ($this->parentArea)
+        {
                 return $this->getParentArea -> name;
         }
 
