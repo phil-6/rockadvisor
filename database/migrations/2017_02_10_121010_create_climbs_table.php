@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRoutesTable extends Migration
+class CreateClimbsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateRoutesTable extends Migration
      */
     public function up()
     {
-        Schema::create('routes', function (Blueprint $table){
+        Schema::create('climbs', function (Blueprint $table){
            $table->increments('id');
            $table->string ("name");
            $table->text("description");
@@ -42,6 +42,6 @@ class CreateRoutesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('routes');
+        Schema::drop('climbs');
     }
 }

@@ -15,7 +15,7 @@ class CreateGradesTable extends Migration
     {
         Schema::create('grades', function (Blueprint $table){
             $table->increments('id');
-            $table->integer('routeTypeId')->unsigned();
+            $table->integer('climbTypeId')->unsigned();
             $table->char('technical_grade', 10)->nullable();
             $table->char('severity_grade', 10)->nullable();
             $table->integer('score')->unsigned()->nullable();
@@ -24,8 +24,8 @@ class CreateGradesTable extends Migration
             $table->timestamps();
 
             //foreign key reference
-            $table->foreign('routeTypeId')->references('id')->
-                on('routeTypes')->onDelete('restrict');
+            $table->foreign('climbTypeId')->references('id')->
+                on('climbTypes')->onDelete('restrict');
 
 
         });

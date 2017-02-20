@@ -13,10 +13,10 @@ class DatabaseSeeder extends Seeder
     {
          $this->call(AreasTableSeeder::class);
          $this->call(CragsTableSeeder::class);
-         $this->call(RoutesTableSeeder::class);
-         $this->call(RouteTypeNamesTableSeeder::class);
-         $this->call(RouteTypeSystemsTableSeeder::class);
-         $this->call(RouteTypesTableSeeder::class);
+         $this->call(ClimbsTableSeeder::class);
+         $this->call(ClimbTypeNamesTableSeeder::class);
+         $this->call(ClimbTypeSystemsTableSeeder::class);
+         $this->call(ClimbTypesTableSeeder::class);
          $this->call(GradesTableSeeder::class);
     }
 }

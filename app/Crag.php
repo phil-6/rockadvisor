@@ -19,11 +19,11 @@ class Crag extends Model
     }
 
     /**
-     * Get the routes for the crag.
+     * Get the climbs at the crag.
      */
-    public function routes()
+    public function climbs()
     {
-        return $this->hasMany('App\Route', 'crag_id', 'id')->orderBy('name');
+        return $this->hasMany('App\Climb', 'crag_id', 'id')->orderBy('name');
     }
 
     /**
