@@ -14,6 +14,8 @@ class CragsTableSeeder extends Seeder
     {
         DB::table('crags')->delete();
 
+        //first 20 alphabetically then some other popular crags
+
         $c = new Crag();
         $c->lat = 51.5654710;
         $c->lng =  -4.1012290;
@@ -279,6 +281,81 @@ class CragsTableSeeder extends Seeder
         $c->sheltered = false;
         $c->area_id = 13;
         $c->save();
+
+        $c = new Crag();
+        $c->lat = 51.53930;
+        $c->lng =  -4.21423;
+        $c->name = "Culver Hole";
+        $c->description = "A cool crag";
+        $c->tidal_range = 2.5;
+        $c->orientation = "s";
+        $c->approach_time = 15;
+        $c->seepage = false;
+        $c->midges = false;
+        $c->sheltered = true;
+        $c->area_id = 8;
+        $c->save();
+
+        //end of first 20m alphabetic
+        //below are popular crags
+        //or ones that I like
+        //anything goes really.
+        $c = new Crag();
+        $c->lat = 51.569941;
+        $c->lng =  -4.11139;
+        $c->name = "Three Cliffs";
+        $c->description = "A cool crag";
+        $c->tidal_range = 3;
+        $c->orientation = "s";
+        $c->approach_time = 30;
+        $c->seepage = false;
+        $c->midges = false;
+        $c->sheltered = true;
+        $c->area_id = 11;
+        $c->save();
+
+        $c = new Crag();
+        $c->lat = 51.568593;
+        $c->lng =  -4.122941;
+        $c->name = "Great Tor Proper";
+        $c->description = "A cool crag";
+        $c->tidal_range = 0;
+        $c->orientation = "se";
+        $c->approach_time = 30;
+        $c->seepage = false;
+        $c->midges = false;
+        $c->sheltered = false;
+        $c->area_id = 10;
+        $c->save();
+
+        $c = new Crag();
+        $c->lat = 51.549429;
+        $c->lng =  -4.253615;
+        $c->name = "Juniper Wall";
+        $c->description = "A cool crag";
+        $c->tidal_range = 0;
+        $c->orientation = "s";
+        $c->approach_time = 30;
+        $c->seepage = false;
+        $c->midges = false;
+        $c->sheltered = false;
+        $c->area_id = 8;
+        $c->save();
+
+        $c = new Crag();
+        $c->lat = 51.564963;
+        $c->lng =  -4.092269;
+        $c->name = "Foxhole Cave";
+        $c->description = "A cool crag";
+        $c->tidal_range = 0;
+        $c->orientation = "s";
+        $c->approach_time = 30;
+        $c->seepage = true;
+        $c->midges = false;
+        $c->sheltered = true;
+        $c->area_id = 8;
+        $c->save();
+
 
     }
 }
