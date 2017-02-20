@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\RouteTypeSystem;
+use App\ClimbTypeSystem;
 
-class RouteTypeSystemsTableSeeder extends Seeder
+class ClimbTypeSystemsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,37 +12,37 @@ class RouteTypeSystemsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('routeTypeSystems')->delete();
+        DB::table('climbTypeSystems')->delete();
 
-        $rts = new RouteTypeSystem();
+        $rts = new ClimbTypeSystem();
         $rts->name = "British";
         $rts->save();
 
-        $rts = new RouteTypeSystem();
+        $rts = new ClimbTypeSystem();
         $rts->name = "French";
         $rts->save();
 
-        $rts = new RouteTypeSystem();
+        $rts = new ClimbTypeSystem();
         $rts->name = "V-Grades";
         $rts->save();
 
-        $rts = new RouteTypeSystem();
+        $rts = new ClimbTypeSystem();
         $rts->name = "Font";
         $rts->save();
 
-        $rts = new RouteTypeSystem();
+        $rts = new ClimbTypeSystem();
         $rts->name = "USA";
         $rts->save();
 
-        $rts = new RouteTypeSystem();
+        $rts = new ClimbTypeSystem();
         $rts->name = "Australian";
         $rts->save();
 
-        $rts = new RouteTypeSystem();
+        $rts = new ClimbTypeSystem();
         $rts->name = "Nordic";
         $rts->save();
 
-        $rts = new RouteTypeSystem();
+        $rts = new ClimbTypeSystem();
         $rts->name = "UIAA";
         $rts->save();
 

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRouteTypesTable extends Migration
+class CreateClimbTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,22 +13,22 @@ class CreateRouteTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('routeTypes', function (Blueprint $table){
+        Schema::create('climbTypes', function (Blueprint $table){
             //primary key
             $table->increments('id');
 
             //foreign keys
-            $table->integer('routeTypeSystemId')->unsigned()->nullable();
-            $table->integer('routeTypeNameId')->unsigned();
+            $table->integer('climbTypeSystemId')->unsigned()->nullable();
+            $table->integer('climbTypeNameId')->unsigned();
 
             //system timestamps
             $table->timestamps();
 
             //foreign key references
-            $table->foreign('routeTypeSystemId')->references('id')->
-                on('routeTypeSystems')->onDelete('restrict');
-            $table->foreign('routeTypeNameId')->references('id')->
-                on('routeTypeNames')->onDelete('restrict');
+            $table->foreign('climbTypeSystemId')->references('id')->
+                on('climbTypeSystems')->onDelete('restrict');
+            $table->foreign('climbTypeNameId')->references('id')->
+                on('climbTypeNames')->onDelete('restrict');
 
         });
     }
@@ -40,6 +40,6 @@ class CreateRouteTypesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('routeTypes');
+        Schema::drop('climbTypes');
     }
 }

@@ -62,7 +62,7 @@ class GradesTableSeeder extends Seeder
 			null);
 		
 		$g = new Grade();
-        $g->routeTypeId = 1;
+        $g->climbTypeId = 1;
         $g->technical_grade = null;
         $g->severity_grade = null;
         $g->score = null;
@@ -71,7 +71,7 @@ class GradesTableSeeder extends Seeder
 		foreach( $technical_grades as $techGradeValue){
 			foreach( $severity_grades as $sevGradeValue){
 				$g = new Grade();
-				$g->routeTypeId = 1;
+				$g->climbTypeId = 1;
 				$g->technical_grade = $techGradeValue;
 				$g->severity_grade = $sevGradeValue;
 				$g->score = null;
@@ -90,7 +90,7 @@ class GradesTableSeeder extends Seeder
 		
 		foreach( $french_sport_grades as $frSportGrade){
 			$g = new Grade();
-			$g->routeTypeId = 2;
+			$g->climbTypeId = 2;
 			$g->technical_grade = $frSportGrade;
 			$g->severity_grade = null;
 			$g->score = null;
@@ -108,7 +108,7 @@ class GradesTableSeeder extends Seeder
 		
 		foreach( $bouldering_vgrades as $vBoulderingGrade){
 			$g = new Grade();
-			$g->routeTypeId = 3;
+			$g->climbTypeId = 3;
 			$g->technical_grade = $vBoulderingGrade;
 			$g->severity_grade = null;
 			$g->score = null;
@@ -125,7 +125,7 @@ class GradesTableSeeder extends Seeder
 		
 		foreach( $bouldering_font_grades as $fontBoulderingGrade){
 			$g = new Grade();
-			$g->routeTypeId = 4;
+			$g->climbTypeId = 4;
 			$g->technical_grade = $fontBoulderingGrade;
 			$g->severity_grade = null;
 			$g->score = null;

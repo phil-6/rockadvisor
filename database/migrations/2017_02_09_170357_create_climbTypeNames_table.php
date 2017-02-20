@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRouteTypeNamesTable extends Migration
+class CreateClimbTypeNamesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateRouteTypeNamesTable extends Migration
      */
     public function up()
     {
-        Schema::create('routeTypeNames', function (Blueprint $table){
+        Schema::create('climbTypeNames', function (Blueprint $table){
             $table->increments('id');
             $table->string('name');
 
@@ -28,6 +28,6 @@ class CreateRouteTypeNamesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('routeTypeNames');
+        Schema::drop('climbTypeNames');
     }
 }

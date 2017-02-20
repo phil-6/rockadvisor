@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class RouteTypeSystem extends Model
+class ClimbTypeSystem extends Model
 {
-    protected $table = 'routeTypeSystems';
+    protected $table = 'climbTypeSystems';
 
     protected $fillable = [];
 }
