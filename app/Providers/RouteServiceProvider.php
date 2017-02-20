@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use App\Area;
 use App\Crag;
+//use App\Route;
+use App\Grade;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -30,6 +32,8 @@ class RouteServiceProvider extends ServiceProvider
         parent::boot();
         Route::model('areaId', Area::class);
         Route::model('cragId', Crag::class);
+        Route::model('routeId', Route::class);
+        Route::model('gradeId', Grade::class);
     }
 
     /**
