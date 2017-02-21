@@ -540,6 +540,9 @@
                 restrictions: false
             },
         ];
+        /*var cragsBasic = [
+            []
+        ]*/
 
 
         var largeInfoWindow = new google.maps.InfoWindow();

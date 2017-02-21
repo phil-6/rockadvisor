@@ -30,7 +30,8 @@ class GradesController extends Controller
         $data = [];
         $grades = Grade::all();
         foreach ($grades as  $grade) {
-            $record = ["id" => $grade->id,
+            $record = [
+                "id" => $grade->id,
                 "climbTypeId" => $grade->climbTypeId,
                 "severity_grade" => $grade -> severity_grade,
                 "technical_grade" => $grade->technical_grade
