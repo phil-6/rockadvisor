@@ -23,12 +23,9 @@ class Grade extends Model
      */
 //    public function getGradesOfType($gradeType)
 //    {
-//        if (£gradeType->"Trad")
-//        {
-//            return
-//        }
+//        return $this->hasMany
 //
-//        return null;
+//
 //    }
 
     /**

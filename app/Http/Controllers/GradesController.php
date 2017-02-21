@@ -43,6 +43,15 @@ class GradesController extends Controller
     }
 
     /**
+     * Get Grades of specific type
+     */
+//    public function api_indexOfType($type_id)
+//    {
+//        $data = [];
+//        $grades = Grade
+//    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
