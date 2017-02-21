@@ -20,7 +20,7 @@ class CreateClimbsTable extends Migration
            $table->integer("length")->unsigned();
 
            $table->integer("topo_id")->unsigned()->nullable()->default(null);
-           $table->integer("grade_id")->unsigned()->nullable()->default(null);
+           $table->integer("grade_id")->unsigned();
            $table->integer("crag_id")->unsigned();
 
            $table->timestamps();
