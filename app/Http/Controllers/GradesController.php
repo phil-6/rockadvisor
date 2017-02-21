@@ -27,14 +27,17 @@ class GradesController extends Controller
 
     public function api_index()
     {
-//        $data = [];
-//        $grades = Grade::all();
-//        foreach ($grades as  $grade) {
-//            $record = ["id" => $grade->id, "name" => $grade->name];
-//            $data[] = $record;
-//        }
-//
-//        return response()->json($data);
+        $data = [];
+        $grades = Grade::all();
+        foreach ($grades as  $grade) {
+            $record = ["id" => $grade->id,
+                "climbTypeId" => $grade->climbTypeId,
+                "technical_grade" => $grade->technical_grade,
+                "severity_grade" => $grade -> severity_grade];
+            $data[] = $record;
+        }
+
+        return response()->json($data);
 
     }
 

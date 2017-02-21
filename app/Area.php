@@ -38,8 +38,6 @@ class Area extends Model
         return null;
     }
 
-
-
     /**
      * Get the areas that this area is a parent of.
      */
