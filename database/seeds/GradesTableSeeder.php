@@ -67,9 +67,9 @@ class GradesTableSeeder extends Seeder
         $g->severity_grade = null;
         $g->score = null;
         $g->save();
-			
-		foreach( $technical_grades as $techGradeValue){
-			foreach( $severity_grades as $sevGradeValue){
+
+        foreach( $severity_grades as $sevGradeValue){
+			foreach( $technical_grades as $techGradeValue){
 				$g = new Grade();
 				$g->climbTypeId = 1;
 				$g->technical_grade = $techGradeValue;
@@ -81,10 +81,13 @@ class GradesTableSeeder extends Seeder
 		
 		//French Sport
 		$french_sport_grades = array(
-			"1", "2", "2+", "3", "3+", "4a", "4b", "4c",
-			"5a", "5b", "5c", "6a", "6a+", "6b", "6b+",
-			"6c", "6c+", "7a", "7a+", "7b", "7b+", "7c",
-			"7c+", "8a", "8a+", "8b", "8b+", "8c", "8c+",
+			"1", "2", "2+",
+            "3", "3+", "3a", "3a+", "3b", "3b+", "3c", "3c+",
+            "4", "4+", "4a", "4a+", "4b", "4b+", "4c", "4c+",
+            "5", "5+", "5a", "5a+", "5b", "5b+", "5c", "5c+",
+            "6a", "6a+", "6b", "6b+", "6c", "6c+",
+            "7a", "7a+", "7b", "7b+", "7c", "7c+",
+            "8a", "8a+", "8b", "8b+", "8c", "8c+",
 			"9a", "9a+", "9b", "9b+", "9c", "9c+", null
 		);
 		

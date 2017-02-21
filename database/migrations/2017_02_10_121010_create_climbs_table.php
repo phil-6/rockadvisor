@@ -26,7 +26,7 @@ class CreateClimbsTable extends Migration
            $table->timestamps();
 
            $table->foreign('topo_id')->references('id')->
-                on('topos')->onDelete('cascade');
+                on('topos')->onDelete('restrict');
            $table->foreign('grade_id')->references('id')->
                 on('grades')->onDelete('restrict');
            $table->foreign('crag_id')->references('id')->

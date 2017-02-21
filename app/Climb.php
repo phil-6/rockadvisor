@@ -11,11 +11,20 @@ class Climb extends Model
     protected $fillable = [];
 
     /**
-     * Get the crag that this route is part of.
+     * Get the crag that this climb is part of.
      */
     public function crag()
     {
         return $this->belongsTo('App\Crag', 'crag_id', 'id');
+    }
+
+    /**
+     *  Get the grade for this climb
+     */
+
+    public function grade()
+    {
+        return $this->hasOne('App\Grade', 'grade_id', 'id');
     }
 
 }

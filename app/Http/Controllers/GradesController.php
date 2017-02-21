@@ -32,8 +32,9 @@ class GradesController extends Controller
         foreach ($grades as  $grade) {
             $record = ["id" => $grade->id,
                 "climbTypeId" => $grade->climbTypeId,
-                "technical_grade" => $grade->technical_grade,
-                "severity_grade" => $grade -> severity_grade];
+                "severity_grade" => $grade -> severity_grade,
+                "technical_grade" => $grade->technical_grade
+                ];
             $data[] = $record;
         }
 

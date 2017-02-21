@@ -30,4 +30,12 @@ class Grade extends Model
 //
 //        return null;
 //    }
+
+    /**
+     * Get all the climbs of a particular grade.
+     */
+    public function climbsAtGrade()
+    {
+        return $this->hasMany ('App\Climb', 'grade_id', 'id');
+    }
 }

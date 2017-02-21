@@ -20,7 +20,7 @@ class ClimbsTableSeeder extends Seeder
         Gain the chimney from the rib bounding the slab on the left and climb it, 
         taking care with blocks at the top";
         $r->length = 23;
-        //$r->grade_id = ??; //vs, 4b
+        $r->grade_id = 150; //vs, 4b
         //$r->topo_id = ??;
         $r->crag_id = 1;
         $r->save();
@@ -31,7 +31,7 @@ class ClimbsTableSeeder extends Seeder
         slab at a good hold. Climb the slab just to the right of the right 
         edge of the chimney, with some unnerving moves.";
         $r->length = 18;
-        //$r->grade_id = ??; //hvs, 4c
+        //$r->grade_id = 132; //hvs, 4c
         //$r->topo_id = ??; 
         $r->crag_id = 1;
         $r->save();
@@ -41,7 +41,7 @@ class ClimbsTableSeeder extends Seeder
         $r->description = "An artificial climb directly up the slab between 
         Great Chimney and Anemone Wall. Using the crack is forbidden.";
         $r->length = 21;
-        //$r->grade_id = ??; //hvs, 5b
+        //$r->grade_id = 180; //hvs, 5b
         //$r->topo_id = ??; 
 		 $r->crag_id = 1;
         $r->save();
@@ -51,7 +51,7 @@ class ClimbsTableSeeder extends Seeder
         $r->description = "Start where the crevasse closes and traverse left to the 
         obvious diagonal crack. When it peters out at a pocket, climb direct.";
         $r->length = 21;
-        //$r->grade_id = ??; //vs, 4c
+        //$r->grade_id = 131; //vs, 4c
         //$r->topo_id = ??; 
 		 $r->crag_id = 1;
         $r->save();
@@ -61,7 +61,7 @@ class ClimbsTableSeeder extends Seeder
         $r->description = "Follow discontinuous cracks and water-worn grooves right 
         of Anemone Wall directly to the top.";
         $r->length = 18;
-        //$r->grade_id = ??; //s
+        //$r->grade_id = 368; //s
         //$r->topo_id = ??; 
 		 $r->crag_id = 1;
         $r->save();
@@ -70,7 +70,7 @@ class ClimbsTableSeeder extends Seeder
         $r->name = "Respite";
         $r->description = "Start 1m right of Alternate and climb the slab direct.";
         $r->length = 18;
-        //$r->grade_id = ??; //vd
+        //$r->grade_id = 365; //vd
         //$r->topo_id = ??; 
 		 $r->crag_id = 1;
         $r->save();
@@ -79,17 +79,17 @@ class ClimbsTableSeeder extends Seeder
         $r->name = "Wide Crack";
         $r->description = "The wide crack to the right of Respite.";
         $r->length = 13;
-        //$r->grade_id = ??; //d
+        //$r->grade_id = 363; //d
         //$r->topo_id = ??; 
-		 $r->crag_id = 1;
+		$r->crag_id = 1;
         $r->save();
 
         $r = new Climb();
         $r->name = "Girdle Traverse";
         $r->description = "Traverse the slab from left to right along the obvious thin break.";
         $r->length = 22;
-        //$r->grade_id = ??; //dhs, 4c
-        //$r->topo_id = ??; 
+        //$r->grade_id = 129; //hs, 4c
+        //$r->topo_id = ??;
 		 $r->crag_id = 1;
         $r->save();
 
@@ -97,7 +97,7 @@ class ClimbsTableSeeder extends Seeder
         $r->name = "Jap's Eye";
         $r->description = "The first short climb up the slab has a tricky finish.";
         $r->length = 12;
-        //$r->grade_id = ??; //6a
+        //$r->grade_id = 397; //6a
         //$r->topo_id = ??; 
 		 $r->crag_id = 3;
         $r->save();
