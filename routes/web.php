@@ -11,8 +11,10 @@
 |
 */
 
-
-
 Route::get('/', function() {
     return View::make('main');
+});
+
+Route::get('/map', function() {
+    return View::make('map');
 });
