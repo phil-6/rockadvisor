@@ -17,11 +17,7 @@ class Crag extends Model
     {
         return $this->belongsTo('App\Area', 'area_id', 'id');
     }
-
-    public function areaName()
-    {
-        return $this->belongsTo('App\Area', 'area_id', 'name');//this is broken
-    }
+    
 
     /**
      * Get the climbs at the crag.

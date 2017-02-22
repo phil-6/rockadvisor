@@ -43,7 +43,7 @@ div {
     <style>
         body        { padding-top:30px; }
         form        { padding-bottom:20px; }
-        .area    { padding-bottom:20px; }
+        .area       { padding-bottom:20px; }
     </style>
 
     <!-- JS -->
@@ -63,8 +63,7 @@ div {
 
     <!-- PAGE TITLE =============================================== -->
     <div class="page-header">
-        <h2>Laravel and Angular Single Page Application</h2>
-        <h4>Areas System</h4>
+        <h2>Areas Index</h2>
     </div>
 
 

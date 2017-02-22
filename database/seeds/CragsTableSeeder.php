@@ -49,7 +49,7 @@ class CragsTableSeeder extends Seeder
         $c->lng =  -4.0580303;
         $c->name = "Barland Quarry";
         $c->description = "A cool crag";
-        $c->tidal_range = 0;
+        $c->tidal_range = null;
         $c->orientation = "n";
         $c->approach_time = 5;
         $c->seepage = true;
@@ -63,7 +63,7 @@ class CragsTableSeeder extends Seeder
         $c->lng =  -4.3023240;
         $c->name = "Black Buttress Left" ;
         $c->description = "A cool crag";
-        $c->tidal_range = 0;
+        $c->tidal_range = null;
         $c->orientation = "w";
         $c->approach_time = 15;
         $c->seepage = false;
@@ -77,7 +77,7 @@ class CragsTableSeeder extends Seeder
         $c->lng =  -4.3026560;
         $c->name = "Black Buttress Right";
         $c->description = "A cool crag";
-        $c->tidal_range = 0;
+        $c->tidal_range = null;
         $c->orientation = "w";
         $c->approach_time = 15;
         $c->seepage = false;
@@ -119,7 +119,7 @@ class CragsTableSeeder extends Seeder
         $c->lng =  -4.2362980;
         $c->name = "Boiler Slab";
         $c->description = "A cool crag";
-        $c->tidal_range = 0;
+        $c->tidal_range = null;
         $c->orientation = "sw";
         $c->approach_time = 40;
         $c->seepage = false;
@@ -147,7 +147,7 @@ class CragsTableSeeder extends Seeder
         $c->lng =  -4.0827030;
         $c->name = "Bowen's Parlour";
         $c->description = "A cool crag";
-        $c->tidal_range = 0;
+        $c->tidal_range = null;
         $c->orientation = "s";
         $c->approach_time = 25;
         $c->seepage = false;
@@ -231,7 +231,7 @@ class CragsTableSeeder extends Seeder
         $c->lng =  -4.2816520;
         $c->name = "Catacomb Gully";
         $c->description = "A cool crag";
-        $c->tidal_range = 0;
+        $c->tidal_range = null;
         $c->orientation = "s";
         $c->approach_time = 40;
         $c->seepage = false;
@@ -245,7 +245,7 @@ class CragsTableSeeder extends Seeder
         $c->lng =  -4.0649930;
         $c->name = "Cefnstylle Quarry";
         $c->description = "A cool crag";
-        $c->tidal_range = 0;
+        $c->tidal_range = null;
         $c->orientation = "ne";
         $c->approach_time = 5;
         $c->seepage = true;
@@ -259,7 +259,7 @@ class CragsTableSeeder extends Seeder
         $c->lng =  -3.9906000;
         $c->name = "Conservative Club Crag";
         $c->description = "A cool crag";
-        $c->tidal_range = 0;
+        $c->tidal_range = null;
         $c->orientation = "se";
         $c->approach_time = 5;
         $c->seepage = true;
@@ -319,7 +319,7 @@ class CragsTableSeeder extends Seeder
         $c->lng =  -4.122941;
         $c->name = "Great Tor Proper";
         $c->description = "A cool crag";
-        $c->tidal_range = 0;
+        $c->tidal_range = null;
         $c->orientation = "se";
         $c->approach_time = 30;
         $c->seepage = false;
@@ -333,7 +333,7 @@ class CragsTableSeeder extends Seeder
         $c->lng =  -4.253615;
         $c->name = "Juniper Wall";
         $c->description = "A cool crag";
-        $c->tidal_range = 0;
+        $c->tidal_range = null;
         $c->orientation = "s";
         $c->approach_time = 30;
         $c->seepage = false;
@@ -347,13 +347,13 @@ class CragsTableSeeder extends Seeder
         $c->lng =  -4.092269;
         $c->name = "Foxhole Cave";
         $c->description = "A cool crag";
-        $c->tidal_range = 0;
+        $c->tidal_range = null;
         $c->orientation = "s";
         $c->approach_time = 30;
         $c->seepage = true;
         $c->midges = false;
         $c->sheltered = true;
-        $c->area_id = 8;
+        $c->area_id = 12;
         $c->save();
 
 

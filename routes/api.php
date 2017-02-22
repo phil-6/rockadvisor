@@ -39,4 +39,4 @@ Route::get('grades', 			    'gradesController@api_index');
 
 
 //Routes for maps api
-Route::get('maps_crags',                 'MapController@map_api_getAllCrags');
+Route::get('maps_crags',            'MapController@map_api_getAllCrags');

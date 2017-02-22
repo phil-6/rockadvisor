@@ -11,6 +11,7 @@
     * Date: 21/02/2017
     * Time: 20:34
     */-->
+
     <style>
         html,
         body {
@@ -64,7 +65,7 @@
             width: 168px;
         }
     </style>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -102,480 +103,40 @@
             *Normally we'd have these in a database instead.
             */
 
-        var locations = [
-            {
-                location: {lat: 51.5654710, lng: -4.1012290},
-                title: 'Anemone Wall',
-                area: 'Shire Combe To Watch House East',
-                type: 'Trad',
-                tidal: true,
-                tidalRange: 0.5,
-                orientation: 'ssw',
-                approachTime: 20,
-                seepage: false,
-                midges: false,
-                grades: {
-                    mod: 0,
-                    diff: 1,
-                    vdiff: 1,
-                    severe: 1,
-                    hs: 1,
-                    vs: 2,
-                    hvs: 2
-                },
-                restrictions: false
-            },
 
-            {
-                location: {lat: 51.5619470, lng: -4.0782820},
-                title: 'Bacon Hole',
-                area: 'Southgate',
-                type: 'Sport',
-                tidal: true,
-                tidalRange: 2,
-                orientation: 's',
-                approachTime: 20,
-                seepage: true,
-                midges: false,
-                grades: {
-                    mod: 0,
-                    diff: 0,
-                    vdiff: 0,
-                    severe: 0,
-                    hs: 0,
-                    vs: 0,
-                    hvs: 0
-                },
-                restrictions: true
-            },
-
-            {
-                location: {lat: 51.5861193, lng: -4.0580303},
-                title: 'Barland Quarry',
-                area: 'Kittle',
-                type: 'Sport',
-                tidal: false,
-                tidalRange: 0,
-                orientation: 'n',
-                approachTime: 5,
-                seepage: true,
-                midges: false,
-                grades: {
-                    mod: 1,
-                    diff: 1,
-                    vdiff: 1,
-                    severe: 2,
-                    hs: 3,
-                    vs: 4,
-                    hvs: 3
-                },
-                restrictions: true
-            },
-
-            {
-                location: {lat: 51.5658020, lng: -4.3023240},
-                title: 'Black Buttress Left',
-                area: 'Rhosili',
-                type: 'Trad',
-                tidal: false,
-                tidalRange: 0,
-                orientation: 'w',
-                approachTime: 15,
-                seepage: false,
-                midges: false,
-                grades: {
-                    mod: 0,
-                    diff: 0,
-                    vdiff: 2,
-                    severe: 0,
-                    hs: 0,
-                    vs: 0,
-                    hvs: 0
-                },
-                restrictions: false
-            },
-
-            {
-                location: {lat: 51.5654740, lng: -4.3026560},
-                title: 'Black Buttress Right',
-                area: 'Rhosili',
-                type: 'Sport',
-                tidal: false,
-                tidalRange: 0,
-                orientation: 'w',
-                approachTime: 15,
-                seepage: false,
-                midges: false,
-                grades: {
-                    mod: 0,
-                    diff: 0,
-                    vdiff: 0,
-                    severe: 0,
-                    hs: 0,
-                    vs: 2,
-                    hvs: 2
-                },
-                restrictions: false
-            },
-
-            {
-                location: {lat: 51.5692640, lng: -4.2941050},
-                title: 'Black Wall',
-                area: 'Rhosili',
-                type: 'Sport',
-                tidal: true,
-                tidalRange: 1,
-                orientation: 'n',
-                approachTime: 45,
-                seepage: true,
-                midges: false,
-                grades: {
-                    mod: 0,
-                    diff: 1,
-                    vdiff: 1,
-                    severe: 2,
-                    hs: 1,
-                    vs: 0,
-                    hvs: 2
-                },
-                restrictions: false
-            },
-
-            {
-                location: {lat: 51.5610530, lng: -4.2823130},
-                title: 'Block Buttress',
-                area: 'Fall Bay to Mewslade',
-                type: 'Trad',
-                tidal: true,
-                tidalRange: 2,
-                orientation: 's',
-                approachTime: 30,
-                seepage: false,
-                midges: false,
-                grades: {
-                    mod: 1,
-                    diff: 1,
-                    vdiff: 0,
-                    severe: 1,
-                    hs: 3,
-                    vs: 1,
-                    hvs: 3
-                },
-                restrictions: false
-            },
-
-            {
-                location: {lat: 51.5427040, lng: -4.2362980},
-                title: 'Boiler Slab',
-                area: 'Hollow Top To Port Eynon',
-                type: 'Trad',
-                tidal: false,
-                tidalRange: 0,
-                orientation: 'sw',
-                approachTime: 40,
-                seepage: false,
-                midges: false,
-                grades: {
-                    mod: 0,
-                    diff: 1,
-                    vdiff: 1,
-                    severe: 3,
-                    hs: 0,
-                    vs: 5,
-                    hvs: 3
-                },
-                restrictions: false
-            },
-
-            {
-                location: {lat: 51.5620600, lng: -4.0800950},
-                title: 'Bosco\'s Den Area',
-                area: 'Minchen Hole to Hunts Bay',
-                type: 'Sport',
-                tidal: true,
-                tidalRange: 2.5,
-                orientation: 'e',
-                approachTime: 20,
-                seepage: true,
-                midges: false,
-                grades: {
-                    mod: 0,
-                    diff: 0,
-                    vdiff: 0,
-                    severe: 0,
-                    hs: 0,
-                    vs: 0,
-                    hvs: 0
-                },
-                restrictions: true
-            },
-
-            {
-                location: {lat: 51.5618230, lng: -4.0827030},
-                title: 'Bowen\'s Parlour',
-                area: 'Minchen Hole to Hunts Bay',
-                type: 'Sport',
-                tidal: false,
-                tidalRange: 0,
-                orientation: 's',
-                approachTime: 25,
-                seepage: false,
-                midges: false,
-                grades: {
-                    mod: 0,
-                    diff: 0,
-                    vdiff: 0,
-                    severe: 0,
-                    hs: 0,
-                    vs: 0,
-                    hvs: 0
-                },
-                restrictions: false
-            },
-
-            {
-                location: {lat: 51.5623040, lng: -4.0792050},
-                title: 'Bucketland',
-                area: 'Minchen Hole to Hunts Bay',
-                type: 'Trad',
-                tidal: true,
-                tidalRange: 1,
-                orientation: 'aaa',
-                approachTime: 35,
-                seepage: false,
-                midges: false,
-                grades: {
-                    mod: 0,
-                    diff: 0,
-                    vdiff: 0,
-                    severe: 0,
-                    hs: 2,
-                    vs: 2,
-                    hvs: 2
-                },
-                restrictions: false
-            },
-
-            {
-                location: {lat: 51.5690450, lng: -4.2955400},
-                title: 'Castaway Cove',
-                area: 'Rhosili',
-                type: 'Sport',
-                tidal: true,
-                tidalRange: 1.5,
-                orientation: 'n',
-                approachTime: 40,
-                seepage: false,
-                midges: false,
-                grades: {
-                    mod: 0,
-                    diff: 0,
-                    vdiff: 0,
-                    severe: 0,
-                    hs: 0,
-                    vs: 0,
-                    hvs: 0
-                },
-                restrictions: false
-            },
-
-            {
-                location: {lat: 51.5682950, lng: -4.0372120},
-                title: 'Caswell Bay - Far South Slab',
-                area: 'Caswell',
-                type: 'Trad',
-                tidal: true,
-                tidalRange: 1.5,
-                orientation: 's',
-                approachTime: 15,
-                seepage: false,
-                midges: false,
-                grades: {
-                    mod: 1,
-                    diff: 7,
-                    vdiff: 1,
-                    severe: 0,
-                    hs: 0,
-                    vs: 2,
-                    hvs: 0
-                },
-                restrictions: false
-            },
-
-            {
-                location: {lat: 51.5687150, lng: -4.0366110},
-                title: 'Caswell Bay - Great Slab',
-                area: 'Caswell',
-                type: 'Trad',
-                tidal: true,
-                tidalRange: 2,
-                orientation: 'se',
-                approachTime: 10,
-                seepage: false,
-                midges: false,
-                grades: {
-                    mod: 1,
-                    diff: 1,
-                    vdiff: 1,
-                    severe: 3,
-                    hs: 2,
-                    vs: 2,
-                    hvs: 1
-                },
-                restrictions: false
-            },
-
-            {
-                location: {lat: 51.5684800, lng: -4.0368930},
-                title: 'Caswell Bay - Yellow Flecked Slab',
-                area: 'Caswell',
-                type: 'Trad',
-                tidal: true,
-                tidalRange: 1.5,
-                orientation: 's',
-                approachTime: 10,
-                seepage: false,
-                midges: false,
-                grades: {
-                    mod: 0,
-                    diff: 1,
-                    vdiff: 7,
-                    severe: 1,
-                    hs: 0,
-                    vs: 2,
-                    hvs: 1
-                },
-                restrictions: false
-            },
-
-            {
-                location: {lat: 51.5612890, lng: -4.2816520},
-                title: 'Catacomb Gully',
-                area: 'Fall Bay to Mewslade',
-                type: 'Trad',
-                tidal: false,
-                tidalRange: 0,
-                orientation: 's',
-                approachTime: 40,
-                seepage: false,
-                midges: false,
-                grades: {
-                    mod: 0,
-                    diff: 3,
-                    vdiff: 1,
-                    severe: 1,
-                    hs: 2,
-                    vs: 2,
-                    hvs: 2
-                },
-                restrictions: false
-            },
-
-            {
-                location: {lat: 51.6466250, lng: -4.0649930},
-                title: 'Cefnstylle Quarry',
-                area: 'Gowerton',
-                type: 'Sport',
-                tidal: false,
-                tidalRange: 0,
-                orientation: 'ne',
-                approachTime: 5,
-                seepage: true,
-                midges: false,
-                grades: {
-                    mod: 0,
-                    diff: 0,
-                    vdiff: 0,
-                    severe: 0,
-                    hs: 0,
-                    vs: 0,
-                    hvs: 0
-                },
-                restrictions: true
-            },
-
-            {
-                location: {lat: 51.5720600, lng: -3.9906000},
-                title: 'Conservative Club Crag',
-                area: 'Mumbles to Langland',
-                type: 'Trad',
-                tidal: false,
-                tidalRange: 0,
-                orientation: 'se',
-                approachTime: 5,
-                seepage: true,
-                midges: true,
-                grades: {
-                    mod: 0,
-                    diff: 0,
-                    vdiff: 0,
-                    severe: 1,
-                    hs: 0,
-                    vs: 0,
-                    hvs: 2
-                },
-                restrictions: true
-            },
-
-            {
-                location: {lat: 51.5646300, lng: -3.9983500},
-                title: 'Crab Island',
-                area: 'Mumbles to Langland',
-                type: 'Trad',
-                tidal: true,
-                tidalRange: 2.5,
-                orientation: 's',
-                approachTime: 15,
-                seepage: false,
-                midges: false,
-                grades: {
-                    mod: 0,
-                    diff: 0,
-                    vdiff: 0,
-                    severe: 2,
-                    hs: 3,
-                    vs: 5,
-                    hvs: 2
-                },
-                restrictions: false
-            },
-        ];
-        /*var cragsBasic = [
-            []
-        ]*/
-
-
+        var apiUrl = ("http://rockadvisorweb-dev/api/maps_crags");
         var largeInfoWindow = new google.maps.InfoWindow();
 
-        // The following group uses the location array to create an array of markers on initialize.
-        for (var i = 0; i < locations.length; i++) {
-            // Get the position from the location array.
-            var position = locations[i].location;
-            var title = locations[i].title;
-            var type = locations[i].type;
-            var tidal = locations[i].tidal;
-            var tidalRange = locations[i].tidalRange;
-            var orientation = locations[i].orientation;
-            var approachTime = locations[i].approachTime;
-            // Create a marker per location, and put into markers array.
-            var marker = new google.maps.Marker({
-                map: map,
-                position: position,
-                title: title,
-                type: type,
-                tidal: tidal,
-                tidalRange: tidalRange,
-                orientation: orientation,
-                approachTime: approachTime,
-                id: i
+        /*var cragsBasic = $.getJSON(apiUrl);
+        //var cragsBasic = JSON.parse(rawJSON.responseText);
+        console.log(cragsBasic);
+        window.alert(cragsBasic);*/
+
+        $.getJSON(apiUrl, function(json1){
+            $.each(json1, function(key, data){
+                var position = new google.maps.LatLng(data.lat, data.lng);
+
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: position,
+                    title: data.name,
+                    area: data.area,
+                    tidalRange: data.tidalRange,
+                    orientation: data.orientation,
+                    approachTime: data.approachTime,
+                    numberOfClimbs: data.numberOfClimbs
+                });
+
+                // Push the marker to our array of markers.
+                markers.push(marker);
+                // Create an onclick event to open an infowindow at each marker.
+                marker.addListener('click', function () {
+                    populateInfoWindow(this, largeInfoWindow);
+                });
             });
-            // Push the marker to our array of markers.
-            markers.push(marker);
-            // Create an onclick event to open an infowindow at each marker.
-            marker.addListener('click', function () {
-                populateInfoWindow(this, largeInfoWindow);
-            });
-        }
+        });
+
+
         document.getElementById('show-listings').addEventListener('click', showListings);
         document.getElementById('hide-listings').addEventListener('click', hideListings);
         document.getElementById('filterTrad').addEventListener('click', filterTrad);
@@ -597,11 +158,11 @@
                 '<h1 id="infoWindowHeading" class="infoWindowHeading">' +
                 marker.title + '</h1>' +
                 '<div id="infoWindowContent">' +
-                '<p><b>Type: </b>' + marker.type +
-                '</p><p><b>Tidal: </b>' + marker.tidal +
+                '<p><b>Area: </b>' + marker.area +
                 '</p><p><b>TidalRange: </b>' + ((marker.tidalRange) * 2) + ' hours' +
                 '</p><p><b>Orientation: </b>' + marker.orientation +
                 '</p><p><b>approachTime: </b>' + marker.approachTime + ' minutes' +
+                '</p><p><b>Climbs: </b>' + marker.numberOfClimbs +
                 '</p></div>' +
                 '</div>';
 
@@ -664,7 +225,7 @@
             markers[i].setMap(null);
         }
         for (var i = 0; i < markers.length; i++) {
-            if (!(markers[i].tidal)) {
+            if (!(markers[i].tidalRange)) {
                 markers[i].setMap(map);
             }
         }
@@ -695,5 +256,6 @@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEqJHTFtiiqM5Sq3sQJZ2JyTB4bEqOCIg&v=3&callback=initMap">
 </script>
+
 </body>
 </html>
