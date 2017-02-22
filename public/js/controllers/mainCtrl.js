@@ -21,8 +21,9 @@ angular.module('mainCtrl', [])
                 $scope.loading = false;
             });
 
-        // function to handle submitting the form
-        // SAVE A AREA ================
+
+        /*// function to handle submitting the form
+        // SAVE AN AREA ================
         $scope.submitArea = function() {
             $scope.loading = true;
 
@@ -42,9 +43,9 @@ angular.module('mainCtrl', [])
                 .error(function(data) {
                     console.log(data);
                 });
-        };
+        };*/
 
-        // function to handle deleting a area
+        /*// function to handle deleting a area
         // DELETE A AREA ====================================================
         $scope.deleteArea = function(id) {
             $scope.loading = true;
@@ -61,6 +62,6 @@ angular.module('mainCtrl', [])
                         });
 
                 });
-        };
+        };*/
 
     });

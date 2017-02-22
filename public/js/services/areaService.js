@@ -6,12 +6,12 @@ angular.module('areaService', [])
     .factory('Area', function($http) {
 
         return {
-            // get all the comments
+            // get all the areas
             get : function() {
                 return $http.get('/api/areas');
             },
 
-            // save a comment (pass in comment data)
+            // save a area (pass in area data)
             save : function(areaData) {
                 return $http({
                     method: 'POST',
@@ -21,7 +21,7 @@ angular.module('areaService', [])
                 });
             },
 
-            // destroy a comment
+            // destroy a area
             destroy : function(id) {
                 return $http.delete('/api/areas/' + id);
             }

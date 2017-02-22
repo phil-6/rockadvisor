@@ -38,5 +38,5 @@ class MapController extends Controller
         return $data;
     }
 
-    
+
 }

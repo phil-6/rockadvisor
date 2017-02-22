@@ -30,7 +30,7 @@ class AreasController extends Controller
         }
 
         return response()->json($data);
-        
+
     }
 
     /**
