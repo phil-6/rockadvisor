@@ -30,7 +30,10 @@ class CragsController extends Controller
         $data = [];
         $crags = Crag::all();
         foreach ($crags as  $crag) {
-            $record = ["id" => $crag->id, "name" => $crag->name, "area" => $crag->area->name];
+            $record = [
+                "id" => $crag->id,
+                "name" => $crag->name,
+                "area" => $crag->area->name];
             $data[] = $record;
         }
 
