@@ -64,27 +64,10 @@ div {
     <!-- PAGE TITLE =============================================== -->
     <div class="page-header">
         <h2>Laravel and Angular Single Page Application</h2>
-        <h4>Areaing System</h4>
+        <h4>Areas System</h4>
     </div>
 
-    <!-- NEW AREA FORM =============================================== -->
-    <form ng-submit="submitArea()"> <!-- ng-submit will disable the default form action and use our function -->
 
-        <!-- AUTHOR -->
-        <div class="form-group">
-            <input type="text" class="form-control input-sm" name="author" ng-model="areaData.author" placeholder="Name">
-        </div>
-
-        <!-- AREA TEXT -->
-        <div class="form-group">
-            <input type="text" class="form-control input-lg" name="area" ng-model="areaData.text" placeholder="Say what you have to say">
-        </div>
-
-        <!-- SUBMIT BUTTON -->
-        <div class="form-group text-right">
-            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-        </div>
-    </form>
 
     <!-- LOADING ICON =============================================== -->
     <!-- show loading icon if the loading variable is set to true -->
@@ -93,8 +76,8 @@ div {
     <!-- THE AREAS =============================================== -->
     <!-- hide these areas if the loading variable is true -->
     <div class="area" ng-hide="loading" ng-repeat="area in areas">
-        <h3>Area #{{ area.id }} <small>by {{ area.author }}</h3>
-        <p>{{ area.text }}</p>
+        <h3>Area #{{ area.id }} </h3>
+        <p>{{ area.title }}</p>
 
         <p><a href="#" ng-click="deleteArea(area.id)" class="text-muted">Delete</a></p>
     </div>
