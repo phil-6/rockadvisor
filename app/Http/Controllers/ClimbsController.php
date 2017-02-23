@@ -16,6 +16,11 @@ use App\Climb;
 class ClimbsController extends Controller
 
 {
+
+    //============================================================
+    //GET REQUESTS
+    //============================================================
+
     /**
      * Display a listing of the resource.
      *
@@ -39,6 +44,27 @@ class ClimbsController extends Controller
         return response()->json($data);
 
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  Climb  $climb
+     * @return \Illuminate\Http\Response
+     */
+    // public function show(Area $area)
+    //
+    // }
+
+    public function api_show($climb)
+    {
+        return response()->json($climb);
+    }
+
+
+
+    //============================================================
+    //POST REQUESTS
+    //============================================================
 
     /**
      * Show the form for creating a new resource.
@@ -83,20 +109,7 @@ class ClimbsController extends Controller
         ));*/
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  Area  $area
-     * @return \Illuminate\Http\Response
-     */
-    // public function show(Area $area)
-    //
-    // }
 
-    public function api_show($climb)
-    {
-        return response()->json($climb);
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -152,6 +165,8 @@ class ClimbsController extends Controller
         $climb->delete();
         return response()->json(array('success' => true));
     }
+
+
 
 
 }

@@ -14,6 +14,12 @@ use App\Crag;
 
 class CragsController extends Controller
 {
+
+    //============================================================
+    //GET REQUESTS
+    //============================================================
+
+
     /**
      * Display a listing of the resource.
      *
@@ -40,6 +46,34 @@ class CragsController extends Controller
         return response()->json($data);
 
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  Crag  $crag
+     * @return \Illuminate\Http\Response
+     */
+    // public function show(Area $area)
+    //
+    // }
+
+    public function api_show($crag)
+    {
+        return response()->json($crag);
+    }
+
+
+
+    public function api_getGradesAtCrag($crag)
+    {
+        return $crag->climbTypeIdsAndNames();
+    }
+
+
+
+    //============================================================
+    //POST REQUESTS
+    //============================================================
 
     /**
      * Show the form for creating a new resource.
@@ -89,20 +123,7 @@ class CragsController extends Controller
         ));*/
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  Area  $area
-     * @return \Illuminate\Http\Response
-     */
-    // public function show(Area $area)
-    //
-    // }
 
-    public function api_show($crag)
-    {
-        return response()->json($crag);
-    }
 
     /**
      * Show the form for editing the specified resource.
