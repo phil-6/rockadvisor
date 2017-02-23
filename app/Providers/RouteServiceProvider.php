@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use App\Area;
 use App\Crag;
-//use App\Route;
+use App\Climb;
 use App\Grade;
 
 class RouteServiceProvider extends ServiceProvider
