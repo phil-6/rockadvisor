@@ -35,8 +35,11 @@ Route::post('climbs', 			    'ClimbsController@api_store');
 Route::post('climbs/{climbId}', 	'ClimbsController@api_update');
 Route::delete('climbs/{climbId}', 	'ClimbsController@api_destroy');
 
-Route::get('grades', 			    'gradesController@api_index');
+Route::get('grades', 			    'GradesController@api_index');
 
-
+//====================================================================
+//Custom api routes
+//====================================================================
+Route::get('crags/{cragId}/type',  'CragsController@api_getGradesAtCrag');
 //Routes for maps api
 Route::get('maps_crags',            'MapController@map_api_getAllCrags');

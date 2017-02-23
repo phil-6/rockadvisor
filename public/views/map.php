@@ -124,6 +124,7 @@
                     tidalRange: data.tidalRange,
                     orientation: data.orientation,
                     approachTime: data.approachTime,
+                    typeOfClimbs: data.typeOfClimbs,
                     numberOfClimbs: data.numberOfClimbs
                 });
 
@@ -159,10 +160,11 @@
                 marker.title + '</h1>' +
                 '<div id="infoWindowContent">' +
                 '<p><b>Area: </b>' + marker.area +
-                '</p><p><b>TidalRange: </b>' + ((marker.tidalRange) * 2) + ' hours' +
+                '</p><p><b>Tidal Range: </b>' + ((marker.tidalRange) * 2) + ' hours' +
                 '</p><p><b>Orientation: </b>' + marker.orientation +
-                '</p><p><b>approachTime: </b>' + marker.approachTime + ' minutes' +
+                '</p><p><b>Approach Time: </b>' + marker.approachTime + ' minutes' +
                 '</p><p><b>Climbs: </b>' + marker.numberOfClimbs +
+                '</p><p><b>Climb Type: </b>' + marker.typeOfClimbs +
                 '</p></div>' +
                 '</div>';
 
