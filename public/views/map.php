@@ -104,7 +104,7 @@
             */
 
 
-        var apiUrl = ("http://rockadvisorweb-dev/api/maps_crags");
+        var apiUrl = ("/api/maps_crags");
         var largeInfoWindow = new google.maps.InfoWindow();
 
         /*var cragsBasic = $.getJSON(apiUrl);
