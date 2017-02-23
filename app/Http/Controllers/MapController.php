@@ -29,6 +29,7 @@ class MapController extends Controller
                 "tidalRange" => $crag->tidal_range,
                 "orientation" => $crag->orientation,
                 "approachTime" => $crag->approach_time,
+                "typeOfClimbs" => $crag->climbTypeIdsAndNames(),
                 "numberOfClimbs" => $crag->climbs->count(),
                 "seepage" => $crag->seepage,
                 "midges" => $crag->midges
