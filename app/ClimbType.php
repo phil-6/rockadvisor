@@ -26,5 +26,13 @@ class ClimbType extends Model
         return $this->belongsTo('App\ClimbTypeName', 'climbTypeNameId', 'id');
     }
 
+    /**
+     * Get all grades of type
+     */
+    public function grades()
+    {
+        return $this->hasMany('App\Grade', 'climbTypeId', 'id');
+    }
+
 
 }

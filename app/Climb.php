@@ -24,7 +24,7 @@ class Climb extends Model
 
     public function grade()
     {
-        return $this->hasOne('App\Grade', 'grade_id', 'id');
+        return $this->belongsTo('App\Grade', 'grade_id', 'id');
     }
 
 }

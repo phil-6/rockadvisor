@@ -18,15 +18,6 @@ class Grade extends Model
     protected $fillable = [];
 
 
-    /**
-     * Get all grades of a particular type.
-     */
-//    public function getGradesOfType($gradeType)
-//    {
-//        return $this->hasMany
-//
-//
-//    }
 
     /**
      * Get all the climbs of a particular grade.
@@ -34,5 +25,13 @@ class Grade extends Model
     public function climbsAtGrade()
     {
         return $this->hasMany ('App\Climb', 'grade_id', 'id');
+    }
+
+    /**
+     * Grade has type
+     */
+    public function climbType()
+    {
+        return $this->belongsTo ('App\ClimbType', 'climbTypeId', 'id');
     }
 }
