@@ -27,13 +27,6 @@ class Crag extends Model
         return $this->hasMany('App\Climb', 'crag_id', 'id')->orderBy('name');
     }
 
-    /**
-     * Get the grades for the crag.
-     */
-//    public function grades()
-//    {
-//        return $this->hasManyThrough('App\Route', 'crag_id', 'id');
-//    }
 
 
     /**
@@ -55,4 +48,20 @@ class Crag extends Model
 
     }
 
+    public function gradesAtCrag()
+    {
+        $allGradesAtCrag = [];
+
+        foreach ($this->climbs as $climb){
+            $gradeId = $climb->grade->id;
+
+            if (!in_array($gradeId, $allGradesAtCrag))
+            {
+                $allGradesAtCrag[] = $gradeId;
+            }
+
+        }
+        return array_unique($allGradesAtCrag);
+
+    }
 }
