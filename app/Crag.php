@@ -32,7 +32,7 @@ class Crag extends Model
     /**
      * Returns all pairs of climb type Ids and the climb type names connected with every climb in this crag.
      */
-    public function climbTypeIdAndName()
+    public function climbTypeIdsAndNames()
     {
         $allClimbTypeIdsAndNames = [];
 
