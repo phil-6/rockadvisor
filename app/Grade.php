@@ -34,4 +34,16 @@ class Grade extends Model
     {
         return $this->belongsTo ('App\ClimbType', 'climbTypeId', 'id');
     }
+
+
+    /**
+     * Returns just a pair of climb type Id and the name connected with this Grade.
+     */
+    public function climbTypeIdAndName()
+    {
+        $climbType = $this->climbType;
+        $climbTypeId = $climbType->climbTypeName->id;
+        $climbTypeName = $climbType->climbTypeName->name;
+        return array("id" => $climbTypeId, "name" => $climbTypeName);
+    }
 }

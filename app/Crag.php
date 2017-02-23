@@ -34,4 +34,25 @@ class Crag extends Model
 //    {
 //        return $this->hasManyThrough('App\Route', 'crag_id', 'id');
 //    }
+
+
+    /**
+     * Returns all pairs of climb type Ids and the climb type names connected with every climb in this crag.
+     */
+    public function climbTypeIdAndName()
+    {
+        $allClimbTypeIdsAndNames = [];
+
+        foreach ($this->climbs as $climb) {
+            $climbTypeIdAndName = $climb->grade->climbTypeIdAndName();
+            if (!in_array($climbTypeIdAndName, $allClimbTypeIdsAndNames))
+            {
+                $allClimbTypeIdsAndNames[] = $climbTypeIdAndName;
+            }
+        }
+
+        return array_unique($allClimbTypeIdsAndNames);
+
+    }
+
 }
