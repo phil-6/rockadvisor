@@ -31,9 +31,9 @@ class RouteServiceProvider extends ServiceProvider
 
         parent::boot();
         Route::model('areaId', Area::class);
-        Route::model('cragId', Crag::class);
-        Route::model('routeId', Route::class);
+        Route::model('cragId', Crag::class);        
         Route::model('gradeId', Grade::class);
+        Route::model('climbId', Climb::class);
     }
 
     /**
