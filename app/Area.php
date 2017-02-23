@@ -15,7 +15,7 @@ class Area extends Model
      */
     public function crags()
     {
-        return $this->hasMany('App\Crag', 'parentArea', 'id')->orderBy('name');
+        return $this->hasMany('App\Crag', 'area_id', 'id')->orderBy('name');
     }
     /**
      * Get the area that this area is part of.
