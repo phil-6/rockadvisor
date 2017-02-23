@@ -20,9 +20,9 @@
 
     <!-- ANGULAR -->
     <!-- all angular resources will be loaded from the /public folder -->
-    <script src="js/controllers/mainCtrl.js"></script> <!-- load our controller -->
-    <script src="js/services/areaService.js"></script> <!-- load our service -->
-    <script src="js/app.js"></script> <!-- load our application -->
+    <script src="angularApp/js/controllers/mainCtrl.js"></script> <!-- load our controller -->
+    <script src="angularApp/js/services/areaService.js"></script> <!-- load our service -->
+    <script src="angularApp/js/app.js"></script> <!-- load our application -->
 
 
 </head>
