@@ -211,23 +211,41 @@
     // Then redraws all Trad Crags
     function filterTrad() {
         for (var i = 0; i < markers.length; i++) {
-            markers[i].setMap(null);
-        }
-        for (var i = 0; i < markers.length; i++) {
-            if (markers[i].type == 'Trad') {
+            var display = false;
+
+            for (var j = 0; j < markers[i].typeOfClimbs.length; j++) {
+
+                console.log(markers[i].typeOfClimbs[j]);
+                if (markers[i].typeOfClimbs[j]['id'] == 1) {
+                    display = true;
+                }
+            }
+
+            if (display) {
                 markers[i].setMap(map);
+            } else {
+                markers[i].setMap(null);
             }
         }
     }
     // This function will loop through the listings and hide them all.
     // Then redraws all Sport Crags
     function filterSport() {
-        for (var i = 0; i < markers.length; i++) {
-            markers[i].setMap(null);
-        }
-        for (var i = 0; i < markers.length; i++) {
-            if (markers[i].type == 'Sport') {
+       for (var i = 0; i < markers.length; i++) {
+            var display = false;
+
+            for (var j = 0; j < markers[i].typeOfClimbs.length; j++) {
+
+                console.log(markers[i].typeOfClimbs[j]);
+                if (markers[i].typeOfClimbs[j]['id'] == 2) {
+                    display = true;
+                }
+            }
+
+            if (display) {
                 markers[i].setMap(map);
+            } else {
+                markers[i].setMap(null);
             }
         }
     }
