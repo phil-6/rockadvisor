@@ -18,3 +18,7 @@ Route::get('/', function() {
 Route::get('/map', function() {
     return View::make('map');
 });
+
+Route::get('/areas', function() {
+    return View::make('areasIndex');
+});

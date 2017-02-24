@@ -3,7 +3,7 @@
 <!doctype html>
 <html lang="en">
 <head> <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Index</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"> <!-- load bootstrap via cdn -->
@@ -20,18 +20,18 @@
 
     <!-- ANGULAR -->
     <!-- all angular resources will be loaded from the /public folder -->
-    <script src="angularApp/controllers/mainCtrl.js"></script> <!-- load our controller -->
+    <script src="angularApp/controllers/areasCtrl.js"></script> <!-- load our controller -->
     <script src="angularApp/services/areaService.js"></script> <!-- load our service -->
     <script src="angularApp/app.js"></script> <!-- load our application -->
 
 
 </head>
 <!-- declare our angular app and controller -->
-<body class="container" ng-app="areaApp" ng-controller="mainController"> <div class="col-md-8 col-md-offset-2">
+<body class="container" ng-app="areaApp" ng-controller="areasController"> <div class="col-md-8 col-md-offset-2">
 
     <!-- PAGE TITLE =============================================== -->
     <div class="page-header">
-        <h2>Index</h2>
+        <h2>Areas Index</h2>
     </div>
 
     <!-- LOADING ICON =============================================== -->
