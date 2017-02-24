@@ -21,7 +21,7 @@ class CragsTableSeeder extends Seeder
         $c->lng =  -4.1012290;
         $c->name = "Anemone Wall";
         $c->description = "A cool crag";
-        $c->tidal_range = 0.5;
+        $c->tidal_range = 1;
         $c->orientation = "ssw";
         $c->approach_time = 20;
         $c->seepage = false;
@@ -175,7 +175,7 @@ class CragsTableSeeder extends Seeder
         $c->lng =  -4.2955400;
         $c->name = "Castaway Cove";
         $c->description = "A cool crag";
-        $c->tidal_range = 1.5;
+        $c->tidal_range = 2;
         $c->orientation = "n";
         $c->approach_time = 40;
         $c->seepage = false;
@@ -189,7 +189,7 @@ class CragsTableSeeder extends Seeder
         $c->lng =  -4.0372120;
         $c->name = "Caswell Bay - Far South Slab";
         $c->description = "A cool crag";
-        $c->tidal_range = 1.5;
+        $c->tidal_range = 2;
         $c->orientation = "s";
         $c->approach_time = 15;
         $c->seepage = false;
@@ -217,7 +217,7 @@ class CragsTableSeeder extends Seeder
         $c->lng =  -4.0368930;
         $c->name = "Caswell Bay - Yellow Flecked Slab";
         $c->description = "A cool crag";
-        $c->tidal_range = 1.5;
+        $c->tidal_range = 2;
         $c->orientation = "s";
         $c->approach_time = 10;
         $c->seepage = false;
@@ -273,7 +273,7 @@ class CragsTableSeeder extends Seeder
         $c->lng =  -3.9983500;
         $c->name = "Crab Island";
         $c->description = "A cool crag";
-        $c->tidal_range = 2.5;
+        $c->tidal_range = 3;
         $c->orientation = "s";
         $c->approach_time = 15;
         $c->seepage = false;
@@ -287,7 +287,7 @@ class CragsTableSeeder extends Seeder
         $c->lng =  -4.21423;
         $c->name = "Culver Hole";
         $c->description = "A cool crag";
-        $c->tidal_range = 2.5;
+        $c->tidal_range = 3;
         $c->orientation = "s";
         $c->approach_time = 15;
         $c->seepage = false;
