@@ -134,14 +134,17 @@ class ClimbsController extends Controller
         //
     }
 
-    public function api_update($climb)
+    public function api_update(Request $request, $id)
     {
-        $climb->name = Request::input('name');
-        $climb->description = Request::input('description');
-        $climb->length = Request::input('length');
-        //$climb->grade_id = $request->input('grade_id');
+
+        $climb = climb::find($id);
+
+        $climb->name = $request->input('name');
+        $climb->description = $request->input('description');
+        $climb->length = $request->input('length');
+        $climb->grade_id = $request->input('grade_id');
         //$climb->topo_id = $request->input('topo_id');
-        $climb->crag_id = Request::input('crag_id');
+        $climb->crag_id = $request->input('crag_id');
 
         $climb->save();
 
