@@ -251,12 +251,13 @@
     // This function will loop through the listings and hide them all.
     // Then redraws all Non-Tidal Crags
     function filterTidal() {
-        for (var i = 0; i < markers.length; i++) {
-            markers[i].setMap(null);
-        }
-        for (var i = 0; i < markers.length; i++) {
-            if (!(markers[i].tidalRange)) {
+       for (var i = 0; i < markers.length; i++) {
+            var display = !markers[i].tidalRange;
+
+            if (display) {
                 markers[i].setMap(map);
+            } else {
+                markers[i].setMap(null);
             }
         }
     }
