@@ -186,8 +186,6 @@
             infowindow.addListener('closeclick', function () {
                 infowindow.marker = null;
             });
-
-            console.log(marker.tidalRange);
         }
     }
 
