@@ -29,6 +29,8 @@ class AreasController extends Controller
             $data[] = $record;
         }
 
+        sleep(2);
+
         return response()->json($data);
 
     }
