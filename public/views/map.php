@@ -150,7 +150,6 @@
     // one infowindow which will open at the marker that is clicked, and populate based
     // on that markers position.
 
-
     function populateInfoWindow(marker, infowindow) {
         // Check to make sure the infowindow is not already opened on this marker.
         if (infowindow.marker != marker) {
@@ -171,7 +170,7 @@
                 marker.title + '</h1>' +
                 '<div id="infoWindowContent">' +
                 '<p><b>Area: </b>' + marker.area +
-                '</p><p><b>Tidal Range: </b>' + ((marker.tidalRange) * 2) + ' hours' +
+                (marker.tidalRange ? '</p><p><b>Tidal Range: </b>' + ((marker.tidalRange) * 2) + ' hours' : "") + 
                 '</p><p><b>Orientation: </b>' + marker.orientation +
                 '</p><p><b>Approach Time: </b>' + marker.approachTime + ' minutes' +
                 '</p><p><b>Climbs: </b>' + marker.numberOfClimbs +
@@ -187,6 +186,8 @@
             infowindow.addListener('closeclick', function () {
                 infowindow.marker = null;
             });
+
+            console.log(marker.tidalRange);
         }
     }
 
