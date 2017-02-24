@@ -98,18 +98,16 @@ class AreasController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  Area $area
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+    // public function update(Request $request, $area)
+    // {
+    //     //
+    // }
 
-    public function api_update(Request $request, $id)
+    public function api_update(Request $request, $area)
     {
-        $area = Area::find($id);
-
         $area->name = $request->input('name');
         $area->parentArea = $request->input('parentArea');
 
