@@ -220,6 +220,26 @@ class ClimbsTableSeeder extends Seeder
         $r->save();
 
 
+        $r = new Climb();
+        $r->name = "Fake Climb ASDA";
+        $r->description = "Start as for Great Chimney then step onto the 
+        slab at a good hold. Climb the slab just to the right of the right 
+        edge of the chimney, with some unnerving moves.";
+        $r->length = 18;
+        $r->grade_id = 167; //hvs, 4c
+        //$r->topo_id = ??; 
+        $r->crag_id = 22;
+        $r->save();
 
+        $r = new Climb();
+        $r->name = "Fake Climb ASDA";
+        $r->description = "Start as for Great Chimney then step onto the 
+        slab at a good hold. Climb the slab just to the right of the right 
+        edge of the chimney, with some unnerving moves.";
+        $r->length = 15;
+        $r->grade_id = 420; //hvs, 4c
+        //$r->topo_id = ??; 
+        $r->crag_id = 22;
+        $r->save();
     }
 }

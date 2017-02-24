@@ -154,6 +154,17 @@
     function populateInfoWindow(marker, infowindow) {
         // Check to make sure the infowindow is not already opened on this marker.
         if (infowindow.marker != marker) {
+
+            var climbTypesString = ""
+
+            if (marker.typeOfClimbs.length == 0) {
+                climbTypesString = "Unknown";
+            } else if (marker.typeOfClimbs.length == 1) {
+                climbTypesString = marker.typeOfClimbs[0]['name'];            
+            } else {
+                climbTypesString = "Mixed";   
+            }
+
             var infoWindowContent = '<div id="content">' +
 
                 '<h1 id="infoWindowHeading" class="infoWindowHeading">' +
@@ -164,7 +175,7 @@
                 '</p><p><b>Orientation: </b>' + marker.orientation +
                 '</p><p><b>Approach Time: </b>' + marker.approachTime + ' minutes' +
                 '</p><p><b>Climbs: </b>' + marker.numberOfClimbs +
-                '</p><p><b>Climb Type: </b>' + marker.typeOfClimbs +
+                '</p><p><b>Climb Type(s): </b>' + climbTypesString +
                 '</p></div>' +
                 '</div>';
 

@@ -69,6 +69,10 @@ class CragsController extends Controller
         return $crag->gradesAtCrag();
     }
 
+    public function api_climbTypeIdsAndNames($crag)
+    {
+        return $crag->climbTypeIdsAndNames();
+    }
 
 
     //============================================================

@@ -44,7 +44,7 @@ class Crag extends Model
             }
         }
 
-        return array_unique($allClimbTypeIdsAndNames);
+        return $allClimbTypeIdsAndNames;
 
     }
 
