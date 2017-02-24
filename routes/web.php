@@ -22,3 +22,7 @@ Route::get('/map', function() {
 Route::get('/areas', function() {
     return View::make('areasIndex');
 });
+
+Route::get('/crags', function() {
+    return View::make('cragsIndex');
+});
