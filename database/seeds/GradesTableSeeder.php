@@ -16,7 +16,7 @@ class GradesTableSeeder extends Seeder
 
         //British Trad
 		//Technical Grade Array
-		$technical_grades = array(
+		$technicalGrades = array(
 			"3a",
 			"3b",
 			"3c",
@@ -35,7 +35,7 @@ class GradesTableSeeder extends Seeder
 			null);
 		
 		//Severity Grade Array
-		$severity_grades = array(
+		$severityGrades = array(
 			"M",
 			"D",
 			"HD",
@@ -63,24 +63,24 @@ class GradesTableSeeder extends Seeder
 		
 		$g = new Grade();
         $g->climbTypeId = 1;
-        $g->technical_grade = null;
-        $g->severity_grade = null;
+        $g->technicalGrade = null;
+        $g->severityGrade = null;
         $g->score = null;
         $g->save();
 
-        foreach( $severity_grades as $sevGradeValue){
-			foreach( $technical_grades as $techGradeValue){
+        foreach( $severityGrades as $sevGradeValue){
+			foreach( $technicalGrades as $techGradeValue){
 				$g = new Grade();
 				$g->climbTypeId = 1;
-				$g->technical_grade = $techGradeValue;
-				$g->severity_grade = $sevGradeValue;
+				$g->technicalGrade = $techGradeValue;
+				$g->severityGrade = $sevGradeValue;
 				$g->score = null;
 				$g->save();
 			}
 		}
 		
 		//French Sport
-		$french_sport_grades = array(
+		$frenchSportGrades = array(
 			"1", "2", "2+",
             "3", "3+", "3a", "3a+", "3b", "3b+", "3c", "3c+",
             "4", "4+", "4a", "4a+", "4b", "4b+", "4c", "4c+",
@@ -91,17 +91,17 @@ class GradesTableSeeder extends Seeder
 			"9a", "9a+", "9b", "9b+", "9c", "9c+", null
 		);
 		
-		foreach( $french_sport_grades as $frSportGrade){
+		foreach( $frenchSportGrades as $frSportGrade){
 			$g = new Grade();
 			$g->climbTypeId = 2;
-			$g->technical_grade = $frSportGrade;
-			$g->severity_grade = null;
+			$g->technicalGrade = $frSportGrade;
+			$g->severityGrade = null;
 			$g->score = null;
 			$g->save();
 		}
 			
 		//Bouldering V-Grades
-		$bouldering_vgrades = array(
+		$boulderingVgrades = array(
 			"VE", "VM", "VB", "V0-", "V0", "V0+", "V1",
 			"V2", "V2+", "V3", "V3+", "V4", "V4+", "V5", 
 			"V5+", "V6", "V6+", "V7", "V7+", "V8", "V8+", 
@@ -109,28 +109,28 @@ class GradesTableSeeder extends Seeder
 			"V16", "V17", null
 		);
 		
-		foreach( $bouldering_vgrades as $vBoulderingGrade){
+		foreach( $boulderingVgrades as $vBoulderingGrade){
 			$g = new Grade();
 			$g->climbTypeId = 3;
-			$g->technical_grade = $vBoulderingGrade;
-			$g->severity_grade = null;
+			$g->technicalGrade = $vBoulderingGrade;
+			$g->severityGrade = null;
 			$g->score = null;
 			$g->save();
 		}
 		
 		//Bouldering Font
-		$bouldering_font_grades = array(
+		$boulderingFontGrades = array(
 			"f2", "f2+", "f3", "f3+", "f4", "f4+", "f5",
 			"f5+", "f6A", "f6A+", "f6B", "f6B+", "f6C", "f6C+",
 			"f7A", "f7A+", "f7B", "f7B+", "f7C", "f7C+", "f8A",
 			"f8A+", "f8B", "f8B+", "f8C", "f8C+", "f9A", null
 		);
 		
-		foreach( $bouldering_font_grades as $fontBoulderingGrade){
+		foreach( $boulderingFontGrades as $fontBoulderingGrade){
 			$g = new Grade();
 			$g->climbTypeId = 4;
-			$g->technical_grade = $fontBoulderingGrade;
-			$g->severity_grade = null;
+			$g->technicalGrade = $fontBoulderingGrade;
+			$g->severityGrade = null;
 			$g->score = null;
 			$g->save();
 		}

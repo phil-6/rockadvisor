@@ -3,3 +3,4 @@
  */
 var app = angular.module('areaApp', ['areasCtrl', 'areaService']);
 var app = angular.module('cragApp', ['cragsCtrl', 'cragService']);
+var app = angular.module('gradeApp', ['gradesCtrl', 'gradeService']);

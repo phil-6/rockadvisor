@@ -16,8 +16,8 @@ class CreateGradesTable extends Migration
         Schema::create('grades', function (Blueprint $table){
             $table->increments('id');
             $table->integer('climbTypeId')->unsigned();
-            $table->char('technical_grade', 10)->nullable();
-            $table->char('severity_grade', 10)->nullable();
+            $table->char('technicalGrade', 10)->nullable();
+            $table->char('severityGrade', 10)->nullable();
             $table->integer('score')->unsigned()->nullable();
 
             //system timestamps

@@ -26,3 +26,7 @@ Route::get('/areas', function() {
 Route::get('/crags', function() {
     return View::make('cragsIndex');
 });
+
+Route::get('/grades', function() {
+    return View::make('gradesIndex');
+});
