@@ -33,12 +33,16 @@ p.filterLabel {
 }
 
 #map {
-    bottom: 0px;
     height: 100%;
+    margin: 0;
+    padding: 0;
+
+    /*bottom: 0px;
     left: 188px;
     position: absolute;
-    right: 0px;
+    right: 0px;*/
 }
+
 
 .options-box {
     background: #fff;
