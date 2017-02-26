@@ -88,11 +88,14 @@
                 mapTypeControlOptions: {
                     position: google.maps.ControlPosition.LEFT_BOTTOM
                 },
-               /* fullscreenControl: true,
-                fullscreenControlOptions: {
-                    position: google.maps.ControlPosition.RIGHT_TOP
-                },*/
                 mapTypeId: 'terrain'
+
+            });
+            map.get('streetView').setOptions({
+                addressControlOptions: {
+                    position: google.maps.ControlPosition.LEFT_BOTTOM
+                },
+                fullscreenControl: false
             });
 
             var apiUrl = ("/api/maps_crags");
@@ -360,6 +363,8 @@
 
 
     </script>
+
+
 
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEqJHTFtiiqM5Sq3sQJZ2JyTB4bEqOCIg&v=3&callback=initMap">
