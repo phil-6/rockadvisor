@@ -35,6 +35,39 @@ html, body {
     padding-right: 5px;
 }
 
+/*
+#showAllUI:hover,
+#hideAllUI:hover,
+#filterTradUI:hover,
+#filterSportUI:hover,
+#filterTidalUI:hover {
+    background-color: #F82;
+    border: 2px solid #F82;
+!*    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.3);
+    cursor: pointer;
+    !*float: left;*!
+    margin-bottom: 3px;
+    text-align: center;*!
+}
+#showAllUI:active,
+ #hideAllUI:active,
+ #filterTradUI:active,
+ #filterSportUI:active,
+ #filterTidalUI:active {
+     background-color: #639;
+     border: 2px solid #639;
+!*     border-radius: 3px;
+     box-shadow: 0 2px 6px rgba(0,0,0,.3);
+     cursor: pointer;
+     !*float: left;*!
+     margin-bottom: 3px;
+     text-align: center;*!
+ }
+*/
+
+
+/*Info Window Tweaks*/
 .infoWindowHeading{
     font-family: 'Raleway', 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }

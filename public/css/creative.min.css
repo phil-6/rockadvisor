@@ -11,7 +11,7 @@
 
 /*
 **Colours**
-Orange: FF8020 (255/128/32)
+Orange: FF8020 (255/128/32) F82
 Green: 20FF80
 Purple: 639
 -
@@ -447,17 +447,17 @@ header .header-content .header-content-inner p {
 .btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open > .dropdown-toggle.btn-primary {
     color: #fff;
     background-color: #FF7106;
-    border-color: #FF7106
+    border-color: #FF7106;
 }
 
 .btn-primary.disabled, .btn-primary.disabled.active, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled], .btn-primary[disabled].active, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
     background-color: #FF8020;
-    border-color: #FF8020
+    border-color: #FF8020;
 }
 
 .btn-primary .badge {
     color: #FF8020;
-    background-color: #fff
+    background-color: #fff;
 }
 
 .btn {

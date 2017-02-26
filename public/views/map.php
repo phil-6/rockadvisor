@@ -367,6 +367,11 @@
             filterSportUI.addEventListener('click', filterSport);
             filterTidalUI.addEventListener('click', filterTidal);
         }
+        $(".controlDiv").on('click', 'div', function(e) {
+            $(this).parent().find('div.active').removeClass('active');
+            $(this).addClass('active');
+        });
+
     </script>
 
 
