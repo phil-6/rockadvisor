@@ -108,7 +108,7 @@ aside {
 
 .navbar-default .navbar-header .navbar-brand {
     color: #FF8020;
-    font-weight: 700;
+    font-weight: 900;
     text-transform: uppercase
 }
 
@@ -154,15 +154,15 @@ aside {
     }
 
     .navbar-default .navbar-header .navbar-brand:focus, .navbar-default .navbar-header .navbar-brand:hover {
-        color: #639;
+        color: #F82;
     }
 
     .navbar-default .nav > li > a, .navbar-default .nav > li > a:focus {
-        color: #639;
+        color: #000;
     }
 
     .navbar-default .nav > li > a:focus:hover, .navbar-default .nav > li > a:hover {
-        color: #639;
+        color: #F82;
     }
 
     .navbar-default.affix {
