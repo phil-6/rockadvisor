@@ -39,3 +39,12 @@ html, body {
     font-family: 'Raleway', 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
+.infoWindowHeading{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.infoWindowContent p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

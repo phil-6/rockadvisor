@@ -168,9 +168,9 @@
 
                 var infoWindowContent = '<div id="content">' +
 
-                    '<h1 id="infoWindowHeading" class="infoWindowHeading">' +
-                    marker.title + '</h1>' +
-                    '<div id="infoWindowContent">' +
+                    '<h2 id="infoWindowHeading" class="infoWindowHeading">' +
+                    marker.title + '</h2>' +
+                    '<div id="infoWindowContent" class="infoWindowContent">' +
                     '<p><b>Area: </b>' + marker.area +
                     (marker.tidalRange ? '</p><p><b>Tidal Range: </b>' + ((marker.tidalRange) * 2) + ' hours' : "") +
                     '</p><p><b>Orientation: </b>' + marker.orientation +

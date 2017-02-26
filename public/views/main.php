@@ -113,40 +113,40 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
+<!--                    <a href="/map">-->
+                        <div class="service-box">
+                            <i class="fa fa-4x fa-code text-primary sr-icons"></i>
+                            <h3>Development</h3>
+                            <p class="text-muted">A university project in its earliest stages. There are a LOT more features coming soon.</p>
+                        </div>
+<!--                    </a>-->
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <a href="#contact">
+                        <div class="service-box">
+                            <i class="fa fa-4x fa-pencil-square-o text-primary sr-icons"></i>
+                            <h3>Contribute</h3>
+                            <p class="text-muted">Our guidebook is 100% crowd sourced, if you’d like to contribute let us know.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
                     <a href="/map">
                         <div class="service-box">
                             <i class="fa fa-4x fa-map-marker text-primary sr-icons"></i>
-                            <h3>Find a Crag</h3>
-                            <p class="text-muted">Find a crag on the map and use the guidebook app to go climbing!</p>
+                            <h3>Map</h3>
+                            <p class="text-muted">We took a very boring map and added all of our favorite crags! Contribute to add your own.</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
-                    <a href="#contact">
+<!--                    <a href="#feedback">-->
                         <div class="service-box">
-                            <i class="fa fa-4x fa-question-circle-o text-primary sr-icons"></i>
-                            <h3>Missing Crag?</h3>
-                            <p class="text-muted">Contributors are adding missing crags all the time.</p>
+                            <i class="fa fa-4x fa-mobile text-primary sr-icons"></i>
+                            <h3>App</h3>
+                            <p class="text-muted">WA guidebook is no use if you can’t use it at the crag, so we developed a handy little app.</p>
                         </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <a href="#contact">
-                        <div class="service-box">
-                            <i class="fa fa-4x fa-plus-circle text-primary sr-icons"></i>
-                            <h3>Help Out</h3>
-                            <p class="text-muted">We're always looking new awesome people like you to help.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <a href="#feedback">
-                        <div class="service-box">
-                            <i class="fa fa-4x fa-pencil-square-o text-primary sr-icons"></i>
-                            <h3>Feedback</h3>
-                            <p class="text-muted">We want your feedback! What have we missed?</p>
-                        </div>
-                    </a>
+<!--                    </a>-->
                 </div>
             </div>
         </div>
