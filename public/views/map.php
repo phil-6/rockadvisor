@@ -56,16 +56,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="../#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#howItWorks">How It Works</a>
+                        <a class="page-scroll" href="../#howItWorks">How It Works</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#feedback">Feedback</a>
+                        <a class="page-scroll" href="../#feedback">Feedback</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contribute</a>
+                        <a class="page-scroll" href="../#contact">Contribute</a>
                     </li>
                 </ul>
             </div>
