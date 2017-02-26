@@ -16,9 +16,7 @@ class ClimbsTableSeeder extends Seeder
 
         $r = new Climb();
         $r->name = "Great Chimney";
-        $r->description = "Start at the left end of the ledge at the foot of the slab. 
-        Gain the chimney from the rib bounding the slab on the left and climb it, 
-        taking care with blocks at the top";
+        $r->description = "Start at the left end of the ledge at the foot of the slab. Gain the chimney from the rib bounding the slab on the left and climb it, taking care with blocks at the top";
         $r->length = 23;
         $r->grade_id = 150; //vs, 4b
         //$r->topo_id = ??;
@@ -27,9 +25,7 @@ class ClimbsTableSeeder extends Seeder
 
         $r = new Climb();
         $r->name = "Honesty";
-        $r->description = "Start as for Great Chimney then step onto the 
-        slab at a good hold. Climb the slab just to the right of the right 
-        edge of the chimney, with some unnerving moves.";
+        $r->description = "Start as for Great Chimney then step onto the slab at a good hold. Climb the slab just to the right of the right edge of the chimney, with some unnerving moves.";
         $r->length = 18;
         $r->grade_id = 167; //hvs, 4c
         //$r->topo_id = ??; 
@@ -38,8 +34,7 @@ class ClimbsTableSeeder extends Seeder
 
         $r = new Climb();
         $r->name = "PickPocket";
-        $r->description = "An artificial climb directly up the slab between 
-        Great Chimney and Anemone Wall. Using the crack is forbidden.";
+        $r->description = "An artificial climb directly up the slab between Great Chimney and Anemone Wall. Using the crack is forbidden.";
         $r->length = 21;
         $r->grade_id = 169; //hvs, 5b
         //$r->topo_id = ??; 
@@ -48,8 +43,7 @@ class ClimbsTableSeeder extends Seeder
 
         $r = new Climb();
         $r->name = "Anemone Wall";
-        $r->description = "Start where the crevasse closes and traverse left to the 
-        obvious diagonal crack. When it peters out at a pocket, climb direct.";
+        $r->description = "Start where the crevasse closes and traverse left to the obvious diagonal crack. When it peters out at a pocket, climb direct.";
         $r->length = 21;
         $r->grade_id = 151; //vs, 4c
         //$r->topo_id = ??; 
@@ -58,8 +52,7 @@ class ClimbsTableSeeder extends Seeder
 
         $r = new Climb();
         $r->name = "Alternate";
-        $r->description = "Follow discontinuous cracks and water-worn grooves right 
-        of Anemone Wall directly to the top.";
+        $r->description = "Follow discontinuous cracks and water-worn grooves right of Anemone Wall directly to the top.";
         $r->length = 18;
         $r->grade_id = 113; //s
         //$r->topo_id = ??; 
@@ -229,7 +222,7 @@ class ClimbsTableSeeder extends Seeder
         $r->length = 24;
         $r->grade_id = 202; //e2, 5c
         //$r->topo_id = ??; 
-        $r->crag_id = 22;
+        $r->crag_id = 25;
         $r->save();
 		
 		$r = new Climb();
@@ -238,7 +231,7 @@ class ClimbsTableSeeder extends Seeder
         $r->length = 24;
         $r->grade_id = 235; //e4, 6a
         //$r->topo_id = ??; 
-        $r->crag_id = 22;
+        $r->crag_id = 25;
         $r->save();
 		
 		$r = new Climb();
@@ -247,7 +240,7 @@ class ClimbsTableSeeder extends Seeder
         $r->length = 24;
         $r->grade_id = 420; //e6 6b / 7b+ but calum aint smart
         //$r->topo_id = ??; 
-        $r->crag_id = 22;
+        $r->crag_id = 25;
         $r->save();
 		
 		$r = new Climb();
@@ -256,7 +249,7 @@ class ClimbsTableSeeder extends Seeder
         $r->length = 24;
         $r->grade_id = 420; //7b but calum aint smart
         //$r->topo_id = ??; 
-        $r->crag_id = 22;
+        $r->crag_id = 25;
         $r->save();
 		
 		$r = new Climb();
@@ -265,7 +258,7 @@ class ClimbsTableSeeder extends Seeder
         $r->length = 23;
         $r->grade_id = 420; //e5, 6b but calum aint smart
         //$r->topo_id = ??; 
-        $r->crag_id = 22;
+        $r->crag_id = 25;
         $r->save();
 		
 		$r = new Climb();
@@ -274,7 +267,7 @@ class ClimbsTableSeeder extends Seeder
         $r->length = 21;
         $r->grade_id = 420; //8a+ but calum aint smart
         //$r->topo_id = ??; 
-        $r->crag_id = 22;
+        $r->crag_id = 25;
         $r->save();
 		
 		$r = new Climb();
@@ -283,7 +276,7 @@ class ClimbsTableSeeder extends Seeder
         $r->length = 15;
         $r->grade_id = 420; //7a but calum aint smart
         //$r->topo_id = ??; 
-        $r->crag_id = 22;
+        $r->crag_id = 25;
         $r->save();
 		
 		$r = new Climb();
@@ -292,7 +285,7 @@ class ClimbsTableSeeder extends Seeder
         $r->length = 15;
         $r->grade_id = 420; //7a but calum aint smart
         //$r->topo_id = ??; 
-        $r->crag_id = 22;
+        $r->crag_id = 25;
         $r->save();
 		
 		$r = new Climb();
@@ -301,7 +294,7 @@ class ClimbsTableSeeder extends Seeder
         $r->length = 12;
         $r->grade_id = 420; //7a but calum aint smart
         //$r->topo_id = ??; 
-        $r->crag_id = 22;
+        $r->crag_id = 25;
         $r->save();
 		
 		$r = new Climb();
@@ -310,7 +303,7 @@ class ClimbsTableSeeder extends Seeder
         $r->length = 27;
         $r->grade_id = 420; //e3, 6a but calum aint smart
         //$r->topo_id = ??; 
-        $r->crag_id = 22;
+        $r->crag_id = 25;
         $r->save();
     }
 }

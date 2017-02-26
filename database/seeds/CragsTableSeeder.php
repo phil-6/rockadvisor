@@ -16,6 +16,7 @@ class CragsTableSeeder extends Seeder
 
         //first 20 alphabetically then some other popular crags
 
+        //Crag Id = 1
         $c = new Crag();
         $c->lat = 51.5654710;
         $c->lng =  -4.1012290;
@@ -30,6 +31,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 12;
         $c->save();
 
+        //Crag Id = 2
         $c = new Crag();
         $c->lat = 51.5619470;
         $c->lng =  -4.0782820;
@@ -44,6 +46,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 12;
         $c->save();
 
+        //Crag Id = 3
         $c = new Crag();
         $c->lat = 51.5861193;
         $c->lng =  -4.0580303;
@@ -58,6 +61,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 14;
         $c->save();
 
+        //Crag Id = 4
         $c = new Crag();
         $c->lat = 51.5658020;
         $c->lng =  -4.3023240;
@@ -72,6 +76,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 6;
         $c->save();
 
+        //Crag Id = 5
         $c = new Crag();
         $c->lat = 51.5654740;
         $c->lng =  -4.3026560;
@@ -86,6 +91,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 6;
         $c->save();
 
+        //Crag Id = 6
         $c = new Crag();
         $c->lat = 51.5692640;
         $c->lng =  -4.2941050;
@@ -100,6 +106,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 6;
         $c->save();
 
+        //Crag Id = 7
         $c = new Crag();
         $c->lat = 51.5610530;
         $c->lng =  -4.2823130;
@@ -114,6 +121,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 7;
         $c->save();
 
+        //Crag Id = 8
         $c = new Crag();
         $c->lat = 51.5427040;
         $c->lng =  -4.2362980;
@@ -128,6 +136,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 8;
         $c->save();
 
+        //Crag Id = 9
         $c = new Crag();
         $c->lat = 51.5620600;
         $c->lng =  -4.0800950;
@@ -142,6 +151,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 12;
         $c->save();
 
+        //Crag Id = 10
         $c = new Crag();
         $c->lat = 51.5618230;
         $c->lng =  -4.0827030;
@@ -156,6 +166,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 12;
         $c->save();
 
+        //Crag Id = 11
         $c = new Crag();
         $c->lat = 51.5623040;
         $c->lng =  -4.0792050;
@@ -170,6 +181,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 12;
         $c->save();
 
+        //Crag Id = 12
         $c = new Crag();
         $c->lat = 51.5690450;
         $c->lng =  -4.2955400;
@@ -184,6 +196,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 6;
         $c->save();
 
+        //Crag Id = 13
         $c = new Crag();
         $c->lat = 51.5682950;
         $c->lng =  -4.0372120;
@@ -198,6 +211,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 13;
         $c->save();
 
+        //Crag Id = 14
         $c = new Crag();
         $c->lat = 51.5687150;
         $c->lng =  -4.0366110;
@@ -212,6 +226,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 13;
         $c->save();
 
+        //Crag Id = 15
         $c = new Crag();
         $c->lat = 51.5684800;
         $c->lng =  -4.0368930;
@@ -226,6 +241,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 13;
         $c->save();
 
+        //Crag Id = 16
         $c = new Crag();
         $c->lat = 51.5612890;
         $c->lng =  -4.2816520;
@@ -240,6 +256,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 7;
         $c->save();
 
+        //Crag Id = 17
         $c = new Crag();
         $c->lat = 51.6466250;
         $c->lng =  -4.0649930;
@@ -254,6 +271,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 14;
         $c->save();
 
+        //Crag Id = 18
         $c = new Crag();
         $c->lat = 51.5720600;
         $c->lng =  -3.9906000;
@@ -268,6 +286,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 13;
         $c->save();
 
+        //Crag Id = 19
         $c = new Crag();
         $c->lat = 51.5646300;
         $c->lng =  -3.9983500;
@@ -282,6 +301,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 13;
         $c->save();
 
+        //Crag Id = 20
         $c = new Crag();
         $c->lat = 51.53930;
         $c->lng =  -4.21423;
@@ -300,6 +320,7 @@ class CragsTableSeeder extends Seeder
         //below are popular crags
         //or ones that I like
         //anything goes really.
+        //Crag Id = 21
         $c = new Crag();
         $c->lat = 51.569941;
         $c->lng =  -4.11139;
@@ -314,6 +335,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 11;
         $c->save();
 
+        //Crag Id = 22
         $c = new Crag();
         $c->lat = 51.568593;
         $c->lng =  -4.122941;
@@ -328,6 +350,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 10;
         $c->save();
 
+        //Crag Id = 23
         $c = new Crag();
         $c->lat = 51.549429;
         $c->lng =  -4.253615;
@@ -342,6 +365,7 @@ class CragsTableSeeder extends Seeder
         $c->area_id = 8;
         $c->save();
 
+        //Crag Id = 24
         $c = new Crag();
         $c->lat = 51.564963;
         $c->lng =  -4.092269;
@@ -355,8 +379,9 @@ class CragsTableSeeder extends Seeder
         $c->sheltered = true;
         $c->area_id = 12;
         $c->save();
-		
-		$c = new Crag();
+
+        //Crag Id = 25
+        $c = new Crag();
         $c->lat = 51.566724;
         $c->lng =  -4.3003771;
         $c->name = "Trial Wall";
