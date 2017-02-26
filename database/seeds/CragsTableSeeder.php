@@ -355,6 +355,20 @@ class CragsTableSeeder extends Seeder
         $c->sheltered = true;
         $c->area_id = 12;
         $c->save();
+		
+		$c = new Crag();
+        $c->lat = 51.566724;
+        $c->lng =  -4.3003771;
+        $c->name = "Trial Wall";
+        $c->description = "A cool crag";
+        $c->tidal_range = null;
+        $c->orientation = "w";
+        $c->approach_time = 10;
+        $c->seepage = false;
+        $c->midges = false;
+        $c->sheltered = false;
+        $c->area_id = 6;
+        $c->save();
 
 
     }
