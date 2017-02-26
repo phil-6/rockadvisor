@@ -49,9 +49,9 @@
     <!-- hide these grades if the loading variable is true -->
     <div class="grade" ng-hide="loading" ng-repeat="grade in grades">
         <p>ID: {{ grade.id }} </p>
-        <p>TypeID {{ grade.climbTypeId }}</p>
-        <p>Tech: {{ grade.technical_grade }}</p>
-        <p>Sev: {{ grade.severity_grade }}</p>
+        <p>TypeID: {{ grade.climbTypeId }}</p>
+        <p>Tech: {{ grade.technicalGrade }}</p>
+        <p>Sev: {{ grade.severityGrade }}</p>
 
     </div>
 
