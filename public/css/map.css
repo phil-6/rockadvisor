@@ -7,14 +7,15 @@
        * element that contains the map. */
 #map {
     height: 100%;
+    /*margin-top: 50px;*/
 }
-/* Optional: Makes the sample page fill the window. */
+/* Makes the map fill the window. */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
-
+/* CSS for filter buttons*/
 #showAllUI, #hideAllUI, #filterTradUI, #filterSportUI, #filterTidalUI {
     background-color: #fff;
     border: 2px solid #fff;
@@ -33,4 +34,8 @@ html, body {
     line-height: 25px;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+.infoWindowHeading{
+    font-family: 'Raleway', 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }

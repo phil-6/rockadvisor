@@ -21,10 +21,14 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,600,700,900|Roboto:300,400,500,700,900" rel="stylesheet">
-
+    <!-- Bootstrap Core CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- Theme CSS -->
     <link href="../css/map.css" rel="stylesheet">
+    <link href="../css/creative.min.css" rel="stylesheet">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,6 +41,38 @@
 </head>
 
 <body>
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top ">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="/">Rock Advisor</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#howItWorks">How It Works</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#feedback">Feedback</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contribute</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
     <div id="map" class="map"></div>
     <script>
         var map;
@@ -49,7 +85,14 @@
                 center: {lat: 51.568552, lng: -4.123009},
                 zoom: 12,
                 mapTypeControl: true,
-                fullscreenControl: true
+                mapTypeControlOptions: {
+                    position: google.maps.ControlPosition.LEFT_BOTTOM
+                },
+               /* fullscreenControl: true,
+                fullscreenControlOptions: {
+                    position: google.maps.ControlPosition.RIGHT_TOP
+                },*/
+                mapTypeId: 'terrain'
             });
 
             var apiUrl = ("/api/maps_crags");
@@ -106,7 +149,7 @@
                 var climbTypesString = ""
 
                 if (marker.typeOfClimbs.length == 0) {
-                    climbTypesString = "Unknown";
+                    climbTypesString = null;
                 } else if (marker.typeOfClimbs.length == 1) {
                     climbTypesString = marker.typeOfClimbs[0]['name'];
                 } else {
@@ -123,7 +166,7 @@
                     '</p><p><b>Orientation: </b>' + marker.orientation +
                     '</p><p><b>Approach Time: </b>' + marker.approachTime + ' minutes' +
                     '</p><p><b>Climbs: </b>' + marker.numberOfClimbs +
-                    '</p><p><b>Climb Type(s): </b>' + climbTypesString +
+                    (climbTypesString  ? '</p><p><b>Climb Type(s): </b>' + climbTypesString : "") +
                     '</p></div>' +
                     '</div>';
 
