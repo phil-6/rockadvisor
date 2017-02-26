@@ -7,7 +7,6 @@
        * element that contains the map. */
 #map {
     height: 100%;
-    /*margin-top: 50px;*/
 }
 /* Makes the map fill the window. */
 html, body {
@@ -39,3 +38,4 @@ html, body {
 .infoWindowHeading{
     font-family: 'Raleway', 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
+

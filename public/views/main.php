@@ -59,10 +59,10 @@
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#howItWorks">How It Works</a>
+                        <a class="page-scroll" href="/map">Crag Map</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#feedback">Feedback</a>
+                        <a class="page-scroll" href="/index">Crag Index</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contribute</a>
@@ -79,7 +79,7 @@
             <div class="header-content-inner">
                 <h1 id="homeHeading">Rock Advisor</h1>
                 <hr>
-                <p>Helping you to get out and climb more!</p>
+                <p>A Climbing Guidebook for the Digital Age</p>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
         </div>
@@ -91,7 +91,7 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">We're building the new generation of guidebook</h2>
                     <hr class="light">
-                    <p class="text-faded">Rock Advisor is your digital companion for find the information about where you want to climb. Starting as a final year university project but with aspirations to go a lot further but to do that we need your help.</p>
+                    <p class="text-faded">Rock Advisor is your digital companion to find the information about where you want to climb. Starting as a final year university project but with aspirations to go a lot further but to do that we need your help.</p>
                     <div class="about-buttons">
                         <a href="/map" class="page-scroll btn btn-default btn-xl sr-button">Crag Map</a>
                         <a href="#howItWorks" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
@@ -254,9 +254,10 @@
         <section id="feedback">
              <div class="container text-center">
                 <div class="call-to-action">
-                    <h2>Feedback</h2>
-                    <p>Reviews, feature suggestions, bugs or just fancy dropping us a message? We'd love to hear form you just complete this imaginary form.</p>
-                    <a href="#about" class="btn btn-default btn-xl sr-button">Broken Form</a>
+                    <h2>Contribute</h2>
+                    <hr class="primary">
+                    <p>We need your help to make Rock Advisor work. In the not too distant future you will be able to add and update the information that we use. We've started with a very limited selection of crags and an even more limited selection of routes. We need you to help grow our database. If you're interested in lending a hand then fill in the form below and we'll get in touch when we need your help!</p>
+                    <a href="#about" class="btn btn-default btn-xl sr-button">I want to help!</a>
                 </div>
             </div>
         </section>
@@ -268,11 +269,11 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Let's Get In Touch!</h2>
                     <hr class="primary">
-                    <p>Ready to start contributing. That's awesome! Drop us an email at the address below and we'll get in touch.</p>
+                    <p>If there's anything else drop us an email at the address below and we'll be in touch.</p>
                 </div>
                 <div class="col-lg-4 col-lg-offset-4 text-center">
                     <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                    <p><a href="mailto:contribute.rockadvisor@elasticparsley.uk">contribute.rockadvisor@elasticparsley.uk</a></p>
+                    <p><a href="mailto:rockadvisor@elasticparsley.uk">rockadvisor@elasticparsley.uk</a></p>
                 </div>
             </div>
         </div>

@@ -62,7 +62,7 @@
                         <a class="page-scroll" href="../#howItWorks">How It Works</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="../#feedback">Feedback</a>
+                        <a class="page-scroll" href="/index">Crag Index</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="../#contact">Contribute</a>
@@ -95,7 +95,8 @@
             });
            /**
             * Move Street View Address Controls from underneath nav bar.
-            * Currently breaks control formatting for unknown reason.
+            * Control formatting is broken for unknown reason.
+            * Likely due to a bootstrap conflict - street view disabled for now.
             */
             /*map.get('streetView').setOptions({
                 addressControlOptions: {
