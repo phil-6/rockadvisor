@@ -233,7 +233,8 @@ header .header-content .header-content-inner h1 {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 50px;
-    color: #8020FF;
+    color: #639;
+            /*#8020FF;*/
     text-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
@@ -284,9 +285,35 @@ header .header-content .header-content-inner p {
     margin-top: 0
 }
 
+
+
 .service-box {
     max-width: 400px;
-    margin: 50px auto 0
+    padding: 10px;
+    margin: 50px auto 0;
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transition: all 1s ease-in-out;
+}
+
+.service-box::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: opacity 1s ease-in-out;
+}
+
+.service-box:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.service-box:hover::after{
+    opacity: 1;
 }
 
 @media (min-width: 992px) {
@@ -375,6 +402,12 @@ header .header-content .header-content-inner p {
 .no-gutter > [class*=col-] {
     padding-right: 0;
     padding-left: 0
+}
+
+.about-buttons .btn{
+    margin-left: 10px;
+    margin-right: 10px;
+    /*width: 160px;*/
 }
 
 .btn-default {

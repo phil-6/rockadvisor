@@ -61,13 +61,13 @@
                     <a class="page-scroll" href="#about">About</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#services">Services</a>
+                    <a class="page-scroll" href="#howItWorks">How It Works</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#portfolio">Portfolio</a>
+                    <a class="page-scroll" href="#feedback">Feedback</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
+                    <a class="page-scroll" href="#contact">Contribute</a>
                 </li>
             </ul>
         </div>
@@ -91,20 +91,23 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">We're building a the new generation of guidebook</h2>
+                <h2 class="section-heading">We're building the new generation of guidebook</h2>
                 <hr class="light">
                 <p class="text-faded">Rock Advisor is your digital companion for find the information about where you want to climb. Starting as a final year university project but with aspirations to go a lot further but to do that we need your help.</p>
-                <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+                <div class="about-buttons">
+                    <a href="/map" class="page-scroll btn btn-default btn-xl sr-button">Crag Map</a>
+                    <a href="#howItWorks" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!--<section id="services">
+<section id="howItWorks">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">At Your Service</h2>
+                <h2 class="section-heading">How Rock Advisor Works</h2>
                 <hr class="primary">
             </div>
         </div>
@@ -112,37 +115,46 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                    <h3>Sturdy Templates</h3>
-                    <p class="text-muted">Our templates are updated regularly so they don't break.</p>
-                </div>
+                <a href="/map">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-map-marker text-primary sr-icons"></i>
+                        <h3>Find a Crag</h3>
+                        <p class="text-muted">Find a crag on the map and use the guidebook app to go climbing!</p>
+                    </div>
+                </a>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-                    <h3>Ready to Ship</h3>
-                    <p class="text-muted">You can use this theme as is, or you can make changes!</p>
-                </div>
+                <a href="#contact">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-question-circle-o text-primary sr-icons"></i>
+                        <h3>Missing Crag?</h3>
+                        <p class="text-muted">Contributors are adding missing crags all the time.</p>
+                    </div>
+                </a>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-                    <h3>Up to Date</h3>
-                    <p class="text-muted">We update dependencies to keep things fresh.</p>
-                </div>
+                <a href="#contact">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-plus-circle text-primary sr-icons"></i>
+                        <h3>Help Out</h3>
+                        <p class="text-muted">We're always looking new awesome people like you to help.</p>
+                    </div>
+                </a>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                    <h3>Made with Love</h3>
-                    <p class="text-muted">You have to make your websites with love these days!</p>
-                </div>
+                <a href="#feedback">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-pencil-square-o text-primary sr-icons"></i>
+                        <h3>Feedback</h3>
+                        <p class="text-muted">We want your feedback! What have we missed?</p>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
 </section>
 
+<!--
 <section class="no-padding" id="portfolio">
     <div class="container-fluid">
         <div class="row no-gutter popup-gallery">
@@ -241,12 +253,15 @@
 </section>
 -->
 <aside class="bg-dark">
-    <div class="container text-center">
-        <div class="call-to-action">
-            <h2>Free Download at Start Bootstrap!</h2>
-            <a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">Download Now!</a>
+    <section id="feedback">
+         <div class="container text-center">
+            <div class="call-to-action">
+                <h2>Feedback</h2>
+                <p>Reviews, feature suggestions, bugs or just fancy dropping us a message? We'd love to hear form you just complete this imaginary form.</p>
+                <a href="#about" class="btn btn-default btn-xl sr-button">Broken Form</a>
+            </div>
         </div>
-    </div>
+    </section>
 </aside>
 
 <section id="contact">
@@ -255,15 +270,11 @@
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <h2 class="section-heading">Let's Get In Touch!</h2>
                 <hr class="primary">
-                <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                <p>Ready to start contributing. That's awesome! Drop us an email at the address below and we'll get in touch.</p>
             </div>
-            <div class="col-lg-4 col-lg-offset-2 text-center">
-                <i class="fa fa-phone fa-3x sr-contact"></i>
-                <p>123-456-6789</p>
-            </div>
-            <div class="col-lg-4 text-center">
+            <div class="col-lg-4 col-lg-offset-4 text-center">
                 <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
+                <p><a href="mailto:contribute.rockadvisor@elasticparsley.uk">contribute.rockadvisor@elasticparsley.uk</a></p>
             </div>
         </div>
     </div>
