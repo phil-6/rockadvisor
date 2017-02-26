@@ -85,18 +85,24 @@
                 center: {lat: 51.568552, lng: -4.123009},
                 zoom: 12,
                 mapTypeControl: true,
+
                 mapTypeControlOptions: {
                     position: google.maps.ControlPosition.LEFT_BOTTOM
                 },
+                streetViewControl: false,
                 mapTypeId: 'terrain'
 
             });
-            map.get('streetView').setOptions({
+           /**
+            * Move Street View Address Controls from underneath nav bar.
+            * Currently breaks control formatting for unknown reason.
+            */
+            /*map.get('streetView').setOptions({
                 addressControlOptions: {
-                    position: google.maps.ControlPosition.LEFT_BOTTOM
+                    position: google.maps.ControlPosition.BOTTOM_CENTER
                 },
                 fullscreenControl: false
-            });
+            });*/
 
             var apiUrl = ("/api/maps_crags");
             var largeInfoWindow = new google.maps.InfoWindow();
@@ -360,10 +366,7 @@
             filterSportUI.addEventListener('click', filterSport);
             filterTidalUI.addEventListener('click', filterTidal);
         }
-
-
     </script>
-
 
 
     <script async defer
