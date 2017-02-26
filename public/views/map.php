@@ -3,7 +3,7 @@
 
 
 
-<html>
+<html lang="en">
 <head>
     <!--/**
     * Created by PhpStorm.
@@ -12,6 +12,8 @@
     * Time: 20:34
     */-->
 
+    <!--
+    --Commented ready for bootstrapping
     <style>
         html,
         body {
@@ -64,26 +66,60 @@
             text-align: center;
             width: 168px;
         }
-    </style>
+    </style>-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Rock Advisor</title>
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,600,700,900|Roboto:300,400,500,700,900" rel="stylesheet">
+
+
+    <!-- Theme CSS -->
+    <link href="../css/map.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
 <body>
-<div class="container">
-    <div class="options-box">
-        <h1>Gower Crags</h1>
-        <div>
-            <input class="map-filters" id="show-listings" type="button" value="Show All Listings">
-            <input class="map-filters" id="hide-listings" type="button" value="Hide All Listings">
-            <input class="map-filters" id="filterTrad" type="button" value="Trad Crags">
-            <input class="map-filters" id="filterSport" type="button" value="Sport Crags">
-            <input class="map-filters" id="filterTidal" type="button" value="Non-Tidal Crags">
-            <p class="filterLabel">Tidal Range</p>
-            <input class="map-filters" id="filterTidalRange" type="range" value="50">
-        </div>
+    <div class="container">
+
+
+                <div class="options-box">
+                    <h1>Rock Advisor</h1>
+                    <div>
+                        <input class="map-filters" id="show-listings" type="button" value="Show All">
+                        <input class="map-filters" id="hide-listings" type="button" value="Hide All">
+                        <input class="map-filters" id="filterTrad" type="button" value="Trad Crags">
+                        <input class="map-filters" id="filterSport" type="button" value="Sport Crags">
+                        <input class="map-filters" id="filterTidal" type="button" value="Non-Tidal Crags">
+                        <p class="filterLabel">Tidal Range</p>
+                        <input class="map-filters" id="filterTidalRange" type="range" value="50">
+                    </div>
+
+                </div>
+
+
+                <div id="map" class="map"></div>
+
+
     </div>
-    <div id="map"></div>
-</div>
+
+
 <script>
     var map;
 
@@ -98,10 +134,6 @@
             mapTypeControl: true
         });
 
-            /**
-            *These are the locations that will be shown to the user.
-            *Normally we'd have these in a database instead.
-            */
 
 
         var apiUrl = ("/api/maps_crags");
@@ -287,6 +319,12 @@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEqJHTFtiiqM5Sq3sQJZ2JyTB4bEqOCIg&v=3&callback=initMap">
 </script>
+    
+
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+
 
 </body>
 </html>
