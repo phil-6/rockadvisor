@@ -45,3 +45,6 @@ Route::get('crags/{cragId}/type',  'CragsController@api_climbTypeIdsAndNames');
 Route::get('crags/{cragId}/grades',  'CragsController@api_getGradesAtCrag');
 //Routes for maps api
 Route::get('maps_crags',            'MapController@map_api_getAllCrags');
+
+//EMAILS!
+Route::post('/send', 'EmailController@send');
