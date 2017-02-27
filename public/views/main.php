@@ -45,6 +45,8 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+    <!-- Google Analytics -->
+    <script src="../js/analytics.js"></script>
 
 </head>
 
@@ -276,7 +278,7 @@
                     in lending a hand then fill in the form below and we'll get in touch when we need your help!</p>
                 <a href="#contributeModal"
                    role="button"
-                   class="btn btn-default btn-xl sr-button"
+                   class="btn btn-default btn-xl sr-button btn-zoom"
                    data-toggle="modal">I want to help!</a>
             </div>
         </div>
@@ -407,6 +409,9 @@
 
 <!-- Theme JavaScript -->
 <script src="../js/creative-theme/creative.min.js"></script>
+
+
+
 
 </body>
 
