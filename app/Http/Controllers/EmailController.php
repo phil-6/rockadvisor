@@ -23,8 +23,7 @@ class EmailController extends Controller
 
         });
 
-        return response()->json(['sucess' => true]);
-        
+        return response()->json(['success' => true]);
 
     }
 

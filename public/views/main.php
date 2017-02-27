@@ -316,7 +316,7 @@
                 </h3>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal contributeForm">
+                <form class="form-horizontal" id="contributeForm">
                     <div class="form-group">
                         <label>Name</label>
                         <input class="form-control required"
@@ -325,7 +325,7 @@
                                data-trigger="manual"
                                data-content="Must be at least 3 characters long, and must only contain letters."
                                type="text"
-                               id="name">
+                               id="name" name="name">
                     </div>
                     <div class="form-group">
                         <label>Message</label>
@@ -333,7 +333,7 @@
                                   placeholder="Your message here.."
                                   data-placement="top"
                                   data-trigger="manual"
-                                  id="messageContent">
+                                  id="messageContent" name="messageContent">
                         </textarea>
                     </div>
                     <div class="form-group">
@@ -344,18 +344,21 @@
                                data-trigger="manual"
                                data-content="Must be a valid e-mail address (user@gmail.com)"
                                type="text"
-                               id="email">
+                               id="email" name="email">
                     </div>
                     <div class="form-group">
                         <button type="submit"
                                 class="btn btn-success btn-primary btn-lg center-block"
-                                id="contributeSubmit">
+                                id="contributeSubmitButton">
                             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                             &nbsp; Done!
                         </button>
                         <p class="help-block pull-left text-danger hide"
-                           id="form-error">
+                           id="contributeSubmitFormError">
                             &nbsp; The form is not valid.
+                        </p>
+                        <p id="contributeSubmitFormProgress">
+                            LIAMDATA
                         </p>
                     </div>
                 </form>
@@ -372,24 +375,27 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $(".contributeForm").submit(function() { return false; });
-        $("#contributeSubmit").on("click", function(){
+        $("#contributeForm").submit(function() { return false; });
+        $("#contributeSubmitButton").on("click", function(){
             /*var email = $("#email");
             var msg = $("#message");
             var name = $("#name");*/
 
-            $("#contributeSubmit").replaceWith("<em>sending...</em>");
+            $("#contributeSubmitButton").hide();
+            $("#contributeSubmitFormProgress").text("please wait");
 
             $.ajax({
                 type: 'POST',
                 url: 'api/send',
-                data: $(".contributeForm").serialize(),
-                success: function(data) {
-                    if(data == "true") {
-                        $(".contributeForm").fadeOut("fast", function(){
-                            $(this).before("<p><strong>Success! thanks :)</strong></p>");
-                        });
-                    }
+                data: $("#contributeForm").serialize(),
+                success: function(result, status, xhr) {
+
+                    // TODO: This is not done
+                    // if(data == "true") {
+                    //     $(".contributeForm").fadeOut("fast", function(){
+                    //         $(this).before("<p><strong>Success! thanks :)</strong></p>");
+                    //     });
+                    // }
                 }
             });
         });
