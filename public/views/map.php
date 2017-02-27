@@ -62,7 +62,7 @@
                         <a class="page-scroll" href="../#howItWorks">How It Works</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/index">Crag Index</a>
+                        <a class="page-scroll" href="/crags">Crag Index</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="../#contact">Contribute</a>
