@@ -214,8 +214,9 @@ class ClimbsTableSeeder extends Seeder
 
 		
 		
-		//Calum fucks things up
 		
+		
+		//Trial Wall Crags
 		$r = new Climb();
         $r->name = "The Adulteress";
         $r->description = "Climb the crack just right of the left arete of the main face, through an overhang, then traverse right along an obvious break and climb the wide crack to the top.";
@@ -238,7 +239,7 @@ class ClimbsTableSeeder extends Seeder
         $r->name = "Skull Attack";
         $r->description = "A stunningly technical wall climb, currently fully bolted. Start right of Blackman's Pinch and left of the Crime and Punishment groove below an overlap. Climb to and surmount the overlap to a ledge. Move left to a thin crack. Moving slightly right at a good thin break, make a baffling sequence on non-existent flakes to gain a prominent groove. Mantle awkwardly into this, topping out to bolt belay.";
         $r->length = 24;
-        $r->grade_id = 420; //e6 6b / 7b+ but calum aint smart
+        $r->grade_id = 486; //e6 6b, f7b+, gone with the sport grade rather than trad
         //$r->topo_id = ??; 
         $r->crag_id = 25;
         $r->save();
@@ -247,7 +248,7 @@ class ClimbsTableSeeder extends Seeder
         $r->name = "Retrobution";
         $r->description = "Plough on up the Crime and Punishment groove until holds run out, continue into Skull Attack to finish.";
         $r->length = 24;
-        $r->grade_id = 420; //7b but calum aint smart
+        $r->grade_id = 485; //f7b
         //$r->topo_id = ??; 
         $r->crag_id = 25;
         $r->save();
@@ -256,7 +257,7 @@ class ClimbsTableSeeder extends Seeder
         $r->name = "Crime and Punishment";
         $r->description = "Fine sustained climbing. Start below a scoop and 3 BRs in the middle of the wall. Gain the scoop, then follow the shallow groove to its top. Traverse right along the obvious break to thin cracks, PR, and climb these (hard) to good jambs beneath the overhang, old PR. The crack then becomes less helpul when pushing for the top.";
         $r->length = 23;
-        $r->grade_id = 420; //e5, 6b but calum aint smart
+        $r->grade_id = 252; //e5, 6b
         //$r->topo_id = ??; 
         $r->crag_id = 25;
         $r->save();
@@ -265,7 +266,7 @@ class ClimbsTableSeeder extends Seeder
         $r->name = "Black Wall";
         $r->description = "The original and direct finish now regeared. A vicious, fingery problem, especially when the direct finish is taken. Start 3m right of Crime and Punishment at a line of 'twizzles'. Make a series of difficult moves to below the bulge. Desperate moves past the remains of an edge lead over the overlap to the top. The route had lost a hold at the top but it has been successfully redpointed in ";
         $r->length = 21;
-        $r->grade_id = 420; //8a+ but calum aint smart
+        $r->grade_id = 490; //f8a+
         //$r->topo_id = ??; 
         $r->crag_id = 25;
         $r->save();
@@ -274,7 +275,7 @@ class ClimbsTableSeeder extends Seeder
         $r->name = "Inch Pinch";
         $r->description = "A pitch, up a short crack on the right side of the crag. Boulder up directly to a BR. Gain a crack with difficulty and climb it. Continue more easily to the top.";
         $r->length = 15;
-        $r->grade_id = 420; //7a but calum aint smart
+        $r->grade_id = 483; //f7a
         //$r->topo_id = ??; 
         $r->crag_id = 25;
         $r->save();
@@ -283,7 +284,7 @@ class ClimbsTableSeeder extends Seeder
         $r->name = "The Hant";
         $r->description = "Follow Inch Pinch to a good lay-away hold, then move right and over the overlap with difficulty. Follow a shallow groove and crack to the top.";
         $r->length = 15;
-        $r->grade_id = 420; //7a but calum aint smart
+        $r->grade_id = 483; //f7a
         //$r->topo_id = ??; 
         $r->crag_id = 25;
         $r->save();
@@ -292,7 +293,7 @@ class ClimbsTableSeeder extends Seeder
         $r->name = "Tribulations";
         $r->description = "The right arete of the buttress, moving left at the top.";
         $r->length = 12;
-        $r->grade_id = 420; //7a but calum aint smart
+        $r->grade_id = 483; //f7a
         //$r->topo_id = ??; 
         $r->crag_id = 25;
         $r->save();
@@ -301,7 +302,7 @@ class ClimbsTableSeeder extends Seeder
         $r->name = "Shakeout";
         $r->description = "A girdle of Trial Wall from right to left. Start at the right edge of the wall, at the obvious breakline below the bulges. Follow the break past 2BRs to join Crime and Punishment. Move up for 2m and continue leftwards, BR, to finish up The Adulteress. A hanging stance can be taken on on Crime And Punishment.";
         $r->length = 27;
-        $r->grade_id = 420; //e3, 6a but calum aint smart
+        $r->grade_id = 219; //e3, 6a
         //$r->topo_id = ??; 
         $r->crag_id = 25;
         $r->save();
