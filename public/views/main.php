@@ -331,7 +331,7 @@
                                   placeholder="Your message here.."
                                   data-placement="top"
                                   data-trigger="manual"
-                                  id="message">
+                                  id="messageContent">
                         </textarea>
                     </div>
                     <div class="form-group">

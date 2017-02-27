@@ -11,9 +11,9 @@ class EmailController extends Controller
     {
         $name = $request->input('name');
         $email = $request->input('email');
-        $message = $request->input('message');
+        $messageContent = $request->input('messageContent');
 
-        Mail::send('emails.contribute', ['name' => $name, 'email' => $email, 'message' => $message], function ($m)
+        Mail::send('emails.contribute', ['name' => $name, 'email' => $email, 'messageContent' => $messageContent], function ($m)
         {
 
             $m->from('521289@swansea.ac.uk', 'Phil Reynolds');
