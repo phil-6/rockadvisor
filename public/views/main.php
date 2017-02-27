@@ -380,7 +380,7 @@
 
             $.ajax({
                 type: 'POST',
-                url: 'formProcess.php',
+                url: 'api/send',
                 data: $(".contributeForm").serialize(),
                 success: function(data) {
                     if(data == "true") {

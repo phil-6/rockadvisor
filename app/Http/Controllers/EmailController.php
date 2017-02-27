@@ -8,19 +8,20 @@ class EmailController extends Controller
 {
     public function send(Request $request)
     {
-        $title = $request->input('title');
-        $content = $request->input('content');
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $message = $request->input('message');
 
-        Mail::send('emails.send', ['title' => $title, 'content' => $content], function ($message)
+        Mail::send('emails.contribute', ['name' => $name, 'email' => $email, 'message' => $message], function ($message)
         {
 
-            $message->from('me@gmail.com', 'Christian Nwamba');
+            $message->from('521289@swansea.ac.uk', 'Phil Reynolds');
 
-            $message->to('chrisn@scotch.io');
+            $message->to("L.P.OReilly@swansea.ac.uk");
 
         });
 
-        return response()->json(['message' => 'Request completed']);
+        return response()->json(['sucess' => true]);
     }
 
 }
