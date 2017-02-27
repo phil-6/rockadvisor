@@ -4,6 +4,6 @@
 <h1>Contribute Email</h1>
 <p>Name: {{$name}}</p>
 <p>Email: {{$email}}</p>
-<p>Message: {{$message}}</p>
+<p>Message: {{$messageContent}}</p>
 </body>
 </html>
