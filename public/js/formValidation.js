@@ -7,13 +7,13 @@ $.fn.goValidate = function() {
         $inputs = $form.find('input:text');
 
     var validators = {
-        name: {
+        formName: {
             regex: /^[A-Za-z]{3,}$/
         },
         pass: {
             regex: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/
         },
-        email: {
+        formEmail: {
             regex: /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/
         },
         phone: {

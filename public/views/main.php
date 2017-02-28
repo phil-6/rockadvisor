@@ -45,8 +45,23 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <!-- Angular Form -->
+    <script src="../angularApp/app.js"></script>
+    <script src="../angularApp/controllers/emailCtrl.js"></script>
+
     <!-- Google Analytics -->
-    <script src="../js/analytics.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-92612290-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 
 </head>
 
@@ -295,7 +310,7 @@
             </div>
             <div class="col-lg-4 col-lg-offset-4 text-center">
                 <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                <p><a href="mailto:rockadvisor@elasticparsley.uk">rockadvisor@elasticparsley.uk</a></p>
+                <p><a href="mailto:rockadvisor@elasticparsley.uk">RockAdvisor@ElasticParsley.uk</a></p>
             </div>
         </div>
     </div>
@@ -306,18 +321,27 @@
      tabindex="-1"
      role="dialog"
      aria-labelledby="contributeModalLabel"
-     aria-hidden="true">
+     aria-hidden="true"
+     ng-app="contributeApp">
     <div class="modal-dialog">
         <div class="modal-content col-sm-12">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="contributeModalLabel">
+                <h3 id="contributeModalLabel" class="text-center">
                     Want to help out? Let us know!
                 </h3>
             </div>
-            <div class="modal-body">
-                <form class="form-horizontal" id="contributeForm">
-                    <div class="form-group">
+            <div class="modal-body"
+                 ng-controller="contributeCtrl">
+                <form class="form-horizontal"
+                      id="contributeForm"
+                      ng-submit="submit(contributeForm)"
+                      name="contributeForm"
+                      method="post"
+                      action=""
+                      role="form">
+                    <div class="form-group"
+                         ng-class="{ 'has-error': contributeForm.formName.$invalid && submitted }">
                         <label>Name</label>
                         <input class="form-control required"
                                placeholder="Your name"
@@ -325,18 +349,24 @@
                                data-trigger="manual"
                                data-content="Must be at least 3 characters long, and must only contain letters."
                                type="text"
-                               id="name" name="name">
+                               id="formName"
+                               name="formName"
+                               ng-model="formData.formName">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group"
+                         ng-class="{ 'has-error': contributeForm.formMessage.$invalid && submitted }">
                         <label>Message</label>
                         <textarea class="form-control"
-                                  placeholder="Your message here.."
+                                  placeholder="Write us a message.."
                                   data-placement="top"
                                   data-trigger="manual"
-                                  id="messageContent" name="messageContent">
+                                  id="formMessage"
+                                  name="formMessage"
+                                  ng-model="formData.formMessage">
                         </textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group"
+                         ng-class="{ 'has-error': contributeEmail.formEmail.$invalid && submitted }">
                         <label>E-Mail</label>
                         <input class="form-control email"
                                placeholder="email@you.com (so that we can contact you)"
@@ -344,21 +374,34 @@
                                data-trigger="manual"
                                data-content="Must be a valid e-mail address (user@gmail.com)"
                                type="text"
-                               id="email" name="email">
+                               id="formEmail"
+                               name="formEmail"
+                               ng-model="formData.formEmail">
                     </div>
                     <div class="form-group">
                         <button type="submit"
                                 class="btn btn-success btn-primary btn-lg center-block"
-                                id="contributeSubmitButton">
+                                id="contributeSubmitButton"
+                                ng-hide="submitButtonHidden">
                             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                            &nbsp; Done!
+                            &nbsp Done!
                         </button>
-                        <p class="help-block pull-left text-danger hide"
+                        <!--<p class="help-block pull-left text-danger hide"
                            id="contributeSubmitFormError">
                             &nbsp; The form is not valid.
+                        </p>-->
+                        <p id="formProgress"
+                           class="text-center"
+                           ng-show="progressMessageShowing">
+                            Sending...
                         </p>
-                        <p id="contributeSubmitFormProgress">
-                            LIAMDATA
+                        <p
+                           class="text-center bg-success"
+                           ng-show="resultShowing"
+                           style="padding: 15px; margin: 0;">
+                            Success!
+                        </p><!--ng-class="result" >{{ resultMessage }}< -->
+
                         </p>
                     </div>
                 </form>
@@ -373,37 +416,6 @@
     </div>
 </div>
 
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("#contributeForm").submit(function() { return false; });
-        $("#contributeSubmitButton").on("click", function(){
-            /*var email = $("#email");
-            var msg = $("#message");
-            var name = $("#name");*/
-
-            $("#contributeSubmitButton").hide();
-            $("#contributeSubmitFormProgress").text("please wait");
-
-            $.ajax({
-                type: 'POST',
-                url: 'api/send',
-                data: $("#contributeForm").serialize(),
-                success: function(result, status, xhr) {
-
-                    // TODO: This is not done
-                    // if(data == "true") {
-                    //     $(".contributeForm").fadeOut("fast", function(){
-                    //         $(this).before("<p><strong>Success! thanks :)</strong></p>");
-                    //     });
-                    // }
-                }
-            });
-        });
-    });
-</script>
-
-
-
 <!-- Bootstrap Core JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -416,9 +428,5 @@
 <!-- Theme JavaScript -->
 <script src="../js/creative-theme/creative.min.js"></script>
 
-
-
-
 </body>
-
 </html>

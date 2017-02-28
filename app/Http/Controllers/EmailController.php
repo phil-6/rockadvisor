@@ -9,17 +9,17 @@ class EmailController extends Controller
 {
     public function send(Request $request)
     {
-        $name = $request->input('name');
-        $email = $request->input('email');
-        $messageContent = $request->input('messageContent');
+        $formName = $request->input('formName');
+        $formEmail = $request->input('formEmail');
+        $formMessage = $request->input('formMessage');
 
-        Mail::send('emails.contribute', ['name' => $name, 'email' => $email, 'messageContent' => $messageContent], function ($m)
+        Mail::send('emails.contribute', ['formName' => $formName, 'formEmail' => $formEmail, 'formMessage' => $formMessage], function ($m)
         {
 
-            $m->from('521289@swansea.ac.uk', 'Phil Reynolds');
+            $m->from('RockAdvisor@ElasticParsley.uk', 'Phil Reynolds');
 
-            $m->to("L.P.OReilly@swansea.ac.uk");
-            $m->subject("Fun!!!");
+            $m->to("Contributor.RockAdvisor@ElasticParsley.uk", 'Phil Reynolds');
+            $m->subject("Can I help out please?");
 
         });
 
