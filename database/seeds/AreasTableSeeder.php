@@ -103,5 +103,17 @@ class AreasTableSeeder extends Seeder
 		$a->name = "North Wales";
         $a->parentArea = 1;
         $a->save();
+		
+		//Id = 16
+		$a = new Area();
+		$a->name = "Snowdonia";
+        $a->parentArea = 15;
+        $a->save();
+		
+		//Id = 17
+		$a = new Area();
+		$a->name = "Llanberis";
+        $a->parentArea = 1;
+        $a->save();
     }
 }

@@ -407,7 +407,7 @@ class CragsTableSeeder extends Seeder
         $c->seepage = false;
         $c->midges = true;
         $c->sheltered = false;
-        $c->area_id = 15;
+        $c->area_id = 17;
         $c->save();
 
 
