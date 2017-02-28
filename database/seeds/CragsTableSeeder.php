@@ -394,6 +394,21 @@ class CragsTableSeeder extends Seeder
         $c->sheltered = false;
         $c->area_id = 6;
         $c->save();
+		
+		//Crag Id = 26
+        $c = new Crag();
+        $c->lat = 53.089797;
+        $c->lng =  -4.049363;
+        $c->name = "Cromlech Boulders";
+        $c->description = "Hidden Wall Area";
+        $c->tidal_range = null;
+        $c->orientation = "n";
+        $c->approach_time = 15;
+        $c->seepage = false;
+        $c->midges = true;
+        $c->sheltered = false;
+        $c->area_id = 15;
+        $c->save();
 
 
     }

@@ -97,5 +97,11 @@ class AreasTableSeeder extends Seeder
         $a->name = "Gower Inland Crags";
         $a->parentArea = 3;
         $a->save();
+		
+		//Id = 15
+		$a = new Area();
+		$a->name = "North Wales";
+        $a->parentArea = 1;
+        $a->save();
     }
 }

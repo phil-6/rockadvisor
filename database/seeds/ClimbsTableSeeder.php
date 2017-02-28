@@ -622,5 +622,70 @@ Pitch 2
         //$r->topo_id = ??; 
         $r->crag_id = 8;
         $r->save();
+		
+		
+		//Cromlech
+		$r = new Climb();
+        $r->name = "Pump Traverse";
+        $r->description = "the slopey traverse starting at the prow on the far righthand side of the roadside face and finishing in the juggy alcove";
+        $r->length = 5;
+        $r->grade_id = 449; //v4
+        //$r->topo_id = ??; 
+        $r->crag_id = 26;
+        $r->save();
+		
+		$r = new Climb();
+        $r->name = "The Pump Traverse Low";
+        $r->description = "its in the bouldering guide (which I don't have)";
+        $r->length = 6;
+        $r->grade_id = 451; //v5
+        //$r->topo_id = ??; 
+        $r->crag_id = 26;
+        $r->save();
+		
+		$r = new Climb();
+        $r->name = "Bog Flake";
+        $r->description = "obvious flake next to the prow - above the stepping stones";
+        $r->length = 5;
+        $r->grade_id = 442; //v0
+        //$r->topo_id = ??; 
+        $r->crag_id = 26;
+        $r->save();
+		
+		$r = new Climb();
+        $r->name = "Prow Righthand";
+        $r->description = "No description has been contributed, yet";
+        $r->length = 6;
+        $r->grade_id = 445; //v2
+        //$r->topo_id = ??; 
+        $r->crag_id = 26;
+        $r->save();
+		
+		$r = new Climb();
+        $r->name = "Prow Lefthand";
+        $r->description = "No description has been contributed, yet";
+        $r->length = 8;
+        $r->grade_id = 447; //v3
+        //$r->topo_id = ??; 
+        $r->crag_id = 26;
+        $r->save();
+		
+		$r = new Climb();
+        $r->name = "Hidden Wall";
+        $r->description = "No description has been contributed, yet";
+        $r->length = 4;
+        $r->grade_id = 447; //v3
+        //$r->topo_id = ??; 
+        $r->crag_id = 26;
+        $r->save();
+		
+		$r = new Climb();
+        $r->name = "Left of The Sting";
+        $r->description = "North Wales Bouldering Guidebook, page 39, a slight line to the left of The Sting";
+        $r->length = 8;
+        $r->grade_id = 451; //v5
+        //$r->topo_id = ??; 
+        $r->crag_id = 26;
+        $r->save();
     }
 }
