@@ -330,7 +330,11 @@
     </div>
 </section>
 
-
+<!--
+    ==========
+    Contact Us
+    ==========
+              -->
 <section id="contact">
     <div class="container">
         <div class="row">

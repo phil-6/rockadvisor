@@ -384,3 +384,13 @@ header .header-content .header-content-inner h4 {
     font-weight: 700;
     text-transform: uppercase
 }
+
+/********/
+/**Blog**/
+/********/
+.quote{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+
