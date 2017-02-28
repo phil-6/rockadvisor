@@ -30,3 +30,7 @@ Route::get('/crags', function() {
 Route::get('/grades', function() {
     return View::make('gradesIndex');
 });
+
+Route::get('/blog', function() {
+    return View::make('blogStatic');
+});

@@ -84,14 +84,15 @@
                     <a class="page-scroll" href="#about">About</a>
                 </li>
                 <li>
+                    <a class="page-scroll" href="#contact">Contribute</a>
+                </li>
+                <li>
                     <a class="page-scroll" href="/map">Crag Map</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="/crags">Crag Index</a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Contribute</a>
-                </li>
+
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -413,6 +414,17 @@
         </div>
     </div>
 </div>
+
+<hr>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p class="copyright text-muted">Copyright &copy; Rock Advisor 2017</p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
