@@ -66,6 +66,11 @@
 </head>
 
 <body id="page-top">
+<!--
+    ==========
+    Navigation
+    ==========
+              -->
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -100,6 +105,11 @@
     <!-- /.container-fluid -->
 </nav>
 
+<!--
+    ==========
+      Header
+    ==========
+              -->
 <header>
     <div class="header-content">
         <div class="header-content-inner">
@@ -111,6 +121,12 @@
     </div>
 </header>
 
+
+<!--
+    ==========
+ about//howItWorks
+    ==========
+              -->
 <section class="bg-primary" id="about">
     <div class="container">
         <div class="row">
@@ -141,14 +157,14 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 text-center">
-                <!--                    <a href="/map">-->
+                <a href="/blog">
                 <div class="service-box">
                     <i class="fa fa-4x fa-code text-primary sr-icons"></i>
                     <h3>Development</h3>
                     <p class="text-muted">A university project in its earliest stages. There are a LOT more features
                         coming soon.</p>
                 </div>
-                <!--                    </a>-->
+                </a>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
                 <a href="#contact">
@@ -183,6 +199,12 @@
         </div>
     </div>
 </section>
+
+<!--
+    ==========
+    Portfolio // Not used
+    ==========
+              -->
 
 <!--
 <section class="no-padding" id="portfolio">
@@ -282,24 +304,32 @@
     </div>
 </section>
 -->
-<aside class="bg-dark">
-    <section id="feedback">
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2>Contribute</h2>
-                <hr class="primary">
-                <p>We need your help to make Rock Advisor work. In the not too distant future you will be able to add
-                    and update the information that we use. We've started with a very limited selection of crags and an
-                    even more limited selection of routes. We need you to help grow our database. If you're interested
-                    in lending a hand then fill in the form below and we'll get in touch when we need your help!</p>
-                <a href="#contributeModal"
-                   role="button"
-                   class="btn btn-default btn-xl sr-button btn-zoom"
-                   data-toggle="modal">I want to help!</a>
-            </div>
+
+
+<!--
+    ==========
+     Feedback
+ Contributor Form
+    ==========
+              -->
+
+<section id="feedback" class="bg-dark">
+    <div class="container text-center">
+        <div class="call-to-action">
+            <h2>Contribute</h2>
+            <hr class="primary">
+            <p>We need your help to make Rock Advisor work. In the not too distant future you will be able to add
+                and update the information that we use. We've started with a very limited selection of crags and an
+                even more limited selection of routes. We need you to help grow our database. If you're interested
+                in lending a hand then fill in the form below and we'll get in touch when we need your help!</p>
+            <a href="#contributeModal"
+               role="button"
+               class="btn btn-default btn-xl sr-button btn-zoom"
+               data-toggle="modal">I want to help!</a>
         </div>
-    </section>
-</aside>
+    </div>
+</section>
+
 
 <section id="contact">
     <div class="container">
@@ -316,6 +346,12 @@
         </div>
     </div>
 </section>
+
+<!--
+    ==========
+  Contribute Modal
+    ==========
+              -->
 
 <div id="contributeModal"
      class="modal fade"
@@ -415,9 +451,15 @@
     </div>
 </div>
 
+<!--
+    ==========
+      Footer
+    ==========
+              -->
+
 <hr>
 <footer>
-    <div class="container">
+    <div class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <p class="copyright text-muted">Copyright &copy; Rock Advisor 2017</p>
@@ -425,6 +467,13 @@
         </div>
     </div>
 </footer>
+
+
+<!--
+    ==========
+     Scripts
+    ==========
+              -->
 
 <!-- Bootstrap Core JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

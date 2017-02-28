@@ -46,7 +46,7 @@ body {
 }
 
 hr {
-    border-color: #FF8020;
+    border-color: #F82;
     border-width: 3px;
     max-width: 50px
 }
@@ -57,11 +57,11 @@ hr.light {
 
 a {
     transition: all .35s;
-    color: #FF8020
+    color: #F82
 }
 
 a:focus, a:hover {
-    color: #EC6600;
+    color: #E60;
 }
 
 p {
@@ -71,7 +71,7 @@ p {
 }
 
 .bg-primary {
-    background-color: #FF8020
+    background-color: #F82
 }
 
 .bg-dark {
@@ -84,7 +84,7 @@ p {
 }
 
 section {
-    padding: 100px 0
+    padding: 80px 0
 }
 
 aside {
@@ -107,13 +107,13 @@ aside {
 }
 
 .navbar-default .navbar-header .navbar-brand {
-    color: #FF8020;
+    color: #F82;
     font-weight: 900;
     text-transform: uppercase
 }
 
 .navbar-default .navbar-header .navbar-brand:focus, .navbar-default .navbar-header .navbar-brand:hover {
-    color: #EC6600;
+    color: #E60;
 }
 
 .navbar-default .navbar-header .navbar-toggle {
@@ -131,11 +131,11 @@ aside {
 }
 
 .navbar-default .nav > li > a:focus:hover, .navbar-default .nav > li > a:hover {
-    color: #FF8020
+    color: #F82
 }
 
 .navbar-default .nav > li.active > a, .navbar-default .nav > li.active > a:focus {
-    color: #FF8020 !important;
+    color: #F82 !important;
     background-color: transparent;
 }
 
@@ -171,12 +171,12 @@ aside {
     }
 
     .navbar-default.affix .navbar-header .navbar-brand {
-        color: #FF8020;
+        color: #F82;
         font-size: 14px;
     }
 
     .navbar-default.affix .navbar-header .navbar-brand:focus, .navbar-default.affix .navbar-header .navbar-brand:hover {
-        color: #EC6600;
+        color: #E60;
     }
 
     .navbar-default.affix .nav > li > a, .navbar-default.affix .nav > li > a:focus {
@@ -284,7 +284,6 @@ header .header-content .header-content-inner p {
 .section-heading {
     margin-top: 0
 }
-
 
 
 .service-box {
@@ -398,7 +397,7 @@ header .header-content .header-content-inner p {
 }
 
 .text-primary {
-    color: #FF8020
+    color: #F82
 }
 
 .no-gutter > [class*=col-] {
@@ -406,11 +405,6 @@ header .header-content .header-content-inner p {
     padding-left: 0
 }
 
-.about-buttons .btn{
-    margin-left: 10px;
-    margin-right: 10px;
-    /*width: 160px;*/
-}
 
 .btn-default {
     color: #222;
@@ -419,6 +413,12 @@ header .header-content .header-content-inner p {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
+}
+.about-buttons .btn-default{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open > .dropdown-toggle.btn-default {
@@ -449,13 +449,13 @@ header .header-content .header-content-inner p {
 
 .btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open > .dropdown-toggle.btn-primary {
     color: #fff;
-    background-color: #F60; /*#FF7106*/
-    border-color: #F60;
+    background-color: #E60; /*#FF7106*/
+    border-color: #E60;
 }
 
 .btn-primary.disabled, .btn-primary.disabled.active, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled], .btn-primary[disabled].active, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
-    background-color: #FF8020;
-    border-color: #FF8020;
+    background-color: #F82;
+    border-color: #F82;
 }
 
 .btn-primary .badge {
