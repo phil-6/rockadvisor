@@ -380,7 +380,7 @@
                     </div>
                     <div class="form-group">
                         <button type="submit"
-                                class="btn btn-success btn-primary btn-lg center-block"
+                                class="btn btn-primary btn-success btn-lg center-block"
                                 id="contributeSubmitButton"
                                 ng-hide="submitButtonHidden">
                             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
@@ -401,13 +401,11 @@
                            style="padding: 15px; margin: 0;">
                             Success!
                         </p><!--ng-class="result" >{{ resultMessage }}< -->
-
-                        </p>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn center-block" data-dismiss="modal" aria-hidden="true">
+                <button class="btn btn-default center-block" data-dismiss="modal" aria-hidden="true">
                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                     Cancel
                 </button>

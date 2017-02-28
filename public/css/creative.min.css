@@ -416,38 +416,41 @@ header .header-content .header-content-inner p {
     color: #222;
     background-color: #fff;
     border-color: #fff;
-    transition: all .35s
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
 }
 
 .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open > .dropdown-toggle.btn-default {
     color: #222;
-    background-color: #f2f2f2;
-    border-color: #ededed
+    background-color: #639;/*#f6f6f6;*/
+    border-color: #639;/*#ededed*/
+    color: #fff;
 }
 
 .btn-default.disabled, .btn-default.disabled.active, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled:focus, .btn-default.disabled:hover, .btn-default[disabled], .btn-default[disabled].active, .btn-default[disabled].focus, .btn-default[disabled]:active, .btn-default[disabled]:focus, .btn-default[disabled]:hover, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default.active, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:hover {
     background-color: #fff;
-    border-color: #fff
+    border-color: #fff;
 }
 
 .btn-default .badge {
     color: #fff;
-    background-color: #222
+    background-color: #222;
 }
 
 .btn-primary {
     color: #fff;
-    background-color: #FF8020;
-    border-color: #FF8020;
+    background-color: #F82;
+    border-color: #F82;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
-    transition: all .35s
+    transition: all .35s;
 }
 
 .btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open > .dropdown-toggle.btn-primary {
     color: #fff;
-    background-color: #FF7106;
-    border-color: #FF7106;
+    background-color: #F60; /*#FF7106*/
+    border-color: #F60;
 }
 
 .btn-primary.disabled, .btn-primary.disabled.active, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled], .btn-primary[disabled].active, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
@@ -456,7 +459,7 @@ header .header-content .header-content-inner p {
 }
 
 .btn-primary .badge {
-    color: #FF8020;
+    color: #F82;
     background-color: #fff;
 }
 
@@ -465,6 +468,11 @@ header .header-content .header-content-inner p {
     border-radius: 300px;
     font-weight: 700;
     text-transform: uppercase
+}
+
+.btn-success:hover{
+    background-color: #639;
+    border-color: #639;
 }
 
 .btn-xl {
@@ -478,7 +486,6 @@ a .btn-zoom{
 a .btn-zoom:hover{
     transform: scale(1.1, 1.1);
 }
-
 
 ::-moz-selection {
     color: #fff;
