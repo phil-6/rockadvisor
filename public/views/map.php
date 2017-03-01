@@ -109,7 +109,7 @@
     <script>
         var map;
         //creates a new blank array for all the listing markers
-        var markers = [];
+
 
         function initMap() {
             // Constructor create a new map, only center and zoom are required.
@@ -137,9 +137,11 @@
                 fullscreenControl: false
             });*/
 
+
+            // Create Markers array and populate it from API
+            var markers = [];
             var apiUrl = ("/api/maps_crags");
             var largeInfoWindow = new google.maps.InfoWindow();
-
 
             $.getJSON(apiUrl, function(json1){
                 $.each(json1, function(key, data){
@@ -154,7 +156,8 @@
                         orientation: data.orientation,
                         approachTime: data.approachTime,
                         typeOfClimbs: data.typeOfClimbs,
-                        numberOfClimbs: data.numberOfClimbs
+                        numberOfClimbs: data.numberOfClimbs,
+                        animation: google.maps.Animation.DROP
                     });
 
                     // Push the marker to our array of markers.
@@ -176,6 +179,11 @@
             mapFilterControlsDiv.index = 1;
 //            mapFilterControlsDiv.style['padding-top'] = '10px';
             map.controls[google.maps.ControlPosition.LEFT_CENTER].push(mapFilterControlsDiv);
+
+            // Add a marker clusterer to manage the markers.
+            var markerCluster = new MarkerClusterer(map, markers,
+                {imagePath: "../resources/images/markerClusterer/m"});
+
         }
 
         /**
@@ -202,6 +210,8 @@
                     climbTypesString = "Mixed";
                 }
 
+
+                //add information to info window
                 var infoWindowContent = '<div id="content">' +
 
                     '<h2 id="infoWindowHeading" class="infoWindowHeading">' +
@@ -461,7 +471,10 @@
             $(this).addClass('active');
         });
 
+
     </script>
+
+    <script type="text/javascript" src="../js/markerClusterer/markerclusterer.js"></script>
 
 
     <script async defer
