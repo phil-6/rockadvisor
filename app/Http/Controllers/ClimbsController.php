@@ -37,7 +37,12 @@ class ClimbsController extends Controller
         $data = [];
         $climbs = Climb::all();
         foreach ($climbs as  $climb) {
-            $record = ["id" => $climb->id, "name" => $climb->name];
+            $record = [
+                "id" => $climb->id,
+                "name" => $climb->name,
+                "grade" => $climb->grade_id,
+                "crag" => $climb->crag_id,
+            ];
             $data[] = $record;
         }
 

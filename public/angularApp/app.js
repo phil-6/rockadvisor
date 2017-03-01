@@ -4,4 +4,5 @@
 var app = angular.module('areaApp', ['areasCtrl', 'areaService']);
 var app = angular.module('cragApp', ['cragsCtrl', 'cragService']);
 var app = angular.module('gradeApp', ['gradesCtrl', 'gradeService']);
+var app = angular.module('climbApp', ['climbsCtrl', 'climbService']);
 var app = angular.module('contributeApp', []);

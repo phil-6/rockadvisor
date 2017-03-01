@@ -19,6 +19,12 @@ Route::get('/map', function() {
     return View::make('map');
 });
 
+//====================================================================
+//Index Pages
+//These are currently for development and lack any sort of meaningful css
+//====================================================================
+
+
 Route::get('/areas', function() {
     return View::make('areasIndex');
 });
@@ -30,6 +36,14 @@ Route::get('/crags', function() {
 Route::get('/grades', function() {
     return View::make('gradesIndex');
 });
+
+Route::get('/climbs', function() {
+    return View::make('climbsIndex');
+});
+
+//====================================================================
+//Horrible Static Blog Page
+//====================================================================
 
 Route::get('/blog', function() {
     return View::make('blogStatic');

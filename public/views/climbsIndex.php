@@ -1,9 +1,11 @@
+
 <!--
  * Created by PhpStorm.
  * User: philr
- * Date: 24/02/2017
- * Time: 10:32
- -->
+ * Date: 01/03/2017
+ * Time: 10:43
+-->
+
 
 <!doctype html>
 <html lang="en">
@@ -15,10 +17,11 @@
     <!-- load fontawesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           type="text/css">
+
     <style>
         body        { padding-top:30px; }
         form        { padding-bottom:20px; }
-        .crag       { padding-bottom:20px; }
+        .climb       { padding-bottom:20px; }
     </style>
 
     <!-- JS -->
@@ -27,18 +30,18 @@
 
     <!-- ANGULAR -->
     <!-- all angular resources will be loaded from the /public folder -->
-    <script src="angularApp/controllers/cragsCtrl.js"></script> <!-- load our controller -->
-    <script src="angularApp/services/cragService.js"></script> <!-- load our service -->
+    <script src="angularApp/controllers/climbsCtrl.js"></script> <!-- load our controller -->
+    <script src="angularApp/services/climbService.js"></script> <!-- load our service -->
     <script src="angularApp/app.js"></script> <!-- load our application -->
 
 
 </head>
 <!-- declare our angular app and controller -->
-<body class="container" ng-app="cragApp" ng-controller="cragsController"> <div class="col-md-8 col-md-offset-2">
+<body class="container" ng-app="climbApp" ng-controller="climbsController"> <div class="col-md-8 col-md-offset-2">
 
     <!-- PAGE TITLE =============================================== -->
     <div class="page-header">
-        <h2>Crags Index</h2>
+        <h2>Climbs Index</h2>
     </div>
 
     <!-- LOADING ICON =============================================== -->
@@ -46,11 +49,12 @@
     <p class="text-center" ng-show="loading"><i class="fa fa-space-shuttle fa-5x fa-spin"></i></p>
 
 
-    <!-- THE CRAGS =============================================== -->
-    <!-- hide these crags if the loading variable is true -->
-    <div class="crag" ng-hide="loading" ng-repeat="crag in crags">
-        <h3>{{ crag.name }} </h3>
-        <p>In Area: {{ crag.area }}</p>
+    <!-- THE CLIMBS =============================================== -->
+    <!-- hide these climbs if the loading variable is true -->
+    <div class="climb" ng-hide="loading" ng-repeat="climb in climbs">
+        <h3>{{ climb.name }} </h3>
+        <p>Crag: {{ climb.crag }}</p>
+        <p>Grade: {{ climb.grade }}</p>
 
     </div>
 

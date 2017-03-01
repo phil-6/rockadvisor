@@ -13,7 +13,9 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"> <!-- load bootstrap via cdn -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+    <!-- load fontawesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css">
     <style>
         body        { padding-top:30px; }
         form        { padding-bottom:20px; }
@@ -42,7 +44,7 @@
 
     <!-- LOADING ICON =============================================== -->
     <!-- show loading icon if the loading variable is set to true -->
-    <p class="text-center" ng-show="loading"><span class="fa fa-meh-o fa-5x fa-spin"></span></p>
+    <<p class="text-center" ng-show="loading"><i class="fa fa-space-shuttle fa-5x fa-spin"></i></p>
 
 
     <!-- THE GRADES =============================================== -->
