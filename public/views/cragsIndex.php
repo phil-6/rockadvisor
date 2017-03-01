@@ -118,6 +118,8 @@
         <h3>{{ crag.name }} </h3>
         <p>In Area: {{ crag.area }}</p>
 
+        <p><a href="#" ng-click="deleteCrag(crag.id)" class="text-muted">Delete</a></p>
+
     </div>
 
 </div>

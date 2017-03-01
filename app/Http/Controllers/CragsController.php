@@ -57,6 +57,8 @@ class CragsController extends Controller
     //
     // }
 
+
+    //note to phil -> this works!!! Don't change it. From Phil
     public function api_show($crag)
     {
         return response()->json($crag);
@@ -152,9 +154,8 @@ class CragsController extends Controller
         //
     }
 
-    public function api_update(Request $request, $id)
+    public function api_update(Request $request, $crag)
     {
-        $crag = Crag::find($id);
 
         $crag->lat = $request->input('lat');
         $crag->lng =  $request->input('lng');
@@ -176,7 +177,7 @@ class CragsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  $crag object
      * @return \Illuminate\Http\Response
      */
 
@@ -185,10 +186,11 @@ class CragsController extends Controller
     //     //
     // }
 
+    //this is broken
     public function api_destroy($crag)
     {
         $crag->delete();
-        return response()->json(array('success' => true));
+        return Response::json(array('success' => true));
     }
 
 }
