@@ -188,6 +188,10 @@
             // Check to make sure the infowindow is not already opened on this marker.
             if (infowindow.marker != marker) {
 
+
+                //If no climbs set climbTypesString to null
+                //If more tha one climb type set it to mixed
+
                 var climbTypesString = ""
 
                 if (marker.typeOfClimbs.length == 0) {
@@ -289,6 +293,28 @@
                 }
             }
         }
+
+        // This function will loop through the listings and hide them all.
+        // Then redraws all Bouldering Crags
+        function filterBouldering() {
+            for (var i = 0; i < markers.length; i++) {
+                var display = false;
+
+                for (var j = 0; j < markers[i].typeOfClimbs.length; j++) {
+
+                    console.log(markers[i].typeOfClimbs[j]);
+                    if (markers[i].typeOfClimbs[j]['id'] == 3) {
+                        display = true;
+                    }
+                }
+
+                if (display) {
+                    markers[i].setMap(map);
+                } else {
+                    markers[i].setMap(null);
+                }
+            }
+        }
         // This function will loop through the listings and hide them all.
         // Then redraws all Non-Tidal Crags
         function filterTidal() {
@@ -331,6 +357,9 @@
          */
         function MapFilterControls(controlDiv, map, center) {
 
+            //          //
+            // SHOW ALL //
+            //          //
             // Set CSS for the SHOW ALL control border
             var showAllUI = document.createElement('div');
             showAllUI.id = 'showAllUI';
@@ -343,6 +372,9 @@
             showAllText.innerHTML = 'Show All';
             showAllUI.appendChild(showAllText);
 
+            //          //
+            // HIDE ALL //
+            //          //
             // Set CSS for the HIDE ALL control border
             var hideAllUI = document.createElement('div');
             hideAllUI.id = 'hideAllUI';
@@ -355,6 +387,9 @@
             hideAllText.innerHTML = 'Hide All';
             hideAllUI.appendChild(hideAllText);
 
+            //             //
+            // FILTER TRAD //
+            //             //
             // Set CSS for the FILTER TRAD control border
             var filterTradUI = document.createElement('div');
             filterTradUI.id = 'filterTradUI';
@@ -367,10 +402,13 @@
             filterTradText.innerHTML = 'Show Trad';
             filterTradUI.appendChild(filterTradText);
 
+            //              //
+            // FILTER SPORT //
+            //              //
             // Set CSS for the FILTER SPORT control border
             var filterSportUI = document.createElement('div');
             filterSportUI.id = 'filterSportUI';
-            filterSportUI.title = 'Show Crags with Trad Routes';
+            filterSportUI.title = 'Show Crags with Sport Routes';
             controlDiv.appendChild(filterSportUI);
 
             // Set CSS for the FILTER SPORT interior
@@ -379,6 +417,24 @@
             filterSportText.innerHTML = 'Show Sport';
             filterSportUI.appendChild(filterSportText);
 
+            //            //
+            // BOULDERING //
+            //            //
+            // Set CSS for the FILTER BOULDERING control border
+            var filterBoulderingUI = document.createElement('div');
+            filterBoulderingUI.id = 'filterBoulderingUI';
+            filterBoulderingUI.title = 'Show Crags with Bouldering';
+            controlDiv.appendChild(filterBoulderingUI);
+
+            // Set CSS for the FILTER BOULDERING interior
+            var filterBoulderingText = document.createElement('div');
+            filterBoulderingText.id = 'filterBoulderingText';
+            filterBoulderingText.innerHTML = 'Bouldering';
+            filterBoulderingUI.appendChild(filterBoulderingText);
+
+            //              //
+            // FILTER TIDAL //
+            //              //
             // Set CSS for the FILTER TIDAL control border
             var filterTidalUI = document.createElement('div');
             filterTidalUI.id = 'filterTidalUI';
@@ -397,6 +453,7 @@
             hideAllUI.addEventListener('click', hideListings);
             filterTradUI.addEventListener('click', filterTrad);
             filterSportUI.addEventListener('click', filterSport);
+            filterBoulderingUI.addEventListener('click', filterBouldering);
             filterTidalUI.addEventListener('click', filterTidal);
         }
         $(".controlDiv").on('click', 'div', function(e) {

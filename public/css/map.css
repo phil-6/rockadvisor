@@ -15,7 +15,7 @@ html, body {
     padding: 0;
 }
 /* CSS for filter buttons*/
-#showAllUI, #hideAllUI, #filterTradUI, #filterSportUI, #filterTidalUI {
+#showAllUI, #hideAllUI, #filterTradUI, #filterSportUI, #filterTidalUI, #filterBoulderingUI {
     background-color: #fff;
     border: 2px solid #fff;
     border-radius: 3px;
@@ -26,7 +26,7 @@ html, body {
     text-align: center;
 }
 
-#showAllText, #hideAllText, #filterTradText, #filterSportText, #filterTidalText { /
+#showAllText, #hideAllText, #filterTradText, #filterSportText, #filterTidalText, #filterBoulderingText { /
     color: rgb(25,25,25);
     font-family: Roboto,Arial,sans-serif;
     font-size: 15px;
