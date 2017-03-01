@@ -1,13 +1,14 @@
+<!--/**
+* Created by PhpStorm.
+* User: philr
+* Date: 21/02/2017
+* Time: 20:34
+*/-->
+
 <!DOCTYPE html>
 
 <html lang="en">
 <head>
-    <!--/**
-    * Created by PhpStorm.
-    * User: philr
-    * Date: 21/02/2017
-    * Time: 20:34
-    */-->
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

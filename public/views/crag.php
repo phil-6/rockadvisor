@@ -104,3 +104,30 @@
     </div>
     <!-- /.container-fluid -->
 </nav>
+
+
+<div class="col-md-8 col-md-offset-2">
+
+    <!-- PAGE TITLE =============================================== -->
+    <div class="page-header">
+        <h2>Crag</h2>
+    </div>
+
+    <!-- LOADING ICON =============================================== -->
+    <!-- show loading icon if the loading variable is set to true -->
+    <p class="text-center" ng-show="loading">
+        <i class="fa fa-space-shuttle fa-5x fa-spin"></i>
+    </p>
+
+
+    <!-- THE CRAG =============================================== -->
+    <!-- hide these crags if the loading variable is true -->
+    <div class="crag" ng-hide="loading" >
+        <h3>{{ crag.name }} </h3>
+        <p>In Area: {{ crag.area }}</p>
+
+    </div>
+
+</div>
+</body>
+</html>

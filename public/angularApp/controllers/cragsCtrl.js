@@ -17,9 +17,23 @@ angular.module('cragsCtrl', [])
         // GET ALL CRAGS ==============
         Crag.get()
             .success(function (data) {
+                console.log("ctrl");
                 $scope.crags = data;
                 $scope.loading = false;
             });
+
+        // SHOW A CRAG =================
+        $scope.showCrag = function (id) {
+            $scope.loading = true;
+
+            Crag.show(id)
+
+                .success(function(data){
+                    console.log("ctrl");
+                    $scope.crags = data;
+                    $scope.loading = false;
+            });
+        };
 
 
         // function to handle submitting the form

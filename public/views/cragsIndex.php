@@ -38,6 +38,18 @@
     <script src="angularApp/services/cragService.js"></script> <!-- load our service -->
     <script src="angularApp/app.js"></script> <!-- load our application -->
 
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-92612290-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
 
 </head>
 <!-- declare our angular app and controller -->
@@ -95,12 +107,14 @@
 
     <!-- LOADING ICON =============================================== -->
     <!-- show loading icon if the loading variable is set to true -->
-    <p class="text-center" ng-show="loading"><i class="fa fa-space-shuttle fa-5x fa-spin"></i></p>
+    <p class="text-center" ng-show="loading">
+        <i class="fa fa-space-shuttle fa-5x fa-spin"></i>
+    </p>
 
 
     <!-- THE CRAGS =============================================== -->
     <!-- hide these crags if the loading variable is true -->
-    <div class="crag" ng-hide="loading" ng-repeat="crag in crags">
+    <div class="crag" ng-hide="loading" ng-repeat="crag in crags" >
         <h3>{{ crag.name }} </h3>
         <p>In Area: {{ crag.area }}</p>
 

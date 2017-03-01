@@ -8,7 +8,14 @@ angular.module('cragService', [])
         return {
             // get all the crags
             get : function() {
+                console.log("service");
                 return $http.get('/api/crags');
+            },
+
+            //get specific crag
+            show: function(id){
+                console.log("service");
+                return $http.get('/api/crags/' + id );
             },
 
             // save a crag (pass in crag data)
