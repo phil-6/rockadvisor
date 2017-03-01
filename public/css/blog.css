@@ -269,7 +269,7 @@ header .header-content .header-content-inner h4 {
 
     header .header-content {
         position: absolute;
-        top: 50%;
+        top: 36%;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
@@ -323,6 +323,7 @@ header .header-content .header-content-inner h4 {
     border-radius: 60px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     background-color: #E60;
+    z-index: 2;
 }
 
 .service-box:hover::after{

@@ -79,14 +79,14 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
+                    data-target="#rockAdvisorNavbar">
                 <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand page-scroll" href="../#page-top">Rock Advisor</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="rockAdvisorNavbar">
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a class="page-scroll" href="../#about">About</a>
@@ -139,7 +139,7 @@
               -->
 <section class="bg-primary text-center" id="about">
     <div class="container">
-        <div class="row col-lg-12 col-md-12 col-sm-12">
+        <div class="row">
             <h2 class="section-heading">About Us</h2>
             <hr class="light">
             <p class="text-faded col-lg-8 col-lg-offset-2">
@@ -148,7 +148,7 @@
                 Naturally, we wrote each others bio's... and chose each others pictures.
             </p>
             <!-- Calum Bio -->
-            <div class="col-lg-6 col-md-6 col-sm-10 ">
+            <div class="col-lg-6 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                 <div class="service-box" id="Calum">
                     <img src="../resources/images/calum.png" height="60%" width="60%">
                     <h3>Calum</h3>
@@ -166,7 +166,7 @@
             </div> <!-- End Calum -->
 
             <!-- Phil Bio -->
-            <div class="col-lg-56 col-md-6 col-sm-10 text-center">
+            <div class="col-lg-6 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                 <div class="service-box" id="Phil">
                     <img src="../resources/images/phil.png" height="60%" width="60%">
                     <h3>Phil</h3>
