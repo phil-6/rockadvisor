@@ -148,7 +148,7 @@
                 Naturally, we wrote each others bio's... and chose each others pictures.
             </p>
             <!-- Calum Bio -->
-            <div class="col-lg-6 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+            <div class="col-lg-6 col-sm-12  col-xs-12">
                 <div class="service-box" id="Calum">
                     <img src="../resources/images/calum.png" height="60%" width="60%">
                     <h3>Calum</h3>
@@ -166,7 +166,7 @@
             </div> <!-- End Calum -->
 
             <!-- Phil Bio -->
-            <div class="col-lg-6 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+            <div class="col-lg-6 col-sm-12  col-xs-12 ">
                 <div class="service-box" id="Phil">
                     <img src="../resources/images/phil.png" height="60%" width="60%">
                     <h3>Phil</h3>
