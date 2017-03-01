@@ -8,18 +8,25 @@
 <!doctype html>
 <html lang="en">
 <head> <meta charset="UTF-8">
-    <title>Index</title>
+    <title>Rock Advisor Crags</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"> <!-- load bootstrap via cdn -->
-    <!-- load fontawesome -->
+    <!-- Bootstrap Core CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Custom Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           type="text/css">
-    <style>
-        body        { padding-top:30px; }
-        form        { padding-bottom:20px; }
-        .crag       { padding-bottom:20px; }
-    </style>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,600,700,900|Roboto:300,400,500,700,900"
+          rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link href="../css/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="../css/creative.min.css" rel="stylesheet">
 
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -34,7 +41,52 @@
 
 </head>
 <!-- declare our angular app and controller -->
-<body class="container" ng-app="cragApp" ng-controller="cragsController"> <div class="col-md-8 col-md-offset-2">
+<body class="container" ng-app="cragApp" ng-controller="cragsController">
+<!--
+    ==========
+    Navigation
+    ==========
+              -->
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top ">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button"
+                    class="navbar-toggle collapsed"
+                    data-toggle="collapse"
+                    data-target="#rockAdvisorNavbar">
+                <span class="sr-only">Toggle navigation</span>
+                Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="/">Rock Advisor</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="rockAdvisorNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll" href="../#contact">Contribute</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="../#howItWorks">How It Works</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="/map">Crag Map</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="/blog">Development</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+
+
+<div class="col-md-8 col-md-offset-2">
 
     <!-- PAGE TITLE =============================================== -->
     <div class="page-header">

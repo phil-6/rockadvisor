@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Rock Advisor</title>
+    <title>Rock Advisor Map</title>
 
     <!-- Custom Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -54,7 +54,11 @@
 </head>
 
 <body>
-
+<!--
+    ==========
+    Navigation
+    ==========
+              -->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top ">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -72,9 +76,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="rockAdvisorNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="../#about">About</a>
-                    </li>
+
                     <li>
                         <a class="page-scroll" href="../#contact">Contribute</a>
                     </li>
@@ -84,6 +86,9 @@
                     <li>
                         <a class="page-scroll" href="/crags">Crag Index</a>
                     </li>
+                    <li>
+                        <a class="page-scroll" href="/blog">Development</a>
+                    </li>
 
                 </ul>
             </div>
@@ -91,6 +96,14 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+
+
+<!--
+    ==========
+       Map
+    ==========
+              -->
+
     <div id="map" class="map"></div>
     <script>
         var map;
