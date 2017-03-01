@@ -239,7 +239,7 @@ class ClimbsTableSeeder extends Seeder
         $r->name = "Skull Attack";
         $r->description = "A stunningly technical wall climb, currently fully bolted. Start right of Blackman's Pinch and left of the Crime and Punishment groove below an overlap. Climb to and surmount the overlap to a ledge. Move left to a thin crack. Moving slightly right at a good thin break, make a baffling sequence on non-existent flakes to gain a prominent groove. Mantle awkwardly into this, topping out to bolt belay.";
         $r->length = 24;
-        $r->grade_id = 486; //e6 6b, f7b+, gone with the sport grade rather than trad
+        $r->grade_id = 422; //e6 6b, 7b+, gone with the sport grade rather than trad
         //$r->topo_id = ??; 
         $r->crag_id = 25;
         $r->save();
@@ -248,7 +248,7 @@ class ClimbsTableSeeder extends Seeder
         $r->name = "Retrobution";
         $r->description = "Plough on up the Crime and Punishment groove until holds run out, continue into Skull Attack to finish.";
         $r->length = 24;
-        $r->grade_id = 485; //f7b
+        $r->grade_id = 421; //7b
         //$r->topo_id = ??; 
         $r->crag_id = 25;
         $r->save();
@@ -266,7 +266,7 @@ class ClimbsTableSeeder extends Seeder
         $r->name = "Black Wall";
         $r->description = "The original and direct finish now regeared. A vicious, fingery problem, especially when the direct finish is taken. Start 3m right of Crime and Punishment at a line of 'twizzles'. Make a series of difficult moves to below the bulge. Desperate moves past the remains of an edge lead over the overlap to the top. The route had lost a hold at the top but it has been successfully redpointed in ";
         $r->length = 21;
-        $r->grade_id = 490; //f8a+
+        $r->grade_id = 426; //8a+
         //$r->topo_id = ??; 
         $r->crag_id = 25;
         $r->save();
@@ -275,7 +275,7 @@ class ClimbsTableSeeder extends Seeder
         $r->name = "Inch Pinch";
         $r->description = "A pitch, up a short crack on the right side of the crag. Boulder up directly to a BR. Gain a crack with difficulty and climb it. Continue more easily to the top.";
         $r->length = 15;
-        $r->grade_id = 483; //f7a
+        $r->grade_id = 419; //7a
         //$r->topo_id = ??; 
         $r->crag_id = 25;
         $r->save();
@@ -284,7 +284,7 @@ class ClimbsTableSeeder extends Seeder
         $r->name = "The Hant";
         $r->description = "Follow Inch Pinch to a good lay-away hold, then move right and over the overlap with difficulty. Follow a shallow groove and crack to the top.";
         $r->length = 15;
-        $r->grade_id = 483; //f7a
+        $r->grade_id = 419; //7a
         //$r->topo_id = ??; 
         $r->crag_id = 25;
         $r->save();
@@ -293,7 +293,7 @@ class ClimbsTableSeeder extends Seeder
         $r->name = "Tribulations";
         $r->description = "The right arete of the buttress, moving left at the top.";
         $r->length = 12;
-        $r->grade_id = 483; //f7a
+        $r->grade_id = 419; //f7a
         //$r->topo_id = ??; 
         $r->crag_id = 25;
         $r->save();
