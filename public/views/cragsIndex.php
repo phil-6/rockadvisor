@@ -34,9 +34,9 @@
 
     <!-- ANGULAR -->
     <!-- all angular resources will be loaded from the /public folder -->
-    <script src="angularApp/controllers/cragsCtrl.js"></script> <!-- load our controller -->
-    <script src="angularApp/services/cragService.js"></script> <!-- load our service -->
-    <script src="angularApp/app.js"></script> <!-- load our application -->
+    <script src="../angularApp/controllers/cragsCtrl.js"></script> <!-- load our controller -->
+    <script src="../angularApp/services/cragService.js"></script> <!-- load our service -->
+    <script src="../angularApp/app.js"></script> <!-- load our application -->
 
     <!-- Google Analytics -->
     <script>
