@@ -24,19 +24,6 @@ angular.module('cragsCtrl', [])
                 $scope.loading = false;
             });
 
-        // // SHOW A CRAG =================
-        // $scope.showCrag = function (id) {
-        //     $scope.loading = true;
-
-        //     CragFactory.show(id)
-
-        //         .success(function(data){
-        //             console.log("ctrl");
-        //             $scope.thisCragData = data;
-        //             $scope.loading = false;
-        //     });
-        // };
-
 
         // function to handle submitting the form
         // SAVE AN CRAG ================
@@ -45,7 +32,7 @@ angular.module('cragsCtrl', [])
 
         //     // save the crag. pass in crag data from the form
         //     // use the function we created in our service
-        //     Crag.save($scope.cragData)
+        //     CragFactory.save($scope.cragData)
         //         .success(function (data) {
 
         //             // if successful, we'll need to refresh the crag list
@@ -68,7 +55,6 @@ angular.module('cragsCtrl', [])
             CragFactory.destroy(id)
                 .success(function (data) {
 
-                    // TODO: If sucess then display a green bar saying deleted.
                     if (data.success) {
                         
                         var i;
@@ -87,13 +73,6 @@ angular.module('cragsCtrl', [])
                         $scope.message = "Crag was not deleted - failed";
                         $scope.showMessage = true;
                     }
-
-                    // // if successful, we'll need to refresh the crag list
-                    // CragFactory.get()
-                    //     .success(function (getData) {
-                    //         $scope.cragsData = getData;
-                    //         $scope.loading = false;
-                    //     });
 
                 });
         };

@@ -28,9 +28,9 @@
 
     <!-- ANGULAR -->
     <!-- all angular resources will be loaded from the /public folder -->
-    <script src="angularApp/controllers/gradesCtrl.js"></script> <!-- load our controller -->
-    <script src="angularApp/services/gradeService.js"></script> <!-- load our service -->
-    <script src="angularApp/app.js"></script> <!-- load our application -->
+    <script src="../angularApp/controllers/gradesCtrl.js"></script> <!-- load our controller -->
+    <script src="../angularApp/services/gradeService.js"></script> <!-- load our service -->
+    <script src="../angularApp/app.js"></script> <!-- load our application -->
 
 
 </head>
@@ -44,17 +44,25 @@
 
     <!-- LOADING ICON =============================================== -->
     <!-- show loading icon if the loading variable is set to true -->
-    <p class="text-center" ng-show="loading"><i class="fa fa-space-shuttle fa-5x fa-spin"></i></p>
+    <p class="text-center" ng-show="loading">
+        <i class="fa fa-space-shuttle fa-5x fa-spin"></i>
+    </p>
 
 
-    <!-- THE GRADES =============================================== -->
-    <!-- hide these grades if the loading variable is true -->
-    <div class="grade" ng-hide="loading" ng-repeat="grade in grades">
-        <p>ID: {{ grade.id }} </p>
-        <p>TypeID: {{ grade.climbTypeId }}</p>
-        <p>Tech: {{ grade.technicalGrade }}</p>
-        <p>Sev: {{ grade.severityGrade }}</p>
+    <!-- THE CRAGS =============================================== -->
+    <!-- hide these crags if the loading variable is true -->
+    <div ng-hide="loading">
+        <div ng-repeat="grade in gradesData" >
+            <hr>
+            <p>ID: {{ grade.id }} </p>
+            <p>TypeID: {{ grade.climbTypeId }}</p>
+            <p>Tech: {{ grade.technicalGrade }}</p>
+            <p>Sev: {{ grade.severityGrade }}</p>
+        </div>
 
+        <div ng-show="!gradesData.length">
+            <p>No gradess are available.</p>
+        </div>
     </div>
 
 </div>

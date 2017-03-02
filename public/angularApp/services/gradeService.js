@@ -3,16 +3,24 @@
  */
 angular.module('gradeService', [])
 
-    .factory('Grade', function($http) {
+    .factory('GradeFactory', function($http) {
 
         return {
             // get all the grades
             get : function() {
+                console.log("service:GradeFactory:get");
                 return $http.get('/api/grades');
+            },
+
+            //get specific grade
+            getDetail: function(id){
+                console.log("service:GradeFactory:getDetail(" + id +")");
+                return $http.get('/api/grades/' + id );
             },
 
             // save a grade (pass in grade data)
             save : function(gradeData) {
+                console.log("service:GradeFactory:save");
                 return $http({
                     method: 'POST',
                     url: '/api/grades',
@@ -23,6 +31,7 @@ angular.module('gradeService', [])
 
             // destroy a grade
             destroy : function(id) {
+                console.log("service:GradeFactory:destroy(" + id +")");
                 return $http.delete('/api/grades/' + id);
             }
         }

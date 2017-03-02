@@ -22,32 +22,47 @@
 
     <!-- ANGULAR -->
     <!-- all angular resources will be loaded from the /public folder -->
-    <script src="angularApp/controllers/areasCtrl.js"></script> <!-- load our controller -->
-    <script src="angularApp/services/areaService.js"></script> <!-- load our service -->
-    <script src="angularApp/app.js"></script> <!-- load our application -->
+    <script src="../angularApp/controllers/areasCtrl.js"></script> <!-- load our controller -->
+    <script src="../angularApp/services/areaService.js"></script> <!-- load our service -->
+    <script src="../angularApp/app.js"></script> <!-- load our application -->
 
 
 </head>
 <!-- declare our angular app and controller -->
-<body class="container" ng-app="areaApp" ng-controller="areasController"> <div class="col-md-8 col-md-offset-2">
+<body class="container" ng-app="areaApp" ng-controller="areasController">
+<div class="col-md-8 col-md-offset-2">
 
     <!-- PAGE TITLE =============================================== -->
     <div class="page-header">
         <h2>Areas Index</h2>
     </div>
 
+    <!-- DELETE SUCCESS MESSAGE ===================================== -->
+    <div class="alert alert-success" ng-show="showMessage">
+        <p>{{message}}</p>
+    </div>
+
     <!-- LOADING ICON =============================================== -->
     <!-- show loading icon if the loading variable is set to true -->
-    <p class="text-center" ng-show="loading"><i class="fa fa-space-shuttle fa-5x fa-spin"></i></p>
+    <p class="text-center" ng-show="loading">
+        <i class="fa fa-space-shuttle fa-5x fa-spin"></i>
+    </p>
 
 
     <!-- THE AREAS =============================================== -->
     <!-- hide these areas if the loading variable is true -->
-    <div class="area" ng-hide="loading" ng-repeat="area in areas">
-        <h3>{{ area.name }} </h3>
-        <p>Part of: {{ area.parentName }}</p>
-
+    <div ng-hide="loading">
+        <div ng-repeat="area in areasData" >
+            <h3>{{ area.name }} </h3>
+            <p>Part of: {{ area.parentName }}</p>
+            <button type="button" class="btn btn-primary" ng-click="deleteArea(area.id)">Delete</button>
+        </div>
+        <div ng-show="!areasData.length">
+            <p>No areas are available.</p>
+        </div>
     </div>
+
+
 
 </div>
 </body>

@@ -16,7 +16,7 @@ angular.module('emailCtrl', [])
             $scope.submitted = true;
             $scope.submitButtonHidden = true;
             $scope.progressMessageShowing = true;
-            
+
             EmailFactory.submit($scope.formData)
                 .success(function(data){
                     console.log(data); //debugging

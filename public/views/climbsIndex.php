@@ -30,9 +30,9 @@
 
     <!-- ANGULAR -->
     <!-- all angular resources will be loaded from the /public folder -->
-    <script src="angularApp/controllers/climbsCtrl.js"></script> <!-- load our controller -->
-    <script src="angularApp/services/climbService.js"></script> <!-- load our service -->
-    <script src="angularApp/app.js"></script> <!-- load our application -->
+    <script src="../angularApp/controllers/climbsCtrl.js"></script> <!-- load our controller -->
+    <script src="../angularApp/services/climbService.js"></script> <!-- load our service -->
+    <script src="../angularApp/app.js"></script> <!-- load our application -->
 
 
 </head>
@@ -44,18 +44,32 @@
         <h2>Climbs Index</h2>
     </div>
 
+    <!-- DELETE SUCCESS MESSAGE ===================================== -->
+    <div class="alert alert-success" ng-show="showMessage">
+        <p>{{message}}</p>
+    </div>
+
     <!-- LOADING ICON =============================================== -->
     <!-- show loading icon if the loading variable is set to true -->
-    <p class="text-center" ng-show="loading"><i class="fa fa-space-shuttle fa-5x fa-spin"></i></p>
+    <p class="text-center" ng-show="loading">
+        <i class="fa fa-space-shuttle fa-5x fa-spin"></i>
+    </p>
 
 
     <!-- THE CLIMBS =============================================== -->
     <!-- hide these climbs if the loading variable is true -->
-    <div class="climb" ng-hide="loading" ng-repeat="climb in climbs">
-        <h3>{{ climb.name }} </h3>
-        <p>Crag: {{ climb.crag }}</p>
-        <p>Grade: {{ climb.grade }}</p>
+    <div  ng-hide="loading">
+        <div ng-repeat="climb in climbsData">
+            <h3>{{ climb.name }} </h3>
+            <p>Crag: {{ climb.crag }}</p>
+            <p>Grade: {{ climb.grade }}</p>
 
+            <button type="button" class="btn btn-primary" ng-click="deleteClimb(climb.id)">Delete</button>
+
+        </div>
+        <div ng-show="!climbsData.length">
+            <p>No climbs are available.</p>
+        </div>
     </div>
 
 </div>

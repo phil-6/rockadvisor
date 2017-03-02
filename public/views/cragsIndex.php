@@ -104,6 +104,7 @@
         <h2>Crags Index</h2>
     </div>
 
+    <!-- DELETE SUCCESS MESSAGE ===================================== -->
     <div class="alert alert-success" ng-show="showMessage">
         <p>{{message}}</p>
     </div>
