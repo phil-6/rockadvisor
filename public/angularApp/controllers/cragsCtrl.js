@@ -8,7 +8,6 @@ angular.module('cragsCtrl', [])
     .controller('cragsController', function ($scope, $http, CragFactory) {
         // object to hold all the data for the new crag form
         $scope.cragsData = {};
-        $scope.thisCragData = {};
         $scope.showMessage = false;
         $scope.message = "";
 
@@ -71,6 +70,7 @@ angular.module('cragsCtrl', [])
 
                     // TODO: If sucess then display a green bar saying deleted.
                     if (data.success) {
+                        
                         var i;
                         for (i = 0; i < $scope.cragsData.length; i++) {
                             crag = $scope.cragsData[i];
@@ -96,6 +96,10 @@ angular.module('cragsCtrl', [])
                     //     });
 
                 });
+        };
+
+        $scope.buildCragURL = function(id) {
+            return "/crags/" + id;
         };
 
     });

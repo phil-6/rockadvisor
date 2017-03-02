@@ -123,6 +123,7 @@
             <p>In Area: {{ crag.area }}</p>
 
             <button type="button" class="btn btn-primary" ng-click="deleteCrag(crag.id)">Delete</button>
+            <a href="{{ buildCragURL(crag.id) }}" type="button" class="btn btn-primary">Show</a>
         </div>
 
         <div ng-show="!cragsData.length">

@@ -49,8 +49,9 @@
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
     <!-- Angular Form -->
-    <script src="../angularApp/app.js"></script>
-    <script src="../angularApp/controllers/emailCtrl.js"></script>
+    <script src="../angularApp/controllers/cragDetailCtrl.js"></script> <!-- load our controller -->
+    <script src="../angularApp/services/cragService.js"></script> <!-- load our service -->
+    <script src="../angularApp/app.js"></script> <!-- load our application -->
 
     <!-- Google Analytics -->
     <script>
@@ -66,6 +67,8 @@
 
 </head>
 
+<!-- declare our angular app and controller -->
+<body class="container" ng-app="cragDetailApp" ng-controller="cragDetailController">
 <!--
     ==========
     Navigation
@@ -109,8 +112,8 @@
 <div class="col-md-8 col-md-offset-2">
 
     <!-- PAGE TITLE =============================================== -->
-    <div class="page-header">
-        <h2>Crag</h2>
+    <div class="page-header" ng-hide="loading">
+        <h2>Crag: {{cragData.name}} </h2>
     </div>
 
     <!-- LOADING ICON =============================================== -->
@@ -119,14 +122,9 @@
         <i class="fa fa-space-shuttle fa-5x fa-spin"></i>
     </p>
 
-
-    <!-- THE CRAG =============================================== -->
-    <!-- hide these crags if the loading variable is true -->
-    <div class="crag" ng-hide="loading" >
-        <h3>{{ crag.name }} </h3>
-        <p>In Area: {{ crag.area }}</p>
-
-    </div>
+    <p ng-hide="loading">
+        <p>{{ cragData }}</p>
+    </p>
 
 </div>
 </body>

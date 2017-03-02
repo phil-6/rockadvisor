@@ -45,8 +45,8 @@ Route::get('/climbs', function() {
 //Detail Pages
 //Definate work in progress
 //====================================================================
-Route::get('/crag/{cragId}', function() {
-    return View::make('crag');
+Route::get('/crags/{cragId}', function() {
+    return View::make('cragDetail');
 });
 
 //====================================================================

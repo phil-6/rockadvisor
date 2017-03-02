@@ -13,8 +13,8 @@ angular.module('cragService', [])
             },
 
             //get specific crag
-            show: function(id){
-                console.log("service:CragFactory:show(" + id +")");
+            getDetail: function(id){
+                console.log("service:CragFactory:getDetail(" + id +")");
                 return $http.get('/api/crags/' + id );
             },
 
