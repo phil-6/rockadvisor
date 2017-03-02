@@ -190,7 +190,7 @@ class CragsController extends Controller
     public function api_destroy($crag)
     {
         $crag->delete();
-        return Response::json(array('success' => true));
+        return response()->json(array('success' => true));
     }
 
 }
