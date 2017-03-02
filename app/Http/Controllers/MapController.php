@@ -36,8 +36,7 @@ class MapController extends Controller
             ];
             $data[] = $record;
         }
-
-        sleep(3);
+        
         return $data;
     }
 

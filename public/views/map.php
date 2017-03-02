@@ -109,7 +109,7 @@
     <script>
         var map;
         //creates a new blank array for all the listing markers
-
+        var markers = [];
 
         function initMap() {
             // Constructor create a new map, only center and zoom are required.
@@ -139,7 +139,6 @@
 
 
             // Create Markers array and populate it from API
-            var markers = [];
             var apiUrl = ("/api/maps_crags");
             var largeInfoWindow = new google.maps.InfoWindow();
 
