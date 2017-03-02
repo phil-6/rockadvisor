@@ -96,13 +96,16 @@
     <!-- /.container-fluid -->
 </nav>
 
-
-
 <div class="col-md-8 col-md-offset-2">
+
 
     <!-- PAGE TITLE =============================================== -->
     <div class="page-header">
         <h2>Crags Index</h2>
+    </div>
+
+    <div class="alert alert-success" ng-show="showMessage">
+        <p>{{message}}</p>
     </div>
 
     <!-- LOADING ICON =============================================== -->
@@ -114,13 +117,20 @@
 
     <!-- THE CRAGS =============================================== -->
     <!-- hide these crags if the loading variable is true -->
-    <div class="crag" ng-hide="loading" ng-repeat="crag in crags" >
-        <h3>{{ crag.name }} </h3>
-        <p>In Area: {{ crag.area }}</p>
+    <div ng-hide="loading">
+        <div ng-repeat="crag in cragsData" >
+            <h3>{{ crag.name }} : {{crag.id}}</h3>
+            <p>In Area: {{ crag.area }}</p>
 
-        <p><a href="#" ng-click="deleteCrag(crag.id)" class="text-muted">Delete</a></p>
+            <button type="button" class="btn btn-primary" ng-click="deleteCrag(crag.id)">Delete</button>
+        </div>
 
+        <div ng-show="!cragsData.length">
+            <p>No crags are available.</p>
+        </div>
     </div>
+
+
 
 </div>
 </body>

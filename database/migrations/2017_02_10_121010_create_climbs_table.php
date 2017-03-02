@@ -25,12 +25,13 @@ class CreateClimbsTable extends Migration
 
            $table->timestamps();
 
+           // TODO: Needs looking at - what happens when we delete a topo?
            $table->foreign('topo_id')->references('id')->
-                on('topos')->onDelete('restrict');
+                on('topos')->onDelete('set null');
            $table->foreign('grade_id')->references('id')->
                 on('grades')->onDelete('restrict');
            $table->foreign('crag_id')->references('id')->
-                on('crags')->onDelete('restrict');
+                on('crags')->onDelete('cascade');
 
         });
     }

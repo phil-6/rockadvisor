@@ -3,23 +3,24 @@
  */
 angular.module('cragService', [])
 
-    .factory('Crag', function($http) {
+    .factory('CragFactory', function($http) {
 
         return {
             // get all the crags
             get : function() {
-                console.log("service");
+                console.log("service:CragFactory:get");
                 return $http.get('/api/crags');
             },
 
             //get specific crag
             show: function(id){
-                console.log("service");
+                console.log("service:CragFactory:show(" + id +")");
                 return $http.get('/api/crags/' + id );
             },
 
             // save a crag (pass in crag data)
             save : function(cragData) {
+                console.log("service:CragFactory:save");
                 return $http({
                     method: 'POST',
                     url: '/api/crags',
@@ -30,6 +31,7 @@ angular.module('cragService', [])
 
             // destroy a crag
             destroy : function(id) {
+                console.log("service:CragFactory:destroy(" + id +")");
                 return $http.delete('/api/crags/' + id);
             }
         }
