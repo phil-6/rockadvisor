@@ -46,10 +46,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <!-- Angular -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
     <!-- Angular Form -->
-    <script src="../angularApp/app.js"></script>
     <script src="../angularApp/controllers/emailCtrl.js"></script>
+    <script src="../angularApp/services/emailService.js"></script>
+    <script src="../angularApp/app.js"></script>
 
     <!-- Google Analytics -->
     <script>
@@ -362,8 +363,7 @@
      tabindex="-1"
      role="dialog"
      aria-labelledby="contributeModalLabel"
-     aria-hidden="true"
-     ng-app="contributeApp">
+     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content col-sm-12">
             <div class="modal-header">
@@ -373,17 +373,12 @@
                 </h3>
             </div>
             <div class="modal-body"
-                 ng-controller="contributeCtrl">
+                 ng-app="contributeApp"
+                 ng-controller="contributeController">
                 <form class="form-horizontal"
-                      id="contributeForm"
-                      ng-submit="submit(contributeForm)"
-                      name="contributeForm"
-                      method="post"
-                      action=""
-                      role="form">
+                      ng-submit="submitEmail()">
                     <div class="form-group"
-                         ng-class="{ 'has-error': contributeForm.formName.$invalid && submitted }">
-                        <label>Name</label>
+                       <label>Name</label>
                         <input class="form-control required"
                                placeholder="Your name"
                                data-placement="top"
@@ -395,7 +390,6 @@
                                ng-model="formData.formName">
                     </div>
                     <div class="form-group"
-                         ng-class="{ 'has-error': contributeForm.formMessage.$invalid && submitted }">
                         <label>Message</label>
                         <textarea class="form-control"
                                   placeholder="Write us a message.."

@@ -6,4 +6,4 @@ var cragApp = angular.module('cragApp', ['cragsCtrl', 'cragService']);
 var cragDetailApp = angular.module('cragDetailApp', ['cragDetailCtrl', 'cragService']);
 // var app = angular.module('gradeApp', ['gradesCtrl', 'gradeService']);
 // var app = angular.module('climbApp', ['climbsCtrl', 'climbService']);
-// var app = angular.module('contributeApp', []);
+var contributeApp = angular.module('contributeApp', ['emailCtrl', 'emailService']);
