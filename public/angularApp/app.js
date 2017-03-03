@@ -11,12 +11,12 @@ var contributeApp = angular.module('contributeApp', ['emailCtrl', 'emailService'
 
 var mainApp = angular.module('mainApp', ['ui.router']);
 mainApp.config(function($stateProvider, $urlRouterProvider){
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/');
     $stateProvider
 
     // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
-            url: '/home',
+            url: '/',
             templateUrl: '../views/partial-home.html'
         })
 

@@ -127,10 +127,10 @@ This is going to be our master template
    Main Content
     ==========
               -->
-<div class="container">
+
     <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
     <div ui-view></div>
-</div>
+
 
 <!--
     ==========
