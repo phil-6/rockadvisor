@@ -9,7 +9,7 @@ var climbApp = angular.module('climbApp', ['climbsCtrl', 'climbService']);
 var contributeApp = angular.module('contributeApp', ['emailCtrl', 'emailService']);
 
 
-var mainApp = angular.module('routerApp', ['ui.router']);
+var mainApp = angular.module('mainApp', ['ui.router']);
 mainApp.config(function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise('/home');
     $stateProvider
@@ -17,7 +17,7 @@ mainApp.config(function($stateProvider, $urlRouterProvider){
     // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
             url: '/home',
-            templateUrl: 'partial-home.html'
+            templateUrl: '../views/partial-home.html'
         })
 
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
