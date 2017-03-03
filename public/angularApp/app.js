@@ -7,3 +7,21 @@ var cragDetailApp = angular.module('cragDetailApp', ['cragDetailCtrl', 'cragServ
 var gradeApp = angular.module('gradeApp', ['gradesCtrl', 'gradeService']);
 var climbApp = angular.module('climbApp', ['climbsCtrl', 'climbService']);
 var contributeApp = angular.module('contributeApp', ['emailCtrl', 'emailService']);
+
+
+var mainApp = angular.module('routerApp', ['ui.router']);
+mainApp.config(function($stateProvider, $urlRouterProvider){
+    $urlRouterProvider.otherwise('/home');
+    $stateProvider
+
+    // HOME STATES AND NESTED VIEWS ========================================
+        .state('home', {
+            url: '/home',
+            templateUrl: 'partial-home.html'
+        })
+
+        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
+        .state('blog', {
+            // we'll get to this in a bit
+        });
+});

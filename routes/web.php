@@ -11,6 +11,7 @@
 |
 */
 
+//Commented for work on pure angular front end
 Route::get('/', function() {
     return View::make('main');
 });
@@ -25,7 +26,7 @@ Route::get('/map', function() {
 //====================================================================
 
 
-Route::get('/areas', function() {
+/*Route::get('/areas', function() {
     return View::make('areasIndex');
 });
 
@@ -39,20 +40,20 @@ Route::get('/grades', function() {
 
 Route::get('/climbs', function() {
     return View::make('climbsIndex');
-});
+});*/
 
 //====================================================================
 //Detail Pages
 //Definate work in progress
 //====================================================================
-Route::get('/crags/{cragId}', function() {
+/*Route::get('/crags/{cragId}', function() {
     return View::make('cragDetail');
-});
+});*/
 
 //====================================================================
 //Horrible Static Blog Page
 //====================================================================
 
-Route::get('/blog', function() {
+/*Route::get('/blog', function() {
     return View::make('blogStatic');
-});
+});*/
