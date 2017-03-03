@@ -18,7 +18,7 @@ angular.module('cragDetailCtrl', [])
         // GET ALL CRAGS ==============
         CragFactory.getDetail($scope.cragId)
             .success(function (data) {
-                console.log("ctrl");
+                //console.log("ctrl");
                 $scope.cragData = data;
                 $scope.loading = false;
             });

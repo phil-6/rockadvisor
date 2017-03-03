@@ -7,7 +7,8 @@
 
 <!doctype html>
 <html lang="en">
-<head> <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <title>Rock Advisor Crags</title>
 
     <!-- Bootstrap Core CSS -->
@@ -40,10 +41,17 @@
 
     <!-- Google Analytics -->
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-92612290-1', 'auto');
         ga('send', 'pageview');
@@ -95,45 +103,50 @@
     </div>
     <!-- /.container-fluid -->
 </nav>
-
-<div class="col-md-8 col-md-offset-2">
-
-
-    <!-- PAGE TITLE =============================================== -->
-    <div class="page-header">
-        <h2>Crags Index</h2>
-    </div>
-
-    <!-- DELETE SUCCESS MESSAGE ===================================== -->
-    <div class="alert alert-success" ng-show="showMessage">
-        <p>{{message}}</p>
-    </div>
-
-    <!-- LOADING ICON =============================================== -->
-    <!-- show loading icon if the loading variable is set to true -->
-    <p class="text-center" ng-show="loading">
-        <i class="fa fa-space-shuttle fa-5x fa-spin"></i>
-    </p>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
 
 
-    <!-- THE CRAGS =============================================== -->
-    <!-- hide these crags if the loading variable is true -->
-    <div ng-hide="loading">
-        <div ng-repeat="crag in cragsData" >
-            <h3>{{ crag.name }} : {{crag.id}}</h3>
-            <p>In Area: {{ crag.area }}</p>
+                <!-- PAGE TITLE =============================================== -->
+                <div class="page-header">
+                    <h2>Crags Index</h2>
+                </div>
 
-            <button type="button" class="btn btn-primary" ng-click="deleteCrag(crag.id)">Delete</button>
-            <a href="{{ buildCragURL(crag.id) }}" type="button" class="btn btn-primary">Show</a>
-        </div>
+                <!-- DELETE SUCCESS MESSAGE ===================================== -->
+                <div class="alert alert-success" ng-show="showMessage">
+                    <p>{{message}}</p>
+                </div>
 
-        <div ng-show="!cragsData.length">
-            <p>No crags are available.</p>
-        </div>
-    </div>
+                <!-- LOADING ICON =============================================== -->
+                <!-- show loading icon if the loading variable is set to true -->
+                <p class="text-center" ng-show="loading">
+                    <i class="fa fa-space-shuttle fa-5x fa-spin"></i>
+                </p>
 
 
+                <!-- THE CRAGS =============================================== -->
+                <!-- hide these crags if the loading variable is true -->
+                <div ng-hide="loading">
+                    <div ng-repeat="crag in cragsData">
+                        <h3>{{ crag.name }} : {{crag.id}}</h3>
+                        <p>In Area: {{ crag.area }}</p>
 
-</div>
+<!--                        Commented for Partial Deployment-->
+<!--                        <button type="button" class="btn btn-primary" ng-click="deleteCrag(crag.id)">Delete</button>-->
+<!--                        <a href="{{ buildCragURL(crag.id) }}" type="button" class="btn btn-primary">Show</a>-->
+                    </div>
+
+                    <div ng-show="!cragsData.length">
+                        <p>No crags are available.</p>
+                    </div>
+                </div>
+
+
+            </div><!-- Boostrap Column -->
+        </div><!-- Row -->
+    </div><!-- Container -->
+</section><!-- Section -->
 </body>
 </html>

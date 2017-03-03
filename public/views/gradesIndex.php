@@ -53,11 +53,12 @@
     <!-- hide these crags if the loading variable is true -->
     <div ng-hide="loading">
         <div ng-repeat="grade in gradesData" >
-            <hr>
+
             <p>ID: {{ grade.id }} </p>
             <p>TypeID: {{ grade.climbTypeId }}</p>
             <p>Tech: {{ grade.technicalGrade }}</p>
             <p>Sev: {{ grade.severityGrade }}</p>
+            <hr>
         </div>
 
         <div ng-show="!gradesData.length">

@@ -55,7 +55,8 @@
         <div ng-repeat="area in areasData" >
             <h3>{{ area.name }} </h3>
             <p>Part of: {{ area.parentName }}</p>
-            <button type="button" class="btn btn-primary" ng-click="deleteArea(area.id)">Delete</button>
+<!--            Commented for Deployment-->
+<!--            <button type="button" class="btn btn-primary" ng-click="deleteArea(area.id)">Delete</button>-->
         </div>
         <div ng-show="!areasData.length">
             <p>No areas are available.</p>

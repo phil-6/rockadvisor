@@ -208,12 +208,38 @@
                     <h3 class="postTitle">
                         Calum's Content
                     </h3>
-                    <p class="post-meta">Posted by <a href="#Calum">Calum</a> Sometime</p>
+                    <p class="post-meta">Posted by <a href="#Calum">Calum</a> Sometime Soon</p>
                     <div class="postContent">
                         <p>Coming soon...</p>
                     </div><!-- End Content -->
 
 
+                </div> <!-- End Post -->
+                <hr>
+                <div class="post">
+
+                    <h3 class="postTitle">
+                        Stepping forward slowly
+                    </h3>
+                    <p class="post-meta">Posted by <a href="#Phil">Phil</a> 03/03/2017</p>
+                    <div class="postContent">
+                        <p>
+                            The aim of this week was to get things ready to allow you to browse through the crags that we have on our database and while a lot more code has been created so have a lot of problems.
+                        </p>
+                        <p>
+                            The biggest of which was an attempted integration of Angular 2. For those who don’t know (I’m still pretty fuzzy) Angular is a javascript framework that allows web pages to do loads of flashy things, especially things like dynamic changes to the content without reloading the page. For example, while the contribute form on the main page is powered just by Bootstrap (a framework for styling pages) the changes after you click submit are all powered by AngularJS.  Angular 2 is the most recent version of AngularJS but it is not a upgrade, it is a complete re write. While I can see that it can be hugely powerful and make a lot of sense if you’re building a application from scratch, trying to upgrade to it is incredibly difficult. I committed a day to getting it working, and it doesn’t feel like I got anywhere close. The progress is still and it would be nice to go back to it at some point, maybe later with Rock Advisor, maybe with another project in the future.
+                        </p>
+                        <p>
+                            There have been a few small updates to the map this week as well, markers now drop in instead of just appearing and marker clustering has been implemented… it doesn’t work, but the code is there. That’s something I’m going to come back to and fix later because it’s really baffling as to why its not working.
+                        </p>
+                        <p>
+                            After I gave up with Angular 2 I decided to make sure we were using the most recent versions of AngularJS and Jquery which power elements that run on most of our pages. This, inevitably broke various bits and pieces, but everything appears to be back up and running now. *Touch Wood*
+                        </p>
+                        <p>
+                            Hopefully at the end of this weekend everything will still look the same but they’ll be a lot more magic going on behind the scenes! Wish me luck!
+                        </p>
+
+                    </div><!-- End Content -->
                 </div> <!-- End Post -->
                 <hr>
                 <div class="post">
@@ -249,9 +275,8 @@
                         </p>
 
                     </div><!-- End Content -->
-
-
                 </div> <!-- End Post -->
+
             </div><!-- Bootstrap -->
         </div><!-- Row -->
     </div><!-- Container -->

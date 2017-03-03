@@ -19,7 +19,7 @@ angular.module('emailCtrl', [])
 
             EmailFactory.submit($scope.formData)
                 .success(function(data){
-                    console.log(data); //debugging
+                    //console.log(data); //debugging
                     if (data.success) { //success comes from the return json object
                         $scope.submitButtonHidden = true;
                         $scope.progressMessageShowing = false;

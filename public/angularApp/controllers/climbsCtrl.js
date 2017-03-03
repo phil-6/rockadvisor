@@ -20,7 +20,7 @@ angular.module('climbsCtrl', [])
         // GET ALL CLIMBS ==============
         ClimbFactory.get()
             .success(function (data) {
-                console.log("ctrl");
+                //console.log("ctrl");
                 $scope.climbsData = data;
                 $scope.loading = false;
             });

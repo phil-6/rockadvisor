@@ -9,7 +9,7 @@ angular.module('emailService', [])
     .factory('EmailFactory', function($http) {
         return{
             submit : function(formData){
-                console.log("service:EmailFactory:submit");
+                // console.log("service:EmailFactory:submit");
                 return $http({
                     method: 'POST',
                     url: '/api/sendMail',

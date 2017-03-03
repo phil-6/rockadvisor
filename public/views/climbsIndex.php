@@ -64,7 +64,8 @@
             <p>Crag: {{ climb.crag }}</p>
             <p>Grade: {{ climb.grade }}</p>
 
-            <button type="button" class="btn btn-primary" ng-click="deleteClimb(climb.id)">Delete</button>
+<!--            Commented for Deployment-->
+<!--            <button type="button" class="btn btn-primary" ng-click="deleteClimb(climb.id)">Delete</button>-->
 
         </div>
         <div ng-show="!climbsData.length">

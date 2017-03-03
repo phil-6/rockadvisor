@@ -19,7 +19,7 @@ angular.module('gradesCtrl', [])
         // GET ALL GRADES ==============
         GradeFactory.get()
             .success(function (data) {
-                console.log("ctrl");
+                //console.log("ctrl");
                 $scope.gradesData = data;
                 $scope.loading = false;
             });

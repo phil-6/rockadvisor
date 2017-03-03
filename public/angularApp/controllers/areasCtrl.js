@@ -20,7 +20,7 @@ angular.module('areasCtrl', [])
         // GET ALL AREAS ==============
         AreaFactory.get()
             .success(function (data) {
-                console.log("ctrl");
+                //console.log("ctrl");
                 $scope.areasData = data;
                 $scope.loading = false;
             });
