@@ -24,7 +24,7 @@ class Crag extends Model
      */
     public function climbs()
     {
-        return $this->hasMany('App\Climb', 'crag_id', 'id')->orderBy('name');
+        return $this->hasMany('App\Climb', 'crag_id', 'id')->orderBy('id');
     }
 
 

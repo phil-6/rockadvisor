@@ -9,6 +9,7 @@ angular.module('cragDetailCtrl', [])
         // object to hold all the data for the new crag form
         $scope.cragId = $stateParams.cragID;
         $scope.cragData = {};
+        $scope.climbs = {}
 
         // loading variable to show the spinning loading icon
         $scope.loading = true;
@@ -20,6 +21,13 @@ angular.module('cragDetailCtrl', [])
             .success(function (data) {
                 //console.log("ctrl");
                 $scope.cragData = data;
+                $scope.loading = false;
+            });
+
+        CragFactory.getClimbs($scope.cragId)
+            .success(function (data) {
+                //console.log("ctrl");
+                $scope.climbs = data;
                 $scope.loading = false;
             });
     });

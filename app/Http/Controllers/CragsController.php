@@ -64,6 +64,11 @@ class CragsController extends Controller
         return response()->json($crag);
     }
 
+    public function api_getClimbsAtCrag($crag){
+        return $crag->climbs();
+
+    }
+
 
 
     public function api_getGradesAtCrag($crag)

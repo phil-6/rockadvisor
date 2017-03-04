@@ -43,6 +43,10 @@ Route::get('grades', 			    'GradesController@api_index');
 Route::get('crags/{cragId}/type',   'CragsController@api_climbTypeIdsAndNames');
 
 Route::get('crags/{cragId}/grades', 'CragsController@api_getGradesAtCrag');
+
+Route::get('crags/{cragId}/climbs', 'CragsController@api_getClimbsAtCrag');
+
+
 //Routes for maps api
 Route::get('maps_crags',            'MapController@map_api_getAllCrags');
 
