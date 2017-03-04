@@ -5,9 +5,9 @@
 angular.module('cragDetailCtrl', [])
 
 // inject the Crag service into our controller
-    .controller('cragDetailController', function ($scope, $http, CragFactory) {
+    .controller('cragDetailController', function ($scope, $http, $stateParams, CragFactory) {
         // object to hold all the data for the new crag form
-        $scope.cragId = 23;
+        $scope.cragId = $stateParams.cragID;
         $scope.cragData = {};
 
         // loading variable to show the spinning loading icon
