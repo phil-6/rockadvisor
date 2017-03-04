@@ -116,14 +116,14 @@ For the "finder" section of the website
     ==========
               -->
 <!-- MAIN CONTENT -->
-<header>
+<section>
     <div class="container">
 
         <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
         <div ui-view class="header-content"></div>
 
     </div>
-</header>
+</section>
 
 
 

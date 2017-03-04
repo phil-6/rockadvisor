@@ -1,17 +1,15 @@
 <!-- partial-finder.html -->
-
 <!--
+--Created by philr
+--on 04/03/17
+--Edited last by philr
+--On 04/03/17
+-->
 <div class="jumbotron text-center">
     <h1>Rock Advisor</h1>
     <p>The Crag Finder</p>
-</div>-->
-<div class="row">
-    <div class="header-content">
-        <div class="header-content-inner">
-            <h1 id="homeHeading">Rock Advisor</h1>
-            <hr>
-            <p>A Climbing Guidebook for the Digital Age</p>
-            <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
-        </div>
-    </div>
+    <a ui-sref=".crags" class="btn btn-primary">Crag List</a>
+    <a ui-sref=".areas" class="btn btn-danger">Area List</a>
 </div>
+
+<div ui-view></div>
