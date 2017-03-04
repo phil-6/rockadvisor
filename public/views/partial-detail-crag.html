@@ -12,7 +12,7 @@
 
         <!-- PAGE TITLE =============================================== -->
         <div class="page-header" ng-hide="loading">
-            <h2>Crag: {{cragData.name}} </h2>
+            <h2>{{cragData.name}} </h2>
         </div>
 
         <!-- LOADING ICON =============================================== -->
@@ -22,7 +22,11 @@
         </p>
 
         <div ng-hide="loading">
-            <p>{{ cragData }}</p>
+
+            <p>{{ cragData.description }}</p>
+            <p>Area: {{ cragData.area_id }}</p>
+            <p>Faces: {{ cragData.orientation }}</p>
+            <p>Approach: {{ cragData.approach_time }} minutes</p>
         </div>
 
     </div><!-- Boostrap Column -->

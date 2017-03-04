@@ -38,8 +38,8 @@
                 <p>In Area: {{ crag.area }}</p>
 
                 <!--                        Commented for Partial Deployment-->
-                <!--                        <button type="button" class="btn btn-primary" ng-click="deleteCrag(crag.id)">Delete</button>-->
-                <!--                        <a href="{{ buildCragURL(crag.id) }}" type="button" class="btn btn-primary">Show</a>-->
+                <button type="button" class="btn btn-primary" ng-click="deleteCrag(crag.id)">Delete</button>
+                <a ui-sref="finder.cragDetail({ cragID: {{crag.id}} })" type="button" class="btn btn-primary">Show</a>
             </div>
 
             <div ng-show="!cragsData.length">
