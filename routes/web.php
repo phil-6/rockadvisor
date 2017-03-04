@@ -25,6 +25,9 @@ Route::get('/map', function() {
 //These are currently for development and lack any sort of meaningful css
 //====================================================================
 
+Route::get('/finder', function(){
+    return View::Make('finder');
+});
 
 /*Route::get('/areas', function() {
     return View::make('areasIndex');

@@ -9,15 +9,15 @@ var climbApp = angular.module('climbApp', ['climbsCtrl', 'climbService']);
 var contributeApp = angular.module('contributeApp', ['emailCtrl', 'emailService']);
 
 
-var mainApp = angular.module('mainApp', ['ui.router']);
-mainApp.config(function($stateProvider, $urlRouterProvider){
-    $urlRouterProvider.otherwise('/');
+var finderApp = angular.module('finderApp', ['ui.router']);
+finderApp.config(function($stateProvider, $urlRouterProvider){
+    $urlRouterProvider.otherwise('/finder');
     $stateProvider
 
     // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
-            url: '/',
-            templateUrl: '../views/partial-home.html'
+            url: '/finder',
+            templateUrl: '../views/partial-finder.html'
         })
 
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================

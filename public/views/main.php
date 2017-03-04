@@ -5,11 +5,7 @@
 --On 03/03/17
 -->
 
-<!--
----------------------------------------
-This is going to be our master template
----------------------------------------
--->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -79,40 +75,37 @@ This is going to be our master template
     </script>
 
 </head>
-<body ng-app="mainApp" id="page-top">
+<body id="page-top">
 <!--
     ==========
     Navigation
     ==========
               -->
-<nav id="mainNav"
-     class="navbar navbar-default navbar-fixed-top"
-     role="navigation">
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button"
-                    class="navbar-toggle collapsed"
-                    data-toggle="collapse"
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#rockAdvisorNavbar">
-                <span class="sr-only">Toggle navigation</span>
-                Menu <i class="fa fa-bars"></i>
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
             </button>
-            <!--"Rock Advisor" Links to Homepage-->
-            <a class="navbar-brand page-scroll" ui-sref="#">Rock Advisor</a>
+            <a class="navbar-brand page-scroll" href="#page-top">Rock Advisor</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="rockAdvisorNavbar">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll" ui-sref="home">Home</a>
+                    <a class="page-scroll" href="#about">About</a>
                 </li>
                 <li>
-                    <a class="page-scroll" ui-sref="map">Crag Map</a>
+                    <a class="page-scroll" href="#contact">Contribute</a>
                 </li>
                 <li>
-                    <a class="page-scroll" ui-sref="crags">Crag Index</a>
+                    <a class="page-scroll" href="/map">Crag Map</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="/crags">Crag Index</a>
                 </li>
 
             </ul>
