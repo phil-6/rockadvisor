@@ -9,7 +9,11 @@ var climbApp = angular.module('climbApp', ['climbsCtrl', 'climbService']);
 var contributeApp = angular.module('contributeApp', ['emailCtrl', 'emailService']);
 
 
-var finderApp = angular.module('finderApp', ['cragsCtrl', 'cragService', 'ui.router']);
+var finderApp = angular.module('finderApp', [
+    'cragsCtrl', 'cragService',
+    'areasCtrl', 'areaService',
+    'ui.router'
+]);
 finderApp.config(function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise('/');
     $stateProvider
@@ -28,7 +32,8 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
         // nested list with just some random string data
         .state('home.areas', {
             url: 'areas',
-            template: 'I could sure use a drink right now.'
+            templateUrl: '../views/partial-finder-areas.html',
+            controller: 'areasController'
         })
 
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================

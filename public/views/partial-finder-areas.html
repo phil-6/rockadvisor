@@ -1,0 +1,45 @@
+<!-- partial-finder-areas.html -->
+<!--
+--Created by philr
+--on 04/03/17
+--Edited last by philr
+--On 04/03/17
+-->
+
+<div class="row"  >
+    <div class="col-md-8 col-md-offset-2">
+
+
+        <!-- PAGE TITLE =============================================== -->
+        <div class="page-header">
+            <h2>Areas Index</h2>
+        </div>
+
+        <!-- DELETE SUCCESS MESSAGE ===================================== -->
+        <div class="alert alert-success" ng-show="showMessage">
+            <p>{{message}}</p>
+        </div>
+
+        <!-- LOADING ICON =============================================== -->
+        <!-- show loading icon if the loading variable is set to true -->
+        <p class="text-center" ng-show="loading">
+            <i class="fa fa-space-shuttle fa-5x fa-spin"></i>
+        </p>
+
+
+        <!-- THE AREAS =============================================== -->
+        <!-- hide these areas if the loading variable is true -->
+        <div ng-hide="loading">
+            <div ng-repeat="area in areasData" >
+                <h3>{{ area.name }} </h3>
+                <p>Part of: {{ area.parentName }}</p>
+                <!--            Commented for Deployment-->
+                <!--            <button type="button" class="btn btn-primary" ng-click="deleteArea(area.id)">Delete</button>-->
+            </div>
+            <div ng-show="!areasData.length">
+                <p>No areas are available.</p>
+            </div>
+        </div>
+
+    </div><!-- Boostrap Column -->
+</div><!-- Row -->
