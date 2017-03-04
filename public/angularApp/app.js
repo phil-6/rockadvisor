@@ -9,7 +9,7 @@ var climbApp = angular.module('climbApp', ['climbsCtrl', 'climbService']);
 var contributeApp = angular.module('contributeApp', ['emailCtrl', 'emailService']);
 
 
-var finderApp = angular.module('finderApp', ['ui.router', 'cragsCtrl', 'cragService' ]);
+var finderApp = angular.module('finderApp', ['cragsCtrl', 'cragService', 'ui.router']);
 finderApp.config(function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise('/');
     $stateProvider
@@ -34,5 +34,6 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
         .state('blog', {
             // we'll get to this in a bit
-        });
+        })
+
 });

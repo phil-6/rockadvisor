@@ -29,7 +29,7 @@ Route::get('/finder', function(){
     return View::Make('finder');
 });
 
-/*Route::get('/areas', function() {
+Route::get('/areas', function() {
     return View::make('areasIndex');
 });
 
@@ -43,7 +43,7 @@ Route::get('/grades', function() {
 
 Route::get('/climbs', function() {
     return View::make('climbsIndex');
-});*/
+});
 
 //====================================================================
 //Detail Pages

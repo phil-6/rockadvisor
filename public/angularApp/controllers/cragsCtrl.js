@@ -2,7 +2,8 @@
  * Created by philr on 24/02/2017.
  */
 
-angular.module('cragsCtrl', [])
+angular
+    .module('cragsCtrl', [])
 
 // inject the Crag service into our controller
     .controller('cragsController', function ($scope, $http, CragFactory) {

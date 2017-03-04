@@ -40,7 +40,7 @@ For the "finder" section of the website
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <!-- AngularJS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <!-- AngularJS UI-Router -->
     <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
 
@@ -70,7 +70,8 @@ For the "finder" section of the website
 
 
 </head>
-<!-- declare our angular app and controller -->
+<!-- declare our angular app and controller
+-->
 <body ng-app="finderApp">
 <!--
     ==========
