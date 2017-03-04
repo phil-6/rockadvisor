@@ -36,9 +36,11 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
             templateUrl: '../views/partial-finder-areas.html',
             controller: 'areasController'
         })
-        // nested crag detail
-        .state('finder.cragDetail', {
-            url: 'crag/:cragID',
+
+
+        // crag detail
+        .state('cragDetail', {
+            url: '/crag/:cragID',
             templateUrl: '../views/partial-detail-crag.html',
             controller: 'cragDetailController'
         })

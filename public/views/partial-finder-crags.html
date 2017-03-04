@@ -32,14 +32,14 @@
         <div ng-hide="loading">
             <div ng-repeat="crag in cragsData">
 
-                <a ui-sref="finder.cragDetail({ cragID: {{crag.id}} })">
+                <a ui-sref="cragDetail({ cragID: {{crag.id}} })">
                     <h3>{{ crag.name }} : {{crag.id}}</h3>
                 </a>
                 <p>In Area: {{ crag.area }}</p>
 
                 <!--                        Commented for Partial Deployment-->
                 <button type="button" class="btn btn-primary" ng-click="deleteCrag(crag.id)">Delete</button>
-                <a ui-sref="finder.cragDetail({ cragID: {{crag.id}} })" type="button" class="btn btn-primary">Show</a>
+                <a ui-sref="cragDetail({ cragID: {{crag.id}} })" type="button" class="btn btn-primary">Show</a>
             </div>
 
             <div ng-show="!cragsData.length">

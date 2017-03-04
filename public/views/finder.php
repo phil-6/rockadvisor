@@ -100,13 +100,13 @@ For the "finder" section of the website
         <div class="collapse navbar-collapse" id="rockAdvisorNavbar">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll" ui-sref="home">Home</a>
+                    <a class="page-scroll" href="/map">Crag Map</a>
                 </li>
                 <li>
-                    <a class="page-scroll" ui-sref="map">Crag Map</a>
+                    <a class="page-scroll" href="/finder">Crag Finder</a>
                 </li>
                 <li>
-                    <a class="page-scroll" ui-sref="blog">Development</a>
+                    <a class="page-scroll" href="/blog">Development</a>
                 </li>
 
             </ul>
