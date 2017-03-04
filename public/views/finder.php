@@ -46,8 +46,8 @@ For the "finder" section of the website
 
     <!-- ANGULAR -->
     <!-- all angular resources will be loaded from the /public folder -->
-    <!--<script src="../angularApp/controllers/cragsCtrl.js"></script> <!-- load our controller -->
-    <!--<script src="../angularApp/services/cragService.js"></script> <!-- load our service -->
+    <script src="../angularApp/controllers/cragsCtrl.js"></script> <!-- load our controller -->
+    <script src="../angularApp/services/cragService.js"></script> <!-- load our service -->
     <script src="../angularApp/app.js"></script> <!-- load our application -->
 
     <!-- Google Analytics -->
@@ -71,7 +71,7 @@ For the "finder" section of the website
 
 </head>
 <!-- declare our angular app and controller -->
-<body class="container" ng-app="finderApp">
+<body ng-app="finderApp">
 <!--
     ==========
     Navigation
@@ -116,14 +116,14 @@ For the "finder" section of the website
     ==========
               -->
 <!-- MAIN CONTENT -->
-<section>
+<header>
     <div class="container">
 
         <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
-        <div ui-view></div>
+        <div ui-view class="header-content"></div>
 
     </div>
-</section>
+</header>
 
 
 
