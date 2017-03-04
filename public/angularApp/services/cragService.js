@@ -19,7 +19,7 @@ angular.module('cragService', [])
             },
 
            getClimbs : function(id){
-              return $http.get('/api/crags/' + id + 'climbs');
+              return $http.get('/api/crags/' + id + '/climbs');
             },
 
             // save a crag (pass in crag data)

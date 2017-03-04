@@ -51,7 +51,6 @@ For the "finder" section of the website
     <script src="../angularApp/controllers/areasCtrl.js"></script> <!-- load our controller -->
     <script src="../angularApp/services/areaService.js"></script> <!-- load our service -->
     <script src="../angularApp/controllers/cragDetailCtrl.js"></script> <!-- load our controller -->
-    <script src="../angularApp/services/cragService.js"></script> <!-- load our service -->
     <script src="../angularApp/app.js"></script> <!-- load our application -->
 
     <!-- Google Analytics -->
