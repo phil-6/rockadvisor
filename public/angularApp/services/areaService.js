@@ -18,6 +18,10 @@ angular.module('areaService', [])
                 return $http.get('/api/areas/' + id );
             },
 
+            getCrags: function (id) {
+                return $http.get('/api/areas/' + id + '/crags');
+            },
+
             // save a area (pass in area data)
             save : function(areaData) {
                 // console.log("service:AreaFactory:save");

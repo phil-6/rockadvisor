@@ -46,6 +46,8 @@ Route::get('crags/{cragId}/grades', 'CragsController@api_getGradesAtCrag');
 
 Route::get('crags/{cragId}/climbs', 'CragsController@api_getClimbsAtCrag');
 
+Route::get('areas/{areaId}/crags',  'AreasController@api_getCragsAtArea');
+
 
 //Routes for maps api
 Route::get('maps_crags',            'MapController@map_api_getAllCrags');

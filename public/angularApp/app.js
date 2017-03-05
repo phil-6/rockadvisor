@@ -5,6 +5,7 @@
  * on 05/03/17
  */
 var areaApp = angular.module('areaApp', ['areasCtrl', 'areaService']);
+var areaDetailApp = angular.module('areaDetailApp', ['areaDetailCtrl', 'areaService']);
 var cragApp = angular.module('cragApp', ['cragsCtrl', 'cragService']);
 var cragDetailApp = angular.module('cragDetailApp', ['cragDetailCtrl', 'cragService']);
 var gradeApp = angular.module('gradeApp', ['gradesCtrl', 'gradeService']);
@@ -14,8 +15,9 @@ var contributeApp = angular.module('contributeApp', ['emailCtrl', 'emailService'
 
 var finderApp = angular.module('finderApp', [
     'cragsCtrl', 'cragService',
-    'areasCtrl', 'areaService',
     'cragDetailCtrl',
+    'areasCtrl', 'areaService',
+    'areaDetailCtrl',
     'ui.router'
 ]);
 finderApp.config(function($stateProvider, $urlRouterProvider){
@@ -38,6 +40,12 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
             url: 'areas',
             templateUrl: '../views/areas-finder-partial.html',
             controller: 'areasController'
+        })
+        .state('finder.areas.detail',{
+
+            params: { areaID: {} },
+            templateUrl: '../views/areas-finder-partial.html',
+            controller: 'areaDetailController'
         })
 
 

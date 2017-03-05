@@ -34,6 +34,10 @@ class AreasController extends Controller
         return response()->json($data);
 
     }
+    public function api_getCragsAtArea($area)
+    {
+        return $area->crags;
+    }
 
     /**
      * Show the form for creating a new resource.

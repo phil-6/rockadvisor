@@ -45,11 +45,12 @@ For the "finder" section of the website
     <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
 
     <!-- ANGULAR -->
-    <script src="../angularApp/controllers/cragsCtrl.js"></script>
-    <script src="../angularApp/services/cragService.js"></script>
-    <script src="../angularApp/controllers/areasCtrl.js"></script>
     <script src="../angularApp/services/areaService.js"></script>
+    <script src="../angularApp/services/cragService.js"></script>
+    <script src="../angularApp/controllers/cragsCtrl.js"></script>
+    <script src="../angularApp/controllers/areasCtrl.js"></script>
     <script src="../angularApp/controllers/cragDetailCtrl.js"></script>
+    <script src="../angularApp/controllers/areaDetailCtrl.js"></script>
     <script src="../angularApp/app.js"></script>
 
     <!-- Google Analytics -->

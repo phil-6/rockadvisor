@@ -9,6 +9,7 @@ angular.module('areasCtrl', [])
     .controller('areasController', function ($scope, $http, AreaFactory) {
         // object to hold all the data for the new area form
         $scope.areasData = {};
+
         $scope.showMessage = false;
         $scope.message = "";
 
@@ -24,6 +25,9 @@ angular.module('areasCtrl', [])
                 $scope.areasData = data;
                 $scope.loading = false;
             });
+
+
+
 
 
         // function to handle submitting the form

@@ -3,38 +3,38 @@
  */
 angular.module('cragService', [])
 
-    .factory('CragFactory', function($http) {
+    .factory('CragFactory', function ($http) {
 
         return {
             // get all the crags
-            get : function() {
+            get: function () {
                 console.log("service:CragFactory:get");
                 return $http.get('/api/crags');
             },
 
             //get specific crag
-            getDetail : function(id){
+            getDetail: function (id) {
                 // console.log("service:CragFactory:getDetail(" + id +")");
-                return $http.get('/api/crags/' + id );
+                return $http.get('/api/crags/' + id);
             },
 
-           getClimbs : function(id){
-              return $http.get('/api/crags/' + id + '/climbs');
+            getClimbs: function (id) {
+                return $http.get('/api/crags/' + id + '/climbs');
             },
 
             // save a crag (pass in crag data)
-            save : function(cragData) {
+            save: function (cragData) {
                 // console.log("service:CragFactory:save");
                 return $http({
                     method: 'POST',
                     url: '/api/crags',
-                    headers: { 'Content-Type' : 'application/x-www-form-urlencoded' },
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
                     data: $.param(cragData)
                 });
             },
 
             // destroy a crag
-            destroy : function(id) {
+            destroy: function (id) {
                 // console.log("service:CragFactory:destroy(" + id +")");
                 return $http.delete('/api/crags/' + id);
             }
