@@ -1,5 +1,8 @@
 /**
- * Created by philr on 23/02/2017.
+ * Created by philr
+ * on 23/02/2017.
+ * Edited last by philr
+ * on 05/03/17
  */
 var areaApp = angular.module('areaApp', ['areasCtrl', 'areaService']);
 var cragApp = angular.module('cragApp', ['cragsCtrl', 'cragService']);
@@ -22,18 +25,18 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
     // HOME STATES AND NESTED VIEWS ========================================
         .state('finder', {
             url: '/',
-            templateUrl: '../views/partial-finder.html'
+            templateUrl: '../views/finder-header-partial.html'
         })
         // nested crags index
         .state('finder.crags', {
             url: 'crags',
-            templateUrl: '../views/partial-finder-crags.html',
+            templateUrl: '../views/crags-finder-partial.html',
             controller: 'cragsController'
         })
         // nested areas index
         .state('finder.areas', {
             url: 'areas',
-            templateUrl: '../views/partial-finder-areas.html',
+            templateUrl: '../views/areas-finder-partial.html',
             controller: 'areasController'
         })
 
@@ -41,15 +44,15 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
         // crag detail
         .state('cragDetail', {
             url: '/crag/:cragID',
-            templateUrl: '../views/partial-detail-crag.html',
+            templateUrl: '../views/crag-detail-partial.html',
             controller: 'cragDetailController'
-        })
+        });
 
 
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
-        .state('blog', {
+        //.state('blog', {
             // we'll get to this in a bit
             //https://scotch.io/tutorials/angular-routing-using-ui-router#multiple-views-about-page
-        })
+        //})
 
 });

@@ -26,7 +26,7 @@ angular.module('cragDetailCtrl', [])
 
         CragFactory.getClimbs($scope.cragId)
             .success(function (data2) {
-                console.log(data2);
+                //console.log(data2);
                 $scope.climbData = data2;
                 $scope.loading = false;
             });

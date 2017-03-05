@@ -45,13 +45,12 @@ For the "finder" section of the website
     <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
 
     <!-- ANGULAR -->
-    <!-- all angular resources will be loaded from the /public folder -->
-    <script src="../angularApp/controllers/cragsCtrl.js"></script> <!-- load our controller -->
-    <script src="../angularApp/services/cragService.js"></script> <!-- load our service -->
-    <script src="../angularApp/controllers/areasCtrl.js"></script> <!-- load our controller -->
-    <script src="../angularApp/services/areaService.js"></script> <!-- load our service -->
-    <script src="../angularApp/controllers/cragDetailCtrl.js"></script> <!-- load our controller -->
-    <script src="../angularApp/app.js"></script> <!-- load our application -->
+    <script src="../angularApp/controllers/cragsCtrl.js"></script>
+    <script src="../angularApp/services/cragService.js"></script>
+    <script src="../angularApp/controllers/areasCtrl.js"></script>
+    <script src="../angularApp/services/areaService.js"></script>
+    <script src="../angularApp/controllers/cragDetailCtrl.js"></script>
+    <script src="../angularApp/app.js"></script>
 
     <!-- Google Analytics -->
     <script>

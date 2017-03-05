@@ -1,4 +1,4 @@
-<!-- partial-detail-crag.html -->
+<!-- crag-detail-partial.html -->
 <!--
 --Created by philr
 --on 04/03/17
@@ -21,18 +21,21 @@
             <i class="fa fa-space-shuttle fa-5x fa-spin"></i>
         </p>
 
-        <div ng-hide="loading">
+        <div ng-hide="loading" >
 
             <p>{{ cragData.description }}</p>
             <p>Area: {{ cragData.area_id }}</p>
             <p>Faces: {{ cragData.orientation }}</p>
             <p>Approach: {{ cragData.approach_time }} minutes</p>
         </div>
+
+
         <div>
             <div ng-repeat="climb in climbData">
 
 
-                <h3>{{ climb.name }} : {{climb.grade_id}}</h3>
+                <h3>{{ climb.name }}</h3>
+                <h3>Grade ID: {{climb.grade_id}}</h3>
 
                 <p>Description: {{ climb.description }}</p>
                 <p>Length: {{ climb.length}}m</p>
