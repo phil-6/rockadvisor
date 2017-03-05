@@ -98,7 +98,7 @@
                     <a class="page-scroll" href="/map">Crag Map</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="/crags">Crag Index</a>
+                    <a class="page-scroll" href="/finder">Crag Finder</a>
                 </li>
 
             </ul>

@@ -85,7 +85,7 @@
                         <a class="page-scroll" href="../#howItWorks">How It Works</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/crags">Crag Index</a>
+                        <a class="page-scroll" href="/finder">Crag Finder</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="/blog">Development</a>
