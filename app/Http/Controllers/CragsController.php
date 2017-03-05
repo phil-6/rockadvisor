@@ -66,7 +66,7 @@ class CragsController extends Controller
 
     public function api_getClimbsAtCrag($crag)
     {
-        return $crag->climbs();
+        return $crag->climbs;
     }
 
 
@@ -191,7 +191,7 @@ class CragsController extends Controller
     //     //
     // }
 
-    //this is broken
+
     public function api_destroy($crag)
     {
         $crag->delete();
