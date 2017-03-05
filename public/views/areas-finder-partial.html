@@ -31,7 +31,9 @@
         <!-- hide these areas if the loading variable is true -->
         <div ng-hide="loading">
             <div ng-repeat="area in areasData" >
-                <h3>{{ area.name }} </h3>
+                <a ui-sref="areaDetail({ areaID: {{area.id}} })">
+                    <h3>{{ area.name }} </h3>
+                </a>
                 <p>Part of: {{ area.parentName }}</p>
                 <!--            Commented for Deployment-->
                 <!--            <button type="button" class="btn btn-primary" ng-click="deleteArea(area.id)">Delete</button>-->

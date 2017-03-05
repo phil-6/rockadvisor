@@ -54,6 +54,13 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
             url: '/crag/:cragID',
             templateUrl: '../views/crag-detail-partial.html',
             controller: 'cragDetailController'
+        })
+
+        // area detail
+        .state('areaDetail', {
+            url: '/area/:areaID',
+            templateUrl: '../views/area-detail-partial.html',
+            controller: 'areaDetailController'
         });
 
 
