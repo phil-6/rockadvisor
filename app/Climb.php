@@ -27,4 +27,6 @@ class Climb extends Model
         return $this->belongsTo('App\Grade', 'grade_id', 'id');
     }
 
+
+
 }

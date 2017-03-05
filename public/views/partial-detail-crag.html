@@ -29,7 +29,22 @@
             <p>Approach: {{ cragData.approach_time }} minutes</p>
         </div>
         <div>
-            <p>{{ climbs }}</p>
+            <div ng-repeat="climb in climbData">
+
+
+                <h3>{{ climb.name }} : {{climb.grade_id}}</h3>
+
+                <p>Description: {{ climb.description }}</p>
+                <p>Length: {{ climb.length}}m</p>
+
+                <!--                        Commented for Partial Deployment-->
+                <!--<button type="button" class="btn btn-primary" ng-click="deleteClimb(climb.id)">Delete</button>-->
+
+            </div>
+
+            <div ng-show="!climbData.length">
+                <p>No climbs are available.</p>
+            </div>
         </div>
 
 
