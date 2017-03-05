@@ -46,4 +46,15 @@ class Grade extends Model
         $climbTypeName = $climbType->climbTypeName->name;
         return array("id" => $climbTypeId, "name" => $climbTypeName);
     }
+
+    /*public function gradeDetail()
+    {
+        $climbType = $this->climbType;
+        $climbTypeId = $climbType->climbTypeName->id;
+        $climbTypeName = $climbType->climbTypeName->name;
+        $climbSystem =
+        return array(
+            "type_id" => $climbTypeId,
+            "type_name" => $climbTypeName);
+    }*/
 }

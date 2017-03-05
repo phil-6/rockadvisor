@@ -50,6 +50,11 @@ class ClimbsController extends Controller
 
     }
 
+    /*public function api_getGradeDetail()
+    {
+
+    }*/
+
     /**
      * Display the specified resource.
      *
