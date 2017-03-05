@@ -1,15 +1,22 @@
-<!-- partial-finder.html -->
+<!-- finder-header-partial.html -->
 <!--
 --Created by philr
 --on 04/03/17
 --Edited last by philr
 --On 04/03/17
 -->
-<div class="jumbotron text-center">
-    <h1>Rock Advisor</h1>
-    <p>The Crag Finder</p>
-    <a ui-sref=".areas" class="btn btn-danger">Area List</a>
-    <a ui-sref=".crags" class="btn btn-primary">Crag List</a>
-</div>
+<section class="finder-header text-center ">
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1>Rock Advisor</h1>
+            <hr>
+            <h4>The Crag Finder</h4>
+        </div>
+        <div class="about-buttons">
+            <a ui-sref=".areas" class="btn btn-danger">Area List</a>
+            <a ui-sref=".crags" class="btn btn-primary">Crag List</a>
+        </div>
+    </div>
+</section>
 
 <div ui-view></div>

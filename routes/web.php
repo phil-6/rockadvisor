@@ -57,6 +57,6 @@ Route::get('/climbs', function() {
 //Horrible Static Blog Page
 //====================================================================
 
-/*Route::get('/blog', function() {
+Route::get('/blog', function() {
     return View::make('blogStatic');
-});*/
+});

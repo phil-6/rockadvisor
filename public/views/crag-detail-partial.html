@@ -7,35 +7,41 @@
 -->
 
 <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-
-
+        <!-- class="row" -->
+        <!-- class="col-md-8 col-md-offset-2" -->
         <!-- PAGE TITLE =============================================== -->
-        <div class="page-header" ng-hide="loading">
-            <h2>{{cragData.name}} </h2>
-        </div>
+        <section class="bg-dark text-center">
+            <div class="page-header" ng-hide="loading">
+                <h1>{{cragData.name}} </h1>
+            </div>
 
-        <!-- LOADING ICON =============================================== -->
-        <!-- show loading icon if the loading variable is set to true -->
-        <p class="text-center" ng-show="loading">
-            <i class="fa fa-space-shuttle fa-5x fa-spin"></i>
-        </p>
+            <!-- LOADING ICON =============================================== -->
+            <!-- show loading icon if the loading variable is set to true -->
+            <p class="text-center" ng-show="loading">
+                <i class="fa fa-space-shuttle fa-5x fa-spin"></i>
+            </p>
 
-        <div ng-hide="loading" >
+            <!-- CRAG DETAILS =============================================== -->
+            <div ng-hide="loading">
 
-            <p>{{ cragData.description }}</p>
-            <p>Area: {{ cragData.area_id }}</p>
-            <p>Faces: {{ cragData.orientation }}</p>
-            <p>Approach: {{ cragData.approach_time }} minutes</p>
-        </div>
+                <p>{{ cragData.description }}</p>
+                <p>Area: {{ cragData.area_id }}</p>
+                <p>Faces: {{ cragData.orientation }}</p>
+                <p>Approach: {{ cragData.approach_time }} minutes</p>
+            </div>
+        </section>
 
 
-        <div>
+        <!-- CLIMBS AT CRAG ============================================= -->
+        <div class="col-md-8 col-md-offset-2">
+            <h2 class="text-center">Climbs</h2>
+            <hr>
+
+
+
             <div ng-repeat="climb in climbData">
-
-
                 <h3>{{ climb.name }}</h3>
-                <h3>Grade ID: {{climb.grade_id}}</h3>
+                <h4>Grade ID: {{climb.grade_id}}</h4>
 
                 <p>Description: {{ climb.description }}</p>
                 <p>Length: {{ climb.length}}m</p>
@@ -50,6 +56,4 @@
             </div>
         </div>
 
-
-    </div><!-- Boostrap Column -->
-</div><!-- Row -->
+</div>

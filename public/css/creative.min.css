@@ -17,9 +17,13 @@ Purple: 639
 -
 Blue: 209FFF
 
-
-
  */
+/**
+**********
+* General *
+**********
+*/
+
 .navbar-default, a {
     -webkit-transition: all .35s;
     -moz-transition: all .35s
@@ -105,7 +109,11 @@ aside {
     -webkit-transition: all .35s;
     -moz-transition: all .35s
 }
-
+/**
+**********
+* Navbar *
+**********
+*/
 .navbar-default .navbar-header .navbar-brand {
     color: #F82;
     font-weight: 900;
@@ -234,7 +242,6 @@ header .header-content .header-content-inner h1 {
     margin-bottom: 0;
     font-size: 50px;
     color: #639;
-            /*#8020FF;*/
     /*text-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);*/
 }
 
@@ -246,12 +253,12 @@ header .header-content .header-content-inner p {
     font-weight: 300;
     color: rgba(255, 255, 255, .7);
     font-size: 16px;
-    margin-bottom: 50px
+    margin-bottom: 50px;
 }
 
 @media (min-width: 768px) {
     header {
-        min-height: 100%
+        min-height: 100%;
     }
 
     header .header-content {
@@ -260,31 +267,78 @@ header .header-content .header-content-inner p {
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
-        padding: 0 50px
+        padding: 0 50px;
     }
 
     header .header-content .header-content-inner {
         max-width: 1000px;
         margin-left: auto;
-        margin-right: auto
+        margin-right: auto;
     }
 
     header .header-content .header-content-inner h1 {
-        font-size: 70px
+        font-size: 70px;
     }
 
     header .header-content .header-content-inner p {
         font-size: 18px;
         max-width: 80%;
         margin-left: auto;
-        margin-right: auto
+        margin-right: auto;
     }
 }
 
 .section-heading {
-    margin-top: 0
+    margin-top: 0;
+}
+/**
+**********
+* Finder *
+**********
+*/
+.finder-header {
+    margin-bottom: 0;
+    background-color: #eee;
+}
+.finder-header .header-content .header-content-inner h1 {
+    font-weight: 200;
+    /*text-transform: uppercase;*/
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    color: #639;
+    /*#8020FF;*/
+    /*text-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);*/
+}
+.finder-header .header-content .header-content-inner hr {
+    margin: 30px auto
 }
 
+.finder-header .header-content .header-content-inner h4 {
+    font-weight: 400;
+    color: #F82;
+    /*font-size: 16px;*/
+    margin-bottom: 50px
+}
+
+@media (min-width: 768px) {
+    .finder-header .header-content .header-content-inner {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .finder-header .header-content .header-content-inner h1 {
+        font-size: 70px;
+    }
+
+    .finder-header .header-content .header-content-inner p {
+        font-size: 18px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 .service-box {
     max-width: 400px;
