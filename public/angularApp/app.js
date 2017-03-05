@@ -27,24 +27,24 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
     // HOME STATES AND NESTED VIEWS ========================================
         .state('finder', {
             url: '/',
-            templateUrl: '../views/finder-header-partial.html'
+            templateUrl: '../views/_finder-header.html'
         })
         // nested crags index
         .state('finder.crags', {
             url: 'crags',
-            templateUrl: '../views/crags-finder-partial.html',
+            templateUrl: '../views/_crags-finder.html',
             controller: 'cragsController'
         })
         // nested areas index
         .state('finder.areas', {
             url: 'areas',
-            templateUrl: '../views/areas-finder-partial.html',
+            templateUrl: '../views/_areas-finder.html',
             controller: 'areasController'
         })
         .state('finder.areas.detail',{
 
             params: { areaID: {} },
-            templateUrl: '../views/areas-finder-partial.html',
+            templateUrl: '../views/_areas-finder.html',
             controller: 'areaDetailController'
         })
 
@@ -52,14 +52,14 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
         // crag detail
         .state('cragDetail', {
             url: '/crag/:cragID',
-            templateUrl: '../views/crag-detail-partial.html',
+            templateUrl: '../views/_crag-detail.html',
             controller: 'cragDetailController'
         })
 
         // area detail
         .state('areaDetail', {
             url: '/area/:areaID',
-            templateUrl: '../views/area-detail-partial.html',
+            templateUrl: '../views/_area-detail.html',
             controller: 'areaDetailController'
         });
 

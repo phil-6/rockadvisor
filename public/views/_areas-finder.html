@@ -1,4 +1,4 @@
-<!-- areas-finder-partial.html -->
+<!-- _areas-finder.html -->
 <!--
 --Created by philr
 --on 04/03/17
@@ -10,37 +10,42 @@
     <div class="col-md-8 col-md-offset-2">
 
 
-        <!-- PAGE TITLE =============================================== -->
+        <!-- Section Title -->
         <div class="page-header">
             <h2>Areas Index</h2>
         </div>
 
-        <!-- DELETE SUCCESS MESSAGE ===================================== -->
+        <!-- Delete Success Message -->
         <div class="alert alert-success" ng-show="showMessage">
             <p>{{message}}</p>
         </div>
 
-        <!-- LOADING ICON =============================================== -->
+        <!-- Loading Icon -->
         <!-- show loading icon if the loading variable is set to true -->
         <p class="text-center" ng-show="loading">
             <i class="fa fa-space-shuttle fa-5x fa-spin"></i>
         </p>
 
 
-        <!-- THE AREAS =============================================== -->
+        <!-- Areas -->
         <!-- hide these areas if the loading variable is true -->
         <div ng-hide="loading">
             <div ng-repeat="area in areasData" >
+
+                <!-- Area Name. Link to Area Detail -->
                 <a ui-sref="areaDetail({ areaID: {{area.id}} })">
                     <h3>{{ area.name }} </h3>
                 </a>
+
                 <p>Part of: {{ area.parentName }}</p>
                 <!--            Commented for Deployment-->
                 <!--            <button type="button" class="btn btn-primary" ng-click="deleteArea(area.id)">Delete</button>-->
 
+                <!-- Should show partial view finder.areas.detail -->
                 <div ui-sref="finder.areas.detail({ areaID: {{area.id}} })"></div>
-
             </div>
+
+            <!-- If no areas -->
             <div ng-show="!areasData.length">
                 <p>No areas are available.</p>
             </div>

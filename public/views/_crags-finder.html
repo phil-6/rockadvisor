@@ -1,4 +1,4 @@
-<!-- crags-finder-partial.html -->
+<!-- _crags-finder.html -->
 <!--
 --Created by philr
 --on 04/03/17
@@ -9,46 +9,43 @@
 <div class="row"  >
     <div class="col-md-8 col-md-offset-2">
 
-
-        <!-- PAGE TITLE =============================================== -->
+        <!-- Section Title -->
         <div class="page-header">
             <h2>Crags Index</h2>
         </div>
 
-        <!-- DELETE SUCCESS MESSAGE ===================================== -->
+        <!-- Delete Success Message -->
         <div class="alert alert-success" ng-show="showMessage">
             <p>{{message}}</p>
         </div>
 
-        <!-- LOADING ICON =============================================== -->
+        <!-- Loading Icon -->
         <!-- show loading icon if the loading variable is set to true -->
         <p class="text-center" ng-show="loading">
             <i class="fa fa-space-shuttle fa-5x fa-spin"></i>
         </p>
 
-
-        <!-- THE CRAGS =============================================== -->
+        <!-- The Crags -->
         <!-- hide these crags if the loading variable is true -->
         <div ng-hide="loading">
             <div ng-repeat="crag in cragsData">
 
+                <!-- Crag Name. Link to Crag Detail -->
                 <a ui-sref="cragDetail({ cragID: {{crag.id}} })">
                     <h3>{{ crag.name }} : {{crag.id}}</h3>
                 </a>
                 <p>In Area: {{ crag.area }}</p>
 
-                <!--                        Commented for Partial Deployment-->
-                <button type="button" class="btn btn-primary" ng-click="deleteCrag(crag.id)">Delete</button>
+                <!-- Delete Crag and Show Crag Buttons -->
+                <button type="button" class="btn btn-danger" ng-click="deleteCrag(crag.id)">Delete</button>
                 <a ui-sref="cragDetail({ cragID: {{crag.id}} })" type="button" class="btn btn-primary">Show</a>
             </div>
 
+            <!-- If no Crags -->
             <div ng-show="!cragsData.length">
                 <p>No crags are available.</p>
             </div>
         </div>
-
-
-
 
     </div><!-- Boostrap Column -->
 </div><!-- Row -->

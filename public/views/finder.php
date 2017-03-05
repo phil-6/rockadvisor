@@ -7,7 +7,7 @@
 -->
 <!--
 ---------------------------------------
-This is going to be our master template
+     This is our master template
 For the "finder" section of the website
 ---------------------------------------
 -->
@@ -73,9 +73,9 @@ For the "finder" section of the website
 
 
 </head>
-<!-- declare our angular app and controller
--->
+<!-- declare our angular app and controller-->
 <body ng-app="finderApp">
+
 <!--
     ==========
     Navigation
@@ -109,36 +109,24 @@ For the "finder" section of the website
                 </li>
 
             </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
 </nav>
 <!--
     ==========
-      Main
+     Content
     ==========
               -->
-<!-- MAIN CONTENT -->
+
+<!-- This div holds our injected content -->
+
 <div ui-view></div>
-
-<!--<section>
-    <div class="container">
-
-        <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== ->
-        <div ui-view class="header-content"></div>
-
-    </div>
-</section>-->
-
-
 
 <!--
     ==========
       Footer
     ==========
               -->
-
 <hr>
 <footer>
     <div class="container text-center">

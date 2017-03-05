@@ -1,0 +1,63 @@
+<!-- _area-detail.html -->
+<!--
+--Created by philr
+--on 05/03/17
+--Edited last by philr
+--On 05/03/17
+-->
+
+<div class="row">
+
+<!--
+    ==========
+    Page Header
+    ==========
+              -->
+
+    <section class="bg-dark text-center">
+        <!-- Area Name -->
+        <div class="page-header">
+            <h1>{{areaData.name}} </h1>
+        </div>
+
+        <!-- Area Description-->
+        <div>
+            <p>{{ areaData.description }}</p>
+        </div>
+    </section>
+
+
+<!--
+    ==========
+  Crags in Area
+    ==========
+              -->
+    
+    <!-- Title -->
+    <div class="col-md-8 col-md-offset-2 text-center">
+        <h2>Crags</h2>
+        <hr>
+
+        <!-- Loading Icon -->
+        <!-- show loading icon if the loading variable is set to true -->
+        <p class="text-center" ng-show="loading">
+            <i class="fa fa-space-shuttle fa-5x fa-spin"></i>
+        </p>
+
+        <!-- Loop of Crags -->
+        <div ng-repeat="crag in cragData"  ng-hide="loading">
+            <a ui-sref="cragDetail({ cragID: {{crag.id}} })">
+                <h3>{{ crag.name }}</h3>
+            </a>
+            <!--Commented for Partial Deployment-->
+            <!--<button type="button" class="btn btn-primary" ng-click="deleteCrag(crag.id)">Delete</button>-->
+        </div>
+
+        <!-- If no crags -->
+        <div ng-show="!cragData.length">
+            <p>No crags are available.</p>
+        </div>
+    </div>
+
+
+</div><!-- Row -->
