@@ -49,7 +49,8 @@
             <!-- Loop of Climbs -->
             <div ng-repeat="climb in climbData">
                 <h3>{{ climb.name }}</h3>
-                <h4>Grade ID: {{climb.grade_id}}</h4>
+                <h4>Type: {{climb.ClimbTypeName}} </h4>
+                <h4>Grade: {{climb.ClimbSeverityGrade}} {{climb.ClimbTechnicalGrade}}</h4>
                 <p>Description: {{ climb.description }}</p>
                 <p>Length: {{ climb.length}}m</p>
 
