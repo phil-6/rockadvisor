@@ -6,7 +6,6 @@
 -->
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +46,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <!-- AngularJS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <!-- AngularJS UI-Router -->
     <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
     <!-- Angular Form -->
@@ -126,16 +125,12 @@
     ==========
               -->
 <header>
-    <div class="container">
-        <div class="row">
-            <div class="header-content">
-                <div class="header-content-inner">
-                    <h1 id="homeHeading">Rock Advisor</h1>
-                    <hr>
-                    <p>A Climbing Guidebook for the Digital Age</p>
-                    <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
-                </div>
-            </div>
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1 id="homeHeading">Rock Advisor</h1>
+            <hr>
+            <p>A Climbing Guidebook for the Digital Age</p>
+            <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
         </div>
     </div>
 </header>
