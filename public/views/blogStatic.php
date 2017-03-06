@@ -219,6 +219,29 @@
                 <div class="post">
 
                     <h3 class="postTitle">
+                        AngularJS Breakthrough
+                    </h3>
+                    <p class="post-meta">Posted by <a href="#Phil">Phil</a> 05/03/2017</p>
+                    <div class="postContent">
+                        <p>
+                            Yesterday I finally cracked routing with angularJS and we have a dynamic-loading set of pages that allows you to view areas, crags and climbs. It still needs a load more information on each of the pages and some significantly better styling but it works! This is the core functionality that will power Rock Advisor.
+                        </p>
+                        <p>
+                            There’s going to be a load more features added to this soon, such as filtering and loads of other dynamic stuff but now the routing in angular is working, all that should be relatively simple. It’s not going to be, I know it’s not going to be, but I can hope.
+                        </p>
+                        <p>
+                            Oh, and now the title on the mage has decided to move right, about 2/3rds of the way across the page. I haven’t changed anything, and it’s still the same on the blog page. The code is the same but in a different place. Only on the main page the auto margins want to have silly values - I can take them out but then it sits just off centre to the left!! *Sigh* Damn it to hell.
+                        </p>
+                        <p>
+                            Maybe tomorrow it’ll work. Hopefully you won’t ever get to see it as it won’t get pushed live. Either way, angular is working, which is a massive hurdle and opens the door for the rest of the development. Exciting times!
+                        </p>
+
+                    </div><!-- End Content -->
+                </div> <!-- End Post -->
+                <hr>
+                <div class="post">
+
+                    <h3 class="postTitle">
                         Stepping forward slowly
                     </h3>
                     <p class="post-meta">Posted by <a href="#Phil">Phil</a> 03/03/2017</p>
