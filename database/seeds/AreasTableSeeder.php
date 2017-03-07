@@ -47,49 +47,49 @@ class AreasTableSeeder extends Seeder
         //Id = 6
         $a = new Area();
         $a->name = "Rhosilli";
-        $a->parentArea = 4;
+        $a->parentArea = 5;
         $a->save();
 
         //Id = 7
         $a = new Area();
         $a->name = "Fall Bay to Mewslade";
-        $a->parentArea = 4;
+        $a->parentArea = 5;
         $a->save();
 
         //Id = 8
         $a = new Area();
         $a->name = "Thurba Head to Port Eynon";
-        $a->parentArea = 4;
+        $a->parentArea = 5;
         $a->save();
 
         //Id = 9
         $a = new Area();
         $a->name = "Oxwich";
-        $a->parentArea = 4;
+        $a->parentArea = 5;
         $a->save();
 
         //Id = 10
         $a = new Area();
         $a->name = "The Three Tors";
-        $a->parentArea = 4;
+        $a->parentArea = 5;
         $a->save();
 
         //Id = 11
         $a = new Area();
         $a->name = "Three Cliffs";
-        $a->parentArea = 4;
+        $a->parentArea = 5;
         $a->save();
 
         //Id = 12
         $a = new Area();
         $a->name = "Southgate and Pennard";
-        $a->parentArea = 4;
+        $a->parentArea = 5;
         $a->save();
 
         //Id = 13
         $a = new Area();
         $a->name = "Caswell to Mumbles";
-        $a->parentArea = 4;
+        $a->parentArea = 5;
         $a->save();
 
         //Id = 14
@@ -113,7 +113,7 @@ class AreasTableSeeder extends Seeder
 		//Id = 17
 		$a = new Area();
 		$a->name = "Llanberis";
-        $a->parentArea = 1;
+        $a->parentArea = 15;
         $a->save();
     }
 }
