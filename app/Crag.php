@@ -64,4 +64,12 @@ class Crag extends Model
         return array_unique($allGradesAtCrag);
 
     }
+
+    public function getAreaNameAttribute()
+    {
+        return $this->area->name;
+    }
+
+    protected $hidden = ['area'];
+    protected $appends = ['AreaName'];
 }
