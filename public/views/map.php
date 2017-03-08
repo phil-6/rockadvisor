@@ -77,12 +77,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="rockAdvisorNavbar">
                 <ul class="nav navbar-nav navbar-right">
-
                     <li>
-                        <a class="page-scroll" href="../#contact">Contribute</a>
+                        <a class="page-scroll" href="/">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="../#howItWorks">How It Works</a>
+                        <a class="page-scroll" href="/map">Crag Map</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="/finder">Crag Finder</a>
