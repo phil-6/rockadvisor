@@ -332,10 +332,18 @@
         <div class="call-to-action">
             <h2>Contribute</h2>
             <hr class="primary">
-            <p>We need your help to make Rock Advisor work. In the not too distant future you will be able to add
-                and update the information that we use. We've started with a very limited selection of crags and an
-                even more limited selection of routes. We need you to help grow our database. If you're interested
-                in lending a hand then fill in the form below and we'll get in touch when we need your help!</p>
+            <p>
+                We need <i>your</i> help to make Rock Advisor work.
+            </p>
+            <p>
+                In the not too distant future you will be able to add and update the information that we use. We've started with a very limited selection of crags and an even more limited selection of routes.
+            </p>
+            <p>
+                We need <i>you</i> to help grow our database.
+            </p>
+            <p>
+                If you're interested in lending a hand then fill in the form below and we'll get in touch when we need your help!
+            </p>
             <a href="#contributeModal"
                role="button"
                class="btn btn-default btn-xl sr-button btn-zoom"
