@@ -35,7 +35,7 @@
     <link href="../css/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="../css/blog.css" rel="stylesheet">
+    <link href="../css/theme.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -115,7 +115,7 @@
               -->
 
 <header class="intro-header">
-    <div class="header-content">
+    <div class="blog-header-content">
         <div class="header-content-inner">
 
             <div class="siteHeading">
@@ -125,7 +125,7 @@
             </div><!-- "siteHeading" -->
             <div class="about-buttons">
                 <a href="#about" class="page-scroll btn btn-default btn-xl sr-button">About Us</a>
-                <a href="#background" class="page-scroll btn btn-default btn-xl sr-button">First Post!</a>
+                <a href="#background" class="page-scroll btn btn-default btn-xl sr-button">Background</a>
                 <a href="#blog" class="page-scroll btn btn-default btn-xl sr-button">Newest Blog</a>
             </div>
         </div><!-- "header-content-inner" -->
@@ -137,7 +137,7 @@
      About Us
     ==========
               -->
-<section class="bg-primary text-center" id="about">
+<section class="bg-primarygrad text-center blogbio" id="about">
     <div class="container">
         <div class="row">
             <h2 class="section-heading">About Us</h2>

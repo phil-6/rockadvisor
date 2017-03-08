@@ -34,7 +34,7 @@ For the "finder" section of the website
     <link href="../css/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="../css/creative.min.css" rel="stylesheet">
+    <link href="../css/theme.css" rel="stylesheet">
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

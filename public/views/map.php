@@ -28,7 +28,7 @@
 
     <!-- Theme CSS -->
     <link href="../css/map.css" rel="stylesheet">
-    <link href="../css/creative.min.css" rel="stylesheet">
+    <link href="../css/theme.css" rel="stylesheet">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
