@@ -3,8 +3,7 @@
  */
 angular.module('emailCtrl', [])
     .controller('contributeController', function ($scope, $http, EmailFactory, $timeout) {
-        //$scope.result = 'hidden';
-        //$scope.resultMessage;
+
         $scope.formData = {}; //formData is an object holding the name, email, and message
         $scope.submitButtonHidden = false;
         $scope.progressMessageShowing = false;
@@ -30,11 +29,9 @@ angular.module('emailCtrl', [])
                         if (data.success) { //success comes from the return json object
                             $scope.submitButtonHidden = true;
                             $scope.progressMessageShowing = false;
-                            // $scope.resultMessage = "Success!";
-                            // $scope.result = 'bg-success';
                             $scope.resultShowing = true;
 
-                            // $scope.contributeForm.$setPristine(); //Not working
+
                             //Paused after success
                             $timeout(function () {
                                 $scope.formData = {};
