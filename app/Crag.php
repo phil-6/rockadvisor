@@ -65,6 +65,10 @@ class Crag extends Model
 
     }
 
+    /**
+     * Append Attributes
+     */
+
     public function getAreaNameAttribute()
     {
         return $this->area->name;

@@ -27,6 +27,10 @@ class Climb extends Model
         return $this->belongsTo('App\Grade', 'grade_id', 'id');
     }
 
+
+    /**
+     * Append Attributes
+     */
     public function getClimbTypeNameAttribute()
     {
         return $this->grade->climbType->climbTypeName->name;
