@@ -413,11 +413,11 @@ header .header-content .header-content-inner p {
     -moz-transition: all .35s;
     transition: all .35s;
 }
-.about-buttons .btn-default{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+.about-buttons .btn{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open > .dropdown-toggle.btn-default {
