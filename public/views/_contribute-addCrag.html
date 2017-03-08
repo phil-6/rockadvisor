@@ -21,47 +21,122 @@
                   ng-submit="processForm()">
                 <!-- our nested state views can be injected here -->
                 <!--<div id="form-views" ui-view></div>-->
-                <div class="form-group"
-                     ng-class="{ 'has-error' : contributeForm.formName.$invalid && !contributeForm.formName.$pristine && submitted}">
-                    <label>Name</label>
-                    <input type="text"
-                           name="formName"
-                           class="form-control"
-                           ng-model="formData.formName"
-                           placeholder="Your name"
-                           required>
-                    <p ng-show="contributeForm.formName.$invalid && !contributeForm.formName.$pristine && submitted "
-                       class="help-block">
-                        Please tell us your name.
-                    </p>
 
+
+                <!--SELECT CRAG-->
+                <div class="form-group">
+                    <label for="selectArea" class="col-sm-2 control-label">Select Area:</label>
+                    <div class="col-sm-10">
+                        <select name="cragArea"
+                                class="form-control"
+                                id="selectArea"
+                                ng-model="formData.cragArea"
+                                ng-options="area.id as area.name for area in areasData"
+                                required>
+                            <option value="">Select Area</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--LOCATION-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Lat/Lng Location:</label>
+                    <div class="col-sm-4">
+                        <input type="number"
+                               name="cragLat"
+                               class="form-control"
+                               ng-model="formData.cragLat"
+                               placeholder="Latitude: 51.600000"
+                               required>
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="number"
+                               name="cragLng"
+                               class="form-control"
+                               ng-model="formData.cragLng"
+                               placeholder="Longitude: -4.150000"
+                               required>
+                    </div>
+                </div>
+
+                <!--CRAG NAME-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Crag Name:</label>
+                    <div class="col-sm-10">
+                        <input type="text"
+                               name="cragName"
+                               class="form-control"
+                               ng-model="formData.cragName"
+                               placeholder="Crag Name"
+                               required>
+
+                    </div>
+                </div>
+
+                <!--CRAG DESCRIPTOIN-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Description:</label>
+                    <div class="col-sm-10">
+                        <textarea type="text"
+                                  name="cragDescription"
+                                  class="form-control"
+                                  ng-model="formData.cragDescription"
+                                  placeholder="Description"
+                                  required>
+                        </textarea>
+
+                    </div>
+                </div>
+
+                <!--OTHER DETAILS-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Tidal Range:</label>
+                    <div class="col-sm-2">
+                        <input type="number"
+                               name="cragTidalRange"
+                               class="form-control"
+                               ng-model="formData.cragTidalRange"
+                               placeholder="Tidal Range">
+                    </div>
+                    <label class="col-sm-2 control-label">Orientation:</label>
+                    <div class="col-sm-2">
+                        <input type="text"
+                               name="cragOrientation"
+                               class="form-control"
+                               ng-model="formData.cragOrientation"
+                               placeholder="SSW"
+                               required>
+                    </div>
+                    <label class="col-sm-2 control-label">Approach Time:</label>
+                    <div class="col-sm-2">
+                        <input type="number"
+                               name="cragApproachTime"
+                               class="form-control"
+                               ng-model="formData.cragApproachTime"
+                               placeholder="Time in minutes"
+                               required>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label>Message</label>
-                    <textarea
-                            type="text"
-                            name="formMessage"
-                            class="form-control"
-                            ng-model="formData.formMessage"
-                            placeholder="Write us a message..">
-                        </textarea>
-                </div>
-                <div class="form-group"
-                     ng-class="{ 'has-error' : contributeForm.formEmail.$invalid && !contributeForm.formEmail.$pristine && submitted}">
+                    <div class="col-sm-3"></div>
 
-                    <label>E-Mail</label>
-                    <input type="email"
-                           name="formEmail"
-                           class="form-control"
-                           ng-model="formData.formEmail"
-                           placeholder="email@you.com (so that we can contact you)"
-                           required>
-                    <p ng-show="contributeForm.formEmail.$invalid && !contributeForm.formEmail.$pristine && submitted"
-                       class="help-block">
-                        We tried, that doesn't seem to work.
-                    </p>
+                    <div class="col-sm-2">
+                        <input type="checkbox" name="seepage" value="seepage">
+                        Seepage
+                    </div>
 
+                    <div class="col-sm-2">
+                        <input type="checkbox" name="midges" value="midges">
+                        Midges
+                    </div>
+
+                    <div class="col-sm-2">
+                        <input type="checkbox" name="sheltered" value="sheltered">
+                        Sheltered
+                    </div>
                 </div>
+
+
                 <div class="form-group">
                     <p id="formError"
                        class="text-center bg-danger"

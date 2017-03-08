@@ -74,7 +74,8 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
         })
         .state('contribute.addCrag',{
             url: 'addCrag',
-            templateUrl: '../views/_contribute-addCrag.html'
+            templateUrl: '../views/_contribute-addCrag.html',
+            controller: 'areasController'
         })
         .state('contribute.addClimb',{
             url: 'addClimb',
