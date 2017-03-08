@@ -400,6 +400,8 @@
                 <form class="form-horizontal"
                       name="contributeForm"
                       ng-submit="submitEmail(contributeForm.$valid)" novalidate>
+
+                    <!--NAME-->
                     <div class="form-group"
                          ng-class="{ 'has-error' : contributeForm.formName.$invalid && !contributeForm.formName.$pristine && submitted}">
                     <label>Name</label>
@@ -413,8 +415,8 @@
                            class="help-block">
                             Please tell us your name.
                         </p>
-
                     </div>
+                    <!--MESSAGE-->
                     <div class="form-group">
                         <label>Message</label>
                         <textarea
@@ -425,6 +427,8 @@
                                 placeholder="Write us a message..">
                         </textarea>
                     </div>
+
+                    <!--EMAIL-->
                     <div class="form-group"
                          ng-class="{ 'has-error' : contributeForm.formEmail.$invalid && !contributeForm.formEmail.$pristine && submitted}">
 
@@ -441,12 +445,17 @@
                         </p>
 
                     </div>
+
+
                     <div class="form-group">
+                        <!--FORM ERROR MESSAGE-->
                         <p id="formError"
                            class="text-center bg-danger"
                            ng-show="errorShowing">
                             Uh Oh! Something went wrong. Please check the form.
                         </p>
+
+                        <!--SUMBIT BUTTON-->
                         <button type="submit"
                                 class="btn btn-primary btn-success btn-lg center-block"
                                 id="contributeSubmitButton"
@@ -455,20 +464,24 @@
                             &nbsp Done!
                         </button>
 
+                        <!--FORM PROGRESS MESSAGE-->
                         <p id="formProgress"
                            class="text-center"
                            ng-show="progressMessageShowing">
                             Sending...
                         </p>
+
+                        <!--FORM SUCCESS MESSAGE-->
                         <p class="text-center bg-success"
                            ng-show="resultShowing"
                            style="padding: 15px; margin: 0;">
                             Success!
-                        </p><!--ng-class="result" >{{ resultMessage }}< -->
+                        </p>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
+                <!--CANCEL BUTTON-->
                 <button class="btn btn-default center-block" data-dismiss="modal" aria-hidden="true">
                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                     Cancel
