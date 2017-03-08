@@ -28,26 +28,26 @@ angular
 
         // function to handle submitting the form
         // SAVE AN CRAG ================
-        // $scope.submitCrag = function () {
-        //     $scope.loading = true;
+        $scope.submitCrag = function () {
+            $scope.loading = true;
 
-        //     // save the crag. pass in crag data from the form
-        //     // use the function we created in our service
-        //     CragFactory.save($scope.cragData)
-        //         .success(function (data) {
+            // save the crag. pass in crag data from the form
+            // use the function we created in our service
+            CragFactory.save($scope.cragData)
+                .success(function (data) {
 
-        //             // if successful, we'll need to refresh the crag list
-        //             Crag.get()
-        //                 .success(function (getData) {
-        //                     $scope.crags = getData;
-        //                     $scope.loading = false;
-        //                 });
+                    // if successful, we'll need to refresh the crag list
+                    Crag.get()
+                        .success(function (getData) {
+                            $scope.crags = getData;
+                            $scope.loading = false;
+                        });
 
-        //         })
-        //         .error(function (data) {
-        //             console.log(data);
-        //         });
-        // };
+                })
+                .error(function (data) {
+                    console.log(data);
+                });
+        };
 
         // function to handle deleting a crag
         // DELETE A CRAG ====================================================

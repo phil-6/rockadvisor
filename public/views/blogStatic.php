@@ -22,8 +22,6 @@
     <!-- Bootstrap Core CSS -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- Bootstrap Core JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Custom Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
@@ -453,7 +451,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 <script src="../js/scrollreveal/scrollreveal.min.js"></script>
 <script src="../js/magnific-popup/jquery.magnific-popup.min.js"></script>
-<script src="../js/formValidation.js"></script>
 
 <!-- Theme JavaScript -->
 <script src="../js/creative-theme/creative.min.js"></script>
