@@ -152,7 +152,7 @@ For the "finder" section of the website
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 <script src="../js/scrollreveal/scrollreveal.min.js"></script>
 <script src="../js/magnific-popup/jquery.magnific-popup.min.js"></script>
-<script src="../js/formValidation.js"></script>
+
 
 <!-- Theme JavaScript -->
 <script src="../js/creative-theme/creative.min.js"></script>
