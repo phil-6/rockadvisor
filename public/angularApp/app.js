@@ -32,19 +32,19 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
         // nested crags index
         .state('finder.crags', {
             url: 'crags',
-            templateUrl: '../views/_crags-finder.html',
+            templateUrl: '../views/_crags-index.html',
             controller: 'cragsController'
         })
         // nested areas index
         .state('finder.areas', {
             url: 'areas',
-            templateUrl: '../views/_areas-finder.html',
+            templateUrl: '../views/_areas-index.html',
             controller: 'areasController'
         })
         .state('finder.areas.detail',{
 
             params: { areaID: {} },
-            templateUrl: '../views/_areas-finder.html',
+            templateUrl: '../views/_areas-index.html',
             controller: 'areaDetailController'
         })
 
