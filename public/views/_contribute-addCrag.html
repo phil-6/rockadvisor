@@ -14,17 +14,23 @@
                 <h2>Create New Crag</h2>
             </div>
             <hr>
+
+            <!--WARNING MESSAGE-->
+            <div class="alert alert-danger text-center">
+                Please be aware, any data you create is likely to be destroyed as Rock Advisor is still in development.
+            </div>
             <!-- use ng-submit to catch the form submission and use our Angular function -->
             <form id="addCragForm"
                   class="form-horizontal"
                   name="addCragForm"
-                  ng-submit="processForm()">
+                  ng-submit="processForm()"
+                  novalidate>
                 <!-- our nested state views can be injected here -->
                 <!--<div id="form-views" ui-view></div>-->
 
-
                 <!--SELECT AREA-->
-                <div class="form-group">
+                <div class="form-group"
+                     ng-class="{ 'has-error' : addCragForm.cragArea.$invalid && !addCragForm.cragArea.$pristine}">
                     <label for="selectArea" class="col-sm-2 control-label">Select Area:</label>
                     <div class="col-sm-10">
                         <select name="cragArea"
@@ -32,35 +38,58 @@
                                 id="selectArea"
                                 ng-model="formData.cragArea"
                                 ng-options="area.id as area.name for area in areasData"
+                                data-placement="top"
+                                data-content="Select the Area that the Crag is in"
                                 required>
                             <option value="">Select Area</option>
                         </select>
                     </div>
+                    <p ng-show="addCragForm.cragArea.$invalid && !addCragForm.cragArea.$pristine"
+                       class="help-block">
+                        Pick an area
+                    </p>
                 </div>
 
                 <!--LOCATION-->
-                <div class="form-group">
+                <div class="form-group"
+                     ng-class="{ 'has-error' :
+                     addCragForm.cragLat.$invalid
+                     && !addCragForm.cragLat.$pristine
+                     &&  addCragForm.cragLng.$invalid
+                     && !addCragForm.cragLng.$pristine}">
                     <label class="col-sm-2 control-label">Lat/Lng Location:</label>
-                    <div class="col-sm-4">
-                        <input type="number"
+                    <div class="col-sm-5">
+                        <input type="text"
                                name="cragLat"
                                class="form-control"
                                ng-model="formData.cragLat"
+                               ng-minlength="3"
+                               ng-pattern= "latregex"
                                placeholder="Latitude: 51.600000"
                                required>
                     </div>
-                    <div class="col-sm-4">
-                        <input type="number"
+                    <div class="col-sm-5">
+                        <input type="text"
                                name="cragLng"
                                class="form-control"
                                ng-model="formData.cragLng"
+                               ng-minlength="3"
+                               ng-pattern="lngregex"
                                placeholder="Longitude: -4.150000"
                                required>
                     </div>
+                    <p ng-show="addCragForm.cragLat.$invalid
+                     && !addCragForm.cragLat.$pristine
+                     &&  addCragForm.cragLng.$invalid
+                     && !addCragForm.cragLng.$pristine"
+                       class="help-block">
+                        Check those lat and lngs for me please
+                    </p>
                 </div>
 
                 <!--CRAG NAME-->
-                <div class="form-group">
+                <div class="form-group"
+                     ng-class="{ 'has-error' : addCragForm.cragName.$invalid && !addCragForm.cragName.$pristine}">
                     <label class="col-sm-2 control-label">Crag Name:</label>
                     <div class="col-sm-10">
                         <input type="text"
@@ -69,12 +98,16 @@
                                ng-model="formData.cragName"
                                placeholder="Crag Name"
                                required>
-
                     </div>
+                    <p ng-show="addCragForm.cragName.$invalid && !addCragForm.cragName.$pristine"
+                       class="help-block">
+                        A Crag must have a name.
+                    </p>
                 </div>
 
                 <!--CRAG DESCRIPTOIN-->
-                <div class="form-group">
+                <div class="form-group"
+                     ng-class="{ 'has-error' : addCragForm.cragDescription.$invalid && !addCragForm.cragDescription.$pristine}">
                     <label class="col-sm-2 control-label">Description:</label>
                     <div class="col-sm-10">
                         <textarea type="text"
@@ -84,38 +117,59 @@
                                   placeholder="Description"
                                   required>
                         </textarea>
-
                     </div>
+                    <p ng-show="addCragForm.cragDescription.$invalid && !addCragForm.cragDescription.$pristine"
+                       class="help-block">
+                        Tell me something about this crag.
+                    </p>
                 </div>
 
                 <!--OTHER DETAILS-->
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">Tidal Range:</label>
-                    <div class="col-sm-2">
-                        <input type="number"
-                               name="cragTidalRange"
-                               class="form-control"
-                               ng-model="formData.cragTidalRange"
-                               placeholder="Tidal Range">
+                    <div>
+                        <label class="col-sm-2 control-label">Tidal Range:</label>
+                        <div class="col-sm-2">
+                            <input type="number"
+                                   name="cragTidalRange"
+                                   class="form-control"
+                                   ng-model="formData.cragTidalRange"
+                                   placeholder="Tidal Range">
+                        </div>
                     </div>
-                    <label class="col-sm-2 control-label">Orientation:</label>
-                    <div class="col-sm-2">
-                        <input type="text"
-                               name="cragOrientation"
-                               class="form-control"
-                               ng-model="formData.cragOrientation"
-                               placeholder="SSW"
-                               required>
+                    <div ng-class="{ 'has-error' : addCragForm.cragOrientation.$invalid && !addCragForm.cragOrientation.$pristine}">
+                        <label class="col-sm-2 control-label">Orientation:</label>
+                        <div class="col-sm-2">
+                            <input type="text"
+                                   name="cragOrientation"
+                                   class="form-control"
+                                   ng-model="formData.cragOrientation"
+                                   ng-maxlength="3"
+                                   ng-pattern="orintationregex"
+                                   placeholder="SSW"
+                                   required>
+                        </div>
+
                     </div>
-                    <label class="col-sm-2 control-label">Approach Time:</label>
-                    <div class="col-sm-2">
-                        <input type="number"
-                               name="cragApproachTime"
-                               class="form-control"
-                               ng-model="formData.cragApproachTime"
-                               placeholder="Time in minutes"
-                               required>
+                    <div ng-class="{ 'has-error' : addCragForm.cragApproachTime.$invalid && !addCragForm.cragApproachTime.$pristine}">
+                        <label class="col-sm-2 control-label">Approach Time:</label>
+                        <div class="col-sm-2">
+                            <input type="number"
+                                   name="cragApproachTime"
+                                   class="form-control"
+                                   ng-model="formData.cragApproachTime"
+                                   placeholder="Time in minutes"
+                                   required>
+                        </div>
+
                     </div>
+                    <p ng-show="addCragForm.cragOrientation.$invalid && !addCragForm.cragOrientation.$pristine"
+                       class="help-block">
+                        Please enter up to three compass letters. Eg NNW.
+                    </p>
+                    <p ng-show="addCragForm.cragApproachTime.$invalid && !addCragForm.cragApproachTime.$pristine"
+                       class="help-block">
+                        Please enter an approach time in minutes.
+                    </p>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-3"></div>
