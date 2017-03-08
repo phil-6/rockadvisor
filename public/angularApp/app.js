@@ -2,7 +2,7 @@
  * Created by philr
  * on 23/02/2017.
  * Edited last by philr
- * on 05/03/17
+ * on 08/03/17
  */
 var areaApp = angular.module('areaApp', ['areasCtrl', 'areaService']);
 var areaDetailApp = angular.module('areaDetailApp', ['areaDetailCtrl', 'areaService']);
@@ -16,10 +16,12 @@ var contributeApp = angular.module('contributeApp', ['emailCtrl', 'emailService'
 var finderApp = angular.module('finderApp', [
     'cragsCtrl', 'cragService',
     'cragDetailCtrl',
+    'cragFormCtrl',
     'areasCtrl', 'areaService',
     'areaDetailCtrl',
     'ui.router', 'ngAnimate'
 ]);
+
 finderApp.config(function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise('/');
     $stateProvider
@@ -75,7 +77,7 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
         .state('contribute.addCrag',{
             url: 'addCrag',
             templateUrl: '../views/_contribute-addCrag.html',
-            controller: 'areasController'
+            controller: 'cragFormController'
         })
         .state('contribute.addClimb',{
             url: 'addClimb',

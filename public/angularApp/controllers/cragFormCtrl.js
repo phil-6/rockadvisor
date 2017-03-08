@@ -1,29 +1,40 @@
 /**
- * Created by philr on 27/02/2017.
+ * Created by philr on 08/03/2017.
  */
-angular.module('emailCtrl', [])
-    .controller('contributeController', function ($scope, $http, EmailFactory, $timeout) {
 
-        $scope.formData = {}; //formData is an object holding the name, email, and message
+angular.module('cragFormCtrl', [])
+    .controller('cragFormController', function ($scope, $http, CragFactory, AreaFactory, $timeout) {
+
+        $scope.formData = {};
         $scope.submitButtonHidden = false;
         $scope.progressMessageShowing = false;
         $scope.resultShowing = false;
         $scope.errorShowing = false;
-        $scope.submitted = false; //used so that form errors are shown only after the form has been submitted
+        /*$scope.latregex = "^(\+|-)?(?:90(?:(?:\.0{1,6})?)|(?:[0-9]|[1-8][0-9])(?:(?:\.[0-9]{1,6})?))$";
+         $scope.lngregex = "^(\+|-)?(?:180(?:(?:\.0{1,6})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\.[0-9]{1,6})?))$";
+         $scope.orientationregex = "N|S|E|W|NE|SE|NW|SW|NNE|ENE|SSE|ESE|NNW|WNW|SSW|WSW";*/
+
+       /* $scope.areasData = {};
+        AreaFactory.get()
+            .success(function (data2) {
+                //console.log("ctrl");
+                $scope.areasData = data2;
+                $scope.loading = false;
+            });*/
 
 
-        $scope.submitEmail = function (isValid) {
-            $scope.submitted = true;
-            $scope.submitButtonHidden = true;
+        $scope.processCragForm = function (isValid) {
+            alert('cool-');
+
+            /*$scope.submitButtonHidden = true;
             $scope.progressMessageShowing = true;
             $scope.errorShowing = false;
             if (isValid) {
-                $scope.submitted = true;
                 $scope.submitButtonHidden = true;
                 $scope.progressMessageShowing = true;
                 $scope.errorShowing = false;
 
-                EmailFactory.submit($scope.formData)
+                CragFactory.save($scope.formData)
                     .success(function (data) {
                         //console.log(data); //debugging
                         if (data.success) { //success comes from the return json object
@@ -31,14 +42,12 @@ angular.module('emailCtrl', [])
                             $scope.progressMessageShowing = false;
                             $scope.resultShowing = true;
 
-
                             //Paused after success
                             $timeout(function () {
                                 $scope.formData = {};
                                 $scope.submitButtonHidden = false;
                                 $scope.progressMessageShowing = false;
                                 $scope.resultShowing = false;
-                                $scope.submitted = false;
 
                             }, 2000);
 
@@ -55,6 +64,6 @@ angular.module('emailCtrl', [])
                     $scope.progressMessageShowing = false;
                     $scope.errorShowing = true;
                 }, 1000);
-            }
+            }*/
         };
     });

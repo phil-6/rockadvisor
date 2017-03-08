@@ -19,14 +19,12 @@
             <div class="alert alert-danger text-center">
                 Please be aware, any data you create is likely to be destroyed as Rock Advisor is still in development.
             </div>
-            <!-- use ng-submit to catch the form submission and use our Angular function -->
-            <form id="addCragForm"
-                  class="form-horizontal"
+
+            <!--Start of Form-->
+            <form class="form-horizontal"
                   name="addCragForm"
-                  ng-submit="processForm()"
+                  ng-submit="processCragForm(addCragForm.$valid)"
                   novalidate>
-                <!-- our nested state views can be injected here -->
-                <!--<div id="form-views" ui-view></div>-->
 
                 <!--SELECT AREA-->
                 <div class="form-group"
@@ -58,23 +56,25 @@
                      &&  addCragForm.cragLng.$invalid
                      && !addCragForm.cragLng.$pristine}">
                     <label class="col-sm-2 control-label">Lat/Lng Location:</label>
+                    <!--ng-pattern= "latregex"-->
                     <div class="col-sm-5">
                         <input type="text"
                                name="cragLat"
                                class="form-control"
                                ng-model="formData.cragLat"
                                ng-minlength="3"
-                               ng-pattern= "latregex"
+
                                placeholder="Latitude: 51.600000"
                                required>
                     </div>
+                    <!--ng-pattern="lngregex"-->
                     <div class="col-sm-5">
                         <input type="text"
                                name="cragLng"
                                class="form-control"
                                ng-model="formData.cragLng"
                                ng-minlength="3"
-                               ng-pattern="lngregex"
+
                                placeholder="Longitude: -4.150000"
                                required>
                     </div>
@@ -110,8 +110,7 @@
                      ng-class="{ 'has-error' : addCragForm.cragDescription.$invalid && !addCragForm.cragDescription.$pristine}">
                     <label class="col-sm-2 control-label">Description:</label>
                     <div class="col-sm-10">
-                        <textarea type="text"
-                                  name="cragDescription"
+                        <textarea name="cragDescription"
                                   class="form-control"
                                   ng-model="formData.cragDescription"
                                   placeholder="Description"
@@ -138,13 +137,14 @@
                     </div>
                     <div ng-class="{ 'has-error' : addCragForm.cragOrientation.$invalid && !addCragForm.cragOrientation.$pristine}">
                         <label class="col-sm-2 control-label">Orientation:</label>
+                        <!--ng-pattern="orientationregex"-->
                         <div class="col-sm-2">
                             <input type="text"
                                    name="cragOrientation"
                                    class="form-control"
                                    ng-model="formData.cragOrientation"
                                    ng-maxlength="3"
-                                   ng-pattern="orintationregex"
+
                                    placeholder="SSW"
                                    required>
                         </div>
@@ -192,34 +192,36 @@
 
 
                 <div class="form-group">
+                    <!--FORM ERROR MESSAGE-->
                     <p id="formError"
                        class="text-center bg-danger"
                        ng-show="errorShowing">
                         Uh Oh! Something went wrong. Please check the form.
                     </p>
+
+                    <!--SUMBIT BUTTON-->
                     <button type="submit"
                             class="btn btn-primary btn-success btn-lg center-block"
-                            id="contributeSubmitButton"
                             ng-hide="submitButtonHidden">
                         <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                         &nbsp Done!
                     </button>
 
+                    <!--FORM PROGRESS MESSAGE-->
                     <p id="formProgress"
                        class="text-center"
                        ng-show="progressMessageShowing">
                         Sending...
                     </p>
+
+                    <!--FORM SUCCESS MESSAGE-->
                     <p class="text-center bg-success"
                        ng-show="resultShowing"
                        style="padding: 15px; margin: 0;">
                         Success!
-                    </p><!--ng-class="result" >{{ resultMessage }}< -->
+                    </p>
                 </div>
-
-
             </form>
-
         </div>
 
         <!--DEBUGGING-->
