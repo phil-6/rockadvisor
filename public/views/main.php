@@ -399,7 +399,8 @@
                  ng-controller="contributeController">
                 <form class="form-horizontal"
                       name="contributeForm"
-                      ng-submit="submitEmail(contributeForm.$valid)" novalidate>
+                      ng-submit="submitEmail(contributeForm.$valid)"
+                      novalidate>
 
                     <!--NAME-->
                     <div class="form-group"
@@ -441,7 +442,7 @@
                                required>
                         <p ng-show="contributeForm.formEmail.$invalid && !contributeForm.formEmail.$pristine && submitted"
                            class="help-block">
-                            We tried, that doesn't seem to work.
+                            That email address doesn't seem to work. Can you double check it please.
                         </p>
 
                     </div>
@@ -450,7 +451,7 @@
                     <div class="form-group">
                         <!--FORM ERROR MESSAGE-->
                         <p id="formError"
-                           class="text-center bg-danger"
+                           class="text-center alert alert-danger"
                            ng-show="errorShowing">
                             Uh Oh! Something went wrong. Please check the form.
                         </p>
@@ -466,13 +467,13 @@
 
                         <!--FORM PROGRESS MESSAGE-->
                         <p id="formProgress"
-                           class="text-center"
+                           class="text-center alert alert-info"
                            ng-show="progressMessageShowing">
                             Sending...
                         </p>
 
                         <!--FORM SUCCESS MESSAGE-->
-                        <p class="text-center bg-success"
+                        <p class="text-center alert alert-success"
                            ng-show="resultShowing"
                            style="padding: 15px; margin: 0;">
                             Success!
