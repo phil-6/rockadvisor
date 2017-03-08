@@ -4,6 +4,7 @@
  * User: philr
  * Date: 04/03/2017
  * Time: 12:26
+ * Edited: 08/03/2017
 -->
 <!--
 ---------------------------------------
@@ -43,6 +44,9 @@ For the "finder" section of the website
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <!-- AngularJS UI-Router -->
     <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!-- AngularJS Animate -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-animate.min.js"></script>
+
 
     <!-- ANGULAR -->
     <script src="../angularApp/services/areaService.js"></script>
@@ -106,6 +110,9 @@ For the "finder" section of the website
                 </li>
                 <li>
                     <a class="page-scroll" href="/blog">Development</a>
+                </li>
+                <li>
+                    <a class="page-scroll" ui-sref="contribute">Contribute</a>
                 </li>
 
             </ul>

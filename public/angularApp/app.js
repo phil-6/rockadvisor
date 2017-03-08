@@ -18,7 +18,7 @@ var finderApp = angular.module('finderApp', [
     'cragDetailCtrl',
     'areasCtrl', 'areaService',
     'areaDetailCtrl',
-    'ui.router'
+    'ui.router', 'ngAnimate'
 ]);
 finderApp.config(function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise('/');
@@ -61,13 +61,26 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
             url: '/area/:areaID',
             templateUrl: '../views/_area-detail.html',
             controller: 'areaDetailController'
+        })
+
+        // contribute
+        .state('contribute',{
+            url: '/contribute/',
+            templateUrl: '../views/_contribute-header.html'
+        })
+        .state('contribute.addArea',{
+            url: 'addArea',
+            templateUrl: '../views/_contribute-addArea.html'
+        })
+        .state('contribute.addCrag',{
+            url: 'addCrag',
+            templateUrl: '../views/_contribute-addCrag.html'
+        })
+        .state('contribute.addClimb',{
+            url: 'addClimb',
+            templateUrl: '../views/_contribute-addClimb.html'
         });
 
 
-        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
-        //.state('blog', {
-            // we'll get to this in a bit
-            //https://scotch.io/tutorials/angular-routing-using-ui-router#multiple-views-about-page
-        //})
 
 });
