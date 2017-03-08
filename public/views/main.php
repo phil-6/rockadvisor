@@ -403,43 +403,55 @@
                  ng-app="contributeApp"
                  ng-controller="contributeController">
                 <form class="form-horizontal"
-                      ng-submit="submitEmail()">
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input class="form-control required"
-                               placeholder="Your name"
-                               data-placement="top"
-                               data-trigger="manual"
-                               data-content="Must be at least 3 characters long, and must only contain letters."
-                               type="text"
-                               id="formName"
+                      name="contributeForm"
+                      ng-submit="submitEmail(contributeForm.$valid)" novalidate>
+                    <div class="form-group"
+                         ng-class="{ 'has-error' : contributeForm.formName.$invalid && !contributeForm.formName.$pristine && submitted}">
+                    <label>Name</label>
+                        <input type="text"
                                name="formName"
-                               ng-model="formData.formName">
+                               class="form-control"
+                               ng-model="formData.formName"
+                               placeholder="Your name"
+                               required>
+                        <p ng-show="contributeForm.formName.$invalid && !contributeForm.formName.$pristine && submitted "
+                           class="help-block">
+                            Please tell us your name.
+                        </p>
+
                     </div>
                     <div class="form-group">
                         <label>Message</label>
-                        <textarea class="form-control"
-                                  placeholder="Write us a message.."
-                                  data-placement="top"
-                                  data-trigger="manual"
-                                  id="formMessage"
-                                  name="formMessage"
-                                  ng-model="formData.formMessage">
+                        <textarea
+                                type="text"
+                                name="formMessage"
+                                class="form-control"
+                                ng-model="formData.formMessage"
+                                placeholder="Write us a message..">
                         </textarea>
                     </div>
-                    <div class="form-group">
-                        <label>E-Mail</label>
-                        <input class="form-control email"
-                               placeholder="email@you.com (so that we can contact you)"
-                               data-placement="top"
-                               data-trigger="manual"
-                               data-content="Must be a valid e-mail address (user@gmail.com)"
-                               type="text"
-                               id="formEmail"
+                    <div class="form-group"
+                         ng-class="{ 'has-error' : contributeForm.formEmail.$invalid && !contributeForm.formEmail.$pristine && submitted}">
+
+                    <label>E-Mail</label>
+                        <input type="email"
                                name="formEmail"
-                               ng-model="formData.formEmail">
+                               class="form-control"
+                               ng-model="formData.formEmail"
+                               placeholder="email@you.com (so that we can contact you)"
+                               required>
+                        <p ng-show="contributeForm.formEmail.$invalid && !contributeForm.formEmail.$pristine && submitted"
+                           class="help-block">
+                            We tried, that doesn't seem to work.
+                        </p>
+
                     </div>
                     <div class="form-group">
+                        <p id="formError"
+                           class="text-center bg-danger"
+                           ng-show="errorShowing">
+                            Uh Oh! Something went wrong. Please check the form.
+                        </p>
                         <button type="submit"
                                 class="btn btn-primary btn-success btn-lg center-block"
                                 id="contributeSubmitButton"
@@ -447,10 +459,7 @@
                             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                             &nbsp Done!
                         </button>
-                        <!--<p class="help-block pull-left text-danger hide"
-                           id="contributeSubmitFormError">
-                            &nbsp; The form is not valid.
-                        </p>-->
+
                         <p id="formProgress"
                            class="text-center"
                            ng-show="progressMessageShowing">
