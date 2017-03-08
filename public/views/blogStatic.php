@@ -13,7 +13,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -22,6 +22,8 @@
     <!-- Bootstrap Core CSS -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Custom Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
@@ -46,6 +48,7 @@
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
     <!-- Google Analytics -->
     <script>
         (function (i, s, o, g, r, a, m) {
@@ -78,8 +81,11 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#rockAdvisorNavbar">
+            <button type="button"
+                    class="navbar-toggle collapsed"
+                    data-toggle="collapse"
+                    data-target="#rockAdvisorNavbar"
+                    aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand page-scroll" href="../#page-top">Rock Advisor</a>
@@ -89,16 +95,16 @@
         <div class="collapse navbar-collapse" id="rockAdvisorNavbar">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll" href="../#about">About</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="../#contact">Contribute</a>
+                    <a class="page-scroll" href="/">Home</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="/map">Crag Map</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="/finder">Crag Finder</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#background">Background</a>
                 </li>
 
             </ul>
