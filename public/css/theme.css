@@ -79,6 +79,11 @@ aside {
 .call-to-action h2 {
     margin: 0 auto 20px;
 }
+.call-to-action p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .text-primary {
     color: #F82;
@@ -91,6 +96,21 @@ aside {
 .page-header{
     border-bottom: 0;
 }
+/**
+**********
+* links *
+**********
+*/
+
+a {
+    transition: all .35s;
+    color: #F82;
+}
+
+a:focus, a:hover {
+    color: #E60;
+}
+
 /**
 **********
 * Backgrounds *
@@ -122,8 +142,9 @@ aside {
 .bg-primarygrad h5,
 .bg-primarygrad h6,
 .bg-primarygrad p{
-    color: #fff;
+    color: #fff ;
 }
+
 
 .bg-bluegrad{
     background: #1FC8DB; /* fallback for old browsers */
@@ -144,6 +165,10 @@ aside {
 .bg-bluegrad p{
     color: #fff;
 }
+.bg-bluegrad a  {
+    color: #fff;
+    font-weight: bold;
+}
 
 /**
 **********
@@ -160,20 +185,6 @@ hr {
     border-color: #fff;
 }
 
-/**
-**********
-* links *
-**********
-*/
-
-a {
-    transition: all .35s;
-    color: #F82;
-}
-
-a:focus, a:hover {
-    color: #E60;
-}
 
 /**
 **********
@@ -293,7 +304,7 @@ header {
 }
 
 header::before{
-    min-height: auto;
+    /*min-height: auto;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

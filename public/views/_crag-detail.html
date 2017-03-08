@@ -24,7 +24,10 @@
             <!-- Crag Details -->
             <div ng-hide="loading" class="detailsSection center-block">
                 <p class="text-faded">{{ cragData.description }}</p>
-                <p>Area: {{ cragData.AreaName }}</p>
+                <p>Area:
+                    <a ui-sref="areaDetail({ areaID: cragData.area_id })">{{ cragData.AreaName }}
+                    </a>
+                </p>
                 <p>Faces: {{ cragData.orientation }}</p>
                 <p>Approach: {{ cragData.approach_time }} minutes</p>
             </div>
@@ -61,7 +64,7 @@
             </div>
 
             <!-- If no Climbs -->
-            <div ng-show="!climbData.length">
+            <div ng-show="!climbData.length" class="text-center">
                 <p>No climbs are available.</p>
             </div>
         </div>

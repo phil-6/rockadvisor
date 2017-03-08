@@ -25,16 +25,43 @@ class AreasController extends Controller
         $data = [];
         $areas = Area::all();
         foreach ($areas as  $area) {
-            $record = ["id" => $area->id, "name" => $area->name, "parentName" => $area->getParentAreaName(), "parentId" => $area->parentArea];
+            $record = [
+                "id" => $area->id,
+                "name" => $area->name,
+                "parentName" => $area->getParentAreaName(),
+                "parentId" => $area->parentArea];
             $data[] = $record;
         }
 
         return response()->json($data);
 
     }
+
+    //get crags at area
     public function api_getCragsAtArea($area)
     {
         return $area->crags;
+    }
+
+    //get child areas at crag
+    public function api_getChildAreas($area)
+    {
+        return $area->getChildAreas;
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  Area  $area
+     * @return \Illuminate\Http\Response
+     */
+    // public function show(Area $area)
+    //
+    // }
+
+    public function api_show($area)
+    {
+        return response()->json($area);
     }
 
     /**
@@ -72,20 +99,7 @@ class AreasController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  Area  $area
-     * @return \Illuminate\Http\Response
-     */
-    // public function show(Area $area)
-    //
-    // }
 
-    public function api_show($area)
-    {
-        return response()->json($area);
-    }
 
     /**
      * Show the form for editing the specified resource.

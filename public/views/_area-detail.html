@@ -8,33 +8,75 @@
 
 <div class="row">
 
-<!--
-    ==========
-    Page Header
-    ==========
-              -->
+    <!--
+        ==========
+        Page Header
+        ==========
+                  -->
 
     <section class="bg-bluegrad text-center">
         <!-- Area Name -->
         <div class="page-header">
             <h1>{{areaData.name}} </h1>
         </div>
+        <hr>
 
         <!-- Area Description-->
         <div>
+
+            <div ng-show="areaData.ParentAreaName">
+                <p>Part of:
+                    <a ui-sref="areaDetail({ areaID: areaData.parentArea })">
+                        {{ areaData.ParentAreaName }}
+                    </a>
+                </p>
+            </div>
+
             <p>{{ areaData.description }}</p>
         </div>
     </section>
 
-
-<!--
-    ==========
-  Crags in Area
-    ==========
-              -->
+    <!--
+        ==========
+        Child Areas
+        ==========
+                  -->
 
     <!-- Title -->
-    <div class="col-md-8 col-md-offset-2 text-center">
+    <div class="col-md-8 col-md-offset-2 text-center" ng-hide="!childAreas.length">
+        <h2>Sub-Areas</h2>
+        <hr>
+
+        <!-- Loading Icon -->
+        <!-- show loading icon if the loading variable is set to true -->
+        <p class="text-center" ng-show="loading">
+            <i class="fa fa-space-shuttle fa-5x fa-spin"></i>
+        </p>
+
+        <!-- Loop of Crags -->
+        <div ng-repeat="area in childAreas" >
+            <a ui-sref="areaDetail({ areaID: {{area.id}} })">
+                <h3>{{ area.name }}</h3>
+            </a>
+            <!--Commented for Partial Deployment-->
+            <!--<button type="button" class="btn btn-primary" ng-click="deleteCrag(crag.id)">Delete</button>-->
+        </div>
+
+        <!-- If no crags -->
+        <div ng-show="!childAreas.length">
+            <p>This area has no sub-areas.</p>
+        </div>
+    </div>
+
+
+    <!--
+        ==========
+      Crags in Area
+        ==========
+                  -->
+
+    <!-- Title -->
+    <div class="col-md-8 col-md-offset-2 text-center" ng-hide="!cragData.length">
         <h2>Crags</h2>
         <hr>
 
@@ -45,7 +87,7 @@
         </p>
 
         <!-- Loop of Crags -->
-        <div ng-repeat="crag in cragData"  ng-hide="loading">
+        <div ng-repeat="crag in cragData" ng-hide="loading">
             <a ui-sref="cragDetail({ cragID: {{crag.id}} })">
                 <h3>{{ crag.name }}</h3>
             </a>
@@ -58,6 +100,16 @@
             <p>No crags are available.</p>
         </div>
     </div>
-
+    <!--
+        ==========
+      Nothing Here??
+        ==========
+                  -->
+    <div ng-show="!childAreas.length" class="col-md-8 col-md-offset-2 text-center">
+        <div ng-show="!cragData.length">
+            <h2>Uh Oh. There's nothing here!</h2>
+            <p>Try looking somewhere else or <a href="../#contact">add something</a></p>
+        </div>
+    </div>
 
 </div><!-- Row -->

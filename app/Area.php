@@ -32,9 +32,8 @@ class Area extends Model
     {
         if ($this->parentArea)
         {
-                return $this->getParentArea -> name;
+            return $this->getParentArea->name;
         }
-
         return null;
     }
 
@@ -46,5 +45,22 @@ class Area extends Model
     {
         return $this->hasMany('App\Area', 'parentArea', 'id');
     }
+
+
+
+    /**
+     * Append Attributes
+     */
+    public function getParentAreaNameAttribute()
+    {
+        if ($this->parentArea)
+        {
+            return $this->getParentArea->name;
+        }
+        return null;
+    }
+
+    protected $hidden = ['getParentArea'];
+    protected $appends = ['ParentAreaName'];
 
 }

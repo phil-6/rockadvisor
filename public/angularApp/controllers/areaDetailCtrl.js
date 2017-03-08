@@ -6,13 +6,14 @@ angular.module('areaDetailCtrl', [])
         $scope.areaId = $stateParams.areaID;
         $scope.areaData = {};
         $scope.cragData = {};
+        $scope.childAreas = {};
         // loading variable to show the spinning loading icon
         $scope.loading = true;
 
         //Get Area Details
         AreaFactory.getDetail($scope.areaId)
             .success(function (data) {
-                console.log("ctrlHere");
+                console.log(data);
                 $scope.areaData = data;
                 $scope.loading = false;
             });
@@ -20,8 +21,16 @@ angular.module('areaDetailCtrl', [])
         //Get Crags at Area
         AreaFactory.getCrags($scope.areaId)
             .success(function (data2) {
-                console.log("I'm here Phil" + data2);
+                //console.log("I'm here Phil" + data2);
                 $scope.cragData = data2;
+                $scope.loading = false;
+            });
+
+        //Get Areas at Area
+        AreaFactory.getChildAreas($scope.areaId)
+            .success(function (data3) {
+                //console.log("I'm here Phil" + data2);
+                $scope.childAreas = data3;
                 $scope.loading = false;
             });
     });

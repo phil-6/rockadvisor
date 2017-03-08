@@ -40,14 +40,19 @@ Route::get('grades', 			    'GradesController@api_index');
 //====================================================================
 //Custom api routes
 //====================================================================
+//Crag Details
+//Get ClimbTypeIdsAndNames - Used in Map
 Route::get('crags/{cragId}/type',   'CragsController@api_climbTypeIdsAndNames');
-
+//Get Grades at Crag - Used in Map
 Route::get('crags/{cragId}/grades', 'CragsController@api_getGradesAtCrag');
-
+//Get Climbs at Crag
 Route::get('crags/{cragId}/climbs', 'CragsController@api_getClimbsAtCrag');
 
+//Area Details
+//Get Crags at Area
 Route::get('areas/{areaId}/crags',  'AreasController@api_getCragsAtArea');
-
+//Get Child Areas
+Route::get('areas/{areaId}/areas',  'AreasController@api_getChildAreas');
 
 //Routes for maps api
 Route::get('maps_crags',            'MapController@map_api_getAllCrags');

@@ -18,8 +18,14 @@ angular.module('areaService', [])
                 return $http.get('/api/areas/' + id );
             },
 
+            //get crags at an area.
             getCrags: function (id) {
                 return $http.get('/api/areas/' + id + '/crags');
+            },
+
+            //get child areas.
+            getChildAreas: function (id) {
+                return $http.get('/api/areas/' + id + '/areas');
             },
 
             // save a area (pass in area data)
