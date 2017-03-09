@@ -88,13 +88,20 @@ class AreasController extends Controller
 
     public function api_store(Request $request)
     {
-        $area = new Area;
+        try {
+            $area = new Area;
 
-        $area->name = $request->input('name');
-        $area->parentArea = $request->input('parentArea');
-        $area->save();
+            $area->parentArea = $request->input('parentArea');
+            $area->name = $request->input('areaName');
+            $area->description = $request->input('areaDescription');
 
-        return response()->json(array('success' => true));
+            $area->save();
+
+            return response()->json(array('success' => true));
+        }
+        catch(Exception $e){
+            return response()->json(array('success' => false));
+        }
 
 
     }

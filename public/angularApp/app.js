@@ -57,13 +57,13 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
             templateUrl: '../views/_crag-detail.html',
             controller: 'cragDetailController'
         })
-
         // area detail
         .state('areaDetail', {
             url: '/area/:areaID',
             templateUrl: '../views/_area-detail.html',
             controller: 'areaDetailController'
         })
+
 
         // contribute
         .state('contribute',{
@@ -72,7 +72,8 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
         })
         .state('contribute.addArea',{
             url: 'addArea',
-            templateUrl: '../views/_contribute-addArea.html'
+            templateUrl: '../views/_contribute-addArea.html',
+            controller: 'areaFormController'
         })
         .state('contribute.addCrag',{
             url: 'addCrag',
@@ -81,7 +82,8 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
         })
         .state('contribute.addClimb',{
             url: 'addClimb',
-            templateUrl: '../views/_contribute-addClimb.html'
+            templateUrl: '../views/_contribute-addClimb.html',
+            controller: 'climbFormController'
         });
 
 

@@ -5,3 +5,243 @@
 --Edited last by philr
 --On 08/03/17
 -->
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 text-center">
+        <div id="form-container">
+
+            <!-- Section Title -->
+            <div class="page-header">
+                <h2>Create New Climb</h2>
+            </div>
+            <hr>
+
+            <!--WARNING MESSAGE-->
+            <div class="alert alert-danger text-center">
+                Please be aware, any data you create is likely to be destroyed as Rock Advisor is still in development.
+            </div>
+
+            <!--Start of Form-->
+            <form class="form-horizontal"
+                  name="addClimbForm"
+                  ng-submit="processClimbForm(addClimbForm.$valid)"
+                  novalidate>
+
+                <!--SELECT AREA-->
+                <div class="form-group"
+                     ng-class="{ 'has-error' : addClimbForm.climbArea.$invalid && !addClimbForm.climbArea.$pristine && submitted}">
+                    <label for="selectArea" class="col-sm-2 control-label">Select Area:</label>
+                    <div class="col-sm-10">
+                        <select name="climbArea"
+                                class="form-control"
+                                id="selectArea"
+                                ng-model="formData.climbArea"
+                                ng-options="area.id as area.name for area in areasData"
+                                required>
+                            <option value="">Select Area</option>
+                        </select>
+                    </div>
+                    <p ng-show="addClimbForm.climbArea.$invalid && !addClimbForm.climbArea.$pristine && submitted"
+                       class="help-block">
+                        Select the Area that the Climb is in
+                    </p>
+                </div>
+
+                <!--LOCATION-->
+                <div class="form-group"
+                     ng-class="{ 'has-error' :
+                     addClimbForm.climbLat.$invalid
+                     && !addClimbForm.climbLat.$pristine
+                     &&  addClimbForm.climbLng.$invalid
+                     && !addClimbForm.climbLng.$pristine
+                     && submitted}">
+                    <label class="col-sm-2 control-label">Lat/Lng Location:</label>
+                    <!--ng-pattern= "latregex"-->
+                    <div class="col-sm-5">
+                        <input type="text"
+                               name="climbLat"
+                               class="form-control"
+                               ng-model="formData.climbLat"
+                               ng-minlength="3"
+                               placeholder="Latitude: 51.600000"
+                               required>
+                    </div>
+                    <!--ng-pattern="lngregex"-->
+                    <div class="col-sm-5">
+                        <input type="text"
+                               name="climbLng"
+                               class="form-control"
+                               ng-model="formData.climbLng"
+                               ng-minlength="3"
+                               placeholder="Longitude: -4.150000"
+                               required>
+                    </div>
+                    <p ng-show="addClimbForm.climbLat.$invalid
+                     && !addClimbForm.climbLat.$pristine
+                     &&  addClimbForm.climbLng.$invalid
+                     && !addClimbForm.climbLng.$pristine
+                     && submitted"
+                       class="help-block">
+                        Check those lat and lngs for me please
+                    </p>
+                </div>
+
+                <!--CLIMB NAME-->
+                <div class="form-group"
+                     ng-class="{ 'has-error' : addClimbForm.climbName.$invalid && !addClimbForm.climbName.$pristine && submitted}">
+                    <label class="col-sm-2 control-label">Climb Name:</label>
+                    <div class="col-sm-10">
+                        <input type="text"
+                               name="climbName"
+                               class="form-control"
+                               ng-model="formData.climbName"
+                               placeholder="Climb Name"
+                               required>
+                    </div>
+                    <p ng-show="addClimbForm.climbName.$invalid && !addClimbForm.climbName.$pristine && submitted"
+                       class="help-block">
+                        A Climb must have a name.
+                    </p>
+                </div>
+
+                <!--CLIMB DESCRIPTOIN-->
+                <div class="form-group"
+                     ng-class="{ 'has-error' : addClimbForm.climbDescription.$invalid && !addClimbForm.climbDescription.$pristine && submitted}">
+                    <label class="col-sm-2 control-label">Description:</label>
+                    <div class="col-sm-10">
+                        <textarea name="climbDescription"
+                                  class="form-control"
+                                  ng-model="formData.climbDescription"
+                                  placeholder="Description"
+                                  required>
+                        </textarea>
+                    </div>
+                    <p ng-show="addClimbForm.climbDescription.$invalid && !addClimbForm.climbDescription.$pristine && submitted"
+                       class="help-block">
+                        Tell me something about this climb.
+                    </p>
+                </div>
+
+                <!--OTHER DETAILS-->
+                <div class="form-group">
+                    <div>
+                        <label class="col-sm-2 control-label">Tidal Range:</label>
+                        <div class="col-sm-2">
+                            <input type="number"
+                                   name="climbTidalRange"
+                                   class="form-control"
+                                   ng-model="formData.climbTidalRange"
+                                   placeholder="Tidal Range">
+                        </div>
+                    </div>
+                    <div ng-class="{ 'has-error' : addClimbForm.climbOrientation.$invalid && !addClimbForm.climbOrientation.$pristine && submitted}">
+                        <label class="col-sm-2 control-label">Orientation:</label>
+                        <!--ng-pattern="orientationregex"-->
+                        <div class="col-sm-2">
+                            <input type="text"
+                                   name="climbOrientation"
+                                   class="form-control"
+                                   ng-model="formData.climbOrientation"
+                                   ng-maxlength="3"
+
+                                   placeholder="SSW"
+                                   required>
+                        </div>
+
+                    </div>
+                    <div ng-class="{ 'has-error' : addClimbForm.climbApproachTime.$invalid && !addClimbForm.climbApproachTime.$pristine && submitted}">
+                        <label class="col-sm-2 control-label">Approach Time:</label>
+                        <div class="col-sm-2">
+                            <input type="number"
+                                   name="climbApproachTime"
+                                   class="form-control"
+                                   ng-model="formData.climbApproachTime"
+                                   placeholder="Time in minutes"
+                                   required>
+                        </div>
+
+                    </div>
+                    <p ng-show="addClimbForm.climbOrientation.$invalid && !addClimbForm.climbOrientation.$pristine && submitted"
+                       class="help-block">
+                        Please enter up to three compass letters. Eg NNW.
+                    </p>
+                    <p ng-show="addClimbForm.climbApproachTime.$invalid && !addClimbForm.climbApproachTime.$pristine && submitted"
+                       class="help-block">
+                        Please enter an approach time in minutes.
+                    </p>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3"></div>
+
+                    <div class="col-sm-2">
+                        <input type="checkbox"
+                               name="seepage"
+                               ng-checked="false"
+                               ng-model="formData.seepage"
+                               ng-init="formData.seepage=false">
+
+                        <label class="control-label">Seepage</label>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <input type="checkbox"
+                               name="midges"
+                               ng-checked="false"
+                               ng-model="formData.midges"
+                               ng-init="formData.midges=false">
+
+                        <label class="control-label">Midges</label>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <input type="checkbox"
+                               name="sheltered"
+                               ng-checked="true"
+                               ng-model="formData.sheltered"
+                               ng-init="formData.sheltered=true">
+
+                        <label class="control-label">Sheltered</label>
+
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+
+                    <!--FORM ERROR MESSAGE-->
+                    <p id="formError"
+                       class="text-center bg-danger"
+                       ng-show="errorShowing">
+                        Uh Oh! Something went wrong. Please check the form.
+                    </p>
+
+                    <!--SUMBIT BUTTON-->
+                    <button type="submit"
+                            class="btn btn-primary btn-success btn-lg center-block"
+                            ng-hide="submitButtonHidden">
+                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                        &nbsp Done!
+                    </button>
+
+                    <!--FORM PROGRESS MESSAGE-->
+                    <p id="formProgress"
+                       class="text-center"
+                       ng-show="progressMessageShowing">
+                        Sending...
+                    </p>
+
+                    <!--FORM SUCCESS MESSAGE-->
+                    <p class="text-center bg-success"
+                       ng-show="resultShowing"
+                       style="padding: 15px; margin: 0;">
+                        Success!
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <!--DEBUGGING-->
+        <pre>
+            {{ formData }}
+        </pre>
+    </div>
+</div>

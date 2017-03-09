@@ -36,15 +36,13 @@
                                 id="selectArea"
                                 ng-model="formData.cragArea"
                                 ng-options="area.id as area.name for area in areasData"
-                                data-placement="top"
-                                data-content="Select the Area that the Crag is in"
                                 required>
                             <option value="">Select Area</option>
                         </select>
                     </div>
                     <p ng-show="addCragForm.cragArea.$invalid && !addCragForm.cragArea.$pristine && submitted"
                        class="help-block">
-                        Pick an area
+                        Select the Area that the Crag is in
                     </p>
                 </div>
 
@@ -64,7 +62,6 @@
                                class="form-control"
                                ng-model="formData.cragLat"
                                ng-minlength="3"
-
                                placeholder="Latitude: 51.600000"
                                required>
                     </div>
@@ -75,7 +72,6 @@
                                class="form-control"
                                ng-model="formData.cragLng"
                                ng-minlength="3"
-
                                placeholder="Longitude: -4.150000"
                                required>
                     </div>
@@ -103,7 +99,7 @@
                     </div>
                     <p ng-show="addCragForm.cragName.$invalid && !addCragForm.cragName.$pristine && submitted"
                        class="help-block">
-                        A Crag must have a name.
+                        A crag must have a name.
                     </p>
                 </div>
 
@@ -213,7 +209,6 @@
 
                     <!--FORM ERROR MESSAGE-->
                     <p id="formError"
-                       class="text-center bg-danger"
                        ng-show="errorShowing">
                         Uh Oh! Something went wrong. Please check the form.
                     </p>
@@ -228,15 +223,16 @@
 
                     <!--FORM PROGRESS MESSAGE-->
                     <p id="formProgress"
-                       class="text-center"
-                       ng-show="progressMessageShowing">
+                       class="text-center alert-info"
+                       ng-show="progressMessageShowing"
+                       style="padding: 15px; margin-left: 150px; margin-right: 150px;">
                         Sending...
                     </p>
 
                     <!--FORM SUCCESS MESSAGE-->
-                    <p class="text-center bg-success"
+                    <p class="text-center alert-success"
                        ng-show="resultShowing"
-                       style="padding: 15px; margin: 0;">
+                       style="padding: 15px; margin-left: 150px; margin-right: 150px;">
                         Success!
                     </p>
                 </div>

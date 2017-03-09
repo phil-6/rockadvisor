@@ -1,9 +1,9 @@
 /**
- * Created by philr on 08/03/2017.
+ * Created by philr on 09/03/2017.
  */
 
-angular.module('cragFormCtrl', [])
-    .controller('cragFormController', function ($scope, $http, CragFactory, AreaFactory, $timeout) {
+angular.module('areaFormCtrl', [])
+    .controller('areaFormController', function ($scope, $http, AreaFactory, $timeout) {
 
         $scope.formData = {};
         $scope.submitButtonHidden = false;
@@ -11,33 +11,21 @@ angular.module('cragFormCtrl', [])
         $scope.resultShowing = false;
         $scope.errorShowing = false;
         $scope.submitted = false;
-        /*$scope.latregex = "^(\+|-)?(?:90(?:(?:\.0{1,6})?)|(?:[0-9]|[1-8][0-9])(?:(?:\.[0-9]{1,6})?))$";
-         $scope.lngregex = "^(\+|-)?(?:180(?:(?:\.0{1,6})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\.[0-9]{1,6})?))$";
-         $scope.orientationregex = "N|S|E|W|NE|SE|NW|SW|NNE|ENE|SSE|ESE|NNW|WNW|SSW|WSW";*/
+        //console.log("ctrl-here");
 
         $scope.areasData = {};
         AreaFactory.get()
             .success(function (data2) {
-                //console.log("ctrl");
+
                 $scope.areasData = data2;
                 $scope.loading = false;
             });
 
 
-        $scope.processCragForm = function (isValid) {
+        $scope.processAreaForm = function (isValid) {
             $scope.submitted = true;
             $scope.submitButtonHidden = true;
             $scope.progressMessageShowing = true;
-
-            if($scope.formData.midges == true){
-                $scope.formData.midges = 1;
-            }else{$scope.formData.midges = 0}
-            if($scope.formData.seepage == true){
-                $scope.formData.seepage = 1;
-            }else{$scope.formData.seepage = 0}
-            if($scope.formData.sheltered == true){
-                $scope.formData.sheltered = 1;
-            }else{$scope.formData.sheltered = 0}
             //$scope.errorShowing = false;
 
             if (isValid) {
@@ -46,7 +34,7 @@ angular.module('cragFormCtrl', [])
                 //$scope.progressMessageShowing = true;
                 $scope.errorShowing = false;
 
-                CragFactory.save($scope.formData)
+                AreaFactory.save($scope.formData)
                     .success(function (data) {
                         //console.log(data); //debugging
                         if (data.success) { //success comes from the return json object
