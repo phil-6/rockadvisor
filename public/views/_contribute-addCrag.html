@@ -14,6 +14,7 @@
                 <h2>Create New Crag</h2>
             </div>
             <hr>
+            <a ui-sref=".crags" class="btn btn-primary">Crag List</a>
 
             <!--WARNING MESSAGE-->
             <div class="alert alert-danger text-center">
@@ -137,14 +138,14 @@
                     </div>
                     <div ng-class="{ 'has-error' : addCragForm.cragOrientation.$invalid && !addCragForm.cragOrientation.$pristine && submitted}">
                         <label class="col-sm-2 control-label">Orientation:</label>
-                        <!--ng-pattern="orientationregex"-->
+
                         <div class="col-sm-2">
                             <input type="text"
                                    name="cragOrientation"
                                    class="form-control"
                                    ng-model="formData.cragOrientation"
                                    ng-maxlength="3"
-
+                                   ng-pattern="orientationregex"
                                    placeholder="SSW"
                                    required>
                         </div>
@@ -247,5 +248,9 @@
         <pre>
             {{ formData }}
         </pre>
+        <!--<pre>
+            {{ latregex }}
+        </pre>-->
+
     </div>
 </div>
