@@ -148,6 +148,7 @@
                     var marker = new google.maps.Marker({
                         map: map,
                         position: position,
+                        id: data.id,
                         title: data.name,
                         area: data.area,
                         tidalRange: data.tidalRange,
@@ -213,7 +214,7 @@
                 var infoWindowContent = '<div id="content">' +
 
                     '<h2 id="infoWindowHeading" class="infoWindowHeading">' +
-                    marker.title + '</h2>' +
+                    '<a href="/finder#/crag/' + marker.id + '">' + marker.title + '</a></h2>' +
                     '<div id="infoWindowContent" class="infoWindowContent">' +
                     '<p><b>Area: </b>' + marker.area +
                     (marker.tidalRange ? '</p><p><b>Tidal Range: </b>' + ((marker.tidalRange) * 2) + ' hours' : "") +

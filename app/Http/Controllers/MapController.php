@@ -22,6 +22,7 @@ class MapController extends Controller
         $crags = Crag::all();
         foreach ($crags as $crag){
             $record = [
+                "id" => $crag->id,
                 "lat" => $crag->lat,
                 "lng" => $crag->lng,
                 "name" => $crag->name,
