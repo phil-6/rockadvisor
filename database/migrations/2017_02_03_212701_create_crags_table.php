@@ -22,9 +22,9 @@ class CreateCragsTable extends Migration
             $table->integer('tidal_range')->unsigned()->nullable()->default(null);
             $table->char("orientation", 3);
             $table->integer('approach_time')->unsigned();
-            $table->boolean("seepage");
-            $table->boolean("midges");
-            $table->boolean("sheltered");
+            $table->boolean("seepage")->default(false);
+            $table->boolean("midges")->default(false);
+            $table->boolean("sheltered")->default(false);
             
             $table->integer('area_id')->unsigned();
 

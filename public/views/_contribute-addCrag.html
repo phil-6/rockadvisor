@@ -175,23 +175,40 @@
                     <div class="col-sm-3"></div>
 
                     <div class="col-sm-2">
-                        <input type="checkbox" name="seepage" value="seepage">
-                        Seepage
+                        <input type="checkbox"
+                               name="seepage"
+                               ng-checked="false"
+                               ng-model="formData.seepage"
+                               >
+                        <!--ng-init="formData.seepage=false"-->
+                        <label class="control-label">Seepage</label>
                     </div>
 
                     <div class="col-sm-2">
-                        <input type="checkbox" name="midges" value="midges">
-                        Midges
+                        <input type="checkbox"
+                               name="midges"
+                               ng-checked="false"
+                               ng-model="formData.midges"
+                               >
+                        <!--ng-init="formData.midges=false"-->
+                        <label class="control-label">Midges</label>
                     </div>
 
                     <div class="col-sm-2">
-                        <input type="checkbox" name="sheltered" value="sheltered">
-                        Sheltered
+                        <input type="checkbox"
+                               name="sheltered"
+                               ng-checked="true"
+                               ng-model="formData.sheltered"
+                               >
+                        <!--ng-init="formData.sheltered=true"-->
+                        <label class="control-label">Sheltered</label>
+
                     </div>
                 </div>
 
 
                 <div class="form-group">
+
                     <!--FORM ERROR MESSAGE-->
                     <p id="formError"
                        class="text-center bg-danger"

@@ -105,33 +105,32 @@ class CragsController extends Controller
 
     public function store(Request $request)
     {
-        //
+        //dd($request->all());
+
     }
 
     public function api_store(Request $request)
     {
+
         $crag = new Crag;
 
-        $crag->lat = $request->input('lat');
-        $crag->lng =  $request->input('lng');
-        $crag->name = $request->input('name');
-        $crag->description = $request->input('description');
-        $crag->tidal_range = $request->input('tidal_range');
-        $crag->orientation = $request->input('orientation');
-        $crag->approach_time = $request->input('approach_time');
-        $crag->seepage = $request->input('seepage');
-        $crag->midges = $request->input('midges');
-        $crag->sheltered = $request->input('sheltered');
-        $crag->area_id = $request->input('area_id');
+        $crag->lat = $request->input('cragLat');
+        $crag->lng =  $request->input('cragLng');
+        $crag->name = $request->input('cragName');
+        $crag->description = $request->input('cragDescription');
+        $crag->tidal_range = $request->input('cragTidalRange');
+        $crag->orientation = $request->input('cragOrientation');
+        $crag->approach_time = $request->input('cragApproachTime');
+//        $crag->seepage = $request->input('seepage');
+//        $crag->midges = $request->input('midges');
+//        $crag->sheltered = $request->input('sheltered');
+        $crag->area_id = $request->input('cragArea');
 
+        //dd($crag);
         $crag->save();
         return response()->json(array('success' => true));
 
-        //Not sure if this will work
-        /*Area::create(array(
-            'name' => Input::get('name'),
-            'parentArea' => Input::get('parentArea')
-        ));*/
+
     }
 
 

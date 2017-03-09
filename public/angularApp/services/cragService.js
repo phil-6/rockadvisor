@@ -24,7 +24,7 @@ angular.module('cragService', [])
 
             // save a crag (pass in crag data)
             save: function (cragData) {
-                // console.log("service:CragFactory:save");
+                console.log("service:CragFactory:save");
                 return $http({
                     method: 'POST',
                     url: '/api/crags',
