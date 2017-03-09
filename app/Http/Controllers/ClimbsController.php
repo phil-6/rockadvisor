@@ -109,7 +109,7 @@ class ClimbsController extends Controller
             $climb->length = $request->input('length');
             $climb->grade_id = $request->input('grade');
             //$climb->topo_id = $request->input('topo_id');
-            $climb->crag_id = $request->input('crag_id');
+            $climb->crag_id = $request->input('crag');
 
             $climb->save();
             return response()->json(array('success' => true));

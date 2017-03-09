@@ -19,6 +19,9 @@
             <div class="alert alert-danger text-center">
                 Please be aware, any data you create is likely to be destroyed as Rock Advisor is still in development.
             </div>
+            <div class="alert alert-info text-center">
+                Improvements to the grade selection system are coming soon.
+            </div>
 
             <!--Start of Form-->
             <form class="form-horizontal"
@@ -37,7 +40,7 @@
                                 class="form-control"
                                 id="selectGrade"
                                 ng-model="formData.grade"
-                                ng-options="grade.id as grade.name for grade in gradesData"
+                                ng-options="grade.id as grade.severityGrade + ' ' + grade.technicalGrade for grade in gradesData"
                                 required>
                             <option value="">Select Grade</option>
                         </select>
@@ -130,7 +133,7 @@
 
                     <!--FORM ERROR MESSAGE-->
                     <p id="formError"
-                       class="text-center bg-danger"
+                       class="text-center alert-danger"
                        ng-show="errorShowing">
                         Uh Oh! Something went wrong. Please check the form.
                     </p>
@@ -145,15 +148,16 @@
 
                     <!--FORM PROGRESS MESSAGE-->
                     <p id="formProgress"
-                       class="text-center"
-                       ng-show="progressMessageShowing">
+                       class="text-center alert-info"
+                       ng-show="progressMessageShowing"
+                       style="padding: 15px; margin-left: 150px; margin-right: 150px;">
                         Sending...
                     </p>
 
                     <!--FORM SUCCESS MESSAGE-->
-                    <p class="text-center bg-success"
+                    <p class="text-center alert-success"
                        ng-show="resultShowing"
-                       style="padding: 15px; margin: 0;">
+                       style="padding: 15px; margin-left: 150px; margin-right: 150px;">
                         Success!
                     </p>
                 </div>
