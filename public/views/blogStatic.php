@@ -325,7 +325,7 @@
                     <div class="postContent">
                         <p>
                             Welcome to the Development blog for Rock Advisor. If you’ve made it this far you’ve
-                            obviously shown an interested in what’s going on behind the scenes as we build this new
+                            obviously shown an interest in what’s going on behind the scenes as we build this new
                             style of guidebook. Thanks! I hope you didn’t come here because something is broken… if it
                             is or if you have any helpful suggestions please drop us <a href="#contact">an email!</a>
                         </p>
@@ -333,7 +333,7 @@
                         <p>
                             So a bit about the project. Rock Advisor is a final year dissertation project for Calum
                             McClune and Phil Reynolds. We’re both heading towards a BSc in Computer Science but took on
-                            a very Software Engineering project because of our particular interest in climbing. The
+                            a Software Engineering style project because of our particular interest in climbing. The
                             project has changed a lot since we first took it on. The initial brief was as follows:
                         </p>
 
@@ -378,7 +378,7 @@
                         <p>
                             Right then, after all that waffle that brings us to now, the end of February. The
                             dissertation progress reports are done with so that leaves us with a bit of a gap. Instead
-                            of progress log I thought it would be a nice idea to have some occasional ramblings from
+                            of progress logs, I thought it would be a nice idea to have some occasional ramblings from
                             Calum and myself about how we’re getting on with the Development of Rock Advisor. And so
                             this development blog was born.
                         </p>
@@ -388,7 +388,7 @@
                             and probably won’t make a lot of sense, most of the time!
                         </p>
                         <p>
-                            I hope you enjoy this journey, if you don’t, well, don’t read it! I ain’t your mother!
+                            I hope you enjoy this journey, if you don’t, well, don’t read it. I'm not going to make you.
                         </p>
                     </div><!-- End Content -->
 
