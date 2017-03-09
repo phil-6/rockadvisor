@@ -19,6 +19,7 @@ var finderApp = angular.module('finderApp', [
     'cragFormCtrl',
     'areasCtrl', 'areaService',
     'areaDetailCtrl',
+    'areaFormCtrl',
     'ui.router', 'ngAnimate'
 ]);
 
