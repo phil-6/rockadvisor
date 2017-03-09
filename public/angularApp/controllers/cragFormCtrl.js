@@ -10,6 +10,7 @@ angular.module('cragFormCtrl', [])
         $scope.progressMessageShowing = false;
         $scope.resultShowing = false;
         $scope.errorShowing = false;
+        $scope.submitted = false;
         /*$scope.latregex = "^(\+|-)?(?:90(?:(?:\.0{1,6})?)|(?:[0-9]|[1-8][0-9])(?:(?:\.[0-9]{1,6})?))$";
          $scope.lngregex = "^(\+|-)?(?:180(?:(?:\.0{1,6})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\.[0-9]{1,6})?))$";
          $scope.orientationregex = "N|S|E|W|NE|SE|NW|SW|NNE|ENE|SSE|ESE|NNW|WNW|SSW|WSW";*/
@@ -24,21 +25,22 @@ angular.module('cragFormCtrl', [])
 
 
         $scope.processCragForm = function (isValid) {
-
+            $scope.submitted = true;
             $scope.submitButtonHidden = true;
             $scope.progressMessageShowing = true;
-            $scope.errorShowing = false;
+            //$scope.errorShowing = false;
             if (isValid) {
-                $scope.submitButtonHidden = true;
-                $scope.progressMessageShowing = true;
-                $scope.errorShowing = false;
+                //$scope.submitted = true;
+                //$scope.submitButtonHidden = true;
+                //$scope.progressMessageShowing = true;
+                //$scope.errorShowing = false;
                 //console.log($scope.formData.midges);
 
                 CragFactory.save($scope.formData)
                     .success(function (data) {
                         console.log(data); //debugging
                         if (data.success) { //success comes from the return json object
-                            $scope.submitButtonHidden = true;
+                            //$scope.submitButtonHidden = true;
                             $scope.progressMessageShowing = false;
                             $scope.resultShowing = true;
 
@@ -46,8 +48,9 @@ angular.module('cragFormCtrl', [])
                             $timeout(function () {
                                 $scope.formData = {};
                                 $scope.submitButtonHidden = false;
-                                $scope.progressMessageShowing = false;
+                                //$scope.progressMessageShowing = false;
                                 $scope.resultShowing = false;
+                                $scope.submitted = false;
 
                             }, 2000);
 

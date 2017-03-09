@@ -16,18 +16,18 @@ angular.module('emailCtrl', [])
             $scope.submitted = true;
             $scope.submitButtonHidden = true;
             $scope.progressMessageShowing = true;
-            $scope.errorShowing = false;
+            // $scope.errorShowing = false;
             if (isValid) {
-                $scope.submitted = true;
-                $scope.submitButtonHidden = true;
-                $scope.progressMessageShowing = true;
-                $scope.errorShowing = false;
+                // $scope.submitted = true;
+                // $scope.submitButtonHidden = true;
+                // $scope.progressMessageShowing = true;
+                // $scope.errorShowing = false;
 
                 EmailFactory.submit($scope.formData)
                     .success(function (data) {
                         //console.log(data); //debugging
                         if (data.success) { //success comes from the return json object
-                            $scope.submitButtonHidden = true;
+                            // $scope.submitButtonHidden = true;
                             $scope.progressMessageShowing = false;
                             $scope.resultShowing = true;
 
@@ -36,7 +36,7 @@ angular.module('emailCtrl', [])
                             $timeout(function () {
                                 $scope.formData = {};
                                 $scope.submitButtonHidden = false;
-                                $scope.progressMessageShowing = false;
+                                // $scope.progressMessageShowing = false;
                                 $scope.resultShowing = false;
                                 $scope.submitted = false;
 
