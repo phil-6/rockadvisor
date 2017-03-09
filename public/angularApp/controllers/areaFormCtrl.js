@@ -11,7 +11,13 @@ angular.module('areaFormCtrl', [])
         $scope.resultShowing = false;
         $scope.errorShowing = false;
         $scope.submitted = false;
-        //console.log("ctrl-here");
+        $scope.submitDisabled = false;
+
+        $scope.disableButton = function() {
+            $scope.sumbitDisabled = true;
+        }
+
+
 
         $scope.areasData = {};
         AreaFactory.get()
@@ -23,6 +29,7 @@ angular.module('areaFormCtrl', [])
         $scope.processAreaForm = function (isValid) {
             $scope.submitted = true;
             $scope.submitButtonHidden = true;
+            $scope.submitDisabled = false;
             $scope.progressMessageShowing = true;
             //$scope.errorShowing = false;
 

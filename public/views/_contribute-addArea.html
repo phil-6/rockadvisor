@@ -94,7 +94,9 @@
                     <!--SUMBIT BUTTON-->
                     <button type="submit"
                             class="btn btn-primary btn-success btn-lg center-block"
-                            ng-hide="submitButtonHidden">
+                            ng-hide="submitButtonHidden"
+                            ng-disabled="submitDisabled"
+                            ng-click="disableButton()">
                         <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                         &nbsp Done!
                     </button>
