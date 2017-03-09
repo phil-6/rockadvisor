@@ -98,7 +98,7 @@
                     <a class="page-scroll" href="#about">About</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">Contribute</a>
+                    <a class="page-scroll" href="#contact">Sign Up</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="/map">Crag Map</a>

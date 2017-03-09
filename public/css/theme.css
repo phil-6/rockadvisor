@@ -144,6 +144,11 @@ a:focus, a:hover {
 .bg-primarygrad p{
     color: #fff ;
 }
+.bg-primarygrad a  {
+    color: #fff;
+    font-weight: bold;
+}
+
 
 
 .bg-bluegrad{
@@ -181,7 +186,9 @@ hr {
     max-width: 50px;
 }
 
-.bg-primary hr, hr.light {
+.bg-primary hr,
+.bg-primarygrad hr,
+hr.light {
     border-color: #fff;
 }
 
@@ -743,10 +750,10 @@ header .blog-header-content .header-content-inner h4 {
 * Finder *
 **********
 */
+
+
 .finder-header {
     margin-bottom: 0;
-    background-color: #eee;
-    background: linear-gradient(141deg, rgb(15, 184, 173) 0%, rgb(31, 200, 219) 51%, rgb(44, 181, 232) 75%)
 
 }
 .finder-header .header-content .header-content-inner h1 {
@@ -756,8 +763,7 @@ header .blog-header-content .header-content-inner h4 {
     margin-bottom: 0;
     font-size: 20px;
     color: #639;
-    /*#8020FF;*/
-    /*text-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);*/
+
 }
 .finder-header .header-content .header-content-inner hr {
     margin: 30px auto;
@@ -765,7 +771,6 @@ header .blog-header-content .header-content-inner h4 {
 
 .finder-header .header-content .header-content-inner h4 {
     font-weight: 600;
-    color: #FFF;
     /*font-size: 16px;*/
     margin-bottom: 50px;
 }

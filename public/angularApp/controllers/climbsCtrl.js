@@ -26,29 +26,6 @@ angular.module('climbsCtrl', [])
             });
 
 
-        // function to handle submitting the form
-        // SAVE AN CLIMB ================
-        // $scope.submitClimb = function () {
-        //     $scope.loading = true;
-
-        //     // save the climb. pass in climb data from the form
-        //     // use the function we created in our service
-        //     ClimbFactory.save($scope.climbData)
-        //         .success(function (data) {
-
-        //             // if successful, we'll need to refresh the climb list
-        //             Climb.get()
-        //                 .success(function (getData) {
-        //                     $scope.climbs = getData;
-        //                     $scope.loading = false;
-        //                 });
-
-        //         })
-        //         .error(function (data) {
-        //             console.log(data);
-        //         });
-        // };
-
         // function to handle deleting a climb
         // DELETE A CLIMB ====================================================
         $scope.deleteClimb = function (id) {

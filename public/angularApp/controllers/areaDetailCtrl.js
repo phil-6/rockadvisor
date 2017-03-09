@@ -13,7 +13,7 @@ angular.module('areaDetailCtrl', [])
         //Get Area Details
         AreaFactory.getDetail($scope.areaId)
             .success(function (data) {
-                console.log(data);
+                //console.log(data);
                 $scope.areaData = data;
                 $scope.loading = false;
             });

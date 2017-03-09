@@ -118,7 +118,7 @@ For the "finder" section of the website
                     <a class="page-scroll" href="/blog">Development</a>
                 </li>
                 <li>
-                    <a class="page-scroll" ui-sref="contribute">Contribute</a>
+                    <a class="page-scroll" ui-sref="contribute">Create</a>
                 </li>
 
             </ul>

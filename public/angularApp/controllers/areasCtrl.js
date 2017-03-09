@@ -27,32 +27,6 @@ angular.module('areasCtrl', [])
             });
 
 
-
-
-
-        // function to handle submitting the form
-        // SAVE AN AREA ================
-        // $scope.submitArea = function () {
-        //     $scope.loading = true;
-
-        //     // save the area. pass in area data from the form
-        //     // use the function we created in our service
-        //     AreaFactory.save($scope.areaData)
-        //         .success(function (data) {
-
-        //             // if successful, we'll need to refresh the area list
-        //             Area.get()
-        //                 .success(function (getData) {
-        //                     $scope.areas = getData;
-        //                     $scope.loading = false;
-        //                 });
-
-        //         })
-        //         .error(function (data) {
-        //             console.log(data);
-        //         });
-        // };
-
         // function to handle deleting a area
         // DELETE A AREA ====================================================
         $scope.deleteArea = function (id) {

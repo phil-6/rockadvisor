@@ -25,29 +25,6 @@ angular.module('gradesCtrl', [])
             });
 
 
-        // function to handle submitting the form
-        // SAVE AN GRADE ================
-        // $scope.submitGrade = function () {
-        //     $scope.loading = true;
-
-        //     // save the grade. pass in grade data from the form
-        //     // use the function we created in our service
-        //     GradeFactory.save($scope.gradeData)
-        //         .success(function (data) {
-
-        //             // if successful, we'll need to refresh the grade list
-        //             Grade.get()
-        //                 .success(function (getData) {
-        //                     $scope.grades = getData;
-        //                     $scope.loading = false;
-        //                 });
-
-        //         })
-        //         .error(function (data) {
-        //             console.log(data);
-        //         });
-        // };
-
         // function to handle deleting a grade
         // DELETE A GRADE ====================================================
         $scope.deleteGrade = function (id) {

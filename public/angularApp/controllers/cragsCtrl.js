@@ -20,7 +20,7 @@ angular
         // GET ALL CRAGS ==============
         CragFactory.get()
             .success(function (data) {
-                console.log("cragsCtrl:CragFactory.get");
+                //console.log("cragsCtrl:CragFactory.get");
                 $scope.cragsData = data;
                 $scope.loading = false;
             });
@@ -45,7 +45,7 @@ angular
 
                 })
                 .error(function (data) {
-                    console.log(data);
+                    //console.log(data);
                 });
         };
 
