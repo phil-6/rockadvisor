@@ -22,8 +22,7 @@
         <hr>
 
         <!-- Area Description-->
-        <div>
-
+        <div class="detailsSection center-block">
             <div ng-show="areaData.ParentAreaName">
                 <p>Part of:
                     <a ui-sref="areaDetail({ areaID: areaData.parentArea })">
@@ -31,7 +30,6 @@
                     </a>
                 </p>
             </div>
-
             <p>{{ areaData.description }}</p>
         </div>
     </section>
