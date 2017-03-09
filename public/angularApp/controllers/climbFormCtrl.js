@@ -3,7 +3,7 @@
  */
 
 angular.module('climbFormCtrl', [])
-    .controller('climbFormController', function ($scope, $http, ClimbFactory, CragFactory, $timeout) {
+    .controller('climbFormController', function ($scope, $http, ClimbFactory, CragFactory, GradeFactory, $timeout) {
 
         $scope.formData = {};
         $scope.submitButtonHidden = false;
@@ -17,6 +17,12 @@ angular.module('climbFormCtrl', [])
         CragFactory.get()
             .success(function (data2) {
                 $scope.cragsData = data2;
+            });
+
+        $scope.gradesData = {};
+        GradeFactory.get()
+            .success(function (data3) {
+                $scope.gradesData = data3;
             });
 
 

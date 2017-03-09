@@ -100,23 +100,24 @@ class ClimbsController extends Controller
 
     public function api_store(Request $request)
     {
-        $climb = new Climb;
 
-        $climb->name = $request->input('name');
-        $climb->description = $request->input('description');
-        $climb->length = $request->input('length');
-        //$climb->grade_id = $request->input('grade_id');
-        //$climb->topo_id = $request->input('topo_id');
-        $climb->crag_id = $request->input('crag_id');
+        try {
+            $climb = new Climb;
 
-        $climb->save();
-        return response()->json(array('success' => true));
+            $climb->name = $request->input('climbName');
+            $climb->description = $request->input('climbDescription');
+            $climb->length = $request->input('length');
+            $climb->grade_id = $request->input('grade');
+            //$climb->topo_id = $request->input('topo_id');
+            $climb->crag_id = $request->input('crag_id');
 
-        //Not sure if this will work
-        /*Area::create(array(
-            'name' => Input::get('name'),
-            'parentArea' => Input::get('parentArea')
-        ));*/
+            $climb->save();
+            return response()->json(array('success' => true));
+        }
+        catch(Exception $e){
+            return response()->json(array('success' => false));
+        }
+
     }
 
 

@@ -29,6 +29,24 @@
                 <!--SELECT CLIMB TYPE-->
                 <!--SELECT CLIMB SYSTEM-->
                 <!--SELECT CLIMB GRADE-->
+                <div class="form-group"
+                     ng-class="{ 'has-error' : addClimbForm.grade.$invalid && !addClimbForm.grade.$pristine && submitted}">
+                    <label for="selectGrade" class="col-sm-2 control-label">Select Grade:</label>
+                    <div class="col-sm-2">
+                        <select name="grade"
+                                class="form-control"
+                                id="selectGrade"
+                                ng-model="formData.grade"
+                                ng-options="grade.id as grade.name for grade in gradesData"
+                                required>
+                            <option value="">Select Grade</option>
+                        </select>
+                    </div>
+                    <p ng-show="addClimbForm.grade.$invalid && !addClimbForm.grade.$pristine && submitted"
+                       class="help-block">
+                        Select the Grade of the Climb
+                    </p>
+                </div>
 
 
                 <!--SELECT CRAG-->
