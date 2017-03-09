@@ -144,8 +144,8 @@ a:focus, a:hover {
 .bg-primarygrad p{
     color: #fff ;
 }
-.bg-primarygrad a  {
-    color: #fff;
+.bg-primarygrad .detailsSection a  {
+    color: #fff ;
     font-weight: bold;
 }
 
@@ -170,8 +170,8 @@ a:focus, a:hover {
 .bg-bluegrad p{
     color: #fff;
 }
-.bg-bluegrad a  {
-    color: #fff;
+.bg-bluegrad .detailsSection a  {
+    color: #fff ;
     font-weight: bold;
 }
 
@@ -428,7 +428,6 @@ header .header-content .header-content-inner p {
 }
 
 .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open > .dropdown-toggle.btn-default {
-    color: #222;
     background-color: #639;/*#f6f6f6;*/
     border-color: #639;/*#ededed*/
     color: #fff;
