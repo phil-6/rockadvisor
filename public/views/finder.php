@@ -55,6 +55,7 @@ For the "finder" section of the website
     <script src="../angularApp/controllers/areasCtrl.js"></script>
     <script src="../angularApp/controllers/cragDetailCtrl.js"></script>
     <script src="../angularApp/controllers/areaDetailCtrl.js"></script>
+    <script src="../angularApp/controllers/cragFormCtrl.js"></script>
     <script src="../angularApp/app.js"></script>
 
     <!-- Google Analytics -->
