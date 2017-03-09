@@ -28,13 +28,24 @@ angular.module('cragFormCtrl', [])
             $scope.submitted = true;
             $scope.submitButtonHidden = true;
             $scope.progressMessageShowing = true;
+            if($scope.formData.midges == true){
+                $scope.formData.midges = 1;
+            }else{$scope.formData.midges = 0}
+            if($scope.formData.seepage == true){
+                $scope.formData.seepage = 1;
+            }else{$scope.formData.seepage = 0}
+            if($scope.formData.sheltered == true){
+                $scope.formData.sheltered = 1;
+            }else{$scope.formData.sheltered = 0}
             //$scope.errorShowing = false;
+
+
             if (isValid) {
                 //$scope.submitted = true;
                 //$scope.submitButtonHidden = true;
                 //$scope.progressMessageShowing = true;
-                //$scope.errorShowing = false;
-                //console.log($scope.formData.midges);
+                $scope.errorShowing = false;
+
 
                 CragFactory.save($scope.formData)
                     .success(function (data) {

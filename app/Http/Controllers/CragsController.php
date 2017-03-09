@@ -4,6 +4,7 @@
  * User: philr
  * Date: 16/02/2017
  * Time: 14:16
+ * Edited: 09/03/17
  */
 
 namespace App\Http\Controllers;
@@ -112,23 +113,30 @@ class CragsController extends Controller
     public function api_store(Request $request)
     {
 
-        $crag = new Crag;
+        try {
+            $crag = new Crag;
 
-        $crag->lat = $request->input('cragLat');
-        $crag->lng =  $request->input('cragLng');
-        $crag->name = $request->input('cragName');
-        $crag->description = $request->input('cragDescription');
-        $crag->tidal_range = $request->input('cragTidalRange');
-        $crag->orientation = $request->input('cragOrientation');
-        $crag->approach_time = $request->input('cragApproachTime');
-//        $crag->seepage = $request->input('seepage');
-//        $crag->midges = $request->input('midges');
-//        $crag->sheltered = $request->input('sheltered');
-        $crag->area_id = $request->input('cragArea');
+            $crag->lat = $request->input('cragLat');
+            $crag->lng = $request->input('cragLng');
+            $crag->name = $request->input('cragName');
+            $crag->description = $request->input('cragDescription');
+            $crag->tidal_range = $request->input('cragTidalRange');
+            $crag->orientation = $request->input('cragOrientation');
+            $crag->approach_time = $request->input('cragApproachTime');
 
-        //dd($crag);
-        $crag->save();
-        return response()->json(array('success' => true));
+            $crag->seepage = $request->input('seepage');
+            $crag->midges = $request->input('midges');
+            $crag->sheltered = $request->input('sheltered');
+
+            $crag->area_id = $request->input('cragArea');
+
+            //dd($crag);
+            $crag->save();
+            return response()->json(array('success' => true));
+        }
+        catch(Exception $e){
+            return response()->json(array('success' => false));
+        }
 
 
     }
