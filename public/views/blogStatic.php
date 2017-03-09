@@ -223,6 +223,29 @@
                 <div class="post">
 
                     <h3 class="postTitle">
+                        Creator Update
+                    </h3>
+                    <p class="post-meta">Posted by <a href="#Phil">Phil</a> 09/03/2017</p>
+                    <div class="postContent">
+                        <p>
+                            This week has been a long one. Lots of progress has been made, more than I expected. I’ve just hit the point where I need to start some more research into what I want to do next!
+                        </p>
+                        <p>
+                            If you can read this, that means the “Creator Update” has gone live. You can now create crags, areas and climbs. The amount of work that went into this was significantly greater than anticipated, and there were a lot of moments where I felt that wildly failing against my keyboard might have a greater effect. But after the breakthrough I mention in the last post and this next step everything is starting to falling into place. We’re getting very close to having something minimum and viable out in the world.
+                        </p>
+                        <p>
+                            The next things are going to be added are a way to edit the data, confirmations for delete, filters to allow you to find what you are looking for more easily, and a bit more back end security. There are still a lot of improvements that need to happen to the map and we still need to add topos and a few other things to our database. But we’re getting there.
+                        </p>
+                        <p>
+                            If you have any suggestions for additional features, thoughts about the way the site is working or if you find any bugs, please <a href="#contact">let me know!</a>
+                        </p>
+
+                    </div><!-- End Content -->
+                </div> <!-- End Post -->
+                <hr>
+                <div class="post">
+
+                    <h3 class="postTitle">
                         AngularJS Breakthrough
                     </h3>
                     <p class="post-meta">Posted by <a href="#Phil">Phil</a> 05/03/2017</p>
