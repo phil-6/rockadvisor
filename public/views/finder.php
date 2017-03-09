@@ -16,7 +16,12 @@ For the "finder" section of the website
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="Rock Advisor - A Climbing Guidebook for the Digital Age">
+    <meta name="author" content="Phil Reynolds">
+
     <title>Crag Finder</title>
 
     <!-- Bootstrap Core CSS -->
