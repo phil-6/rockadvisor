@@ -51,8 +51,10 @@ For the "finder" section of the website
     <!-- ANGULAR -->
     <script src="../angularApp/services/areaService.js"></script>
     <script src="../angularApp/services/cragService.js"></script>
+    <script src="../angularApp/services/climbService.js"></script>
     <script src="../angularApp/controllers/cragsCtrl.js"></script>
     <script src="../angularApp/controllers/areasCtrl.js"></script>
+    <script src="../angularApp/controllers/climbsCtrl.js"></script>
     <script src="../angularApp/controllers/cragDetailCtrl.js"></script>
     <script src="../angularApp/controllers/areaDetailCtrl.js"></script>
     <script src="../angularApp/controllers/cragFormCtrl.js"></script>

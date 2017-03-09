@@ -20,7 +20,7 @@ angular.module('cragFormCtrl', [])
             .success(function (data2) {
                 //console.log("ctrl");
                 $scope.areasData = data2;
-                $scope.loading = false;
+
             });
 
 

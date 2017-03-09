@@ -16,9 +16,7 @@ angular.module('areaFormCtrl', [])
         $scope.areasData = {};
         AreaFactory.get()
             .success(function (data2) {
-
                 $scope.areasData = data2;
-                $scope.loading = false;
             });
 
 

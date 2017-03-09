@@ -26,62 +26,28 @@
                   ng-submit="processClimbForm(addClimbForm.$valid)"
                   novalidate>
 
-                <!--SELECT AREA-->
+                <!--SELECT CLIMB TYPE-->
+                <!--SELECT CLIMB SYSTEM-->
+                <!--SELECT CLIMB GRADE-->
+
+
+                <!--SELECT CRAG-->
                 <div class="form-group"
-                     ng-class="{ 'has-error' : addClimbForm.climbArea.$invalid && !addClimbForm.climbArea.$pristine && submitted}">
-                    <label for="selectArea" class="col-sm-2 control-label">Select Area:</label>
+                     ng-class="{ 'has-error' : addClimbForm.crag.$invalid && !addClimbForm.crag.$pristine && submitted}">
+                    <label for="selectCrag" class="col-sm-2 control-label">Select Crag:</label>
                     <div class="col-sm-10">
-                        <select name="climbArea"
+                        <select name="crag"
                                 class="form-control"
-                                id="selectArea"
-                                ng-model="formData.climbArea"
-                                ng-options="area.id as area.name for area in areasData"
+                                id="selectCrag"
+                                ng-model="formData.crag"
+                                ng-options="crag.id as crag.name for crag in cragsData"
                                 required>
-                            <option value="">Select Area</option>
+                            <option value="">Select Crag</option>
                         </select>
                     </div>
-                    <p ng-show="addClimbForm.climbArea.$invalid && !addClimbForm.climbArea.$pristine && submitted"
+                    <p ng-show="addClimbForm.crag.$invalid && !addClimbForm.crag.$pristine && submitted"
                        class="help-block">
-                        Select the Area that the Climb is in
-                    </p>
-                </div>
-
-                <!--LOCATION-->
-                <div class="form-group"
-                     ng-class="{ 'has-error' :
-                     addClimbForm.climbLat.$invalid
-                     && !addClimbForm.climbLat.$pristine
-                     &&  addClimbForm.climbLng.$invalid
-                     && !addClimbForm.climbLng.$pristine
-                     && submitted}">
-                    <label class="col-sm-2 control-label">Lat/Lng Location:</label>
-                    <!--ng-pattern= "latregex"-->
-                    <div class="col-sm-5">
-                        <input type="text"
-                               name="climbLat"
-                               class="form-control"
-                               ng-model="formData.climbLat"
-                               ng-minlength="3"
-                               placeholder="Latitude: 51.600000"
-                               required>
-                    </div>
-                    <!--ng-pattern="lngregex"-->
-                    <div class="col-sm-5">
-                        <input type="text"
-                               name="climbLng"
-                               class="form-control"
-                               ng-model="formData.climbLng"
-                               ng-minlength="3"
-                               placeholder="Longitude: -4.150000"
-                               required>
-                    </div>
-                    <p ng-show="addClimbForm.climbLat.$invalid
-                     && !addClimbForm.climbLat.$pristine
-                     &&  addClimbForm.climbLng.$invalid
-                     && !addClimbForm.climbLng.$pristine
-                     && submitted"
-                       class="help-block">
-                        Check those lat and lngs for me please
+                        Select the Crag that the Climb is on
                     </p>
                 </div>
 
@@ -123,85 +89,22 @@
 
                 <!--OTHER DETAILS-->
                 <div class="form-group">
-                    <div>
-                        <label class="col-sm-2 control-label">Tidal Range:</label>
-                        <div class="col-sm-2">
-                            <input type="number"
-                                   name="climbTidalRange"
-                                   class="form-control"
-                                   ng-model="formData.climbTidalRange"
-                                   placeholder="Tidal Range">
-                        </div>
-                    </div>
-                    <div ng-class="{ 'has-error' : addClimbForm.climbOrientation.$invalid && !addClimbForm.climbOrientation.$pristine && submitted}">
-                        <label class="col-sm-2 control-label">Orientation:</label>
-                        <!--ng-pattern="orientationregex"-->
-                        <div class="col-sm-2">
-                            <input type="text"
-                                   name="climbOrientation"
-                                   class="form-control"
-                                   ng-model="formData.climbOrientation"
-                                   ng-maxlength="3"
 
-                                   placeholder="SSW"
+                    <div ng-class="{ 'has-error' : addClimbForm.length.$invalid && !addClimbForm.length.$pristine && submitted}">
+                        <label class="col-sm-2 control-label">Climb Length:</label>
+                        <div class="col-sm-3">
+                            <input type="number"
+                                   name="length"
+                                   class="form-control"
+                                   ng-model="formData.length"
+                                   placeholder="Length in metres"
                                    required>
                         </div>
-
                     </div>
-                    <div ng-class="{ 'has-error' : addClimbForm.climbApproachTime.$invalid && !addClimbForm.climbApproachTime.$pristine && submitted}">
-                        <label class="col-sm-2 control-label">Approach Time:</label>
-                        <div class="col-sm-2">
-                            <input type="number"
-                                   name="climbApproachTime"
-                                   class="form-control"
-                                   ng-model="formData.climbApproachTime"
-                                   placeholder="Time in minutes"
-                                   required>
-                        </div>
-
-                    </div>
-                    <p ng-show="addClimbForm.climbOrientation.$invalid && !addClimbForm.climbOrientation.$pristine && submitted"
+                    <p ng-show="addClimbForm.length.$invalid && !addClimbForm.length.$pristine && submitted"
                        class="help-block">
-                        Please enter up to three compass letters. Eg NNW.
+                        Please enter the length of the climb in metres.
                     </p>
-                    <p ng-show="addClimbForm.climbApproachTime.$invalid && !addClimbForm.climbApproachTime.$pristine && submitted"
-                       class="help-block">
-                        Please enter an approach time in minutes.
-                    </p>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-3"></div>
-
-                    <div class="col-sm-2">
-                        <input type="checkbox"
-                               name="seepage"
-                               ng-checked="false"
-                               ng-model="formData.seepage"
-                               ng-init="formData.seepage=false">
-
-                        <label class="control-label">Seepage</label>
-                    </div>
-
-                    <div class="col-sm-2">
-                        <input type="checkbox"
-                               name="midges"
-                               ng-checked="false"
-                               ng-model="formData.midges"
-                               ng-init="formData.midges=false">
-
-                        <label class="control-label">Midges</label>
-                    </div>
-
-                    <div class="col-sm-2">
-                        <input type="checkbox"
-                               name="sheltered"
-                               ng-checked="true"
-                               ng-model="formData.sheltered"
-                               ng-init="formData.sheltered=true">
-
-                        <label class="control-label">Sheltered</label>
-
-                    </div>
                 </div>
 
 
