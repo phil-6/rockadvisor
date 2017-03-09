@@ -127,6 +127,8 @@
                         <label class="col-sm-2 control-label">Tidal Range:</label>
                         <div class="col-sm-2">
                             <input type="number"
+                                   min="0"
+                                   max="6"
                                    name="cragTidalRange"
                                    class="form-control"
                                    ng-model="formData.cragTidalRange"
@@ -152,6 +154,7 @@
                         <label class="col-sm-2 control-label">Approach Time:</label>
                         <div class="col-sm-2">
                             <input type="number"
+                                   min="0"
                                    name="cragApproachTime"
                                    class="form-control"
                                    ng-model="formData.cragApproachTime"
