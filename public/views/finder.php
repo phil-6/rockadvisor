@@ -170,6 +170,7 @@ For the "finder" section of the website
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 <script src="../js/scrollreveal/scrollreveal.min.js"></script>
 <script src="../js/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="../js/confirm-with-reveal/confirm_with_reveal.min.js"></script>
 
 
 <!-- Theme JavaScript -->

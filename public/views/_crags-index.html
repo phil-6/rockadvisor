@@ -37,9 +37,12 @@
                     <h3>{{ crag.name }} : {{crag.id}}</h3>
                 </a>
                 <p>In Area: {{ crag.area }}</p>
+                <div class="alert alert-success" ng-show="showMessage">
+                    <p>{{message}}</p>
+                </div>
 
                 <!-- Delete Crag and Show Crag Buttons -->
-                <button type="button" class="btn btn-danger" ng-click="deleteCrag(crag.id)">Delete</button>
+                <button type="button" class="btn btn-danger" ng-click="deleteCrag(crag.id)" data-confirm>Delete</button>
                 <a ui-sref="cragDetail({ cragID: {{crag.id}} })" type="button" class="btn btn-primary">Show</a>
             </div>
 
