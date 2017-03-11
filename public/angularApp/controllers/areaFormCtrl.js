@@ -47,6 +47,13 @@ angular.module('areaFormCtrl', [])
                             $scope.progressMessageShowing = false;
                             $scope.resultShowing = true;
 
+                            //Refresh area list.
+                            //Doesn't work at the moment
+                            AreaFactory.get()
+                                .success(function (data2) {
+                                    $scope.areasData = data2;
+                                });
+
                             //Paused after success
                             $timeout(function () {
                                 $scope.formData = {};
