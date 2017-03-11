@@ -147,6 +147,12 @@
          });*/
 
 
+
+/**
+    ==========
+  Create Markers
+    ==========
+              */
         // Create Markers array and populate it from API
         var apiUrl = ("/api/maps_crags");
         var largeInfoWindow = new google.maps.InfoWindow();
@@ -195,6 +201,12 @@
 
     }
 
+
+/**
+    ==========
+   Info Windows
+    ==========
+              */
     /**
      *  This function populates the infowindow when the marker is clicked. We'll only allow
      * one infowindow which will open at the marker that is clicked, and populate based
@@ -247,6 +259,14 @@
     }
 
 
+
+/**
+    ==========
+     Filters
+    ==========
+              */
+
+
     /**
      * These functions control all the map filters.
      * Any marker property can be used to filter
@@ -254,6 +274,10 @@
      * something else because these are pretty darn important
      */
 
+
+    //          //
+    // SHOW ALL //
+    //          //
     // This function will loop through the markers array and display them all.
     function showListings() {
         var bounds = new google.maps.LatLngBounds();
@@ -264,12 +288,20 @@
         }
         map.fitBounds(bounds);
     }
+
+    //          //
+    // HIDE ALL //
+    //          //
     // This function will loop through the listings and hide them all.
     function hideListings() {
         for (var i = 0; i < markers.length; i++) {
             markers[i].setMap(null);
         }
     }
+    
+    //             //
+    // FILTER TRAD //
+    //             //
     // This function will loop through the listings and hide them all.
     // Then redraws all Trad Crags
     function filterTrad() {
@@ -292,6 +324,10 @@
         }
         map.fitBounds(bounds);
     }
+
+    //              //
+    // FILTER SPORT //
+    //              //
     // This function will loop through the listings and hide them all.
     // Then redraws all Sport Crags
     function filterSport() {
@@ -314,6 +350,9 @@
         map.fitBounds(bounds);
     }
 
+    //            //
+    // BOULDERING //
+    //           //
     // This function will loop through the listings and hide them all.
     // Then redraws all Bouldering Crags
     function filterBouldering() {
@@ -335,6 +374,10 @@
         }
         map.fitBounds(bounds);
     }
+
+    //           //
+    // NON-TIDAL //
+    //           //
     // This function will loop through the listings and hide them all.
     // Then redraws all Non-Tidal Crags
     function filterTidal() {
@@ -354,6 +397,9 @@
         map.fitBounds(bounds);
     }
 
+    //             //
+    // TIDAL RANGE //
+    //             //
     // This function will loop through the listings and hide them all,
     // and checks to find the max tidal range
     // Then redraws all in that tidal range
@@ -373,6 +419,12 @@
         }
     }
 
+
+/**
+    ==========
+  Filter Buttons
+    ==========
+              */
 
     /**
      * Adds controls for map filters
