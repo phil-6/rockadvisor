@@ -147,12 +147,11 @@
          });*/
 
 
-
-/**
-    ==========
-  Create Markers
-    ==========
-              */
+        /**
+         ==========
+         Create Markers
+         ==========
+                    */
         // Create Markers array and populate it from API
         var apiUrl = ("/api/maps_crags");
         var largeInfoWindow = new google.maps.InfoWindow();
@@ -199,14 +198,54 @@
         var markerCluster = new MarkerClusterer(map, markers,
             {imagePath: "../resources/images/markerClusterer/m"});
 
+
+        /**
+         ==========
+         Show User Location
+         ==========
+                    */
+
+        /** WILL NOT WORK UNTIL CONNECTION IS HTTPS */
+
+        /** //User loctation
+         var infoWindow = new google.maps.InfoWindow({map: map});
+
+         // Try HTML5 geolocation.
+         if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+
+                infoWindow.setPosition(pos);
+                infoWindow.setContent('Location found.');
+                map.setCenter(pos);
+            }, function() {
+                handleLocationError(true, infoWindow, map.getCenter());
+            });
+        } else {
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infoWindow, map.getCenter());
+        } */
+
+
     }
 
+    /*Location Error Handling*/
+    /**function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+            'Error: The Geolocation service failed.' :
+            'Error: Your browser doesn\'t support geolocation.');
+    }*/
 
-/**
-    ==========
-   Info Windows
-    ==========
-              */
+
+    /**
+     ==========
+     Info Windows
+     ==========
+     */
     /**
      *  This function populates the infowindow when the marker is clicked. We'll only allow
      * one infowindow which will open at the marker that is clicked, and populate based
@@ -259,12 +298,11 @@
     }
 
 
-
-/**
-    ==========
+    /**
+     ==========
      Filters
-    ==========
-              */
+     ==========
+     */
 
 
     /**
@@ -298,7 +336,7 @@
             markers[i].setMap(null);
         }
     }
-    
+
     //             //
     // FILTER TRAD //
     //             //
@@ -389,7 +427,7 @@
         }
         //Redraw filtered markers
         for (var i = 0; i < markers.length; i++) {
-            if(!markers[i].tidalRange){
+            if (!markers[i].tidalRange) {
                 markers[i].setMap(map);
                 bounds.extend(markers[i].getPosition());
             }
@@ -420,11 +458,11 @@
     }
 
 
-/**
-    ==========
-  Filter Buttons
-    ==========
-              */
+    /**
+     ==========
+     Filter Buttons
+     ==========
+     */
 
     /**
      * Adds controls for map filters
@@ -540,7 +578,7 @@
 
 </script>
 
-<script type="text/javascript" src="../js/markerClusterer/markerclusterer.js"></script>
+<script src="../js/markerClusterer/markerclusterer.js"></script>
 
 
 <script async defer
