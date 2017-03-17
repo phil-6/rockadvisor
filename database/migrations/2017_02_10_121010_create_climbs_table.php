@@ -18,10 +18,14 @@ class CreateClimbsTable extends Migration
            $table->string ("name");
            $table->text("description");
            $table->integer("length")->unsigned();
+           $table->integer("pitches")->unsigned();
+           $table->string("firstAscent");
+           $table->date("firstAscentDate");
 
            $table->integer("topo_id")->unsigned()->nullable()->default(null);
            $table->integer("grade_id")->unsigned();
            $table->integer("crag_id")->unsigned();
+
 
            $table->timestamps();
 

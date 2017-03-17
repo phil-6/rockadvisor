@@ -13,25 +13,28 @@ class CreateCragsTable extends Migration
      */
     public function up()
     {
-        Schema::create('crags', function (Blueprint $table){
-			$table->increments('id');
+        Schema::create("crags", function (Blueprint $table){
+			$table->increments("id");
             $table->double("lat",11,8);
             $table->double("lng",11,8);
             $table->string("name");
             $table->text("description");
-            $table->integer('tidal_range')->unsigned()->nullable()->default(null);
+            $table->integer("tidalRange")->unsigned()->nullable()->default(null);
             $table->char("orientation", 3);
-            $table->integer('approach_time')->unsigned();
+            $table->integer("approach_time")->unsigned();
+            $table->string("approachDetails");
+            $table->string("rockType")->nullable()->default(null);
+
             $table->boolean("seepage")->default(false);
             $table->boolean("midges")->default(false);
             $table->boolean("sheltered")->default(false);
             
-            $table->integer('area_id')->unsigned();
+            $table->integer("area_id")->unsigned();
 
 			$table->timestamps();
 
-            $table->foreign('area_id')->references('id')->
-                on('areas')->onDelete('cascade');
+            $table->foreign("area_id")->references("id")->
+                on("areas")->onDelete("cascade");
 
 		});
 		
