@@ -17,7 +17,7 @@ class CreateToposTable extends Migration
             //primary key
             $table->increments('id');
 
-            $table->string('url');
+            $table->string('location');
 
             //system timestamps
             $table->timestamps();
