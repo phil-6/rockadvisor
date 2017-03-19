@@ -21,8 +21,10 @@ class CreateCragsTable extends Migration
             $table->text("description");
             $table->integer("tidalRange")->unsigned()->nullable()->default(null);
             $table->char("orientation", 3);
-            $table->integer("approach_time")->unsigned();
-            $table->string("approachDetails");
+            $table->integer("approachTime")->unsigned();
+            $table->text("approachDetails")->nullable()->default(null);
+            $table->text("accessInformation")->nullable()->default(null);
+
             $table->string("rockType")->nullable()->default(null);
 
             $table->boolean("seepage")->default(false);
