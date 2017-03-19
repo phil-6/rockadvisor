@@ -23,7 +23,7 @@ class CragsTableSeeder extends Seeder
         $c->name = "Anemone Wall";
         $c->description = "At dead low water there is a through-cave which provides a start for the routes as far as Anemone Wall. At all but spring tides or rough seas, it is possible to gain the routes a few metres up them, without any change. This is the slab 100m to the east of the headland. Access is down the easy slab to the east.";
         $c->tidalRange = 1;
-        $c->orientation = "ssw";
+        $c->orientation_id_id = 11;
         $c->approachTime = 20;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -41,7 +41,7 @@ class CragsTableSeeder extends Seeder
         $c->name = "Bacon Hole";
         $c->description = "Bacon Hole is an internationally important conservation site, both for its geology, its archaeology and for the fauna (protected bats) found in the area. Its a Site of Special Scientific Interest, and the features of the site (including roosting and hibernating bats) are protected by law. For this reason the owners, the National Trust and Government of Wales's conservation advisors, the Natural Resource for Wales do not allow climbing at this venue.";
         $c->tidalRange = 2;
-        $c->orientation = "s";
+        $c->orientation_id = 3;
         $c->approachTime = 20;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -62,7 +62,7 @@ This large slab has seen a recent re-equipment on some of the routes 'vandalised
 Climbs to the left of Miss You are subject to frequent rockfall.
 If you want to climb the harder routes then you may need to give some of the more delicate smears a light soft brushing (no wire brushing as this will only polish the rock).";
         $c->tidalRange = null;
-        $c->orientation = "n";
+        $c->orientation_id = 1;
         $c->approachTime = 5;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -80,7 +80,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Black Buttress Left";
         $c->description = "A cool crag";
         $c->tidalRange = null;
-        $c->orientation = "w";
+        $c->orientation_id = 4;
         $c->approachTime = 15;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -98,7 +98,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Black Buttress Right";
         $c->description = "A cool crag";
         $c->tidalRange = null;
-        $c->orientation = "w";
+        $c->orientation_id = 4;
         $c->approachTime = 15;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -116,7 +116,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Black Wall";
         $c->description = "A cool crag";
         $c->tidalRange = 1;
-        $c->orientation = "n";
+        $c->orientation_id = 1;
         $c->approachTime = 45;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -134,7 +134,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Block Buttress";
         $c->description = "A cool crag";
         $c->tidalRange = 2;
-        $c->orientation = "s";
+        $c->orientation_id = 3;
         $c->approachTime = 30;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -152,7 +152,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Boiler Slab";
         $c->description = "A cool crag";
         $c->tidalRange = null;
-        $c->orientation = "sw";
+        $c->orientation_id = 12;
         $c->approachTime = 40;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -170,7 +170,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Bosco's Den Area";
         $c->description = "A cool crag";
         $c->tidalRange = 2.5;
-        $c->orientation = "e";
+        $c->orientation_id = 3;
         $c->approachTime = 20;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -188,7 +188,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Bowen's Parlour";
         $c->description = "A cool crag";
         $c->tidalRange = null;
-        $c->orientation = "s";
+        $c->orientation_id = 3;
         $c->approachTime = 25;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -206,7 +206,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Bucketland";
         $c->description = "A cool crag";
         $c->tidalRange = 1;
-        $c->orientation = "aaa";
+        $c->orientation_id = 17;
         $c->approachTime = 35;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -224,7 +224,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Castaway Cove";
         $c->description = "A cool crag";
         $c->tidalRange = 2;
-        $c->orientation = "n";
+        $c->orientation_id = 1;
         $c->approachTime = 40;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -242,7 +242,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Caswell Bay - Far South Slab";
         $c->description = "A cool crag";
         $c->tidalRange = 2;
-        $c->orientation = "s";
+        $c->orientation_id = 3;
         $c->approachTime = 15;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -260,7 +260,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Caswell Bay - Great Slab";
         $c->description = "A cool crag";
         $c->tidalRange = 2;
-        $c->orientation = "se";
+        $c->orientation_id = 9;
         $c->approachTime = 10;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -278,7 +278,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Caswell Bay - Yellow Flecked Slab";
         $c->description = "A cool crag";
         $c->tidalRange = 2;
-        $c->orientation = "s";
+        $c->orientation_id = 3;
         $c->approachTime = 10;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -296,7 +296,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Catacomb Gully";
         $c->description = "A cool crag";
         $c->tidalRange = null;
-        $c->orientation = "s";
+        $c->orientation_id = 3;
         $c->approachTime = 40;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -314,7 +314,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Cefnstylle Quarry";
         $c->description = "A cool crag";
         $c->tidalRange = null;
-        $c->orientation = "ne";
+        $c->orientation_id = 6;
         $c->approachTime = 5;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -332,7 +332,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Conservative Club Crag";
         $c->description = "A cool crag";
         $c->tidalRange = null;
-        $c->orientation = "se";
+        $c->orientation_id = 9;
         $c->approachTime = 5;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -350,7 +350,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Crab Island";
         $c->description = "A cool crag";
         $c->tidalRange = 3;
-        $c->orientation = "s";
+        $c->orientation_id = 3;
         $c->approachTime = 15;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -368,7 +368,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Culver Hole";
         $c->description = "A cool crag";
         $c->tidalRange = 3;
-        $c->orientation = "s";
+        $c->orientation_id = 3;
         $c->approachTime = 15;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -390,7 +390,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Three Cliffs";
         $c->description = "A cool crag";
         $c->tidalRange = 3;
-        $c->orientation = "s";
+        $c->orientation_id = 3;
         $c->approachTime = 30;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -408,7 +408,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Great Tor Proper";
         $c->description = "A cool crag";
         $c->tidalRange = null;
-        $c->orientation = "se";
+        $c->orientation_id = 9;
         $c->approachTime = 30;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -426,7 +426,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Juniper Wall";
         $c->description = "A cool crag";
         $c->tidalRange = null;
-        $c->orientation = "s";
+        $c->orientation_id = 3;
         $c->approachTime = 30;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -444,7 +444,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Foxhole Cave";
         $c->description = "A cool crag";
         $c->tidalRange = null;
-        $c->orientation = "s";
+        $c->orientation_id = 3;
         $c->approachTime = 30;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -462,7 +462,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Trial Wall";
         $c->description = "A cool crag";
         $c->tidalRange = null;
-        $c->orientation = "w";
+        $c->orientation_id = 4;
         $c->approachTime = 10;
         $c->approachDetails = "";
         $c->accessInformation = "";
@@ -480,7 +480,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->name = "Cromlech Boulders";
         $c->description = "Hidden Wall Area";
         $c->tidalRange = null;
-        $c->orientation = "n";
+        $c->orientation_id = 1;
         $c->approachTime = 15;
         $c->approachDetails = "";
         $c->accessInformation = "";
