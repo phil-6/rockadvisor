@@ -120,9 +120,13 @@ class CragsController extends Controller
             $crag->lng = $request->input('cragLng');
             $crag->name = $request->input('cragName');
             $crag->description = $request->input('cragDescription');
-            $crag->tidal_range = $request->input('cragTidalRange');
+            $crag->tidalRange = $request->input('cragTidalRange');
             $crag->orientation = $request->input('cragOrientation');
-            $crag->approach_time = $request->input('cragApproachTime');
+            $crag->approachTime = $request->input('cragApproachTime');
+            $crag->approachDetails = $request->input('cragApproach');
+            $crag->accessInformation = $request->input('cragAccess');
+            $crag->rockType = $request->input('');
+
 
             $crag->seepage = $request->input('seepage');
             $crag->midges = $request->input('midges');
