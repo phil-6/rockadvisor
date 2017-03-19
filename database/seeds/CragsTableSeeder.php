@@ -27,7 +27,7 @@ class CragsTableSeeder extends Seeder
         $c->approachTime = 20;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = false;
         $c->midges = false;
         $c->sheltered = false;
@@ -45,7 +45,7 @@ class CragsTableSeeder extends Seeder
         $c->approachTime = 20;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = true;
         $c->midges = false;
         $c->sheltered = false;
@@ -66,7 +66,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 5;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = true;
         $c->midges = false;
         $c->sheltered = false;
@@ -84,7 +84,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 15;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = false;
         $c->midges = false;
         $c->sheltered = false;
@@ -102,7 +102,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 15;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = false;
         $c->midges = false;
         $c->sheltered = false;
@@ -120,7 +120,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 45;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = true;
         $c->midges = false;
         $c->sheltered = false;
@@ -138,7 +138,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 30;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = false;
         $c->midges = false;
         $c->sheltered = false;
@@ -156,7 +156,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 40;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = false;
         $c->midges = false;
         $c->sheltered = false;
@@ -174,7 +174,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 20;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = true;
         $c->midges = false;
         $c->sheltered = false;
@@ -192,7 +192,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 25;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = false;
         $c->midges = false;
         $c->sheltered = false;
@@ -210,7 +210,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 35;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = false;
         $c->midges = false;
         $c->sheltered = false;
@@ -228,7 +228,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 40;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = false;
         $c->midges = false;
         $c->sheltered = false;
@@ -246,7 +246,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 15;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = false;
         $c->midges = false;
         $c->sheltered = false;
@@ -264,7 +264,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 10;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = false;
         $c->midges = false;
         $c->sheltered = false;
@@ -282,7 +282,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 10;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = false;
         $c->midges = false;
         $c->sheltered = false;
@@ -300,7 +300,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 40;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = false;
         $c->midges = false;
         $c->sheltered = false;
@@ -318,7 +318,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 5;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = true;
         $c->midges = false;
         $c->sheltered = false;
@@ -336,7 +336,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 5;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = true;
         $c->midges = true;
         $c->sheltered = false;
@@ -354,7 +354,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 15;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = false;
         $c->midges = false;
         $c->sheltered = false;
@@ -372,7 +372,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 15;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = false;
         $c->midges = false;
         $c->sheltered = true;
@@ -394,7 +394,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 30;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = false;
         $c->midges = false;
         $c->sheltered = true;
@@ -412,7 +412,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 30;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = false;
         $c->midges = false;
         $c->sheltered = false;
@@ -430,7 +430,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 30;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = false;
         $c->midges = false;
         $c->sheltered = false;
@@ -448,7 +448,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 30;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = true;
         $c->midges = false;
         $c->sheltered = true;
@@ -466,7 +466,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 10;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = false;
         $c->midges = false;
         $c->sheltered = false;
@@ -484,7 +484,7 @@ If you want to climb the harder routes then you may need to give some of the mor
         $c->approachTime = 15;
         $c->approachDetails = "";
         $c->accessInformation = "";
-        $c->rockType = "";
+        $c->rockType_id = 1;
         $c->seepage = false;
         $c->midges = true;
         $c->sheltered = false;
