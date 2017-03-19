@@ -10,7 +10,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ParkingLocations extends Model
+class ParkingLocation extends Model
 {
 
     protected $table = 'parkingLocations';

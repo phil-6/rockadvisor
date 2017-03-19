@@ -28,10 +28,8 @@ class CreateClimbsTable extends Migration
             $table->integer("grade_id")->unsigned();
             $table->integer("crag_id")->unsigned();
 
-
             $table->timestamps();
 
-            // TODO: Needs looking at - what happens when we delete a topo?
             $table->foreign('topo_id')->references('id')->
             on('topos')->onDelete('set null');
             $table->foreign('grade_id')->references('id')->

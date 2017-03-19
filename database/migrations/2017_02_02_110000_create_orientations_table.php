@@ -3,14 +3,14 @@
  * Created by PhpStorm.
  * User: philr
  * Date: 19/03/2017
- * Time: 10:07
+ * Time: 13:47
  */
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateParkingLocationsTable extends Migration
+class CreateOrientationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -19,11 +19,9 @@ class CreateParkingLocationsTable extends Migration
      */
     public function up()
     {
-        Schema::create("parkingLocations", function (Blueprint $table){
-            $table->increments("id");
-            $table->double("lat",11,8);
-            $table->double("lng",11,8);
-            $table->text("description")->nullable()->default(null);
+        Schema::create('orientations', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string("name");
 
             $table->timestamps();
 
@@ -38,6 +36,6 @@ class CreateParkingLocationsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('crags');
+        Schema::drop('orientations');
     }
 }
