@@ -35,6 +35,14 @@ class Crag extends Model
         return $this->belongsTo('App\Orientation', 'orientation_id', 'id');
     }
 
+    /**
+     * Get the orientation of the crag
+     */
+    public function rockType()
+    {
+        return $this->belongsTo('App\RockType', 'rockType_id', 'id');
+    }
+
 
     /**
      * Returns all pairs of climb type Ids and the climb type names connected with every climb in this crag.

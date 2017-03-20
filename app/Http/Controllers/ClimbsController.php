@@ -107,6 +107,11 @@ class ClimbsController extends Controller
             $climb->name = $request->input('climbName');
             $climb->description = $request->input('climbDescription');
             $climb->length = $request->input('length');
+            $climb->pitches = $request->input('pitches');
+            $climb->firstAscent = $request->input('firstAscent');
+            $climb->firstAscentDate = $request->input('firstAscentDate');
+            $climb->topoNumber = $request->input('topoNumber');
+
             $climb->grade_id = $request->input('grade');
             //$climb->topo_id = $request->input('topo_id');
             $climb->crag_id = $request->input('crag');
@@ -148,18 +153,28 @@ class ClimbsController extends Controller
     public function api_update(Request $request, $id)
     {
 
-        $climb = climb::find($id);
 
-        $climb->name = $request->input('name');
-        $climb->description = $request->input('description');
-        $climb->length = $request->input('length');
-        $climb->grade_id = $request->input('grade_id');
-        //$climb->topo_id = $request->input('topo_id');
-        $climb->crag_id = $request->input('crag_id');
+        try {
+            $climb = climb::find($id);
 
-        $climb->save();
+            $climb->name = $request->input('climbName');
+            $climb->description = $request->input('climbDescription');
+            $climb->length = $request->input('length');
+            $climb->pitches = $request->input('pitches');
+            $climb->firstAscent = $request->input('firstAscent');
+            $climb->firstAscentDate = $request->input('firstAscentDate');
+            $climb->topoNumber = $request->input('topoNumber');
 
-        return response()->json(array('success' => true));
+            $climb->grade_id = $request->input('grade');
+            //$climb->topo_id = $request->input('topo_id');
+            $climb->crag_id = $request->input('crag');
+
+            $climb->save();
+            return response()->json(array('success' => true));
+        }
+        catch(Exception $e){
+            return response()->json(array('success' => false));
+        }
     }
 
     /**
@@ -176,8 +191,12 @@ class ClimbsController extends Controller
 
     public function api_destroy($climb)
     {
-        $climb->delete();
-        return response()->json(array('success' => true));
+        try {
+            $climb->delete();
+            return response()->json(array('success' => true));
+        } catch(Exception $e){
+            return response()->json(array('success' => false));
+        }
     }
 
 

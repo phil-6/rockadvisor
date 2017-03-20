@@ -121,17 +121,16 @@ class CragsController extends Controller
             $crag->name = $request->input('cragName');
             $crag->description = $request->input('cragDescription');
             $crag->tidalRange = $request->input('cragTidalRange');
-            $crag->orientation = $request->input('cragOrientation');
             $crag->approachTime = $request->input('cragApproachTime');
             $crag->approachDetails = $request->input('cragApproach');
             $crag->accessInformation = $request->input('cragAccess');
-            $crag->rockType = $request->input('');
-
 
             $crag->seepage = $request->input('seepage');
             $crag->midges = $request->input('midges');
             $crag->sheltered = $request->input('sheltered');
 
+            $crag->rockType_id = $request->input('cragRockType');
+            $crag->orientation_id = $request->input('cragOrientation');
             $crag->area_id = $request->input('cragArea');
 
             //dd($crag);
@@ -170,24 +169,36 @@ class CragsController extends Controller
         //
     }
 
-    public function api_update(Request $request, $crag)
+    public function api_update(Request $request, $id)
     {
 
-        $crag->lat = $request->input('lat');
-        $crag->lng =  $request->input('lng');
-        $crag->name = $request->input('name');
-        $crag->description = $request->input('description');
-        $crag->tidal_range = $request->input('tidal_range');
-        $crag->orientation =$request->input('orientation');
-        $crag->approach_time = $request->input('approach_time');
-        $crag->seepage = $request->input('seepage');
-        $crag->midges = $request->input('midges');
-        $crag->sheltered = $request->input('sheltered');
-        $crag->area_id = $request->input('area_id');
+        try {
+            $crag = crag::find($id);
 
-        $crag->save();
+            $crag->lat = $request->input('cragLat');
+            $crag->lng = $request->input('cragLng');
+            $crag->name = $request->input('cragName');
+            $crag->description = $request->input('cragDescription');
+            $crag->tidalRange = $request->input('cragTidalRange');
+            $crag->approachTime = $request->input('cragApproachTime');
+            $crag->approachDetails = $request->input('cragApproach');
+            $crag->accessInformation = $request->input('cragAccess');
 
-        return response()->json(array('success' => true));
+            $crag->seepage = $request->input('seepage');
+            $crag->midges = $request->input('midges');
+            $crag->sheltered = $request->input('sheltered');
+
+            $crag->rockType_id = $request->input('cragRockType');
+            $crag->orientation_id = $request->input('cragOrientation');
+            $crag->area_id = $request->input('cragArea');
+
+            //dd($crag);
+            $crag->save();
+            return response()->json(array('success' => true));
+        }
+        catch(Exception $e){
+            return response()->json(array('success' => false));
+        }
     }
 
     /**
@@ -205,8 +216,12 @@ class CragsController extends Controller
 
     public function api_destroy($crag)
     {
-        $crag->delete();
-        return response()->json(array('success' => true));
+        try {
+            $crag->delete();
+            return response()->json(array('success' => true));
+        } catch(Exception $e){
+            return response()->json(array('success' => false));
+        }
     }
 
 }
