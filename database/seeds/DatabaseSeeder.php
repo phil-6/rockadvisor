@@ -12,7 +12,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(AreasTableSeeder::class);
+        $this->call(OrientationsTableSeeder::class);
+        $this->call(RockTypesTableSeeder::class);
         $this->call(CragsTableSeeder::class);
+        //$this->call(ParkingLocationSeeder::class);
+        //$this->call(CragParkingSeeder::class);
         $this->call(ClimbTypeNamesTableSeeder::class);
         $this->call(ClimbTypeSystemsTableSeeder::class);
         $this->call(ClimbTypesTableSeeder::class);

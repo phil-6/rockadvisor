@@ -23,7 +23,7 @@ class CragsTableSeeder extends Seeder
         $c->name = "Anemone Wall";
         $c->description = "At dead low water there is a through-cave which provides a start for the routes as far as Anemone Wall. At all but spring tides or rough seas, it is possible to gain the routes a few metres up them, without any change. This is the slab 100m to the east of the headland. Access is down the easy slab to the east.";
         $c->tidalRange = 1;
-        $c->orientation_id_id = 11;
+        $c->orientation_id = 11;
         $c->approachTime = 20;
         $c->approachDetails = "";
         $c->accessInformation = "";

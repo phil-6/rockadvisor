@@ -27,6 +27,13 @@ class Crag extends Model
         return $this->hasMany('App\Climb', 'crag_id', 'id')->orderBy('id');
     }
 
+    /**
+     * Get the orientation of the crag
+     */
+    public function orientation()
+    {
+        return $this->belongsTo('App\Orientation', 'orientation_id', 'id');
+    }
 
 
     /**

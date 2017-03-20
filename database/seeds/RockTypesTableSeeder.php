@@ -9,7 +9,7 @@
 use Illuminate\Database\Seeder;
 use App\RockType;
 
-class RockTypeTableSeeder extends Seeder
+class RockTypesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
