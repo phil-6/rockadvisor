@@ -77,11 +77,18 @@ class GradesController extends Controller
     public function api_store(Request $request)
     {
 
-        //Not sure if this will work
-        /*Area::create(array(
-            'name' => Input::get('name'),
-            'parentArea' => Input::get('parentArea')
-        ));*/
+        try {
+            $grade = new Grade;
+            $grade->climbTypeId = $request->input('climbTypeId');
+            $grade->severityGrade = $request->input('severityGrade');
+            $grade->technicalGrade = $request->input('technicalGrade');
+            $grade->save();
+
+            return response()->json(array('success' => true));
+
+        } catch (Exception $e) {
+            return response()->json(array('success' => false));
+        }
     }
 
     /**
