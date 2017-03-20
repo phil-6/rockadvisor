@@ -108,26 +108,80 @@
                     </p>
                 </div>
 
-                <!--OTHER DETAILS-->
+                <!--LENGTH AND PITCHES-->
                 <div class="form-group">
 
                     <div ng-class="{ 'has-error' : addClimbForm.length.$invalid && !addClimbForm.length.$pristine && submitted}">
                         <label class="col-sm-2 control-label">Climb Length:</label>
-                        <div class="col-sm-3">
+                        <div class="col-sm-2">
                             <input type="number"
-                                   min="0"
+                                   min="1"
                                    name="length"
                                    class="form-control"
                                    ng-model="formData.length"
-                                   placeholder="Length in metres"
+                                   placeholder="10m"
                                    required>
                         </div>
                     </div>
+                    <div ng-class="{ 'has-error' : addClimbForm.pitches.$invalid && !addClimbForm.pitches.$pristine && submitted}">
+                        <label class="col-sm-2 col-md-offset-2 control-label">Number of Pitches:</label>
+                        <div class="col-sm-2">
+                            <input type="number"
+                                   min="1"
+                                   name="pitches"
+                                   class="form-control"
+                                   ng-model="formData.pitches"
+                                   placeholder="1"
+                                   required>
+                        </div>
+                    </div>
+                    <p ng-show="addClimbForm.pitches.$invalid && !addClimbForm.pitches.$pristine && submitted"
+                       class="help-block">
+                        Please enter the number of pitches.
+                    </p>
                     <p ng-show="addClimbForm.length.$invalid && !addClimbForm.length.$pristine && submitted"
                        class="help-block">
                         Please enter the length of the climb in metres.
                     </p>
                 </div>
+
+                <!--FIRST ASCENT-->
+                <div class="form-group">
+
+                    <div ng-class="{ 'has-error' : addClimbForm.firstAscent.$invalid && !addClimbForm.firstAscent.$pristine && submitted}">
+                        <label class="col-sm-2 control-label">First Ascent By:</label>
+                        <div class="col-sm-4">
+                            <input type="text"
+                                   name="firstAscent"
+                                   class="form-control"
+                                   ng-model="formData.firstAscent"
+                                   placeholder="Joe Bloggs"
+                                   required>
+                        </div>
+                    </div>
+                    <div ng-class="{ 'has-error' : addClimbForm.firstAscentDate.$invalid && !addClimbForm.firstAscentDate.$pristine && submitted}">
+                        <label class="col-sm-2 control-label">First Ascent On:</label>
+                        <div class="col-sm-4">
+                            <input type="date"
+                                   min="1"
+                                   name="firstAscentDate"
+                                   class="form-control"
+                                   ng-model="formData.firstAscentDate"
+                                   required>
+                        </div>
+                    </div>
+                    <p ng-show="addClimbForm.firstAscent.$invalid && !addClimbForm.firstAscent.$pristine && submitted"
+                       class="help-block">
+                        Who sent this route first?
+                    </p>
+                    <p ng-show="addClimbForm.firstAscentDate.$invalid && !addClimbForm.firstAscentDate.$pristine && submitted"
+                       class="help-block">
+                        When was it first climbed?
+                    </p>
+                </div>
+
+                <!--TOPO-->
+                <!--TOPO NUMBER-->
 
 
                 <div class="form-group">

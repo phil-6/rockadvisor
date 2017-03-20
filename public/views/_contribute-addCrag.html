@@ -160,6 +160,7 @@
 
                 <!--OTHER DETAILS-->
                 <div class="form-group">
+                    <!--TIDAL RANGE-->
                     <div>
                         <label class="col-sm-2 control-label">Tidal Range:</label>
                         <div class="col-sm-2">
@@ -172,21 +173,22 @@
                                    placeholder="Tidal Range">
                         </div>
                     </div>
+                    <!--ORIENTATION-->
                     <div ng-class="{ 'has-error' : addCragForm.cragOrientation.$invalid && !addCragForm.cragOrientation.$pristine && submitted}">
                         <label class="col-sm-2 control-label">Orientation:</label>
-
                         <div class="col-sm-2">
-                            <input type="text"
-                                   name="cragOrientation"
-                                   class="form-control"
-                                   ng-model="formData.cragOrientation"
-                                   ng-maxlength="3"
-                                   ng-pattern="orientationregex"
-                                   placeholder="SSW"
-                                   required>
+                            <select name="cragOrientation"
+                                    class="form-control"
+                                    id="selectOrientation"
+                                    ng-model="formData.cragOrientation"
+                                    ng-options="orientation.id as orientation.name for orientation in orientationData"
+                                    required>
+                                <option value="">Select Orientation</option>
+                            </select>
                         </div>
 
                     </div>
+                    <!--APPROACH TIME-->
                     <div ng-class="{ 'has-error' : addCragForm.cragApproachTime.$invalid && !addCragForm.cragApproachTime.$pristine && submitted}">
                         <label class="col-sm-2 control-label">Approach Time:</label>
                         <div class="col-sm-2">
