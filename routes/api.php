@@ -36,6 +36,8 @@ Route::post('climbs/{climbId}', 	'ClimbsController@api_update');
 Route::delete('climbs/{climbId}', 	'ClimbsController@api_destroy');
 
 Route::get('grades', 			    'GradesController@api_index');
+Route::get('orientations', 		    'OrientationsController@api_index');
+Route::get('rockTypes', 			'RockTypesController@api_index');
 
 //====================================================================
 //Custom api routes

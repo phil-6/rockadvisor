@@ -3,7 +3,7 @@
  */
 
 angular.module('cragFormCtrl', [])
-    .controller('cragFormController', function ($scope, $http, CragFactory, AreaFactory, $timeout) {
+    .controller('cragFormController', function ($scope, $http, CragFactory, AreaFactory, OrientationFactory, RockTypeFactory, $timeout) {
 
         $scope.formData = {};
         $scope.submitButtonHidden = false;
@@ -12,15 +12,27 @@ angular.module('cragFormCtrl', [])
         $scope.errorShowing = false;
         $scope.submitted = false;
         /*$scope.latregex = " ^(\+|-)?(?:90(?:(?:\.0{1,6})?)|(?:[0-9]|[1-8][0-9])(?:(?:\.[0-9]{1,6})?))$ ";
-        $scope.lngregex = " ^(\+|-)?(?:180(?:(?:\.0{1,6})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\.[0-9]{1,6})?))$ ";
-        $scope.orientationregex = "N|S|E|W|NE|SE|NW|SW|NNE|ENE|SSE|ESE|NNW|WNW|SSW|WSW";*/
+        $scope.lngregex = " ^(\+|-)?(?:180(?:(?:\.0{1,6})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\.[0-9]{1,6})?))$ ";*/
 
         $scope.areasData = {};
         AreaFactory.get()
             .success(function (data2) {
                 //console.log("ctrl");
                 $scope.areasData = data2;
+            });
 
+        $scope.orientationsData = {};
+        OrientationFactory.get()
+            .success(function (data3) {
+                //console.log("ctrl");
+                $scope.orientationsData = data3;
+            });
+
+        $scope.rockTypesData = {};
+        RockTypeFactory.get()
+            .success(function (data4) {
+                //console.log("ctrl");
+                $scope.rockTypesData = data4;
             });
 
 

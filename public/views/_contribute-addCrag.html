@@ -162,7 +162,7 @@
                 <div class="form-group">
                     <!--TIDAL RANGE-->
                     <div>
-                        <label class="col-sm-2 control-label">Tidal Range:</label>
+                        <label class="col-sm-2 col-sm-offset-1 control-label">Tidal Range:</label>
                         <div class="col-sm-2">
                             <input type="number"
                                    min="0"
@@ -173,21 +173,7 @@
                                    placeholder="Tidal Range">
                         </div>
                     </div>
-                    <!--ORIENTATION-->
-                    <div ng-class="{ 'has-error' : addCragForm.cragOrientation.$invalid && !addCragForm.cragOrientation.$pristine && submitted}">
-                        <label class="col-sm-2 control-label">Orientation:</label>
-                        <div class="col-sm-2">
-                            <select name="cragOrientation"
-                                    class="form-control"
-                                    id="selectOrientation"
-                                    ng-model="formData.cragOrientation"
-                                    ng-options="orientation.id as orientation.name for orientation in orientationData"
-                                    required>
-                                <option value="">Select Orientation</option>
-                            </select>
-                        </div>
 
-                    </div>
                     <!--APPROACH TIME-->
                     <div ng-class="{ 'has-error' : addCragForm.cragApproachTime.$invalid && !addCragForm.cragApproachTime.$pristine && submitted}">
                         <label class="col-sm-2 control-label">Approach Time:</label>
@@ -202,15 +188,59 @@
                         </div>
 
                     </div>
-                    <p ng-show="addCragForm.cragOrientation.$invalid && !addCragForm.cragOrientation.$pristine && submitted"
+                    <p ng-show="addCragForm.cragApproachTime.$invalid && !addCragForm.cragApproachTime.$pristine && submitted"
                        class="help-block">
-                        Please enter up to three compass letters. Eg NNW.
+                        Please enter the tidal range in hours.
                     </p>
                     <p ng-show="addCragForm.cragApproachTime.$invalid && !addCragForm.cragApproachTime.$pristine && submitted"
                        class="help-block">
                         Please enter an approach time in minutes.
                     </p>
                 </div>
+
+                <!--NEXT LINE-->
+                <div class="form-group">
+                    <!--ROCK TYPE-->
+                    <div ng-class="{ 'has-error' : addCragForm.cragRockType.$invalid && !addCragForm.cragRockType.$pristine && submitted}">
+                        <label class="col-sm-2 col-sm-offset-1 control-label">Rock Type:</label>
+                        <div class="col-sm-2">
+                            <select name="cragOrientation"
+                                    class="form-control"
+                                    id="selectRockType"
+                                    ng-model="formData.cragRockType"
+                                    ng-options="rockType.id as rockType.name for rockType in rockTypesData"
+                                    required>
+                                <option value="">Rock Type</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--ORIENTATION-->
+                    <div ng-class="{ 'has-error' : addCragForm.cragOrientation.$invalid && !addCragForm.cragOrientation.$pristine && submitted}">
+                        <label class="col-sm-2 control-label">Orientation:</label>
+                        <div class="col-sm-2">
+                            <select name="cragOrientation"
+                                    class="form-control"
+                                    id="selectOrientation"
+                                    ng-model="formData.cragOrientation"
+                                    ng-options="orientation.id as orientation.name for orientation in orientationsData"
+                                    required>
+                                <option value="">Orientation</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p ng-show="addCragForm.cragRockType.$invalid && !addCragForm.cragRockType.$pristine && submitted"
+                       class="help-block">
+                        Please select an Rock Type.
+                    </p>
+                    <p ng-show="addCragForm.cragOrientation.$invalid && !addCragForm.cragOrientation.$pristine && submitted"
+                       class="help-block">
+                        Please select an Orientation.
+                    </p>
+
+                </div>
+
+
+                <!--CHECK BOXES-->
                 <div class="form-group">
                     <div class="col-sm-3"></div>
 
@@ -247,6 +277,7 @@
                 </div>
 
 
+                <!--BUTTONS AND MESSAGES-->
                 <div class="form-group">
 
                     <!--FORM ERROR MESSAGE-->
