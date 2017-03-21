@@ -173,6 +173,9 @@ For the "finder" section of the website
 <script src="../js/scrollreveal/scrollreveal.min.js"></script>
 <script src="../js/magnific-popup/jquery.magnific-popup.min.js"></script>
 <script src="../js/confirm-with-reveal/confirm_with_reveal.min.js"></script>
+<script>
+    $(document).confirmWithReveal();
+</script>
 
 
 <!-- Theme JavaScript -->

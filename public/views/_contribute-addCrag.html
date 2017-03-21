@@ -54,23 +54,24 @@
                      || addCragForm.cragLng.$invalid)
                      && submitted}">
                     <label class="col-sm-2 control-label">Lat/Lng Location:</label>
-                    <!--ng-pattern= "latregex"-->
+                    <!--ng-minlength="3"-->
                     <div class="col-sm-5">
                         <input type="text"
                                name="cragLat"
                                class="form-control"
                                ng-model="formData.cragLat"
-                               ng-minlength="3"
+
+                               ng-pattern= "latregex"
                                placeholder="Latitude: 51.600000"
                                required>
                     </div>
-                    <!--ng-pattern="lngregex"-->
+                    <!---->
                     <div class="col-sm-5">
                         <input type="text"
                                name="cragLng"
                                class="form-control"
                                ng-model="formData.cragLng"
-                               ng-minlength="3"
+                               ng-pattern="lngregex"
                                placeholder="Longitude: -4.150000"
                                required>
                     </div>

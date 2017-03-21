@@ -119,8 +119,11 @@
     var map;
     //creates a new blank array for all the listing markers
     var markers = [];
+    var markerCluster;
 
     function initMap() {
+
+
         // Constructor create a new map, only center and zoom are required.
         map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 51.600000, lng: -4.150000},
@@ -176,12 +179,14 @@
 
                 // Push the marker to our array of markers.
                 markers.push(marker);
+                markerCluster.addMarker(marker);
                 // Create an onclick event to open an infowindow at each marker.
                 marker.addListener('click', function () {
                     populateInfoWindow(this, largeInfoWindow);
                 });
             });
         });
+
 
 
         // Create the DIV to hold the control and call the CenterControl()
@@ -195,9 +200,9 @@
         map.controls[google.maps.ControlPosition.LEFT_CENTER].push(mapFilterControlsDiv);
 
         // Add a marker clusterer to manage the markers.
-        var markerCluster = new MarkerClusterer(map, markers,
-            {imagePath: "../resources/images/markerClusterer/m"});
-
+        markerCluster = new MarkerClusterer(map, [],
+            {imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m"});
+//../resources/images/markerClusterer/m"
 
         /**
          ==========
@@ -322,9 +327,11 @@
         // Extend the boundaries of the map for each marker and display the marker
         for (var i = 0; i < markers.length; i++) {
             markers[i].setMap(map);
+            markerCluster.addMarker(markers[i]);
             bounds.extend(markers[i].position);
         }
         map.fitBounds(bounds);
+        markerCluster.repaint();
     }
 
     //          //
@@ -334,7 +341,9 @@
     function hideListings() {
         for (var i = 0; i < markers.length; i++) {
             markers[i].setMap(null);
+            markerCluster.removeMarker(markers[i]);
         }
+
     }
 
     //             //
@@ -348,6 +357,7 @@
         //Clear markers from map
         for (var i = 0; i < markers.length; i++) {
             markers[i].setMap(null);
+            markerCluster.removeMarker(markers[i]);
         }
         //Redraw filtered markers
         for (var i = 0; i < markers.length; i++) {
@@ -356,11 +366,13 @@
                 console.log(markers[i].typeOfClimbs[j]);
                 if (markers[i].typeOfClimbs[j]['id'] == 1) {
                     markers[i].setMap(map);
+                    markerCluster.addMarker(markers[i]);
                     bounds.extend(markers[i].getPosition());
                 }
             }
         }
         map.fitBounds(bounds);
+        markerCluster.repaint();
     }
 
     //              //
@@ -374,6 +386,7 @@
         //Clear markers from map
         for (var i = 0; i < markers.length; i++) {
             markers[i].setMap(null);
+            markerCluster.removeMarker(markers[i]);
         }
         //Redraw filtered markers
         for (var i = 0; i < markers.length; i++) {
@@ -381,11 +394,13 @@
                 console.log(markers[i].typeOfClimbs[j]);
                 if (markers[i].typeOfClimbs[j]['id'] == 2) {
                     markers[i].setMap(map);
+                    markerCluster.addMarker(markers[i]);
                     bounds.extend(markers[i].getPosition());
                 }
             }
         }
         map.fitBounds(bounds);
+        markerCluster.repaint();
     }
 
     //            //
@@ -578,7 +593,8 @@
 
 </script>
 
-<script src="../js/markerClusterer/markerclusterer.js"></script>
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+<!--"../js/markerClusterer/markerclusterer.js"-->
 
 
 <script async defer

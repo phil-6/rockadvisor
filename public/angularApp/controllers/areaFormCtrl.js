@@ -15,7 +15,7 @@ angular.module('areaFormCtrl', [])
 
         $scope.disableButton = function() {
             $scope.sumbitDisabled = true;
-        }
+        };
 
 
 
