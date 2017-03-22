@@ -6,15 +6,15 @@
 --On 04/03/17
 -->
 
-<div class="row no-margin"  >
+<div class="row no-margin">
     <div class="col-md-4 col-md-offset-4 text-center">
 
         <!-- Section Title -->
-        <div class="page-header">
+        <div class="page-header"
+             >
             <h2>Crags Index</h2>
         </div>
         <hr>
-
 
         <!-- Delete Success Message -->
         <div class="alert alert-success" ng-show="showMessage">
@@ -30,11 +30,7 @@
         <!-- The Crags -->
         <!-- hide these crags if the loading variable is true -->
         <div ng-hide="loading">
-            <div class="alert alert-success" ng-show="showMessage">
-                <p>{{message}}</p>
-            </div>
             <div ng-repeat="crag in cragsData">
-
                 <!-- Crag Name. Link to Crag Detail -->
                 <a ui-sref="cragDetail({ cragID: {{crag.id}} })">
                     <h3>{{ crag.name }} : {{crag.id}}</h3>
@@ -42,7 +38,12 @@
                 <p>In Area: {{ crag.area }}</p>
 
                 <!-- Delete Crag and Show Crag Buttons -->
-                <button type="button" class="btn btn-danger" ng-click="deleteCrag(crag.id)" data-confirm='{"title":"Delete Thing","body":"Are you sure?","password":"DELETE","ok":"Go for it"}'>Delete</button>
+                <a type="button"
+                        class="btn btn-danger"
+                        ng-click="deleteCrag(crag.id)"
+                        data-toggle="confirmation">Delete
+                </a>
+
                 <a ui-sref="cragDetail({ cragID: {{crag.id}} })" type="button" class="btn btn-primary">Show</a>
             </div>
 
@@ -51,6 +52,7 @@
                 <p>No crags are available.</p>
             </div>
         </div>
+
 
     </div><!-- Boostrap Column -->
 </div><!-- Row -->

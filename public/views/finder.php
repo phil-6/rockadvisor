@@ -172,11 +172,15 @@ For the "finder" section of the website
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 <script src="../js/scrollreveal/scrollreveal.min.js"></script>
 <script src="../js/magnific-popup/jquery.magnific-popup.min.js"></script>
-<script src="../js/confirm-with-reveal/confirm_with_reveal.min.js"></script>
-<script>
-    $(document).confirmWithReveal();
-</script>
 
+<script src="../js/bootstrap-confirmation/bootstrap-confirmation.js"></script>
+
+<script>
+    $('[data-toggle=confirmation]').confirmation({
+    rootSelector: '[data-toggle=confirmation]'
+    // other options
+    });
+</script>
 
 <!-- Theme JavaScript -->
 <script src="../js/creative-theme/creative.min.js"></script>
