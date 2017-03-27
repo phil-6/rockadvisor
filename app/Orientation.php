@@ -15,4 +15,12 @@ class Orientation extends Model
     protected $table = 'orientations';
 
     protected $fillable = [];
+
+    /**
+     * Get the crags that have the orientation.
+     */
+    public function crags()
+    {
+        return $this->hasMany('App\Crag', 'orientation_id', 'id')->orderBy('name');
+    }
 }

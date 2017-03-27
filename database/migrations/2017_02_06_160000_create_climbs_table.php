@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+
 class CreateClimbsTable extends Migration
 {
     /**
@@ -20,7 +21,7 @@ class CreateClimbsTable extends Migration
             $table->integer("length")->unsigned();
             $table->integer("pitches")->unsigned();
             $table->string("firstAscent");
-            $table->date("firstAscentDate");
+            $table->datetime("firstAscentDate");
             //number of climb on topo
             $table->integer("topoNumber")->unsigned()->nullable()->default(null);
 

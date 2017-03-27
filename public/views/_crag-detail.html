@@ -23,13 +23,21 @@
 
             <!-- Crag Details -->
             <div ng-hide="loading" class="detailsSection center-block">
-                <p class="text-faded">{{ cragData.description }}</p>
-                <p>Area:
+                <h5>{{ cragData.description }}</h5>
+                <h5>Area:
                     <a ui-sref="areaDetail({ areaID: cragData.area_id })">{{ cragData.AreaName }}
                     </a>
-                </p>
-                <p>Faces: {{ cragData.orientation }}</p>
-                <p>Approach: {{ cragData.approach_time }} minutes</p>
+                </h5>
+                <p>Faces: {{ cragData.OrientationName }}</p>
+                <p>Rock Type: {{ cragData.RockTypeName }}</p>
+                <h4>Approach</h4>
+                <p> {{ cragData.approachTime }} minutes</p>
+                <p> {{ cragData.approachDetails }} </p>
+                <div ng-show="cragData.accessInformation">
+                    <h4>Access Information</h4>
+                    <p> {{ cragData.accessInformation }} </p>
+                </div>
+
             </div>
 
         </section>

@@ -157,7 +157,7 @@
                     */
         // Create Markers array and populate it from API
         var apiUrl = ("/api/maps_crags");
-        var largeInfoWindow = new google.maps.InfoWindow();
+        var infoWindow = new google.maps.InfoWindow();
 
         $.getJSON(apiUrl, function (json1) {
             $.each(json1, function (key, data) {
@@ -182,7 +182,7 @@
                 markerCluster.addMarker(marker);
                 // Create an onclick event to open an infowindow at each marker.
                 marker.addListener('click', function () {
-                    populateInfoWindow(this, largeInfoWindow);
+                    populateInfoWindow(this, infoWindow);
                 });
             });
         });

@@ -27,13 +27,14 @@ class MapController extends Controller
                 "lng" => $crag->lng,
                 "name" => $crag->name,
                 "area" => $crag->area->name,
-                "tidalRange" => $crag->tidal_range,
-                "orientation" => $crag->orientation,
-                "approachTime" => $crag->approach_time,
+                "tidalRange" => $crag->tidalRange,
+                "orientation" => $crag->orientation->name,
+                "approachTime" => $crag->approachTime,
                 "typeOfClimbs" => $crag->climbTypeIdsAndNames(),
                 "numberOfClimbs" => $crag->climbs->count(),
                 "seepage" => $crag->seepage,
-                "midges" => $crag->midges
+                "midges" => $crag->midges,
+                "sheltered" => $crag->sheltered
             ];
             $data[] = $record;
         }

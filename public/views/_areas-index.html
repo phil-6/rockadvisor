@@ -38,11 +38,33 @@
                 </a>
 
                 <p>Part of: {{ area.parentName }}</p>
-                <!--            Commented for Deployment-->
-                <!--            <button type="button" class="btn btn-primary" ng-click="deleteArea(area.id)">Delete</button>-->
+                <!-- Commented for Deployment-->
+                <!-- button type="button" class="btn btn-primary" ng-click="deleteArea(area.id)">Delete</button>-->
 
                 <!-- Should show partial view finder.areas.detail -->
-                <div ui-sref="finder.areas.detail({ areaID: {{area.id}} })"></div>
+                <!--<div ui-sref="finder.areas.detail({ areaID: {{area.id}} })"></div>-->
+
+
+                <!--ng-show="cragsData.length"-->
+
+                <!--What this does is pretty magical
+                It also doesnt work
+                but it overwrites the crags on display for all areas lots. Its funny.-->
+                <!--<div ng-init="getCrags(area.id)">
+                    <p>Crags</p>
+                    <div ng-repeat="crag in cragsData">
+                        <a ui-sref="cragDetail({ cragID: {{crag.id}} })">
+                            <p>{{ crag.name }} </p>
+                        </a>
+
+                    </div>
+                </div>-->
+
+                <!--<div ng-repeat="crag in CragsData | filter: {crag.area_id == {{area.id}} } ">
+                    {{crag.name}}
+                </div>-->
+
+
             </div>
 
             <!-- If no areas -->

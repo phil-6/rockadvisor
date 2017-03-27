@@ -6,9 +6,11 @@ angular.module('areasCtrl', [])
 
 
 // inject the Area service into our controller
-    .controller('areasController', function ($scope, $http, AreaFactory) {
+    .controller('areasController', function ($scope, $http, AreaFactory, CragFactory) {
         // object to hold all the data for the new area form
         $scope.areasData = {};
+        $scope.cragsData = {};
+        $scope.areaId;
 
         $scope.showMessage = false;
         $scope.message = "";
@@ -26,6 +28,22 @@ angular.module('areasCtrl', [])
                 $scope.loading = false;
             });
 
+        //Get Crags at Area
+        // $scope.getCrags = function (id) {
+        //     AreaFactory.getCrags(id)
+        //         .success(function (data2) {
+        //             console.log(data2);
+        //             //$scope.cragsData = data2;
+        //         });
+        // };
+
+        //Get All Crags
+        // CragFactory.get()
+        //     .success(function (data3) {
+        //         //console.log("cragsCtrl:CragFactory.get");
+        //         $scope.cragsData = data3;
+        //         $scope.loading = false;
+        //     });
 
         // function to handle deleting a area
         // DELETE A AREA ====================================================

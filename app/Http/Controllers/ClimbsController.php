@@ -11,6 +11,7 @@ namespace App\Http\Controllers;
 use Illuminate\Auth\Access\Response;
 use Illuminate\Http\Request;
 use App\Climb;
+use Carbon\Carbon;
 
 
 class ClimbsController extends Controller
@@ -109,13 +110,14 @@ class ClimbsController extends Controller
             $climb->length = $request->input('length');
             $climb->pitches = $request->input('pitches');
             $climb->firstAscent = $request->input('firstAscent');
-            $climb->firstAscentDate = $request->input('firstAscentDate');
-            $climb->topoNumber = $request->input('topoNumber');
+            $climb->firstAscentDate = Carbon::createFromFormat('d/m/Y',($request->input('firstAscentDate')));
+            //$climb->topoNumber = $request->input('topoNumber');
 
             $climb->grade_id = $request->input('grade');
             //$climb->topo_id = $request->input('topo_id');
             $climb->crag_id = $request->input('crag');
 
+            //dd($climb);
             $climb->save();
             return response()->json(array('success' => true));
         }

@@ -53,6 +53,10 @@ class RockTypesTableSeeder extends Seeder
         $rt = new RockType();
         $rt->name = "Sandstone (hard)";
         $rt->save();
+        //Id = 9
+        $rt = new RockType();
+        $rt->name = "Quarried Limestone";
+        $rt->save();
 
 
 

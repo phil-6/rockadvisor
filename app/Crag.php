@@ -89,6 +89,17 @@ class Crag extends Model
         return $this->area->name;
     }
 
-    protected $hidden = ['area'];
-    protected $appends = ['AreaName'];
+    public function getRockTypeNameAttribute()
+    {
+        return $this->rockType->name;
+    }
+
+    public function getOrientationNameAttribute()
+    {
+        return $this->orientation->name;
+    }
+
+    protected $hidden = ['area', 'rockType', 'orientation' ];
+    protected $appends = ['AreaName', 'RockTypeName', 'OrientationName'];
+
 }

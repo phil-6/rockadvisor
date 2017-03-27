@@ -830,7 +830,20 @@ header .blog-header-content .header-content-inner h4 {
     font-weight: 600;
 }
 
+.crag-detail h5 {
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 15px;
+
+}
+
 .crag-detail .detailsSection {
     max-width: 80%;
 }
+.crag-detail .detailsSection p {
+    margin-bottom: 0;
+}
+
+
 

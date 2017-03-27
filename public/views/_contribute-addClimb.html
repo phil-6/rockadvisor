@@ -162,11 +162,13 @@
                     <div ng-class="{ 'has-error' : addClimbForm.firstAscentDate.$invalid && !addClimbForm.firstAscentDate.$pristine && submitted}">
                         <label class="col-sm-2 control-label">First Ascent On:</label>
                         <div class="col-sm-4">
-                            <input type="date"
+                            <input type="text"
                                    min="1"
                                    name="firstAscentDate"
                                    class="form-control"
                                    ng-model="formData.firstAscentDate"
+                                   ng-pattern="dateregex"
+                                   placeholder="dd/mm/yyyy"
                                    required>
                         </div>
                     </div>
