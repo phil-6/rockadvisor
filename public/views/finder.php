@@ -49,6 +49,8 @@ For the "finder" section of the website
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <!-- AngularJS UI-Router -->
     <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!-- AngularJS UI-Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
     <!-- AngularJS Animate -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-animate.min.js"></script>
 
