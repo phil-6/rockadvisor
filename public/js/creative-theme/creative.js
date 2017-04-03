@@ -21,6 +21,11 @@
         $('.navbar-toggle:visible').click();
     });
 
+    // Closes the Responsive Menu on Click - well it might do
+    $('body').click(function() {
+        $('.navbar-toggle:visible').click();
+    });
+
     // Offset for Main Navigation
     $('#mainNav').affix({
         offset: {
