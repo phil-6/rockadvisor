@@ -7,77 +7,88 @@
 -->
 
 <div class="row crag-detail no-margin">
-<!--
-    ==========
-    Page Header
-    ==========
-              -->
-        <section class="bg-primarygrad text-center ">
+    <!--
+        ==========
+        Page Header
+        ==========
+                  -->
+    <section class="bg-primarygrad text-center ">
 
-            <!-- Crag Name -->
-            <div class="page-header" ng-hide="loading">
-                <h1>{{cragData.name}} </h1>
+        <!-- Crag Name -->
+        <div class="page-header" ng-hide="loading">
+            <h1>{{cragData.name}} </h1>
 
-            </div>
-            <hr>
+        </div>
+        <hr>
 
-            <!-- Crag Details -->
-            <div ng-hide="loading" class="detailsSection center-block">
-                <h5>{{ cragData.description }}</h5>
-                <h5>Area:
-                    <a ui-sref="areaDetail({ areaID: cragData.area_id })">{{ cragData.AreaName }}
-                    </a>
-                </h5>
-                <p>Faces: {{ cragData.OrientationName }}</p>
-                <p>Rock Type: {{ cragData.RockTypeName }}</p>
-                <h4>Approach</h4>
-                <p> {{ cragData.approachTime }} minutes</p>
-                <p> {{ cragData.approachDetails }} </p>
-                <div ng-show="cragData.accessInformation">
-                    <h4>Access Information</h4>
-                    <p> {{ cragData.accessInformation }} </p>
-                </div>
-
-            </div>
-            <button class="btn btn-default" ng-click="$ctrl.open()" ui-sref="contribute.editCrag"> Edit</button>
-            <ui-view/>
-
-
-        </section>
-
-<!--
-    ==========
-   Climbs at Crag
-    ==========
-              -->
-        <!-- Title -->
-        <div class="col-lg-6 col-lg-offset-3 climb-list">
-            <h2 class="text-center">Climbs</h2>
-            <hr>
-
-            <!-- Loading Icon -->
-            <!-- show loading icon if the loading variable is set to true -->
-            <p class="text-center" ng-show="loading">
-                <i class="fa fa-space-shuttle fa-5x fa-spin"></i>
-            </p>
-
-            <!-- Loop of Climbs -->
-            <div ng-repeat="climb in climbData">
-                <h3>{{ climb.name }}</h3>
-                <h4>Type: {{climb.ClimbTypeName}} </h4>
-                <h4>Grade: {{climb.ClimbSeverityGrade}} {{climb.ClimbTechnicalGrade}}</h4>
-                <p>Description: {{ climb.description }}</p>
-                <p>Length: {{ climb.length}}m</p>
-
-                <!--Commented for Partial Deployment-->
-                <!--<button type="button" class="btn btn-primary" ng-click="deleteClimb(climb.id)">Delete</button>-->
-                <hr>
+        <!-- Crag Details -->
+        <div ng-hide="loading" class="detailsSection center-block">
+            <h5>{{ cragData.description }}</h5>
+            <h5>Area:
+                <a ui-sref="areaDetail({ areaID: cragData.area_id })">{{ cragData.AreaName }}
+                </a>
+            </h5>
+            <p>Faces: {{ cragData.OrientationName }}</p>
+            <p>Rock Type: {{ cragData.RockTypeName }}</p>
+            <h4>Approach</h4>
+            <p> {{ cragData.approachTime }} minutes</p>
+            <p> {{ cragData.approachDetails }} </p>
+            <div ng-show="cragData.accessInformation">
+                <h4>Access Information</h4>
+                <p> {{ cragData.accessInformation }} </p>
             </div>
 
-            <!-- If no Climbs -->
-            <div ng-show="!climbData.length" class="text-center">
-                <p>No climbs are available.</p>
+        </div>
+        <button class="btn btn-default" data-toggle="modal" data-target="#editModal"> Edit</button>
+
+
+        <div
+                id="editModal" class="modal fade"
+             tabindex="-1"
+             role="dialog"
+
+             >
+            <div ng-include="'../views/_contribute-addCrag.html'">
+
             </div>
         </div>
+
+
+    </section>
+
+    <!--
+        ==========
+       Climbs at Crag
+        ==========
+                  -->
+    <!-- Title -->
+    <div class="col-lg-6 col-lg-offset-3 climb-list">
+        <h2 class="text-center">Climbs</h2>
+        <hr>
+
+        <!-- Loading Icon -->
+        <!-- show loading icon if the loading variable is set to true -->
+        <p class="text-center" ng-show="loading">
+            <i class="fa fa-space-shuttle fa-5x fa-spin"></i>
+        </p>
+
+        <!-- Loop of Climbs -->
+        <div ng-repeat="climb in climbData">
+            <h3>{{ climb.name }}</h3>
+            <h4>Type: {{climb.ClimbTypeName}} </h4>
+            <h4>Grade: {{climb.ClimbSeverityGrade}} {{climb.ClimbTechnicalGrade}}</h4>
+            <p>Description: {{ climb.description }}</p>
+            <p>Length: {{ climb.length}}m</p>
+
+            <!--Commented for Partial Deployment-->
+            <!--<button type="button" class="btn btn-primary" ng-click="deleteClimb(climb.id)">Delete</button>-->
+            <hr>
+        </div>
+
+        <!-- If no Climbs -->
+        <div ng-show="!climbData.length" class="text-center">
+            <p>No climbs are available.</p>
+        </div>
+    </div>
 
 </div><!-- Row -->
