@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ClimbTypeSystemsTableSeeder::class);
         $this->call(ClimbTypesTableSeeder::class);
         $this->call(GradesTableSeeder::class);
+        $this->call(ToposTableSeeder::class);
         $this->call(ClimbsTableSeeder::class);
     }
 }

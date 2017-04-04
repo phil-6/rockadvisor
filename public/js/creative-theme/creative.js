@@ -22,7 +22,7 @@
     });
 
     // Closes the Responsive Menu on Click - well it might do
-    $('body').click(function() {
+    $(document).click(function() {
         $('.navbar-toggle:visible').click();
     });
 

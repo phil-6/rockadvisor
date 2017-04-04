@@ -10,7 +10,7 @@ angular.module('cragDetailCtrl', [])
         $scope.cragId = $stateParams.cragID;
         $scope.cragData = {};
         $scope.climbData = {};
-        
+
 
         // loading variable to show the spinning loading icon
         $scope.loading = true;

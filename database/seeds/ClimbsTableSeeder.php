@@ -23,7 +23,7 @@ class ClimbsTableSeeder extends Seeder
         $c->firstAscentDate = "1980-01-01";
         $c->topoNumber = 1;
         $c->grade_id = 150; //vs, 4b
-        //$c->topo_id = ??;
+        $c->topo_id = 1;
         $c->crag_id = 1;
         $c->save();
 
