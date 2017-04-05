@@ -89,21 +89,7 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
             templateUrl: '../views/_contribute-addClimb.html',
             controller: 'climbFormController'
         })
-        .state('contribute.editCrag',{
-            parent: 'finder',
-            url: '/editCrag',
-            onEnter: ['$modal', '$state', function ($modal, $state) {
-                console.log('open that here modal');
-                $modal.open({
-                    templateUrl: '../views/_contribute-addCrag.html',
-                    controller: 'cragFormController',
-                    backdrop: false,
-                    windowClass: 'right fade'
-                }).result.finally(function () {
-                    $state.go('list');
-                })
-            }]
-        })
+
 
 
 

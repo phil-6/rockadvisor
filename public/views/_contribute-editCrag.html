@@ -1,0 +1,325 @@
+<!-- _contribute-editCrag.html -->
+<!--
+--Created by philr
+--on 05/04/17
+--Edited last by philr
+--On 05/03/17
+-->
+<div id="form-container">
+
+    <!-- Section Title -->
+    <div class="page-header">
+        <h2>Edit {{cragData.name}}</h2>
+    </div>
+
+
+    <!--WARNING MESSAGE-->
+    <div class="alert alert-danger text-center">
+        Please be aware, any data you create is likely to be destroyed as Rock Advisor is still in development.
+    </div>
+
+    <!--Start of Form-->
+    <form class="form-horizontal"
+          name="addCragForm"
+          ng-submit="processCragForm(addCragForm.$valid)"
+          novalidate>
+
+        <!--SELECT AREA-->
+        <div class="form-group"
+             ng-class="{ 'has-error' : addCragForm.cragArea.$invalid && submitted}">
+            <label for="selectArea" class="col-sm-2 control-label">Select Area:</label>
+            <div class="col-sm-10">
+                <select name="cragArea"
+                        class="form-control"
+                        id="selectArea"
+                        ng-model="formData.cragArea"
+                        ng-init="formData.cragArea = options[cragData.area_id].value"
+                        ng-options="area.id as area.name for area in areasData"
+                        required>
+                    <option value=""></option>
+                </select>
+            </div>
+            <p ng-show="addCragForm.cragArea.$invalid && submitted"
+               class="help-block">
+                Select the Area that the Crag is in
+            </p>
+        </div>
+
+        <!--LOCATION-->
+        <div class="form-group"
+             ng-class="{ 'has-error' :
+                     (addCragForm.cragLat.$invalid
+                     || addCragForm.cragLng.$invalid)
+                     && submitted}">
+            <label class="col-sm-2 control-label">Lat/Lng Location:</label>
+            <!--ng-minlength="3"-->
+            <div class="col-sm-5">
+                <input type="text"
+                       name="cragLat"
+                       class="form-control"
+                       ng-model="formData.cragLat"
+                       ng-pattern="latregex"
+                       placeholder="Latitude: 51.600000"
+                       required>
+            </div>
+            <!---->
+            <div class="col-sm-5">
+                <input type="text"
+                       name="cragLng"
+                       class="form-control"
+                       ng-model="formData.cragLng"
+                       ng-pattern="lngregex"
+                       placeholder="Longitude: -4.150000"
+                       required>
+            </div>
+            <p ng-show="addCragForm.cragLat.$invalid
+                     && submitted"
+               class="help-block">
+                Check that latitude for me please
+            </p>
+            <p ng-show="addCragForm.cragLng.$invalid
+                     && submitted"
+               class="help-block">
+                Check that longitude for me please
+            </p>
+        </div>
+
+        <!--CRAG NAME-->
+        <div class="form-group"
+             ng-class="{ 'has-error' : addCragForm.cragName.$invalid && submitted}">
+            <label class="col-sm-2 control-label">Crag Name:</label>
+            <div class="col-sm-10">
+                <input type="text"
+                       name="cragName"
+                       class="form-control"
+                       ng-model="formData.cragName"
+                       required>
+            </div>
+            <p ng-show="addCragForm.cragName.$invalid && submitted"
+               class="help-block">
+                A crag must have a name.
+            </p>
+        </div>
+
+        <!--CRAG DESCRIPTION-->
+        <div class="form-group"
+             ng-class="{ 'has-error' : addCragForm.cragDescription.$invalid && submitted}">
+            <label class="col-sm-2 control-label">Description:</label>
+            <div class="col-sm-10">
+                <textarea name="cragDescription"
+                          class="form-control"
+                          ng-model="formData.cragDescription"
+                          placeholder="Description"
+                          required>
+
+                </textarea>
+            </div>
+            <p ng-show="addCragForm.cragDescription.$invalid && submitted"
+               class="help-block">
+                Tell me something about this crag.
+            </p>
+        </div>
+
+        <!--CRAG APPROACH-->
+        <div class="form-group"
+             ng-class="{ 'has-error' : addCragForm.cragApproach.$invalid && submitted}">
+            <label class="col-sm-2 control-label">Approach:</label>
+            <div class="col-sm-10">
+                <textarea name="cragApproach"
+                          class="form-control"
+                          ng-model="formData.cragApproach"
+                          placeholder="How do you get here?"
+                          required>
+
+                </textarea>
+
+            </div>
+            <p ng-show="addCragForm.cragApproach.$invalid && submitted"
+               class="help-block">
+                Tell me how to get to this crag
+            </p>
+        </div>
+
+        <!--CRAG ACCESS-->
+        <div class="form-group"
+             ng-class="{ 'has-error' : addCragForm.cragAccess.$invalid && submitted}">
+            <label class="col-sm-2 control-label">Access Information:</label>
+            <div class="col-sm-10">
+                <textarea name="cragAccess"
+                          class="form-control"
+                          ng-model="formData.cragAccess"
+                          placeholder="Access problems or information"
+                          >
+                </textarea>
+            </div>
+            <p ng-show="addCragForm.cragAccess.$invalid && submitted"
+               class="help-block">
+                What access problems are there at this crag?
+            </p>
+        </div>
+
+        <!--OTHER DETAILS-->
+        <div class="form-group">
+            <!--TIDAL RANGE-->
+            <div>
+                <label class="col-sm-2 col-sm-offset-1 control-label">Tidal Range:</label>
+                <div class="col-sm-2">
+                    <input type="number"
+                           min="0"
+                           max="6"
+                           name="cragTidalRange"
+                           class="form-control"
+                           ng-model="formData.cragTidalRange"
+                           placeholder="Tidal Range">
+                </div>
+            </div>
+
+            <!--APPROACH TIME-->
+            <div ng-class="{ 'has-error' : addCragForm.cragApproachTime.$invalid && submitted}">
+                <label class="col-sm-2 control-label">Approach Time:</label>
+                <div class="col-sm-2">
+                    <input type="number"
+                           min="0"
+                           name="cragApproachTime"
+                           class="form-control"
+                           ng-model="formData.cragApproachTime"
+                           placeholder="Time in minutes"
+                           required>
+                </div>
+
+            </div>
+        </div>
+        <!--ERROR MESSAGES-->
+        <div ng-class="{ 'has-error' : addCragForm.cragTidalRange.$invalid || addCragForm.cragApproachTime.$invalid && submitted}">
+            <p ng-show="addCragForm.cragTidalRange.$invalid && submitted"
+               class="help-block">
+                Please enter the tidal range in hours. (Between 1 and 6 Hours)
+            </p>
+            <p ng-show="addCragForm.cragApproachTime.$invalid  && submitted"
+               class="help-block">
+                How long does it take to get to the crag, in minutes.
+            </p>
+        </div>
+
+        <!--NEXT LINE-->
+        <div class="form-group">
+            <!--ROCK TYPE-->
+            <div ng-class="{ 'has-error' : addCragForm.cragRockType.$invalid && submitted}">
+                <label class="col-sm-2 col-sm-offset-1 control-label">Rock Type:</label>
+                <div class="col-sm-2">
+                    <select name="cragRockType"
+                            class="form-control"
+                            id="selectRockType"
+                            ng-model="formData.cragRockType"
+                            ng-options="rockType.id as rockType.name for rockType in rockTypesData"
+                            required>
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <!--ORIENTATION-->
+            <div ng-class="{ 'has-error' : addCragForm.cragOrientation.$invalid && submitted}">
+                <label class="col-sm-2 control-label">Orientation:</label>
+                <div class="col-sm-2">
+                    <select name="cragOrientation"
+                            class="form-control"
+                            id="selectOrientation"
+                            ng-model="formData.cragOrientation"
+                            ng-options="orientation.id as orientation.name for orientation in orientationsData"
+                            required>
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!--ERROR MESSAGES-->
+        <div ng-class="{ 'has-error' : addCragForm.cragRockType.$invalid || addCragForm.cragOrientation.$invalid && submitted}">
+            <p ng-show="addCragForm.cragRockType.$invalid && submitted"
+               class="help-block">
+                What type of rock do we get to touch?
+            </p>
+            <p ng-show="addCragForm.cragOrientation.$invalid && submitted"
+               class="help-block">
+                Which way does the crag face?
+            </p>
+        </div>
+
+
+        <!--CHECK BOXES-->
+        <div class="form-group">
+            <div class="col-sm-3"></div>
+
+            <div class="col-sm-2">
+                <input type="checkbox"
+                       name="seepage"
+
+                       ng-model="formData.seepage">
+
+                <label class="control-label">Seepage</label>
+            </div>
+
+            <div class="col-sm-2">
+                <input type="checkbox"
+                       name="midges"
+
+                       ng-model="formData.midges">
+
+                <label class="control-label">Midges</label>
+            </div>
+
+            <div class="col-sm-2">
+                <input type="checkbox"
+                       name="sheltered"
+
+                       ng-model="formData.sheltered"
+>
+
+                <label class="control-label">Sheltered</label>
+
+            </div>
+        </div>
+
+
+        <!--BUTTONS AND MESSAGES-->
+        <div class="form-group">
+
+            <!--FORM ERROR MESSAGE-->
+            <p id="formError"
+               class="text-center alert-danger"
+               ng-show="errorShowing">
+                Uh Oh! Something went wrong. Please check the form.
+            </p>
+
+            <!--SUMBIT BUTTON-->
+            <button type="submit"
+                    class="btn btn-primary btn-success btn-lg center-block"
+                    ng-hide="submitButtonHidden">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                &nbsp Done!
+            </button>
+
+            <!--FORM PROGRESS MESSAGE-->
+            <p id="formProgress"
+               class="text-center alert-info"
+               ng-show="progressMessageShowing"
+               style="padding: 15px; margin-left: 150px; margin-right: 150px;">
+                Sending...
+            </p>
+
+            <!--FORM SUCCESS MESSAGE-->
+            <p class="text-center alert-success"
+               ng-show="resultShowing"
+               style="padding: 15px; margin-left: 150px; margin-right: 150px;">
+                Success!
+            </p>
+        </div>
+    </form>
+</div>
+
+<!--DEBUGGING-->
+<!--<pre>
+    {{ formData }}
+</pre>-->
+<!--<pre>
+    {{ latregex }}
+</pre>-->

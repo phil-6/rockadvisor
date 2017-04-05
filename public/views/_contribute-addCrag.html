@@ -75,11 +75,15 @@
                                placeholder="Longitude: -4.150000"
                                required>
                     </div>
-                    <p ng-show="(addCragForm.cragLat.$invalid
-                     ||  addCragForm.cragLng.$invalid)
+                    <p ng-show="addCragForm.cragLat.$invalid
                      && submitted"
                        class="help-block">
-                        Check those lat and lngs for me please
+                        Check that latitude for me please
+                    </p>
+                    <p ng-show=" addCragForm.cragLng.$invalid
+                     && submitted"
+                       class="help-block">
+                        Check that longitude for me please
                     </p>
                 </div>
 

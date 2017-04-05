@@ -13,7 +13,7 @@ angular.module('cragFormCtrl', [])
         $scope.submitted = false;
         $scope.latregex = "^(\\+|-)?(?:90(?:(?:\\.0{1,6})?)|(?:[0-9]|[1-8][0-9])(?:(?:\\.[0-9]{1,6})?))$";
         $scope.lngregex = "^(\\+|-)?(?:180(?:(?:\\.0{1,6})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\\.[0-9]{1,6})?))$";
-        //$scope.regexTest = "\\d+";
+
 
         $scope.areasData = {};
         AreaFactory.get()

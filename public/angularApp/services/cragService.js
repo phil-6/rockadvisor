@@ -33,6 +33,16 @@ angular.module('cragService', [])
                 });
             },
 
+            //edit a crag
+            update: function (cragData, id){
+                return $http({
+                    method: 'POST',
+                    url: ('api/crags/' + id),
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                    data: $.param(cragData)
+                });
+            },
+
             // destroy a crag
             destroy: function (id) {
                 // console.log("service:CragFactory:destroy(" + id +")");
