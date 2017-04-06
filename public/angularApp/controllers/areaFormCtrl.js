@@ -21,8 +21,8 @@ angular.module('areaFormCtrl', [])
 
         $scope.areasData = {};
         AreaFactory.get()
-            .success(function (data2) {
-                $scope.areasData = data2;
+            .success(function (data) {
+                $scope.areasData = data;
             });
 
 
@@ -40,9 +40,9 @@ angular.module('areaFormCtrl', [])
                 $scope.errorShowing = false;
 
                 AreaFactory.save($scope.formData)
-                    .success(function (data) {
+                    .success(function (data1) {
                         //console.log(data); //debugging
-                        if (data.success) { //success comes from the return json object
+                        if (data1.success) { //success comes from the return json object
                             //$scope.submitButtonHidden = true;
                             $scope.progressMessageShowing = false;
                             $scope.resultShowing = true;

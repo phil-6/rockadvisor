@@ -28,7 +28,7 @@ angular.module('areaService', [])
                 return $http.get('/api/areas/' + id + '/areas');
             },
 
-            // save a area (pass in area data)
+            // save an area (pass in area data)
             save : function(areaData) {
                 // console.log("service:AreaFactory:save");
                 return $http({
@@ -38,8 +38,18 @@ angular.module('areaService', [])
                     data: $.param(areaData)
                 });
             },
+            //edit an area
+            update: function (areaData, id){
+                console.log(areaData);
+                return $http({
+                    method: 'POST',
+                    url: ('api/areas/' + id),
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                    data: $.param(areaData)
+                });
+            },
 
-            // destroy a area
+            // destroy an area
             destroy : function(id) {
                 // console.log("service:ClimbFactory:destroy(" + id +")");
                 return $http.delete('/api/areas/' + id);

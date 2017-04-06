@@ -2,7 +2,14 @@
  * Created by philr on 05/03/2017.
  */
 angular.module('areaDetailCtrl', [])
-    .controller('areaDetailController', function($scope, $http, $stateParams, AreaFactory ){
+    .controller('areaDetailController', function(
+        $scope,
+        $http,
+        $stateParams,
+        AreaFactory,
+        $timeout ){
+
+
         $scope.areaId = $stateParams.areaID;
         $scope.areaData = {};
         $scope.cragData = {};
@@ -20,17 +27,111 @@ angular.module('areaDetailCtrl', [])
 
         //Get Crags at Area
         AreaFactory.getCrags($scope.areaId)
-            .success(function (data2) {
+            .success(function (data1) {
                 //console.log("I'm here Phil" + data2);
-                $scope.cragData = data2;
+                $scope.cragData = data1;
                 $scope.loading = false;
             });
 
         //Get Areas at Area
         AreaFactory.getChildAreas($scope.areaId)
-            .success(function (data3) {
+            .success(function (data2) {
                 //console.log("I'm here Phil" + data2);
-                $scope.childAreas = data3;
+                $scope.childAreas = data2;
                 $scope.loading = false;
             });
+
+
+        /**
+         * EDIT AREA
+         */
+
+        $scope.formData = {};
+        //populate form with crag information
+        $scope.fillForm = function() {
+            $scope.formData.parentArea = $scope.areaData.parentArea;
+            $scope.formData.areaName = $scope.areaData.name;
+            $scope.formData.areaDescription = $scope.areaData.description;
+        };
+
+        $scope.submitButtonHidden = false;
+        $scope.progressMessageShowing = false;
+        $scope.resultShowing = false;
+        $scope.errorShowing = false;
+        $scope.submitted = false;
+        $scope.submitDisabled = false;
+
+        $scope.disableButton = function() {
+            $scope.sumbitDisabled = true;
+        };
+
+
+
+        //populate areas list in form
+        $scope.areasData = {};
+        AreaFactory.get()
+            .success(function (data3) {
+                $scope.areasData = data3;
+            });
+
+
+        $scope.processAreaForm = function (isValid) {
+            $scope.submitted = true;
+            $scope.submitButtonHidden = true;
+            $scope.submitDisabled = false;
+            $scope.progressMessageShowing = true;
+            //$scope.errorShowing = false;
+
+            if (isValid) {
+                //$scope.submitted = true;
+                //$scope.submitButtonHidden = true;
+                //$scope.progressMessageShowing = true;
+                $scope.errorShowing = false;
+
+                AreaFactory.update($scope.formData, $scope.areaData.id)
+                    .success(function (data4) {
+                        //console.log(data); //debugging
+                        if (data4.success) { //success comes from the return json object
+                            //$scope.submitButtonHidden = true;
+                            $scope.progressMessageShowing = false;
+                            $scope.resultShowing = true;
+
+                            //Refresh area list.
+                            //Doesn't work at the moment
+                            AreaFactory.get()
+                                .success(function (data5) {
+                                    $scope.areasData = data5;
+                                });
+
+                            //get updated area information
+                            AreaFactory.getDetail($scope.areaId)
+                                .success(function (data6) {
+                                    //console.log(data);
+                                    $scope.areaData = data6;
+                                    $scope.loading = false;
+                                });
+
+                            //Paused after success
+                            $timeout(function () {
+                                $scope.fillForm();
+                                $scope.submitButtonHidden = false;
+                                //$scope.progressMessageShowing = false;
+                                $scope.resultShowing = false;
+                                $scope.submitted = false;
+                            }, 2000);
+
+                        } else {
+                            $scope.submitButtonHidden = false;
+                            $scope.progressMessageShowing = false;
+                            $scope.errorShowing = true;
+                        }
+                    });
+            } else { //on validate failure
+                $timeout(function () {
+                    $scope.submitButtonHidden = false;
+                    $scope.progressMessageShowing = false;
+                    $scope.errorShowing = true;
+                }, 1000);
+            }
+        };
     });

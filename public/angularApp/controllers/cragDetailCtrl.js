@@ -5,7 +5,17 @@
 angular.module('cragDetailCtrl', [])
 
 // inject the Crag service into our controller
-    .controller('cragDetailController', function ($scope, $http, $stateParams, CragFactory, AreaFactory, OrientationFactory, RockTypeFactory, $timeout) {
+    .controller('cragDetailController', function (
+        $scope,
+        $http,
+        $stateParams,
+        CragFactory,
+        AreaFactory,
+        OrientationFactory,
+        RockTypeFactory,
+        $timeout) {
+
+
         // object to hold all the data for the new crag form
         $scope.cragId = $stateParams.cragID;
         $scope.cragData = {};
@@ -39,7 +49,7 @@ angular.module('cragDetailCtrl', [])
         $scope.formData = {};
         //populate form with crag information
         $scope.fillForm = function(){
-            console.log("Here")
+            //console.log("Here")
             $scope.formData.cragArea = $scope.cragData.area_id;
             $scope.formData.cragLat = $scope.cragData.lat;
             $scope.formData.cragLng = $scope.cragData.lng;

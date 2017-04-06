@@ -108,37 +108,32 @@ class AreasController extends Controller
 
 
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+
+
+
 
     /**
-     * Update the specified resource in storage.
+     * * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  Area $area
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse
      */
-    // public function update(Request $request, $area)
-    // {
-    //     //
-    // }
-
-    public function api_update(Request $request, $area)
+    public function api_update(Request $request, $id)
     {
-        $area->name = $request->input('name');
-        $area->parentArea = $request->input('parentArea');
+        try{
+            $area = area::find($id);
+            $area->parentArea = $request->input('parentArea');
+            $area->name = $request->input('areaName');
+            $area->description = $request->input('areaDescription');
 
-        $area->save();
+            $area->save();
 
-        return response()->json(array('success' => true));
+            return response()->json(array('success' => true));
+        }
+        catch(Exception $e) {
+            return response()->json(array('success' => false));
+        }
 
     }
 

@@ -3,7 +3,7 @@
 --Created by philr
 --on 05/04/17
 --Edited last by philr
---On 05/03/17
+--On 06/04/17
 -->
 <div id="form-container">
 
@@ -20,13 +20,13 @@
 
     <!--Start of Form-->
     <form class="form-horizontal"
-          name="addCragForm"
-          ng-submit="processCragForm(addCragForm.$valid)"
+          name="editCragForm"
+          ng-submit="processCragForm(editCragForm.$valid)"
           novalidate>
 
         <!--SELECT AREA-->
         <div class="form-group"
-             ng-class="{ 'has-error' : addCragForm.cragArea.$invalid && submitted}">
+             ng-class="{ 'has-error' : editCragForm.cragArea.$invalid && submitted}">
             <label for="selectArea" class="col-sm-2 control-label">Select Area:</label>
             <div class="col-sm-10">
                 <select name="cragArea"
@@ -39,7 +39,7 @@
                     <option value=""></option>
                 </select>
             </div>
-            <p ng-show="addCragForm.cragArea.$invalid && submitted"
+            <p ng-show="editCragForm.cragArea.$invalid && submitted"
                class="help-block">
                 Select the Area that the Crag is in
             </p>
@@ -48,8 +48,8 @@
         <!--LOCATION-->
         <div class="form-group"
              ng-class="{ 'has-error' :
-                     (addCragForm.cragLat.$invalid
-                     || addCragForm.cragLng.$invalid)
+                     (editCragForm.cragLat.$invalid
+                     || editCragForm.cragLng.$invalid)
                      && submitted}">
             <label class="col-sm-2 control-label">Lat/Lng Location:</label>
             <!--ng-minlength="3"-->
@@ -72,12 +72,12 @@
                        placeholder="Longitude: -4.150000"
                        required>
             </div>
-            <p ng-show="addCragForm.cragLat.$invalid
+            <p ng-show="editCragForm.cragLat.$invalid
                      && submitted"
                class="help-block">
                 Check that latitude for me please
             </p>
-            <p ng-show="addCragForm.cragLng.$invalid
+            <p ng-show="editCragForm.cragLng.$invalid
                      && submitted"
                class="help-block">
                 Check that longitude for me please
@@ -86,7 +86,7 @@
 
         <!--CRAG NAME-->
         <div class="form-group"
-             ng-class="{ 'has-error' : addCragForm.cragName.$invalid && submitted}">
+             ng-class="{ 'has-error' : editCragForm.cragName.$invalid && submitted}">
             <label class="col-sm-2 control-label">Crag Name:</label>
             <div class="col-sm-10">
                 <input type="text"
@@ -95,7 +95,7 @@
                        ng-model="formData.cragName"
                        required>
             </div>
-            <p ng-show="addCragForm.cragName.$invalid && submitted"
+            <p ng-show="editCragForm.cragName.$invalid && submitted"
                class="help-block">
                 A crag must have a name.
             </p>
@@ -103,7 +103,7 @@
 
         <!--CRAG DESCRIPTION-->
         <div class="form-group"
-             ng-class="{ 'has-error' : addCragForm.cragDescription.$invalid && submitted}">
+             ng-class="{ 'has-error' : editCragForm.cragDescription.$invalid && submitted}">
             <label class="col-sm-2 control-label">Description:</label>
             <div class="col-sm-10">
                 <textarea name="cragDescription"
@@ -114,7 +114,7 @@
 
                 </textarea>
             </div>
-            <p ng-show="addCragForm.cragDescription.$invalid && submitted"
+            <p ng-show="editCragForm.cragDescription.$invalid && submitted"
                class="help-block">
                 Tell me something about this crag.
             </p>
@@ -122,7 +122,7 @@
 
         <!--CRAG APPROACH-->
         <div class="form-group"
-             ng-class="{ 'has-error' : addCragForm.cragApproach.$invalid && submitted}">
+             ng-class="{ 'has-error' : editCragForm.cragApproach.$invalid && submitted}">
             <label class="col-sm-2 control-label">Approach:</label>
             <div class="col-sm-10">
                 <textarea name="cragApproach"
@@ -134,7 +134,7 @@
                 </textarea>
 
             </div>
-            <p ng-show="addCragForm.cragApproach.$invalid && submitted"
+            <p ng-show="editCragForm.cragApproach.$invalid && submitted"
                class="help-block">
                 Tell me how to get to this crag
             </p>
@@ -142,7 +142,7 @@
 
         <!--CRAG ACCESS-->
         <div class="form-group"
-             ng-class="{ 'has-error' : addCragForm.cragAccess.$invalid && submitted}">
+             ng-class="{ 'has-error' : editCragForm.cragAccess.$invalid && submitted}">
             <label class="col-sm-2 control-label">Access Information:</label>
             <div class="col-sm-10">
                 <textarea name="cragAccess"
@@ -152,7 +152,7 @@
                           >
                 </textarea>
             </div>
-            <p ng-show="addCragForm.cragAccess.$invalid && submitted"
+            <p ng-show="editCragForm.cragAccess.$invalid && submitted"
                class="help-block">
                 What access problems are there at this crag?
             </p>
@@ -175,7 +175,7 @@
             </div>
 
             <!--APPROACH TIME-->
-            <div ng-class="{ 'has-error' : addCragForm.cragApproachTime.$invalid && submitted}">
+            <div ng-class="{ 'has-error' : editCragForm.cragApproachTime.$invalid && submitted}">
                 <label class="col-sm-2 control-label">Approach Time:</label>
                 <div class="col-sm-2">
                     <input type="number"
@@ -190,12 +190,12 @@
             </div>
         </div>
         <!--ERROR MESSAGES-->
-        <div ng-class="{ 'has-error' : addCragForm.cragTidalRange.$invalid || addCragForm.cragApproachTime.$invalid && submitted}">
-            <p ng-show="addCragForm.cragTidalRange.$invalid && submitted"
+        <div ng-class="{ 'has-error' : editCragForm.cragTidalRange.$invalid || editCragForm.cragApproachTime.$invalid && submitted}">
+            <p ng-show="editCragForm.cragTidalRange.$invalid && submitted"
                class="help-block">
                 Please enter the tidal range in hours. (Between 1 and 6 Hours)
             </p>
-            <p ng-show="addCragForm.cragApproachTime.$invalid  && submitted"
+            <p ng-show="editCragForm.cragApproachTime.$invalid  && submitted"
                class="help-block">
                 How long does it take to get to the crag, in minutes.
             </p>
@@ -204,7 +204,7 @@
         <!--NEXT LINE-->
         <div class="form-group">
             <!--ROCK TYPE-->
-            <div ng-class="{ 'has-error' : addCragForm.cragRockType.$invalid && submitted}">
+            <div ng-class="{ 'has-error' : editCragForm.cragRockType.$invalid && submitted}">
                 <label class="col-sm-2 col-sm-offset-1 control-label">Rock Type:</label>
                 <div class="col-sm-2">
                     <select name="cragRockType"
@@ -218,7 +218,7 @@
                 </div>
             </div>
             <!--ORIENTATION-->
-            <div ng-class="{ 'has-error' : addCragForm.cragOrientation.$invalid && submitted}">
+            <div ng-class="{ 'has-error' : editCragForm.cragOrientation.$invalid && submitted}">
                 <label class="col-sm-2 control-label">Orientation:</label>
                 <div class="col-sm-2">
                     <select name="cragOrientation"
@@ -233,12 +233,12 @@
             </div>
         </div>
         <!--ERROR MESSAGES-->
-        <div ng-class="{ 'has-error' : addCragForm.cragRockType.$invalid || addCragForm.cragOrientation.$invalid && submitted}">
-            <p ng-show="addCragForm.cragRockType.$invalid && submitted"
+        <div ng-class="{ 'has-error' : editCragForm.cragRockType.$invalid || editCragForm.cragOrientation.$invalid && submitted}">
+            <p ng-show="editCragForm.cragRockType.$invalid && submitted"
                class="help-block">
                 What type of rock do we get to touch?
             </p>
-            <p ng-show="addCragForm.cragOrientation.$invalid && submitted"
+            <p ng-show="editCragForm.cragOrientation.$invalid && submitted"
                class="help-block">
                 Which way does the crag face?
             </p>

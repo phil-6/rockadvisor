@@ -1,0 +1,127 @@
+<!-- _contribute-editCrag.html -->
+<!--
+--Created by philr
+--on 06/04/17
+--Edited last by philr
+--On 06/04/17
+-->
+
+<div id="form-container">
+
+    <!-- Section Title -->
+    <div class="page-header">
+        <h2>Edit {{areaData.name}}</h2>
+    </div>
+    
+    <!--WARNING MESSAGE-->
+    <div class="alert alert-danger text-center">
+        Please be aware, any data you create is likely to be destroyed as Rock Advisor is still in development.
+    </div>
+
+    <!--Start of Form-->
+    <form class="form-horizontal"
+          name="editAreaForm"
+          ng-submit="processAreaForm(editAreaForm.$valid)"
+          novalidate>
+
+        <!--SELECT AREA-->
+        <div class="form-group"
+             ng-class="{ 'has-error' : editAreaForm.parentArea.$invalid && !editAreaForm.parentArea.$pristine && submitted}">
+            <label for="selectArea" class="col-sm-2 control-label">Parent Area:</label>
+            <div class="col-sm-10">
+                <select name="parentArea"
+                        class="form-control"
+                        id="selectArea"
+                        ng-model="formData.parentArea"
+                        ng-init="formData.parentArea = options[areaData.parentArea].value"
+                        ng-options="area.id as area.name for area in areasData">
+                    <option value="">Select Area</option>
+                </select>
+            </div>
+            <p ng-show="editAreaForm.parentArea.$invalid && !editAreaForm.parentArea.$pristine && submitted"
+               class="help-block">
+                Select the Area that this Area is part of.
+            </p>
+        </div>
+
+        <!--ADD AREA NAME-->
+        <div class="form-group"
+             ng-class="{ 'has-error' : editAreaForm.areaName.$invalid && !editAreaForm.areaName.$pristine && submitted}">
+            <label class="col-sm-2 control-label">Area Name:</label>
+            <div class="col-sm-10">
+                <input type="text"
+                       name="areaName"
+                       class="form-control"
+                       ng-model="formData.areaName"
+                       placeholder="Area Name"
+                       required>
+            </div>
+            <p ng-show="editAreaForm.areaName.$invalid && !editAreaForm.areaName.$pristine && submitted"
+               class="help-block">
+                An area must have a name.
+            </p>
+        </div>
+
+        <!--ADD AREA DESCRIPTOIN-->
+        <div class="form-group"
+             ng-class="{ 'has-error' : editAreaForm.areaDescription.$invalid && !editAreaForm.areaDescription.$pristine && submitted}">
+            <label class="col-sm-2 control-label">Description:</label>
+            <div class="col-sm-10">
+                        <textarea name="areaDescription"
+                                  class="form-control"
+                                  ng-model="formData.areaDescription"
+                                  placeholder="Description"
+                                  required>
+                        </textarea>
+            </div>
+            <p ng-show="editAreaForm.areaDescription.$invalid && !editAreaForm.areaDescription.$pristine && submitted"
+               class="help-block">
+                Tell me something about this area.
+            </p>
+        </div>
+
+        <div class="form-group">
+
+            <!--FORM ERROR MESSAGE-->
+            <p id="formError"
+               class="text-center alert-danger"
+               ng-show="errorShowing">
+                Uh Oh! Something went wrong. Please check the form.
+            </p>
+
+            <!--SUMBIT BUTTON-->
+            <button type="button"
+                    class="btn btn-danger btn-lg"
+                    data-dismiss="modal"
+                    ng-hide="submitButtonHidden">
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                &nbsp Close
+            </button>
+            <button type="submit"
+                    class="btn btn-primary btn-success btn-lg "
+                    ng-hide="submitButtonHidden"
+                    ng-click="disableButton()">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                &nbsp Save!
+            </button>
+
+            <!--FORM PROGRESS MESSAGE-->
+            <p id="formProgress"
+               class="text-center alert-info formMessage"
+               ng-show="progressMessageShowing">
+                Sending...
+            </p>
+
+            <!--FORM SUCCESS MESSAGE-->
+            <p class="text-center alert-success formMessage"
+               ng-show="resultShowing">
+                Success!
+            </p>
+        </div>
+    </form>
+</div>
+
+<!--DEBUGGING-->
+<!--<pre>
+    {{ formData }}
+</pre>-->
