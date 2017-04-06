@@ -110,6 +110,10 @@ class CragsController extends Controller
 
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function api_store(Request $request)
     {
 

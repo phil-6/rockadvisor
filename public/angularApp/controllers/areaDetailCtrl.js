@@ -20,15 +20,15 @@ angular.module('areaDetailCtrl', [])
         //Get Area Details
         AreaFactory.getDetail($scope.areaId)
             .success(function (data) {
-                //console.log(data);
                 $scope.areaData = data;
+                console.log('data');
+                console.log($scope.areaData);
                 $scope.loading = false;
             });
 
         //Get Crags at Area
         AreaFactory.getCrags($scope.areaId)
             .success(function (data1) {
-                //console.log("I'm here Phil" + data2);
                 $scope.cragData = data1;
                 $scope.loading = false;
             });
@@ -36,7 +36,6 @@ angular.module('areaDetailCtrl', [])
         //Get Areas at Area
         AreaFactory.getChildAreas($scope.areaId)
             .success(function (data2) {
-                //console.log("I'm here Phil" + data2);
                 $scope.childAreas = data2;
                 $scope.loading = false;
             });
@@ -50,6 +49,7 @@ angular.module('areaDetailCtrl', [])
         //populate form with crag information
         $scope.fillForm = function() {
             $scope.formData.parentArea = $scope.areaData.parentArea;
+            console.log($scope.formData.parentArea, $scope.areaData.parentArea );
             $scope.formData.areaName = $scope.areaData.name;
             $scope.formData.areaDescription = $scope.areaData.description;
         };
@@ -87,10 +87,17 @@ angular.module('areaDetailCtrl', [])
                 //$scope.submitButtonHidden = true;
                 //$scope.progressMessageShowing = true;
                 $scope.errorShowing = false;
+                console.log("$scope.areaData.id");
+                console.log($scope.areaData.id);
+                console.log("$scope.areaId");
+                console.log($scope.areaId);
+                console.log("$scope.formData");
+                console.log($scope.formData);
 
                 AreaFactory.update($scope.formData, $scope.areaData.id)
                     .success(function (data4) {
-                        //console.log(data); //debugging
+                        console.log("data4");
+                        console.log(data4); //debugging
                         if (data4.success) { //success comes from the return json object
                             //$scope.submitButtonHidden = true;
                             $scope.progressMessageShowing = false;
@@ -106,7 +113,8 @@ angular.module('areaDetailCtrl', [])
                             //get updated area information
                             AreaFactory.getDetail($scope.areaId)
                                 .success(function (data6) {
-                                    //console.log(data);
+                                    console.log('data6');
+                                    console.log(data6);
                                     $scope.areaData = data6;
                                     $scope.loading = false;
                                 });

@@ -40,7 +40,9 @@ angular.module('areaService', [])
             },
             //edit an area
             update: function (areaData, id){
+                console.log('service: Data then id');
                 console.log(areaData);
+                console.log(id);
                 return $http({
                     method: 'POST',
                     url: ('api/areas/' + id),

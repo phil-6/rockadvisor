@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Auth\Access\Response;
 use Illuminate\Http\Request;
-
 use App\Area;
 
 class AreasController extends Controller
@@ -86,6 +85,10 @@ class AreasController extends Controller
         //
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function api_store(Request $request)
     {
         try {
@@ -106,12 +109,6 @@ class AreasController extends Controller
 
     }
 
-
-
-
-
-
-
     /**
      * * Update the specified resource in storage.
      *
@@ -123,10 +120,12 @@ class AreasController extends Controller
     {
         try{
             $area = area::find($id);
-            $area->parentArea = $request->input('parentArea');
+
             $area->name = $request->input('areaName');
             $area->description = $request->input('areaDescription');
+            $area->parentArea = $request->input('parentArea');
 
+            //dd($area);
             $area->save();
 
             return response()->json(array('success' => true));
