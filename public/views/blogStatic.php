@@ -223,6 +223,31 @@
                 <div class="post">
 
                     <h3 class="postTitle">
+                        Editor Update
+                    </h3>
+                    <p class="post-meta">Posted by <a href="#Phil">Phil</a> 03/04/2017</p>
+                    <div class="postContent">
+                        <p>
+                            I’ve been quiet for quite a while working on lots of bits and pieces. With lots of frustration. But as of today you can now edit Areas, Crags and Climbs. There are lots of little bits that still need moving around, and I’m not happy with where the edit buttons are living at the moment but it’s the first major I feel like I’ve made since the last update.
+                        </p>
+                        <p>
+                            That being said, delete confirmations still don’t work and topos aren’t quite there yet. But you can edit the big things, which is vitally important.
+                            Coming up next we have topos, back end validation, creation and editing of parking locations and rock types and then some improvements to the map.
+                            There is now a month until the end of the academic portion of this project but hopefully we will be able to continue developing this after the end of that.
+                        </p>
+                        <p>
+                            Hopefully the next update will happen a bit sooner!
+                        </p>
+                        <p>
+                            As always, any bugs or suggestions please let me know. There is still a long this list of things that I would like to add but it’s getting there slowly!
+                        </p>
+
+                    </div><!-- End Content -->
+                </div> <!-- End Post -->
+                <hr>
+                <div class="post">
+
+                    <h3 class="postTitle">
                         Creator Update
                     </h3>
                     <p class="post-meta">Posted by <a href="#Phil">Phil</a> 09/03/2017</p>
