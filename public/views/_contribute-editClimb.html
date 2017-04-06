@@ -1,0 +1,230 @@
+<!-- _contribute-editClimb.html -->
+<!--
+--Created by philr
+--on 06/04/17
+--Edited last by philr
+--On 06/04/17
+-->
+
+<div id="form-container ">
+
+    <!-- Section Title -->
+    <div class="page-header text-center">
+        <h2>Edit {{thisClimb.name}}</h2>
+    </div>
+    <hr>
+
+    <!--WARNING MESSAGE-->
+    <div class="alert alert-danger text-center">
+        Please be aware, any data you create is likely to be destroyed as Rock Advisor is still in development.
+    </div>
+    <div class="alert alert-info text-center">
+        Improvements to the grade selection system are coming soon.
+    </div>
+
+    <!--Start of Form-->
+    <form class="form-horizontal"
+          name="editClimbForm"
+          ng-submit="processClimbForm(editClimbForm.$valid)"
+          novalidate>
+
+        <!--SELECT CLIMB TYPE-->
+        <!--SELECT CLIMB SYSTEM-->
+        <!--SELECT CLIMB GRADE-->
+        <div class="form-group"
+             ng-class="{ 'has-error' : editClimbForm.grade.$invalid && !editClimbForm.grade.$pristine && submitted}">
+            <label for="selectGrade" class="col-sm-2 control-label">Select Grade:</label>
+            <div class="col-sm-2">
+                <select name="grade"
+                        class="form-control"
+                        id="selectGrade"
+                        ng-model="climbFormData.grade"
+                        ng-init="climbFormData.grade = options[thisClimb.grade_id].value"
+                        ng-options="grade.id as grade.severityGrade + ' ' + grade.technicalGrade for grade in gradesData"
+                        required>
+                    <option value=""></option>
+                </select>
+            </div>
+            <p ng-show="editClimbForm.grade.$invalid && !editClimbForm.grade.$pristine && submitted"
+               class="help-block">
+                Select the Grade of the Climb
+            </p>
+        </div>
+
+
+        <!--SELECT CRAG-->
+        <div class="form-group"
+             ng-class="{ 'has-error' : editClimbForm.crag.$invalid && !editClimbForm.crag.$pristine && submitted}">
+            <label for="selectCrag" class="col-sm-2 control-label">Select Crag:</label>
+            <div class="col-sm-10">
+                <select name="crag"
+                        class="form-control"
+                        id="selectCrag"
+                        ng-model="climbFormData.crag"
+                        ng-init="climbFormData.crag = options[climbData.crag_id].value"
+                        ng-options="crag.id as crag.name for crag in cragsData"
+                        required>
+                    <option value="">Select Crag</option>
+                </select>
+            </div>
+            <p ng-show="editClimbForm.crag.$invalid && !editClimbForm.crag.$pristine && submitted"
+               class="help-block">
+                Select the Crag that the Climb is on
+            </p>
+        </div>
+
+        <!--CLIMB NAME-->
+        <div class="form-group"
+             ng-class="{ 'has-error' : editClimbForm.climbName.$invalid && !editClimbForm.climbName.$pristine && submitted}">
+            <label class="col-sm-2 control-label">Climb Name:</label>
+            <div class="col-sm-10">
+                <input type="text"
+                       name="climbName"
+                       class="form-control"
+                       ng-model="climbFormData.climbName"
+                       required>
+            </div>
+            <p ng-show="editClimbForm.climbName.$invalid && !editClimbForm.climbName.$pristine && submitted"
+               class="help-block">
+                A Climb must have a name.
+            </p>
+        </div>
+
+        <!--CLIMB DESCRIPTOIN-->
+        <div class="form-group"
+             ng-class="{ 'has-error' : editClimbForm.climbDescription.$invalid && !editClimbForm.climbDescription.$pristine && submitted}">
+            <label class="col-sm-2 control-label">Description:</label>
+            <div class="col-sm-10">
+                        <textarea name="climbDescription"
+                                  class="form-control"
+                                  ng-model="climbFormData.climbDescription"
+                                  placeholder="Description"
+                                  required>
+                        </textarea>
+            </div>
+            <p ng-show="editClimbForm.climbDescription.$invalid && !editClimbForm.climbDescription.$pristine && submitted"
+               class="help-block">
+                Tell me something about this climb.
+            </p>
+        </div>
+
+        <!--LENGTH AND PITCHES-->
+        <div class="form-group">
+
+            <div ng-class="{ 'has-error' : editClimbForm.length.$invalid && !editClimbForm.length.$pristine && submitted}">
+                <label class="col-sm-2 control-label">Climb Length:</label>
+                <div class="col-sm-2">
+                    <input type="number"
+                           min="1"
+                           name="length"
+                           class="form-control"
+                           ng-model="climbFormData.length"
+                           placeholder="10m"
+                           required>
+                </div>
+            </div>
+            <div ng-class="{ 'has-error' : editClimbForm.pitches.$invalid && !editClimbForm.pitches.$pristine && submitted}">
+                <label class="col-sm-2 col-md-offset-2 control-label">Number of Pitches:</label>
+                <div class="col-sm-2">
+                    <input type="number"
+                           min="1"
+                           name="pitches"
+                           class="form-control"
+                           ng-model="climbFormData.pitches"
+                           placeholder="1"
+                           required>
+                </div>
+            </div>
+            <p ng-show="editClimbForm.pitches.$invalid && !editClimbForm.pitches.$pristine && submitted"
+               class="help-block">
+                Please enter the number of pitches.
+            </p>
+            <p ng-show="editClimbForm.length.$invalid && !editClimbForm.length.$pristine && submitted"
+               class="help-block">
+                Please enter the length of the climb in metres.
+            </p>
+        </div>
+
+        <!--FIRST ASCENT-->
+        <div class="form-group">
+
+            <div ng-class="{ 'has-error' : editClimbForm.firstAscent.$invalid && !editClimbForm.firstAscent.$pristine && submitted}">
+                <label class="col-sm-2 control-label">First Ascent By:</label>
+                <div class="col-sm-4">
+                    <input type="text"
+                           name="firstAscent"
+                           class="form-control"
+                           ng-model="climbFormData.firstAscent"
+                           placeholder="Joe Bloggs">
+                </div>
+            </div>
+            <div ng-class="{ 'has-error' : editClimbForm.firstAscentDate.$invalid && !editClimbForm.firstAscentDate.$pristine && submitted}">
+                <label class="col-sm-2 control-label">First Ascent On:</label>
+                <div class="col-sm-4">
+                    <input type="text"
+                           min="1"
+                           name="firstAscentDate"
+                           class="form-control"
+                           ng-model="climbFormData.firstAscentDate"
+                           ng-pattern="dateregex"
+                           placeholder="dd/mm/yyyy">
+                </div>
+            </div>
+            <p ng-show="editClimbForm.firstAscent.$invalid && !editClimbForm.firstAscent.$pristine && submitted"
+               class="help-block">
+                Who sent this route first?
+            </p>
+            <p ng-show="editClimbForm.firstAscentDate.$invalid && !editClimbForm.firstAscentDate.$pristine && submitted"
+               class="help-block">
+                When was it first climbed?
+            </p>
+        </div>
+
+        <!--TOPO-->
+        <!--TOPO NUMBER-->
+
+
+        <div class="form-group text-center">
+
+            <!--FORM ERROR MESSAGE-->
+            <p id="formError"
+               class="text-center alert alert-danger formMessage"
+               ng-show="errorShowing">
+                Uh Oh! Something went wrong. Please check the form.
+            </p>
+
+            <!--SUMBIT BUTTON-->
+            <button type="button"
+                    class="btn btn-danger btn-lg"
+                    data-dismiss="modal"
+                    ng-hide="submitButtonHidden">
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                &nbsp Close
+            </button>
+            <button type="submit"
+                    class="btn btn-primary btn-success btn-lg"
+                    ng-hide="submitButtonHidden">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                &nbsp Done!
+            </button>
+
+            <!--FORM PROGRESS MESSAGE-->
+            <p id="formProgress"
+               class="text-center alert-info formMessage"
+               ng-show="progressMessageShowing">
+                Sending...
+            </p>
+
+            <!--FORM SUCCESS MESSAGE-->
+            <p class="text-center alert-success formMessage"
+               ng-show="resultShowing">
+                Success!
+            </p>
+        </div>
+    </form>
+</div>
+
+<!--DEBUGGING-->
+<!--<pre>
+    {{ climbFormData }}
+</pre>-->

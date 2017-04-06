@@ -152,23 +152,27 @@ class ClimbsController extends Controller
         //
     }
 
-    public function api_update(Request $request, $id)
+    /**
+     * @param Request $request
+     * @param $climb
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function api_update(Request $request, $climb)
     {
 
 
         try {
-            $climb = climb::find($id);
 
             $climb->name = $request->input('climbName');
             $climb->description = $request->input('climbDescription');
             $climb->length = $request->input('length');
             $climb->pitches = $request->input('pitches');
             $climb->firstAscent = $request->input('firstAscent');
-            $climb->firstAscentDate = $request->input('firstAscentDate');
+            $climb->firstAscentDate = Carbon::createFromFormat('d/m/Y',($request->input('firstAscentDate')));
             $climb->topoNumber = $request->input('topoNumber');
 
             $climb->grade_id = $request->input('grade');
-            //$climb->topo_id = $request->input('topo_id');
+            $climb->topo_id = $request->input('topo');
             $climb->crag_id = $request->input('crag');
 
             $climb->save();

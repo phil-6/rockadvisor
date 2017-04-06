@@ -30,6 +30,17 @@ angular.module('climbService', [])
                 });
             },
 
+            //edit a climb
+            update : function(climbData, id) {
+                // console.log("service:ClimbFactory:update");
+                return $http({
+                    method: 'POST',
+                    url: ('/api/climbs/' + id),
+                    headers: { 'Content-Type' : 'application/x-www-form-urlencoded' },
+                    data: $.param(climbData)
+                });
+            },
+
             // destroy a climb
             destroy : function(id) {
                 // console.log("service:ClimbFactory:destroy(" + id +")");

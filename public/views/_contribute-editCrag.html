@@ -5,6 +5,7 @@
 --Edited last by philr
 --On 06/04/17
 -->
+
 <div id="form-container">
 
     <!-- Section Title -->
@@ -52,7 +53,6 @@
                      || editCragForm.cragLng.$invalid)
                      && submitted}">
             <label class="col-sm-2 control-label">Lat/Lng Location:</label>
-            <!--ng-minlength="3"-->
             <div class="col-sm-5">
                 <input type="text"
                        name="cragLat"
@@ -62,7 +62,6 @@
                        placeholder="Latitude: 51.600000"
                        required>
             </div>
-            <!---->
             <div class="col-sm-5">
                 <input type="text"
                        name="cragLng"
@@ -111,7 +110,6 @@
                           ng-model="formData.cragDescription"
                           placeholder="Description"
                           required>
-
                 </textarea>
             </div>
             <p ng-show="editCragForm.cragDescription.$invalid && submitted"
@@ -279,7 +277,7 @@
 
             <!--FORM ERROR MESSAGE-->
             <div id="formError"
-               class="text-center alert alert-danger"
+               class="text-center alert alert-danger formMessage"
                ng-show="errorShowing">
                 Uh Oh! Something went wrong. Please check the form.
             </div>
