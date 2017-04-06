@@ -252,27 +252,21 @@
             <div class="col-sm-2">
                 <input type="checkbox"
                        name="seepage"
-
                        ng-model="formData.seepage">
-
                 <label class="control-label">Seepage</label>
             </div>
 
             <div class="col-sm-2">
                 <input type="checkbox"
                        name="midges"
-
                        ng-model="formData.midges">
-
                 <label class="control-label">Midges</label>
             </div>
 
             <div class="col-sm-2">
                 <input type="checkbox"
                        name="sheltered"
-
-                       ng-model="formData.sheltered"
->
+                       ng-model="formData.sheltered">
 
                 <label class="control-label">Sheltered</label>
 
@@ -291,25 +285,33 @@
             </p>
 
             <!--SUMBIT BUTTON-->
+
+            <button type="button"
+                    class="btn btn-danger btn-lg"
+                    data-dismiss="modal"
+                    ng-hide="submitButtonHidden">
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                &nbsp Close
+            </button>
             <button type="submit"
-                    class="btn btn-primary btn-success btn-lg center-block"
+                    class="btn btn-primary btn-success btn-lg"
                     ng-hide="submitButtonHidden">
                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                &nbsp Done!
+                &nbsp Save!
             </button>
+
+
 
             <!--FORM PROGRESS MESSAGE-->
             <p id="formProgress"
-               class="text-center alert-info"
-               ng-show="progressMessageShowing"
-               style="padding: 15px; margin-left: 150px; margin-right: 150px;">
+               class="text-center alert-info formMessage"
+               ng-show="progressMessageShowing">
                 Sending...
             </p>
 
             <!--FORM SUCCESS MESSAGE-->
-            <p class="text-center alert-success"
-               ng-show="resultShowing"
-               style="padding: 15px; margin-left: 150px; margin-right: 150px;">
+            <p class="text-center alert-success formMessage"
+               ng-show="resultShowing">
                 Success!
             </p>
         </div>

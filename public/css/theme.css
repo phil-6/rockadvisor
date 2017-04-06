@@ -845,5 +845,19 @@ header .blog-header-content .header-content-inner h4 {
     margin-bottom: 0;
 }
 
+.crag-detail .modal-content{
+    padding: 10px;
+}
+
+textarea {
+    /* will prevent resizing horizontally */
+    resize:vertical;
+}
+
+.formMessage {
+    padding: 15px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
 
 

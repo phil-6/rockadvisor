@@ -124,16 +124,17 @@ angular.module('cragDetailCtrl', [])
                             //$scope.submitButtonHidden = true;
                             $scope.progressMessageShowing = false;
                             $scope.resultShowing = true;
+                            //get updated crag information
+                            CragFactory.getDetail($scope.cragId)
+                                .success(function (data7) {
+                                    //console.log(data);
+                                    $scope.cragData = data7;
+                                });
 
                             //Paused after success
                             $timeout(function () {
 
-                                //get updated crag information
-                                CragFactory.getDetail($scope.cragId)
-                                    .success(function (data7) {
-                                        //console.log(data);
-                                        $scope.cragData = data7;
-                                    });
+                                $scope.fillForm();
                                 $scope.submitButtonHidden = false;
                                 //$scope.progressMessageShowing = false;
                                 $scope.resultShowing = false;
