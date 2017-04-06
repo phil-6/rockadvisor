@@ -278,11 +278,11 @@
         <div class="form-group">
 
             <!--FORM ERROR MESSAGE-->
-            <p id="formError"
-               class="text-center alert-danger"
+            <div id="formError"
+               class="text-center alert alert-danger"
                ng-show="errorShowing">
                 Uh Oh! Something went wrong. Please check the form.
-            </p>
+            </div>
 
             <!--SUMBIT BUTTON-->
 
@@ -303,17 +303,17 @@
 
 
             <!--FORM PROGRESS MESSAGE-->
-            <p id="formProgress"
-               class="text-center alert-info formMessage"
+            <div id="formProgress"
+               class="text-center alert alert-info formMessage"
                ng-show="progressMessageShowing">
                 Sending...
-            </p>
+            </div>
 
             <!--FORM SUCCESS MESSAGE-->
-            <p class="text-center alert-success formMessage"
+            <div class="text-center alert alert-success formMessage"
                ng-show="resultShowing">
                 Success!
-            </p>
+            </div>
         </div>
     </form>
 </div>
