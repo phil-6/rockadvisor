@@ -15,15 +15,15 @@
     <hr>
 
     <!--WARNING MESSAGE-->
-    <div class="alert alert-danger text-center">
+    <!--<div class="alert alert-danger text-center">
         Please be aware, any data you create is likely to be destroyed as Rock Advisor is still in development.
-    </div>
+    </div>-->
     <div class="alert alert-info text-center">
         Improvements to the grade selection system are coming soon.
     </div>
 
     <!--Start of Form-->
-    <form class="form-horizontal"
+    <form class="form-horizontal text-center"
           name="editClimbForm"
           ng-submit="processClimbForm(editClimbForm.$valid)"
           novalidate>
@@ -32,7 +32,7 @@
         <!--SELECT CLIMB SYSTEM-->
         <!--SELECT CLIMB GRADE-->
         <div class="form-group"
-             ng-class="{ 'has-error' : editClimbForm.grade.$invalid && !editClimbForm.grade.$pristine && submitted}">
+             ng-class="{ 'has-error' : editClimbForm.grade.$invalid && submitted}">
             <label for="selectGrade" class="col-sm-2 control-label">Select Grade:</label>
             <div class="col-sm-2">
                 <select name="grade"
@@ -45,7 +45,7 @@
                     <option value=""></option>
                 </select>
             </div>
-            <p ng-show="editClimbForm.grade.$invalid && !editClimbForm.grade.$pristine && submitted"
+            <p ng-show="editClimbForm.grade.$invalid && submitted"
                class="help-block">
                 Select the Grade of the Climb
             </p>
@@ -54,7 +54,7 @@
 
         <!--SELECT CRAG-->
         <div class="form-group"
-             ng-class="{ 'has-error' : editClimbForm.crag.$invalid && !editClimbForm.crag.$pristine && submitted}">
+             ng-class="{ 'has-error' : editClimbForm.crag.$invalid && submitted}">
             <label for="selectCrag" class="col-sm-2 control-label">Select Crag:</label>
             <div class="col-sm-10">
                 <select name="crag"
@@ -67,7 +67,7 @@
                     <option value="">Select Crag</option>
                 </select>
             </div>
-            <p ng-show="editClimbForm.crag.$invalid && !editClimbForm.crag.$pristine && submitted"
+            <p ng-show="editClimbForm.crag.$invalid && submitted"
                class="help-block">
                 Select the Crag that the Climb is on
             </p>
@@ -75,7 +75,7 @@
 
         <!--CLIMB NAME-->
         <div class="form-group"
-             ng-class="{ 'has-error' : editClimbForm.climbName.$invalid && !editClimbForm.climbName.$pristine && submitted}">
+             ng-class="{ 'has-error' : editClimbForm.climbName.$invalid && submitted}">
             <label class="col-sm-2 control-label">Climb Name:</label>
             <div class="col-sm-10">
                 <input type="text"
@@ -84,7 +84,7 @@
                        ng-model="climbFormData.climbName"
                        required>
             </div>
-            <p ng-show="editClimbForm.climbName.$invalid && !editClimbForm.climbName.$pristine && submitted"
+            <p ng-show="editClimbForm.climbName.$invalid && submitted"
                class="help-block">
                 A Climb must have a name.
             </p>
@@ -92,7 +92,7 @@
 
         <!--CLIMB DESCRIPTOIN-->
         <div class="form-group"
-             ng-class="{ 'has-error' : editClimbForm.climbDescription.$invalid && !editClimbForm.climbDescription.$pristine && submitted}">
+             ng-class="{ 'has-error' : editClimbForm.climbDescription.$invalid  && submitted}">
             <label class="col-sm-2 control-label">Description:</label>
             <div class="col-sm-10">
                         <textarea name="climbDescription"
@@ -102,7 +102,7 @@
                                   required>
                         </textarea>
             </div>
-            <p ng-show="editClimbForm.climbDescription.$invalid && !editClimbForm.climbDescription.$pristine && submitted"
+            <p ng-show="editClimbForm.climbDescription.$invalid && submitted"
                class="help-block">
                 Tell me something about this climb.
             </p>
@@ -111,7 +111,7 @@
         <!--LENGTH AND PITCHES-->
         <div class="form-group">
 
-            <div ng-class="{ 'has-error' : editClimbForm.length.$invalid && !editClimbForm.length.$pristine && submitted}">
+            <div ng-class="{ 'has-error' : editClimbForm.length.$invalid && submitted}">
                 <label class="col-sm-2 control-label">Climb Length:</label>
                 <div class="col-sm-2">
                     <input type="number"
@@ -123,7 +123,7 @@
                            required>
                 </div>
             </div>
-            <div ng-class="{ 'has-error' : editClimbForm.pitches.$invalid && !editClimbForm.pitches.$pristine && submitted}">
+            <div ng-class="{ 'has-error' : editClimbForm.pitches.$invalid && submitted}">
                 <label class="col-sm-2 col-md-offset-2 control-label">Number of Pitches:</label>
                 <div class="col-sm-2">
                     <input type="number"
@@ -135,11 +135,14 @@
                            required>
                 </div>
             </div>
-            <p ng-show="editClimbForm.pitches.$invalid && !editClimbForm.pitches.$pristine && submitted"
+        </div>
+        <!-- ERROR MESSAGES -->
+        <div ng-class="{ 'has-error' : editClimbForm.pitches.$invalid || editClimbForm.length.$invalid && submitted}">
+            <p ng-show="editClimbForm.pitches.$invalid && submitted"
                class="help-block">
                 Please enter the number of pitches.
             </p>
-            <p ng-show="editClimbForm.length.$invalid && !editClimbForm.length.$pristine && submitted"
+            <p ng-show="editClimbForm.length.$invalid && submitted"
                class="help-block">
                 Please enter the length of the climb in metres.
             </p>
@@ -148,17 +151,17 @@
         <!--FIRST ASCENT-->
         <div class="form-group">
 
-            <div ng-class="{ 'has-error' : editClimbForm.firstAscent.$invalid && !editClimbForm.firstAscent.$pristine && submitted}">
+            <div ng-class="{ 'has-error' : editClimbForm.firstAscent.$invalid && submitted}">
                 <label class="col-sm-2 control-label">First Ascent By:</label>
                 <div class="col-sm-4">
                     <input type="text"
                            name="firstAscent"
                            class="form-control"
                            ng-model="climbFormData.firstAscent"
-                           placeholder="Joe Bloggs">
+                           placeholder="Joe Bloggs" required>
                 </div>
             </div>
-            <div ng-class="{ 'has-error' : editClimbForm.firstAscentDate.$invalid && !editClimbForm.firstAscentDate.$pristine && submitted}">
+            <div ng-class="{ 'has-error' : editClimbForm.firstAscentDate.$invalid && submitted}">
                 <label class="col-sm-2 control-label">First Ascent On:</label>
                 <div class="col-sm-4">
                     <input type="text"
@@ -167,14 +170,17 @@
                            class="form-control"
                            ng-model="climbFormData.firstAscentDate"
                            ng-pattern="dateregex"
-                           placeholder="dd/mm/yyyy">
+                           placeholder="dd/mm/yyyy" required>
                 </div>
             </div>
-            <p ng-show="editClimbForm.firstAscent.$invalid && !editClimbForm.firstAscent.$pristine && submitted"
+        </div>
+        <!--ERROR MESSAGES-->
+        <div ng-class="{ 'has-error' : editClimbForm.firstAscent.$invalid || editClimbForm.firstAscentDate.$invalid && submitted}">
+            <p ng-show="editClimbForm.firstAscent.$invalid && submitted"
                class="help-block">
                 Who sent this route first?
             </p>
-            <p ng-show="editClimbForm.firstAscentDate.$invalid && !editClimbForm.firstAscentDate.$pristine && submitted"
+            <p ng-show="editClimbForm.firstAscentDate.$invalid && submitted"
                class="help-block">
                 When was it first climbed?
             </p>

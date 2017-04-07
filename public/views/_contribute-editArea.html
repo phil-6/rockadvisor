@@ -14,8 +14,11 @@
     </div>
     
     <!--WARNING MESSAGE-->
-    <div class="alert alert-danger text-center">
+    <!--<div class="alert alert-danger text-center">
         Please be aware, any data you create is likely to be destroyed as Rock Advisor is still in development.
+    </div>-->
+    <div class="alert alert-info text-center">
+        Improvements to this form are coming soon.
     </div>
 
     <!--Start of Form-->
@@ -26,7 +29,7 @@
 
         <!--SELECT AREA-->
         <div class="form-group"
-             ng-class="{ 'has-error' : editAreaForm.parentArea.$invalid && !editAreaForm.parentArea.$pristine && submitted}">
+             ng-class="{ 'has-error' : editAreaForm.parentArea.$invalid && submitted}">
             <label for="selectArea" class="col-sm-2 control-label">Parent Area:</label>
             <div class="col-sm-10">
                 <select name="parentArea"
@@ -38,7 +41,7 @@
                     <option value="">Select Area</option>
                 </select>
             </div>
-            <p ng-show="editAreaForm.parentArea.$invalid && !editAreaForm.parentArea.$pristine && submitted"
+            <p ng-show="editAreaForm.parentArea.$invalid && submitted"
                class="help-block">
                 Select the Area that this Area is part of.
             </p>
@@ -46,7 +49,7 @@
 
         <!--ADD AREA NAME-->
         <div class="form-group"
-             ng-class="{ 'has-error' : editAreaForm.areaName.$invalid && !editAreaForm.areaName.$pristine && submitted}">
+             ng-class="{ 'has-error' : editAreaForm.areaName.$invalid && submitted}">
             <label class="col-sm-2 control-label">Area Name:</label>
             <div class="col-sm-10">
                 <input type="text"
@@ -56,7 +59,7 @@
                        placeholder="Area Name"
                        required>
             </div>
-            <p ng-show="editAreaForm.areaName.$invalid && !editAreaForm.areaName.$pristine && submitted"
+            <p ng-show="editAreaForm.areaName.$invalid && submitted"
                class="help-block">
                 An area must have a name.
             </p>
@@ -64,7 +67,7 @@
 
         <!--ADD AREA DESCRIPTOIN-->
         <div class="form-group"
-             ng-class="{ 'has-error' : editAreaForm.areaDescription.$invalid && !editAreaForm.areaDescription.$pristine && submitted}">
+             ng-class="{ 'has-error' : editAreaForm.areaDescription.$invalid && submitted}">
             <label class="col-sm-2 control-label">Description:</label>
             <div class="col-sm-10">
                         <textarea name="areaDescription"
@@ -74,7 +77,7 @@
                                   required>
                         </textarea>
             </div>
-            <p ng-show="editAreaForm.areaDescription.$invalid && !editAreaForm.areaDescription.$pristine && submitted"
+            <p ng-show="editAreaForm.areaDescription.$invalid && submitted"
                class="help-block">
                 Tell me something about this area.
             </p>

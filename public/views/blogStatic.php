@@ -210,14 +210,16 @@
                 <hr>
                 <div class="post">
                     <h3 class="postTitle">
-                        Calum's Content
+                        Calum's First Post
                     </h3>
-                    <p class="post-meta">Posted by <a href="#Calum">Calum</a> Sometime Soon</p>
+                    <p class="post-meta">Posted by <a href="#Calum">Calum</a> 07/04/2017</p>
                     <div class="postContent">
-                        <p>Coming soon...</p>
+                        <p>So after weeks of procrastinating and being stuck on a very trivial database problem, finally progress! Which means it's time to stop making lots of silly (and messy and hacked together and generally hideous) prototypes and start the final application build. </p>
+                        <p> Fortunately most of the work can be copied from the prototypes after a little cleanup which might mean it's finished in time.</p><p> Maybe.</p>
+                        <p> For now the biggest slow down is relearning the beauty of android front end and it's not so effective link to back end processes. Also making it look pretty, that's also taking a lot of time.</p>
+                        <p> But nonetheless there is certainly progress, and that's a beautiful thing. If it weren't for two coursework deadlines fast approaching I'd feel comfortable with completing my Dissertation and the application. As is, stress levels are flying through the roof.</p>
+                        <p> But nothing a week in Mallorca can't sort out</p>
                     </div><!-- End Content -->
-
-
                 </div> <!-- End Post -->
                 <hr>
                 <div class="post">
@@ -225,7 +227,7 @@
                     <h3 class="postTitle">
                         Editor Update
                     </h3>
-                    <p class="post-meta">Posted by <a href="#Phil">Phil</a> 03/04/2017</p>
+                    <p class="post-meta">Posted by <a href="#Phil">Phil</a> 07/04/2017</p>
                     <div class="postContent">
                         <p>
                             I’ve been quiet for quite a while working on lots of bits and pieces. With lots of frustration. But as of today you can now edit Areas, Crags and Climbs. There are lots of little bits that still need moving around, and I’m not happy with where the edit buttons are living at the moment but it’s the first major I feel like I’ve made since the last update.
