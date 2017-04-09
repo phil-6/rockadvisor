@@ -127,7 +127,10 @@
 <header>
     <div class="header-content">
         <div class="header-content-inner">
-            <h1 id="homeHeading">Rock Advisor</h1>
+            <div id="homeHeading">
+                <h1 class="headingBrandRock">Rock</h1> <h1 class="headingBrandAdvisor">Advisor</h1>
+            </div>
+
             <hr>
             <p>A Climbing Guidebook for the Digital Age</p>
             <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>

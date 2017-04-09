@@ -173,11 +173,10 @@ angular.module('cragDetailCtrl', [])
          * EDIT Climb
          */
 
-
         $scope.climbFormData = {};
         $scope.fillClimbForm = function($climb) {
-            console.log("Here");
-            console.log($climb);
+            //console.log("Here");
+            //console.log($climb);
             $scope.thisClimb = $climb;
             $scope.climbFormData.grade = $climb.grade_id;
             $scope.climbFormData.crag = $climb.crag_id;
@@ -217,7 +216,7 @@ angular.module('cragDetailCtrl', [])
             $scope.submitted = true;
             $scope.submitButtonHidden = true;
             $scope.progressMessageShowing = true;
-            console.log("nowhere");
+            //console.log("nowhere");
             //$scope.errorShowing = false;
 
             if (isValid) {
@@ -225,13 +224,13 @@ angular.module('cragDetailCtrl', [])
                 //$scope.submitButtonHidden = true;
                 //$scope.progressMessageShowing = true;
                 $scope.errorShowing = false;
-                console.log($scope.thisClimb);
-                console.log($scope.climbFormData);
+                //console.log($scope.thisClimb);
+                //console.log($scope.climbFormData);
                 //console.log($scope.thisClimb.id);
 
                 ClimbFactory.update($scope.climbFormData, $scope.thisClimb.id)
                     .success(function (data10) {
-                        console.log(data10); //debugging
+                        //console.log(data10); //debugging
                         if (data10.success) { //success comes from the return json object
                             //$scope.submitButtonHidden = true;
                             $scope.progressMessageShowing = false;

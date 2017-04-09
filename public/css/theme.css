@@ -121,92 +121,6 @@ a:focus, a:hover {
 
 /**
 **********
-* Backgrounds *
-**********
-*/
-.bg-primary {
-    background-color: #F82;
-}
-
-.bg-dark {
-    background-color: #222;
-    color: #fff;
-}
-
-.bg-primarygrad {
-    background: #F82; /* fallback for old browsers */
-    background: linear-gradient(141deg, DarkOrange 35%, Orange 60%, OrangeRed 85%);
-    /* For Safari 5.1 to 6.0 */
-    background: -webkit-linear-gradient(141deg, DarkOrange 35%, Orange 60%, OrangeRed 85%);
-    /* For Opera 11.1 to 12.0 */
-    background: -o-linear-gradient(141deg, DarkOrange 35%, Orange 60%, OrangeRed 85%);
-    /* For Firefox 3.6 to 15 */
-    background: -moz-linear-gradient(141deg, DarkOrange 35%, Orange 60%, OrangeRed 85%);
-    /*Previous*/
-    /*(141deg, rgb(255, 119, 17) 0%, rgb(255, 136, 34) 51%, rgb(238, 102, 0) 75%);*/
-}
-
-.bg-primarygrad h1,
-.bg-primarygrad h2,
-.bg-primarygrad h3,
-.bg-primarygrad h4,
-.bg-primarygrad h5,
-.bg-primarygrad h6,
-.bg-primarygrad p {
-    color: #fff;
-}
-
-
-.bg-primarygrad .detailsSection a {
-    color: #fff;
-    font-weight: bold;
-}
-
-.bg-bluegrad {
-    background: #1FC8DB; /* fallback for old browsers */
-    background: linear-gradient(141deg, rgb(15, 184, 173) 0%, rgb(31, 200, 219) 51%, rgb(44, 181, 232) 75%);
-    /* For Safari 5.1 to 6.0 */
-    background: -webkit-linear-gradient(141deg, rgb(15, 184, 173) 0%, rgb(31, 200, 219) 51%, rgb(44, 181, 232) 75%);
-    /* For Opera 11.1 to 12.0 */
-    background: -o-linear-gradient(141deg, rgb(15, 184, 173) 0%, rgb(31, 200, 219) 51%, rgb(44, 181, 232) 75%);
-    /* For Firefox 3.6 to 15 */
-    background: -moz-linear-gradient(141deg, rgb(15, 184, 173) 0%, rgb(31, 200, 219) 51%, rgb(44, 181, 232) 75%);
-}
-
-.bg-bluegrad h1,
-.bg-bluegrad h2,
-.bg-bluegrad h3,
-.bg-bluegrad h4,
-.bg-bluegrad h5,
-.bg-bluegrad h6,
-.bg-bluegrad p {
-    color: #fff;
-}
-
-.bg-bluegrad .detailsSection a {
-    color: #fff;
-    font-weight: bold;
-}
-
-/**
-**********
-* hr *
-**********
-*/
-hr {
-    border-color: #F82;
-    border-width: 3px;
-    max-width: 50px;
-}
-
-.bg-primary hr,
-.bg-primarygrad hr,
-hr.light {
-    border-color: #fff;
-}
-
-/**
-**********
 * Navbar *
 **********
 */
@@ -306,6 +220,95 @@ hr.light {
 
 /**
 **********
+* Backgrounds *
+**********
+*/
+.bg-primary {
+    background-color: #F82;
+}
+
+.bg-dark {
+    background-color: #222;
+    color: #fff;
+}
+
+.bg-primarygrad {
+    background: #F82; /* fallback for old browsers */
+    background: linear-gradient(141deg, DarkOrange 35%, Orange 60%, OrangeRed 85%);
+    /* For Safari 5.1 to 6.0 */
+    background: -webkit-linear-gradient(141deg, DarkOrange 35%, Orange 60%, OrangeRed 85%);
+    /* For Opera 11.1 to 12.0 */
+    background: -o-linear-gradient(141deg, DarkOrange 35%, Orange 60%, OrangeRed 85%);
+    /* For Firefox 3.6 to 15 */
+    background: -moz-linear-gradient(141deg, DarkOrange 35%, Orange 60%, OrangeRed 85%);
+    /*Previous*/
+    /*(141deg, rgb(255, 119, 17) 0%, rgb(255, 136, 34) 51%, rgb(238, 102, 0) 75%);*/
+}
+
+.bg-primarygrad h1,
+.bg-primarygrad h2,
+.bg-primarygrad h3,
+.bg-primarygrad h4,
+.bg-primarygrad h5,
+.bg-primarygrad h6,
+.bg-primarygrad p {
+    color: #fff;
+}
+
+
+.bg-primarygrad .detailsSection a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.bg-bluegrad {
+    background: #1FC8DB; /* fallback for old browsers */
+    background: linear-gradient(141deg, rgb(15, 184, 173) 0%, rgb(31, 200, 219) 51%, rgb(44, 181, 232) 75%);
+    /* For Safari 5.1 to 6.0 */
+    background: -webkit-linear-gradient(141deg, rgb(15, 184, 173) 0%, rgb(31, 200, 219) 51%, rgb(44, 181, 232) 75%);
+    /* For Opera 11.1 to 12.0 */
+    background: -o-linear-gradient(141deg, rgb(15, 184, 173) 0%, rgb(31, 200, 219) 51%, rgb(44, 181, 232) 75%);
+    /* For Firefox 3.6 to 15 */
+    background: -moz-linear-gradient(141deg, rgb(15, 184, 173) 0%, rgb(31, 200, 219) 51%, rgb(44, 181, 232) 75%);
+}
+
+.bg-bluegrad h1,
+.bg-bluegrad h2,
+.bg-bluegrad h3,
+.bg-bluegrad h4,
+.bg-bluegrad h5,
+.bg-bluegrad h6,
+.bg-bluegrad p {
+    color: #fff;
+}
+
+.bg-bluegrad .detailsSection a {
+    color: #fff;
+    font-weight: bold;
+}
+
+
+/**
+**********
+* hr *
+**********
+*/
+hr {
+    border-color: #F82;
+    border-width: 3px;
+    max-width: 50px;
+}
+
+.bg-primary hr,
+.bg-primarygrad hr,
+hr.light {
+    border-color: #fff;
+}
+
+
+
+/**
+**********
 * Header *
 **********
 */
@@ -361,7 +364,7 @@ header .header-content .header-content-inner h1 {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 50px;
-    color: #639;
+    /*color: #639;*/
     /*text-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);*/
 }
 
@@ -406,6 +409,15 @@ header .header-content .header-content-inner p {
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+.headingBrandRock{
+    color: #639;
+    display: inline;
+}
+.headingBrandAdvisor{
+    color: #F82;
+    display: inline;
 }
 
 /**
