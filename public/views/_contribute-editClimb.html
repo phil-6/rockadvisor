@@ -34,13 +34,13 @@
         <div class="form-group"
              ng-class="{ 'has-error' : editClimbForm.grade.$invalid && submitted}">
             <label for="selectGrade" class="col-sm-2 control-label">Select Grade:</label>
-            <div class="col-sm-2">
+            <div class="col-sm-4">
                 <select name="grade"
                         class="form-control"
                         id="selectGrade"
                         ng-model="climbFormData.grade"
                         ng-init="climbFormData.grade = options[thisClimb.grade_id].value"
-                        ng-options="grade.id as grade.severityGrade + ' ' + grade.technicalGrade for grade in gradesData"
+                        ng-options="grade.id as grade.climbTypeSystem + ' ' + grade.climbTypeName + ' ' + grade.severityGrade + ' ' + grade.technicalGrade for grade in gradesData"
                         required>
                     <option value=""></option>
                 </select>

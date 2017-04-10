@@ -34,7 +34,9 @@ class GradesController extends Controller
                 "id" => $grade->id,
                 "climbTypeId" => $grade->climbTypeId,
                 "severityGrade" => $grade ->severityGrade,
-                "technicalGrade" => $grade->technicalGrade
+                "technicalGrade" => $grade->technicalGrade,
+                "climbTypeSystem" => $grade->climbType->climbTypeSystem->name,
+                "climbTypeName" => $grade->climbType->climbTypeName->name
                 ];
             $data[] = $record;
         }

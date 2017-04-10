@@ -37,5 +37,11 @@ class ClimbTypesTableSeeder extends Seeder
         $rt->climbTypeSystemId = 4;
         $rt->climbTypeNameId = 3;
         $rt->save();
+
+        //Deep Water Solo id=5
+        $rt = new ClimbType();
+        $rt->climbTypeSystemId = 1;
+        $rt->climbTypeNameId = 13;
+        $rt->save();
     }
 }

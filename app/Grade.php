@@ -57,4 +57,20 @@ class Grade extends Model
             "type_id" => $climbTypeId,
             "type_name" => $climbTypeName);
     }*/
+
+    /**
+     * Append Attributes
+     */
+
+   /* public function getClimbTypeNameAttribute()
+    {
+        return $this->climbType->climbTypeName->name;
+    }
+    public function getClimbTypeSystemAttribute()
+    {
+        return $this->climbType->climbTypeSystem->name;
+    }
+
+    //protected $hidden = ['climbType'];
+    protected $appends = ['ClimbTypeName', 'ClimbTypeSystem'];*/
 }

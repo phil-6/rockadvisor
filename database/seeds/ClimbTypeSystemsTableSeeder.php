@@ -45,6 +45,7 @@ class ClimbTypeSystemsTableSeeder extends Seeder
         $rts = new ClimbTypeSystem();
         $rts->name = "UIAA";
         $rts->save();
+        
 
 
     }

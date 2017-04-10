@@ -134,5 +134,22 @@ class GradesTableSeeder extends Seeder
 			$g->score = null;
 			$g->save();
 		}
+
+		//DWS Grades
+        $deepWaterSoloGrades = array(
+          "S0", "S1", "S2", "S3", null
+        );
+
+        foreach( $deepWaterSoloGrades as $DWSgrade){
+            foreach( $frenchSportGrades as $techGrade ){
+                $g = new Grade();
+                $g->climbTypeId = 5;
+                $g->technicalGrade = $techGrade;
+                $g->severityGrade = $DWSgrade;
+                $g->score = null;
+                $g->save();
+            }
+        }
+
     }
 }
