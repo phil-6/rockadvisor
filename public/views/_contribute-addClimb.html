@@ -23,6 +23,7 @@
                 Improvements to the grade selection system are coming soon.
             </div>
 
+
             <!--Start of Form-->
             <form class="form-horizontal"
                   name="addClimbForm"
@@ -56,20 +57,25 @@
                 <div class="form-group"
                      ng-class="{ 'has-error' : addClimbForm.crag.$invalid && submitted}">
                     <label for="selectCrag" class="col-sm-2 control-label">Select Crag:</label>
-                    <div class="col-sm-10">
+                    <div class="col-sm-6">
                         <select name="crag"
                                 class="form-control"
                                 id="selectCrag"
                                 ng-model="formData.crag"
                                 ng-options="crag.id as crag.name for crag in cragsData"
+                                ng-change="cragSelected()"
                                 required>
                             <option value="">Select Crag</option>
                         </select>
                     </div>
+
+
                     <p ng-show="addClimbForm.crag.$invalid && submitted"
                        class="help-block">
                         Select the Crag that the Climb is on
                     </p>
+
+
                 </div>
 
                 <!--CLIMB NAME-->
@@ -229,5 +235,13 @@
         <!--<pre>
             {{ formData }}
         </pre>-->
+    </div>
+
+    <!--SHOW CLIMBS AT CRAG-->
+    <div class="col-sm-3 align-bottom center-block" ng-show="showCurrentClimbs">
+        <h4>Climbs at Crag</h4>
+        <div ng-repeat="climb in climbsAtCrag">
+            <p class="no-margin">{{ climb.name }}</p>
+        </div>
     </div>
 </div>
