@@ -14,6 +14,9 @@
              id="top">
             <h2>Areas Index</h2>
         </div>
+        <div ng-hide="loading">
+            <input type="text" ng-model="filterArea" placeholder="Search">
+        </div>
         <hr>
 
         <!-- Delete Success Message -->
@@ -30,7 +33,7 @@
         <!-- Areas -->
         <!-- hide these areas if the loading variable is true -->
         <div ng-hide="loading">
-            <div ng-repeat="area in areasData" >
+            <div ng-repeat="area in areasData | filter: {'name' : filterArea}" >
 
                 <!-- Area Name. Link to Area Detail -->
                 <a ui-sref="areaDetail({ areaID: {{area.id}} })">

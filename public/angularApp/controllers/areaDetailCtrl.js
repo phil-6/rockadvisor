@@ -21,8 +21,8 @@ angular.module('areaDetailCtrl', [])
         AreaFactory.getDetail($scope.areaId)
             .success(function (data) {
                 $scope.areaData = data;
-                console.log('data');
-                console.log($scope.areaData);
+                //console.log('data');
+                //console.log($scope.areaData);
                 $scope.loading = false;
             });
 
@@ -49,7 +49,7 @@ angular.module('areaDetailCtrl', [])
         //populate form with crag information
         $scope.fillForm = function() {
             $scope.formData.parentArea = $scope.areaData.parentArea;
-            console.log($scope.formData.parentArea, $scope.areaData.parentArea );
+            //console.log($scope.formData.parentArea, $scope.areaData.parentArea );
             $scope.formData.areaName = $scope.areaData.name;
             $scope.formData.areaDescription = $scope.areaData.description;
         };
@@ -87,17 +87,17 @@ angular.module('areaDetailCtrl', [])
                 //$scope.submitButtonHidden = true;
                 //$scope.progressMessageShowing = true;
                 $scope.errorShowing = false;
-                console.log("$scope.areaData.id");
-                console.log($scope.areaData.id);
-                console.log("$scope.areaId");
-                console.log($scope.areaId);
-                console.log("$scope.formData");
-                console.log($scope.formData);
+                //console.log("$scope.areaData.id");
+                //console.log($scope.areaData.id);
+                //console.log("$scope.areaId");
+                //console.log($scope.areaId);
+                //console.log("$scope.formData");
+                //console.log($scope.formData);
 
                 AreaFactory.update($scope.formData, $scope.areaData.id)
                     .success(function (data4) {
-                        console.log("data4");
-                        console.log(data4); //debugging
+                        //console.log("data4");
+                        //console.log(data4); //debugging
                         if (data4.success) { //success comes from the return json object
                             //$scope.submitButtonHidden = true;
                             $scope.progressMessageShowing = false;

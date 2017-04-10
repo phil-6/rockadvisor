@@ -14,6 +14,9 @@
              >
             <h2>Crags Index</h2>
         </div>
+        <div ng-hide="loading">
+            <input type="text" ng-model="filterCrag" placeholder="Search">
+        </div>
         <hr>
 
         <!-- Delete Success Message -->
@@ -30,7 +33,9 @@
         <!-- The Crags -->
         <!-- hide these crags if the loading variable is true -->
         <div ng-hide="loading">
-            <div ng-repeat="crag in cragsData">
+
+
+            <div ng-repeat="crag in cragsData | filter: {'name' : filterCrag} | orderBy: 'name'">
                 <!-- Crag Name. Link to Crag Detail -->
                 <a ui-sref="cragDetail({ cragID: {{crag.id}} })">
                     <h3>{{ crag.name }}</h3>
