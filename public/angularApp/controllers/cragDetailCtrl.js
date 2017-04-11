@@ -5,18 +5,17 @@
 angular.module('cragDetailCtrl', [])
 
 // inject the Crag service into our controller
-    .controller('cragDetailController', function (
-        $scope,
-        $http,
-        $stateParams,
-        CragFactory,
-        AreaFactory,
-        ClimbFactory,
-        OrientationFactory,
-        RockTypeFactory,
-        GradeFactory,
-        $filter,
-        $timeout) {
+    .controller('cragDetailController', function ($scope,
+                                                  $http,
+                                                  $stateParams,
+                                                  CragFactory,
+                                                  AreaFactory,
+                                                  ClimbFactory,
+                                                  OrientationFactory,
+                                                  RockTypeFactory,
+                                                  GradeFactory,
+                                                  $filter,
+                                                  $timeout) {
 
 
         // object to hold all the data for the new crag form
@@ -51,7 +50,7 @@ angular.module('cragDetailCtrl', [])
 
         $scope.formData = {};
         //populate form with crag information
-        $scope.fillForm = function(){
+        $scope.fillForm = function () {
             //console.log("Here")
             $scope.formData.cragArea = $scope.cragData.area_id;
             $scope.formData.cragLat = $scope.cragData.lat;
@@ -65,15 +64,21 @@ angular.module('cragDetailCtrl', [])
             $scope.formData.cragRockType = $scope.cragData.rockType_id;
             $scope.formData.cragOrientation = $scope.cragData.orientation_id;
 
-            if($scope.cragData.midges == 1){
+            if ($scope.cragData.midges == 1) {
                 $scope.formData.midges = true;
-            }else{$scope.formData.midges = false}
-            if($scope.cragData.seepage == 1){
+            } else {
+                $scope.formData.midges = false
+            }
+            if ($scope.cragData.seepage == 1) {
                 $scope.formData.seepage = true;
-            }else{$scope.formData.seepage = false}
-            if($scope.cragData.sheltered == 1){
+            } else {
+                $scope.formData.seepage = false
+            }
+            if ($scope.cragData.sheltered == 1) {
                 $scope.formData.sheltered = true;
-            }else{$scope.formData.sheltered = false}
+            } else {
+                $scope.formData.sheltered = false
+            }
 
         };
 
@@ -113,15 +118,21 @@ angular.module('cragDetailCtrl', [])
             $scope.submitButtonHidden = true;
             $scope.progressMessageShowing = true;
 
-            if($scope.formData.midges == true){
+            if ($scope.formData.midges == true) {
                 $scope.formData.midges = 1;
-            }else{$scope.formData.midges = 0}
-            if($scope.formData.seepage == true){
+            } else {
+                $scope.formData.midges = 0
+            }
+            if ($scope.formData.seepage == true) {
                 $scope.formData.seepage = 1;
-            }else{$scope.formData.seepage = 0}
-            if($scope.formData.sheltered == true){
+            } else {
+                $scope.formData.seepage = 0
+            }
+            if ($scope.formData.sheltered == true) {
                 $scope.formData.sheltered = 1;
-            }else{$scope.formData.sheltered = 0}
+            } else {
+                $scope.formData.sheltered = 0
+            }
             //$scope.errorShowing = false;
 
             if (isValid) {
@@ -174,16 +185,27 @@ angular.module('cragDetailCtrl', [])
          */
 
         $scope.climbFormData = {};
-        $scope.fillClimbForm = function($climb) {
+        $scope.fillClimbForm = function ($climb) {
             //console.log("Here");
             //console.log($climb);
             $scope.thisClimb = $climb;
+            $scope.loadingGrade = true;
             $scope.climbFormData.grade = $climb.grade_id;
+            $scope.thisGrade = {};
+            GradeFactory.getDetail($climb.grade_id)
+                .success(function (data11) {
+                    $scope.thisGrade = data11;
+                    //console.log($scope.thisGrade);
+                    $scope.filterGradeGradeType = $scope.thisGrade.climbTypeId;
+                    $scope.gradeTypeSelected();
+                    $scope.filterGradeSeverity = $scope.thisGrade.severityGrade;
+                    $scope.loadingGrade = false;
+                });
             $scope.climbFormData.crag = $climb.crag_id;
             $scope.climbFormData.climbName = $climb.name;
             $scope.climbFormData.climbDescription = $climb.description;
             $scope.climbFormData.length = $climb.length;
-            $scope.climbFormData.pitches= $climb.pitches;
+            $scope.climbFormData.pitches = $climb.pitches;
             $scope.climbFormData.firstAscent = $climb.firstAscent;
             $scope.climbFormData.firstAscentDate = $filter('date')(new Date($climb.firstAscentDate), "dd/MM/yyyy");
             $scope.climbFormData.topoNumber = $climb.topoNumber;
@@ -210,6 +232,42 @@ angular.module('cragDetailCtrl', [])
             .success(function (data9) {
                 $scope.gradesData = data9;
             });
+
+        /*Grade Selector*/
+        $scope.technialOnlySelect = false;
+        $scope.techAndSevSelect = false;
+
+        $scope.gradeTypeSelected = function () {
+            $scope.technialOnlySelect = false;
+            $scope.techAndSevSelect = false;
+            $timeout(function () {
+                if ($scope.filterGradeGradeType === 1) {
+                    //British Trad
+                    //console.log("British Trad");
+                    $scope.techAndSevSelect = true;
+                } else if ($scope.filterGradeGradeType === 2) {
+                    //French Sport
+                    //console.log("French Sport");
+                    $scope.technialOnlySelect = true;
+                } else if ($scope.filterGradeGradeType === 3) {
+                    //Bouldering V
+                    //console.log("Bouldering V");
+                    $scope.technialOnlySelect = true;
+                } else if ($scope.filterGradeGradeType === 4) {
+                    //Bouldering Font
+                    //console.log("Bouldering Font");
+                    $scope.technialOnlySelect = true;
+                } else if ($scope.filterGradeGradeType === 5) {
+                    //DWS
+                    //console.log("DWS");
+                    $scope.techAndSevSelect = true;
+                } else {
+                    $scope.errorShowing = true;
+                    $scope.technialOnlySelect = false;
+                    $scope.techAndSevSelect = false;
+                }
+            }, 250);
+        };
 
 
         $scope.processClimbForm = function (isValid) {

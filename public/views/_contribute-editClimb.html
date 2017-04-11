@@ -28,41 +28,17 @@
           ng-submit="processClimbForm(editClimbForm.$valid)"
           novalidate>
 
-        <!--SELECT CLIMB TYPE-->
-        <!--SELECT CLIMB SYSTEM-->
-        <!--SELECT CLIMB GRADE-->
-        <div class="form-group"
-             ng-class="{ 'has-error' : editClimbForm.grade.$invalid && submitted}">
-            <label for="selectGrade" class="col-sm-2 control-label">Select Grade:</label>
-            <div class="col-sm-4">
-                <select name="grade"
-                        class="form-control"
-                        id="selectGrade"
-                        ng-model="climbFormData.grade"
-                        ng-init="climbFormData.grade = options[thisClimb.grade_id].value"
-                        ng-options="grade.id as grade.climbTypeSystem + ' ' + grade.climbTypeName + ' ' + grade.severityGrade + ' ' + grade.technicalGrade for grade in gradesData"
-                        required>
-                    <option value=""></option>
-                </select>
-            </div>
-            <p ng-show="editClimbForm.grade.$invalid && submitted"
-               class="help-block">
-                Select the Grade of the Climb
-            </p>
-        </div>
-
-
         <!--SELECT CRAG-->
         <div class="form-group"
              ng-class="{ 'has-error' : editClimbForm.crag.$invalid && submitted}">
             <label for="selectCrag" class="col-sm-2 control-label">Select Crag:</label>
-            <div class="col-sm-10">
+            <div class="col-sm-6">
                 <select name="crag"
                         class="form-control"
                         id="selectCrag"
                         ng-model="climbFormData.crag"
-                        ng-init="climbFormData.crag = options[climbData.crag_id].value"
                         ng-options="crag.id as crag.name for crag in cragsData"
+                        ng-change="cragSelected()"
                         required>
                     <option value="">Select Crag</option>
                 </select>
@@ -72,6 +48,82 @@
                 Select the Crag that the Climb is on
             </p>
         </div>
+
+
+        <!--SELECT CLIMB GRADE-->
+        <div ng-show="loadingGrade">
+            <p>Loading...</p>
+        </div>
+        <div class="form-group"
+             ng-class="{ 'has-error' : editClimbForm.grade.$invalid && submitted}"
+             ng-hide="loadingGrade">
+            <label for="selectGrade" class="col-sm-2 control-label">Select Grade:</label>
+            <!--<div class="col-sm-2">
+                <select name="grade"
+                        class="form-control"
+                        id="selectGrade"
+                        ng-model="formData.grade"
+                        ng-options="grade.id as grade.climbTypeSystem + ' ' + grade.climbTypeName + ' ' + grade.severityGrade + ' ' + grade.technicalGrade for grade in gradesData"
+                        required>
+                    <option value="">Select Grade</option>
+                </select>
+            </div>-->
+            <!--Grade Type Select-->
+            <div class="col-sm-3">
+                <select name="gradeType"
+                        class="form-control"
+                        id="selectGrade"
+                        ng-model="filterGradeGradeType"
+                        ng-change="gradeTypeSelected()"
+                        ng-options="grade.climbTypeId as grade.climbTypeSystem + ' ' + grade.climbTypeName for grade in gradesData | unique:'climbTypeId'"
+                        required>
+                    <option value="">Grade Type</option>
+                </select>
+            </div>
+
+            <!--Sev Select -->
+            <!--Shows sev select box -->
+            <div class="col-sm-3">
+                <select name="grade"
+                        ng-show="techAndSevSelect"
+                        class="form-control"
+                        ng-model="filterGradeSeverity"
+                        ng-options="grade.severityGrade as grade.severityGrade for grade in gradesData | where:{ climbTypeId : filterGradeGradeType} | unique:'severityGrade' "
+                        required>
+                    <option value="">Sev Grade</option>
+                </select>
+            </div>
+
+            <!--Tech Select-->
+            <!--Shows tech select box ::filter.severity &&-->
+            <div class="col-sm-3">
+                <select name="grade"
+                        ng-show=" techAndSevSelect"
+                        class="form-control"
+                        ng-model="climbFormData.grade"
+                        ng-options="grade.id as grade.technicalGrade for grade in gradesData | where:{ severityGrade : filterGradeSeverity }"
+                        required>
+                    <option value="">Tech Grade</option>
+                </select>
+            </div>
+
+            <!--Technical Only Select -->
+            <!--Shows just technical select box for grade types that don't have a sev grade-->
+            <div class="col-sm-3">
+                <select name="grade"
+                        ng-show="technialOnlySelect"
+                        class="form-control"
+                        ng-model="climbFormData.grade"
+                        ng-options="grade.id as grade.technicalGrade for grade in gradesData | where:{ climbTypeId : filterGradeGradeType }"
+                        required>
+                    <option value="">Select Grade</option>
+                </select>
+            </div>
+            <p ng-show="editClimbForm.grade.$invalid && submitted"
+               class="help-block">
+                Select the Grade of the Climb
+            </p>
+        </div> <!--END OF GRADE SELECTION-->
 
         <!--CLIMB NAME-->
         <div class="form-group"
