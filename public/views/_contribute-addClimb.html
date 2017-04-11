@@ -20,15 +20,6 @@
             </div>
             <hr>
 
-            <!--WARNING MESSAGE-->
-            <!--<div class="alert alert-danger text-center">
-                Please be aware, any data you create is likely to be destroyed as Rock Advisor is still in development.
-            </div>-->
-            <div class="alert alert-info text-center">
-                Improvements to the grade selection system are coming soon.
-            </div>
-
-
             <!--Start of Form-->
             <form class="form-horizontal"
                   name="addClimbForm"
@@ -104,10 +95,10 @@
                     </div>
 
                     <!--Tech Select-->
-                    <!--Shows tech select box ::filter.severity &&-->
+                    <!--Shows tech select box -->
                     <div class="col-sm-3">
                         <select name="grade"
-                                ng-show=" techAndSevSelect"
+                                ng-show="techAndSevSelect"
                                 class="form-control"
                                 ng-model="formData.grade"
                                 ng-options="grade.id as grade.technicalGrade for grade in gradesData | where:{ severityGrade : filter.severity }"
@@ -122,7 +113,7 @@
                     <!--Shows just technical select box for grade types that don't have a sev grade-->
                     <div class="col-sm-3">
                         <select name="grade"
-                                ng-show="technialOnlySelect"
+                                ng-show="technicalOnlySelect"
                                 class="form-control"
                                 ng-model="formData.grade"
                                 ng-options="grade.id as grade.technicalGrade for grade in gradesData | where:{ climbTypeId : filter.gradeType }"

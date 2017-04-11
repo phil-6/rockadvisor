@@ -46,11 +46,11 @@ angular.module('climbFormCtrl', [])
         };
 
         /*Grade Selector*/
-        $scope.technialOnlySelect = false;
+        $scope.technicalOnlySelect = false;
         $scope.techAndSevSelect = false;
 
         $scope.gradeTypeSelected = function () {
-            $scope.technialOnlySelect = false;
+            $scope.technicalOnlySelect = false;
             $scope.techAndSevSelect = false;
             $timeout(function () {
                 if ($scope.filter.gradeType === 1) {
@@ -60,22 +60,22 @@ angular.module('climbFormCtrl', [])
                 } else if ($scope.filter.gradeType === 2) {
                     //French Sport
                     //console.log("French Sport");
-                    $scope.technialOnlySelect = true;
+                    $scope.technicalOnlySelect = true;
                 } else if ($scope.filter.gradeType === 3) {
                     //Bouldering V
                     //console.log("Bouldering V");
-                    $scope.technialOnlySelect = true;
+                    $scope.technicalOnlySelect = true;
                 } else if ($scope.filter.gradeType === 4) {
                     //Bouldering Font
                     //console.log("Bouldering Font");
-                    $scope.technialOnlySelect = true;
+                    $scope.technicalOnlySelect = true;
                 } else if ($scope.filter.gradeType === 5) {
                     //DWS
                     //console.log("DWS");
                     $scope.techAndSevSelect = true;
                 } else {
                     $scope.errorShowing = true;
-                    $scope.technialOnlySelect = false;
+                    $scope.technicalOnlySelect = false;
                     $scope.techAndSevSelect = false;
                 }
             },250);
