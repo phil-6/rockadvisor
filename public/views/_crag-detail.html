@@ -13,28 +13,24 @@
         Page Header
         ==========
                   -->
-    <section class="bg-primarygrad text-center ">
-        <button ng-click="showEditControls()"
-                ng-hide="editButtonShowing"
-                class="btn btn-primary pull-right no-margin text-faded"
-                data-toggle="tooltip"
-                title="Show Editor Controls">
-            <i class="fa fa-terminal fa-2x" aria-hidden="true"></i>
-        </button>
-        <button ng-click="hideEditControls()"
-                ng-show="editButtonShowing"
-                class="btn btn-primary pull-right no-margin text-faded"
-                data-toggle="tooltip"
-                title="Done Editing">
-            <i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
-        </button>
+    <section class="bg-primarygrad text-center">
+
+
+
 
 
         <!-- Crag Name -->
-        <div class="page-header" ng-hide="loading">
-            <h1>{{cragData.name}} </h1>
-
+        <div class="page-header center-block no-margin" ng-hide="loading">
+            <h1 class="no-margin">{{cragData.name}} </h1>
         </div>
+        <!-- Edit Crag Button-->
+        <button ng-show="editButtonShowing"
+                ng-click="fillForm()"
+                class="btn btn-default clearfix"
+                data-toggle="modal"
+                data-target="#editModal">
+            Edit
+        </button>
         <hr>
 
         <!-- Crag Details -->
@@ -55,14 +51,7 @@
             </div>
 
         </div>
-        <!-- Edit Crag Button-->
-        <button ng-show="editButtonShowing"
-                ng-click="fillForm()"
-                class="btn btn-default"
-                data-toggle="modal"
-                data-target="#editModal">
-            Edit
-        </button>
+
 
 
         <div id="editModal" class="modal fade"
@@ -77,6 +66,22 @@
             </div>
 
         </div>
+
+        <!--Toggle Editor Buttons-->
+        <button ng-click="showEditControls()"
+                ng-hide="editButtonShowing"
+                class="btn btn-primary pull-right text-right "
+                data-toggle="tooltip"
+                title="Show Editor Controls">
+            <i class="fa fa-terminal fa-2x" aria-hidden="true"></i>
+        </button>
+        <button ng-click="hideEditControls()"
+                ng-show="editButtonShowing"
+                class="btn btn-primary pull-right text-right "
+                data-toggle="tooltip"
+                title="Done Editing">
+            <i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
+        </button>
 
 
     </section>
@@ -96,7 +101,8 @@
         </div>
         <!-- Update Success Message -->
         <div class="alert alert-success alert-dismissable text-center" ng-show="showUpdateMessage">
-            <strong>Success!</strong> <a href="" ng-click="refreshClimbs()" class="alert-link">Refresh</a> the list to see changes.
+            <strong>Success!</strong> <a href="" ng-click="refreshClimbs()" class="alert-link">Refresh</a> the list to
+            see changes.
         </div>
 
         <!-- Loading Icon -->
