@@ -68,7 +68,7 @@
                 <select name="gradeType"
                         class="form-control"
                         id="selectGrade"
-                        ng-model="filterGradeGradeType"
+                        ng-model="filter.gradeType"
                         ng-change="gradeTypeSelected()"
                         ng-options="grade.climbTypeId as grade.climbTypeSystem + ' ' + grade.climbTypeName for grade in gradesData | unique:'climbTypeId'"
                         data-toggle="tooltip"
@@ -84,8 +84,8 @@
                 <select name="grade"
                         ng-show="techAndSevSelect"
                         class="form-control"
-                        ng-model="filterGradeSeverity"
-                        ng-options="grade.severityGrade as grade.severityGrade for grade in gradesData | where:{ climbTypeId : filterGradeGradeType} | unique:'severityGrade' "
+                        ng-model="filter.severity"
+                        ng-options="grade.severityGrade as grade.severityGrade for grade in gradesData | where:{ climbTypeId : filter.gradeType} | unique:'severityGrade' "
                         data-toggle="tooltip"
                         title="What is the severity grade for this climb?"
                         required>
@@ -100,7 +100,7 @@
                         ng-show="techAndSevSelect"
                         class="form-control"
                         ng-model="climbFormData.grade"
-                        ng-options="grade.id as grade.technicalGrade for grade in gradesData | where:{ severityGrade : filterGradeSeverity }"
+                        ng-options="grade.id as grade.technicalGrade for grade in gradesData | where:{ severityGrade : filter.severity }"
                         data-toggle="tooltip"
                         title="What is the technical grade for this climb?"
                         required>
@@ -115,7 +115,7 @@
                         ng-show="technicalOnlySelect"
                         class="form-control"
                         ng-model="climbFormData.grade"
-                        ng-options="grade.id as grade.technicalGrade for grade in gradesData | where:{ climbTypeId : filterGradeGradeType }"
+                        ng-options="grade.id as grade.technicalGrade for grade in gradesData | where:{ climbTypeId : filter.gradeType }"
                         data-toggle="tooltip"
                         title="What grade is this Climb?"
                         required>
