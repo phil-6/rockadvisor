@@ -88,7 +88,7 @@
                         ng-options="grade.severityGrade as grade.severityGrade for grade in gradesData | where:{ climbTypeId : filter.gradeType} | unique:'severityGrade' "
                         data-toggle="tooltip"
                         title="What is the severity grade for this climb?"
-                        required>
+                        >
                     <option value="">Sev Grade</option>
                 </select>
             </div>
@@ -103,7 +103,7 @@
                         ng-options="grade.id as grade.technicalGrade for grade in gradesData | where:{ severityGrade : filter.severity }"
                         data-toggle="tooltip"
                         title="What is the technical grade for this climb?"
-                        required>
+                        >
                     <option value="">Tech Grade</option>
                 </select>
             </div>
@@ -118,7 +118,7 @@
                         ng-options="grade.id as grade.technicalGrade for grade in gradesData | where:{ climbTypeId : filter.gradeType }"
                         data-toggle="tooltip"
                         title="What grade is this Climb?"
-                        required>
+                        >
                     <option value="">Select Grade</option>
                 </select>
             </div>
@@ -126,6 +126,7 @@
                class="help-block">
                 Select the Grade of the Climb
             </p>
+
         </div> <!--END OF GRADE SELECTION-->
 
         <!--CLIMB NAME-->
@@ -300,6 +301,6 @@
 </div>
 
 <!--DEBUGGING-->
-<!--<pre>
+<pre>
     {{ climbFormData }}
-</pre>-->
+</pre>
