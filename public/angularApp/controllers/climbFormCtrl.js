@@ -14,12 +14,15 @@ angular.module('climbFormCtrl', [])
         $scope.submitted = false;
         $scope.dateregex = "^(?:(?:31(\\/|-|\\.)(?:0?[13578]|1[02]))\\1|(?:(?:29|30)(\\/|-|\\.)(?:0?[1,3-9]|1[0-2])\\2))(?:(?:1[6-9]|[2-9]\\d)?\\d{2})$|^(?:29(\\/|-|\\.)0?2\\3(?:(?:(?:1[6-9]|[2-9]\\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\\d|2[0-8])(\\/|-|\\.)(?:(?:0?[1-9])|(?:1[0-2]))\\4(?:(?:1[6-9]|[2-9]\\d)?\\d{2})$";
         //console.log("ctrl-here");
+        // loading variable to show the spinning loading icon
+        $scope.loading = true;
 
         /*Get All Crags*/
         $scope.cragsData = {};
         CragFactory.get()
             .success(function (data2) {
                 $scope.cragsData = data2;
+
             });
 
         /*Get All Grades*/
@@ -27,6 +30,7 @@ angular.module('climbFormCtrl', [])
         GradeFactory.get()
             .success(function (data3) {
                 $scope.gradesData = data3;
+                $scope.loading = false;
             });
 
         /*Get Climbs at Crag*/
@@ -39,8 +43,42 @@ angular.module('climbFormCtrl', [])
             if ($scope.climbsAtCrag) {
                 $scope.showCurrentClimbs = true;
             }
+        };
 
+        /*Grade Selector*/
+        $scope.technialOnlySelect = false;
+        $scope.techAndSevSelect = false;
 
+        $scope.gradeTypeSelected = function () {
+            $scope.technialOnlySelect = false;
+            $scope.techAndSevSelect = false;
+            $timeout(function () {
+                if ($scope.filter.gradeType === 1) {
+                    //British Trad
+                    //console.log("British Trad");
+                    $scope.techAndSevSelect = true;
+                } else if ($scope.filter.gradeType === 2) {
+                    //French Sport
+                    //console.log("French Sport");
+                    $scope.technialOnlySelect = true;
+                } else if ($scope.filter.gradeType === 3) {
+                    //Bouldering V
+                    //console.log("Bouldering V");
+                    $scope.technialOnlySelect = true;
+                } else if ($scope.filter.gradeType === 4) {
+                    //Bouldering Font
+                    //console.log("Bouldering Font");
+                    $scope.technialOnlySelect = true;
+                } else if ($scope.filter.gradeType === 5) {
+                    //DWS
+                    //console.log("DWS");
+                    $scope.techAndSevSelect = true;
+                } else {
+                    $scope.errorShowing = true;
+                    $scope.technialOnlySelect = false;
+                    $scope.techAndSevSelect = false;
+                }
+            },250);
         };
 
 

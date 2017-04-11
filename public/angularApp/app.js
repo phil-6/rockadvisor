@@ -23,7 +23,7 @@ var finderApp = angular.module('finderApp', [
     'climbsCtrl', 'climbService',
     'climbFormCtrl',
     'gradeService', 'orientationService', 'rockTypeService',
-    'ui.router', 'ui.bootstrap', 'ngAnimate'
+    'ui.router', 'ui.bootstrap', 'angular.filter', 'ngAnimate'
 ]);
 
 finderApp.config(function($stateProvider, $urlRouterProvider){
