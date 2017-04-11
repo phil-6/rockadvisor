@@ -39,6 +39,8 @@
                         ng-model="climbFormData.crag"
                         ng-options="crag.id as crag.name for crag in cragsData"
                         ng-change="cragSelected()"
+                        data-toggle="tooltip"
+                        title="Select which crag this climb is at."
                         required>
                     <option value="">Select Crag</option>
                 </select>
@@ -76,6 +78,8 @@
                         ng-model="filterGradeGradeType"
                         ng-change="gradeTypeSelected()"
                         ng-options="grade.climbTypeId as grade.climbTypeSystem + ' ' + grade.climbTypeName for grade in gradesData | unique:'climbTypeId'"
+                        data-toggle="tooltip"
+                        title="What type of climb is this?"
                         required>
                     <option value="">Grade Type</option>
                 </select>
@@ -89,6 +93,8 @@
                         class="form-control"
                         ng-model="filterGradeSeverity"
                         ng-options="grade.severityGrade as grade.severityGrade for grade in gradesData | where:{ climbTypeId : filterGradeGradeType} | unique:'severityGrade' "
+                        data-toggle="tooltip"
+                        title="What is the severity grade for this climb?"
                         required>
                     <option value="">Sev Grade</option>
                 </select>
@@ -102,6 +108,8 @@
                         class="form-control"
                         ng-model="climbFormData.grade"
                         ng-options="grade.id as grade.technicalGrade for grade in gradesData | where:{ severityGrade : filterGradeSeverity }"
+                        data-toggle="tooltip"
+                        title="What is the technical grade for this climb?"
                         required>
                     <option value="">Tech Grade</option>
                 </select>
@@ -115,6 +123,8 @@
                         class="form-control"
                         ng-model="climbFormData.grade"
                         ng-options="grade.id as grade.technicalGrade for grade in gradesData | where:{ climbTypeId : filterGradeGradeType }"
+                        data-toggle="tooltip"
+                        title="What grade is this Climb?"
                         required>
                     <option value="">Select Grade</option>
                 </select>
@@ -134,6 +144,8 @@
                        name="climbName"
                        class="form-control"
                        ng-model="climbFormData.climbName"
+                       data-toggle="tooltip"
+                       title="What is this climb called?"
                        required>
             </div>
             <p ng-show="editClimbForm.climbName.$invalid && submitted"
@@ -147,12 +159,14 @@
              ng-class="{ 'has-error' : editClimbForm.climbDescription.$invalid  && submitted}">
             <label class="col-sm-2 control-label">Description:</label>
             <div class="col-sm-10">
-                        <textarea name="climbDescription"
-                                  class="form-control"
-                                  ng-model="climbFormData.climbDescription"
-                                  placeholder="Description"
-                                  required>
-                        </textarea>
+                <textarea name="climbDescription"
+                          class="form-control"
+                          ng-model="climbFormData.climbDescription"
+                          placeholder="Description"
+                          data-toggle="tooltip"
+                          title="How does this climb go?"
+                          required>
+                </textarea>
             </div>
             <p ng-show="editClimbForm.climbDescription.$invalid && submitted"
                class="help-block">
@@ -172,6 +186,8 @@
                            class="form-control"
                            ng-model="climbFormData.length"
                            placeholder="10m"
+                           data-toggle="tooltip"
+                           title="Enter the approximate length of this climb"
                            required>
                 </div>
             </div>
@@ -184,6 +200,8 @@
                            class="form-control"
                            ng-model="climbFormData.pitches"
                            placeholder="1"
+                           data-toggle="tooltip"
+                           title="Roughly how many pitches is this climb?"
                            required>
                 </div>
             </div>
@@ -210,7 +228,10 @@
                            name="firstAscent"
                            class="form-control"
                            ng-model="climbFormData.firstAscent"
-                           placeholder="Joe Bloggs" required>
+                           placeholder="Joe Bloggs"
+                           data-toggle="tooltip"
+                           title="Who climbed this first?"
+                           required>
                 </div>
             </div>
             <div ng-class="{ 'has-error' : editClimbForm.firstAscentDate.$invalid && submitted}">
@@ -222,7 +243,10 @@
                            class="form-control"
                            ng-model="climbFormData.firstAscentDate"
                            ng-pattern="dateregex"
-                           placeholder="dd/mm/yyyy" required>
+                           placeholder="dd/mm/yyyy"
+                           data-toggle="tooltip"
+                           title="When was it first climbed? Enter 01/01/1980 if unknown"
+                           required>
                 </div>
             </div>
         </div>

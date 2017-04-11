@@ -39,6 +39,8 @@
                         ng-model="formData.cragArea"
                         ng-init="formData.cragArea = options[cragData.area_id].value"
                         ng-options="area.id as area.name for area in areasData"
+                        data-toggle="tooltip"
+                        title="Select the Area that the Crag is in."
                         required>
                     <option value=""></option>
                 </select>
@@ -63,6 +65,8 @@
                        ng-model="formData.cragLat"
                        ng-pattern="latregex"
                        placeholder="Latitude: 51.600000"
+                       data-toggle="tooltip"
+                       title="Enter the Crag Latitude"
                        required>
             </div>
             <div class="col-sm-5">
@@ -72,6 +76,8 @@
                        ng-model="formData.cragLng"
                        ng-pattern="lngregex"
                        placeholder="Longitude: -4.150000"
+                       data-toggle="tooltip"
+                       title="Enter the Crag Longitude"
                        required>
             </div>
             <p ng-show="editCragForm.cragLat.$invalid
@@ -95,6 +101,8 @@
                        name="cragName"
                        class="form-control"
                        ng-model="formData.cragName"
+                       data-toggle="tooltip"
+                       title="What's the name of this Crag?"
                        required>
             </div>
             <p ng-show="editCragForm.cragName.$invalid && submitted"
@@ -112,6 +120,8 @@
                           class="form-control"
                           ng-model="formData.cragDescription"
                           placeholder="Description"
+                          data-toggle="tooltip"
+                          title="Describe the Crag"
                           required>
                 </textarea>
             </div>
@@ -130,6 +140,8 @@
                           class="form-control"
                           ng-model="formData.cragApproach"
                           placeholder="How do you get here?"
+                          data-toggle="tooltip"
+                          title="How do you get to this Crag?"
                           required>
 
                 </textarea>
@@ -150,7 +162,8 @@
                           class="form-control"
                           ng-model="formData.cragAccess"
                           placeholder="Access problems or information"
-                          >
+                          data-toggle="tooltip"
+                          title="Are there any access restrictions?">
                 </textarea>
             </div>
             <p ng-show="editCragForm.cragAccess.$invalid && submitted"
@@ -171,6 +184,8 @@
                            name="cragTidalRange"
                            class="form-control"
                            ng-model="formData.cragTidalRange"
+                           data-toggle="tooltip"
+                           title="How many hours either side of low tide can you climb here?"
                            placeholder="Tidal Range">
                 </div>
             </div>
@@ -185,6 +200,8 @@
                            class="form-control"
                            ng-model="formData.cragApproachTime"
                            placeholder="Time in minutes"
+                           data-toggle="tooltip"
+                           title="How long does it take to get here?"
                            required>
                 </div>
 
@@ -213,6 +230,8 @@
                             id="selectRockType"
                             ng-model="formData.cragRockType"
                             ng-options="rockType.id as rockType.name for rockType in rockTypesData"
+                            data-toggle="tooltip"
+                            title="What rock type is this crag made from?"
                             required>
                         <option value=""></option>
                     </select>
@@ -227,6 +246,8 @@
                             id="selectOrientation"
                             ng-model="formData.cragOrientation"
                             ng-options="orientation.id as orientation.name for orientation in orientationsData"
+                            data-toggle="tooltip"
+                            title="Which direction does this crag face?"
                             required>
                         <option value=""></option>
                     </select>

@@ -40,6 +40,15 @@ angular.module('areaDetailCtrl', [])
                 $scope.loading = false;
             });
 
+        //Toggle Controls
+        $scope.editButtonShowing = false;
+        $scope.showEditControls = function(){
+            $scope.editButtonShowing = true;
+        };
+        $scope.hideEditControls = function(){
+            $scope.editButtonShowing = false;
+        };
+
 
         /**
          * EDIT AREA
