@@ -7,12 +7,28 @@
 -->
 
 <div class="row crag-detail no-margin">
+
     <!--
         ==========
         Page Header
         ==========
                   -->
     <section class="bg-primarygrad text-center ">
+        <button ng-click="showEditControls()"
+                ng-hide="editButtonShowing"
+                class="btn btn-primary pull-right no-margin text-faded"
+                data-toggle="tooltip"
+                title="Show Editor Controls">
+            <i class="fa fa-terminal fa-2x" aria-hidden="true"></i>
+        </button>
+        <button ng-click="hideEditControls()"
+                ng-show="editButtonShowing"
+                class="btn btn-primary pull-right no-margin text-faded"
+                data-toggle="tooltip"
+                title="Done Editing">
+            <i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
+        </button>
+
 
         <!-- Crag Name -->
         <div class="page-header" ng-hide="loading">
@@ -39,7 +55,8 @@
             </div>
 
         </div>
-        <button ng-hide="loading"
+        <!-- Edit Crag Button-->
+        <button ng-show="editButtonShowing"
                 ng-click="fillForm()"
                 class="btn btn-default"
                 data-toggle="modal"
@@ -73,6 +90,14 @@
     <div class="col-lg-6 col-lg-offset-3 climb-list">
         <h2 class="text-center">Climbs</h2>
         <hr>
+        <!-- Delete Success Message -->
+        <div class="alert alert-success alert-dismissable text-center" ng-show="showMessage">
+            <p>{{message}}</p>
+        </div>
+        <!-- Update Success Message -->
+        <div class="alert alert-success alert-dismissable text-center" ng-show="showUpdateMessage">
+            <strong>Success!</strong> <a href="" ng-click="refreshClimbs()" class="alert-link">Refresh</a> the list to see changes.
+        </div>
 
         <!-- Loading Icon -->
         <!-- show loading icon if the loading variable is set to true -->
@@ -88,8 +113,15 @@
             <p>Description: {{ climb.description }}</p>
             <p>Length: {{ climb.length}}m</p>
 
-            <!--Edit Button-->
-            <button ng-hide="loading"
+            <!--Edit Climb Button-->
+            <!-- Delete Crag and Show Crag Buttons -->
+            <button class="btn btn-danger"
+                    ng-show="editButtonShowing"
+                    ng-click="deleteClimb(climb.id)"
+                    data-toggle="confirmation">
+                Delete
+            </button>
+            <button ng-show="editButtonShowing"
                     ng-click="fillClimbForm(climb)"
                     class="btn btn-primary"
                     data-toggle="modal"
@@ -105,7 +137,11 @@
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <!-- Close Cross Top Right-->
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <button type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-hidden="true">×
+                        </button>
                         <div ng-include="'../views/_contribute-editClimb.html'"></div>
                     </div>
                 </div>

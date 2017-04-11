@@ -25,10 +25,19 @@ angular
                 $scope.loading = false;
             });
 
+        //Toggle Controls
+        $scope.editButtonShowing = false;
+        $scope.showEditControls = function(){
+            $scope.editButtonShowing = true;
+        };
+        $scope.hideEditControls = function(){
+            $scope.editButtonShowing = false;
+        };
+
 
         // function to handle submitting the form
         // SAVE AN CRAG ================
-        $scope.submitCrag = function () {
+       /* $scope.submitCrag = function () {
             $scope.loading = true;
 
             // save the crag. pass in crag data from the form
@@ -47,7 +56,7 @@ angular
                 .error(function (data) {
                     //console.log(data);
                 });
-        };
+        };*/
 
         // function to handle deleting a crag
         // DELETE A CRAG ====================================================
@@ -61,7 +70,7 @@ angular
                         var i;
                         for (i = 0; i < $scope.cragsData.length; i++) {
                             crag = $scope.cragsData[i];
-                            if (crag.id == id) {
+                            if (crag.id === id) {
                                 break;
                             }
                         }

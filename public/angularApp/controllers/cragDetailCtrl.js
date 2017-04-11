@@ -22,6 +22,7 @@ angular.module('cragDetailCtrl', [])
         $scope.cragId = $stateParams.cragID;
         $scope.cragData = {};
         $scope.climbData = {};
+        $scope.showMessage = false;
 
 
         // loading variable to show the spinning loading icon
@@ -40,13 +41,38 @@ angular.module('cragDetailCtrl', [])
             .success(function (data2) {
                 //console.log(data2);
                 $scope.climbData = data2;
+                //console.log($scope.climbData[0]);
                 $scope.loading = false;
             });
+
+        //Refresh Climbs
+        $scope.refreshClimbs = function(){
+            $scope.showUpdateMessage = false;
+            CragFactory.getClimbs($scope.cragId)
+                .success(function (data3) {
+                    //console.log(data2);
+                    $scope.climbData = data3;
+                    //console.log($scope.climbData[0]);
+                    $scope.loading = false;
+                });
+        };
+
+        //Toggle Controls
+        $scope.editButtonShowing = false;
+        $scope.showEditControls = function(){
+            $scope.editButtonShowing = true;
+        };
+        $scope.hideEditControls = function(){
+            $scope.editButtonShowing = false;
+        };
+
+
 
 
         /**
          * EDIT CRAG
          */
+        // EDIT CRAG ====================================================
 
         $scope.formData = {};
         //populate form with crag information
@@ -64,17 +90,17 @@ angular.module('cragDetailCtrl', [])
             $scope.formData.cragRockType = $scope.cragData.rockType_id;
             $scope.formData.cragOrientation = $scope.cragData.orientation_id;
 
-            if ($scope.cragData.midges == 1) {
+            if ($scope.cragData.midges === 1) {
                 $scope.formData.midges = true;
             } else {
                 $scope.formData.midges = false
             }
-            if ($scope.cragData.seepage == 1) {
+            if ($scope.cragData.seepage === 1) {
                 $scope.formData.seepage = true;
             } else {
                 $scope.formData.seepage = false
             }
-            if ($scope.cragData.sheltered == 1) {
+            if ($scope.cragData.sheltered === 1) {
                 $scope.formData.sheltered = true;
             } else {
                 $scope.formData.sheltered = false
@@ -93,23 +119,23 @@ angular.module('cragDetailCtrl', [])
 
         $scope.areasData = {};
         AreaFactory.get()
-            .success(function (data3) {
+            .success(function (data4) {
                 //console.log("ctrl");
-                $scope.areasData = data3;
+                $scope.areasData = data4;
             });
 
         $scope.orientationsData = {};
         OrientationFactory.get()
-            .success(function (data4) {
+            .success(function (data5) {
                 //console.log("ctrl");
-                $scope.orientationsData = data4;
+                $scope.orientationsData = data5;
             });
 
         $scope.rockTypesData = {};
         RockTypeFactory.get()
-            .success(function (data5) {
+            .success(function (data6) {
                 //console.log("ctrl");
-                $scope.rockTypesData = data5;
+                $scope.rockTypesData = data6;
             });
 
 
@@ -118,17 +144,17 @@ angular.module('cragDetailCtrl', [])
             $scope.submitButtonHidden = true;
             $scope.progressMessageShowing = true;
 
-            if ($scope.formData.midges == true) {
+            if ($scope.formData.midges === true) {
                 $scope.formData.midges = 1;
             } else {
                 $scope.formData.midges = 0
             }
-            if ($scope.formData.seepage == true) {
+            if ($scope.formData.seepage === true) {
                 $scope.formData.seepage = 1;
             } else {
                 $scope.formData.seepage = 0
             }
-            if ($scope.formData.sheltered == true) {
+            if ($scope.formData.sheltered === true) {
                 $scope.formData.sheltered = 1;
             } else {
                 $scope.formData.sheltered = 0
@@ -142,17 +168,17 @@ angular.module('cragDetailCtrl', [])
                 $scope.errorShowing = false;
 
                 CragFactory.update($scope.formData, $scope.cragData.id)
-                    .success(function (data6) {
+                    .success(function (data7) {
                         //console.log(data); //debugging
-                        if (data6.success) { //success comes from the return json object
+                        if (data7.success) { //success comes from the return json object
                             //$scope.submitButtonHidden = true;
                             $scope.progressMessageShowing = false;
                             $scope.resultShowing = true;
                             //get updated crag information
                             CragFactory.getDetail($scope.cragId)
-                                .success(function (data7) {
+                                .success(function (data8) {
                                     //console.log(data);
-                                    $scope.cragData = data7;
+                                    $scope.cragData = data8;
                                 });
 
                             //Paused after success
@@ -183,6 +209,7 @@ angular.module('cragDetailCtrl', [])
         /**
          * EDIT Climb
          */
+        // EDIT A CLIMB ====================================================
 
         $scope.climbFormData = {};
         $scope.fillClimbForm = function ($climb) {
@@ -193,8 +220,8 @@ angular.module('cragDetailCtrl', [])
             $scope.climbFormData.grade = $climb.grade_id;
             $scope.thisGrade = {};
             GradeFactory.getDetail($climb.grade_id)
-                .success(function (data11) {
-                    $scope.thisGrade = data11;
+                .success(function (data9) {
+                    $scope.thisGrade = data9;
                     //console.log($scope.thisGrade);
                     $scope.filterGradeGradeType = $scope.thisGrade.climbTypeId;
                     $scope.gradeTypeSelected();
@@ -223,14 +250,14 @@ angular.module('cragDetailCtrl', [])
 
         $scope.cragsData = {};
         CragFactory.get()
-            .success(function (data8) {
-                $scope.cragsData = data8;
+            .success(function (data10) {
+                $scope.cragsData = data10;
             });
 
         $scope.gradesData = {};
         GradeFactory.get()
-            .success(function (data9) {
-                $scope.gradesData = data9;
+            .success(function (data11) {
+                $scope.gradesData = data11;
             });
 
         /*Grade Selector*/
@@ -287,15 +314,21 @@ angular.module('cragDetailCtrl', [])
                 //console.log($scope.thisClimb.id);
 
                 ClimbFactory.update($scope.climbFormData, $scope.thisClimb.id)
-                    .success(function (data10) {
+                    .success(function (data12) {
                         //console.log(data10); //debugging
-                        if (data10.success) { //success comes from the return json object
+                        if (data12.success) { //success comes from the return json object
                             //$scope.submitButtonHidden = true;
                             $scope.progressMessageShowing = false;
                             $scope.resultShowing = true;
+                            $scope.showUpdateMessage = true;
+                            ClimbFactory.getDetail($scope.thisClimb.id)
+                                .success(function(data13){
+                                    $scope.thisClimb = data13;
+                                });
 
                             //Paused after success
                             $timeout(function () {
+
                                 $scope.fillClimbForm($scope.thisClimb);
                                 $scope.submitButtonHidden = false;
                                 //$scope.progressMessageShowing = false;
@@ -316,6 +349,38 @@ angular.module('cragDetailCtrl', [])
                     $scope.errorShowing = true;
                 }, 1000);
             }
+        };
+
+        /**
+         * DELETE CLIMB
+         */
+        // DELETE A CLIMB ====================================================
+        $scope.deleteClimb = function (id) {
+            // use the function we created in our service
+            ClimbFactory.destroy(id)
+                .success(function (data14) {
+
+                    if (data14.success) {
+
+                        var i;
+                        for (i = 0; i < $scope.climbData.length; i++) {
+                            climb = $scope.climbData[i];
+                            if (climb.id === id) {
+                                break;
+                            }
+                        }
+
+                        $scope.climbData.splice(i,1);
+
+                        $scope.message = "Climb was deleted";
+                        $scope.showMessage = true;
+                    } else {
+                        $scope.message = "Climb was not deleted - failed";
+                        $scope.showMessage = true;
+                    }
+
+                });
+            $scope.refreshClimbs();
         };
     });
 

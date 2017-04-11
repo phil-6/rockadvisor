@@ -7,20 +7,35 @@
 -->
 
 <div class="row no-margin">
+    <button ng-click="showEditControls()"
+            ng-hide="editButtonShowing"
+            class="btn btn-default pull-right no-margin text-faded"
+            data-toggle="tooltip"
+            title="Show Editor Controls">
+        <i class="fa fa-terminal fa-2x" aria-hidden="true"></i>
+    </button>
+    <button ng-click="hideEditControls()"
+            ng-show="editButtonShowing"
+            class="btn btn-default pull-right no-margin text-faded"
+            data-toggle="tooltip"
+            title="Done Editing">
+        <i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
+    </button>
     <div class="col-md-4 col-md-offset-4 text-center">
 
+
         <!-- Section Title -->
-        <div class="page-header"
-             >
+        <div class="page-header">
             <h2>Crags Index</h2>
         </div>
+
         <div ng-hide="loading">
             <input type="text" ng-model="filterCrag" placeholder="Search">
         </div>
         <hr>
 
         <!-- Delete Success Message -->
-        <div class="alert alert-success" ng-show="showMessage">
+        <div class="alert alert-success alert-dismissable" ng-show="showMessage">
             <p>{{message}}</p>
         </div>
 
@@ -44,12 +59,17 @@
 
                 <!-- Delete Crag and Show Crag Buttons -->
                 <a type="button"
-                        class="btn btn-danger"
-                        ng-click="deleteCrag(crag.id)"
-                        data-toggle="confirmation">Delete
+                   class="btn btn-danger"
+                   ng-click="deleteCrag(crag.id)"
+                   ng-show="editButtonShowing"
+                   data-toggle="confirmation">Delete
                 </a>
 
-                <a ui-sref="cragDetail({ cragID: {{crag.id}} })" type="button" class="btn btn-primary">Show</a>
+                <a ui-sref="cragDetail({ cragID: {{crag.id}} })"
+                   type="button"
+                   class="btn btn-primary"
+                   ng-show="editButtonShowing">Show
+                </a>
             </div>
 
             <!-- If no Crags -->
