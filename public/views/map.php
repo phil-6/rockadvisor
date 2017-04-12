@@ -259,7 +259,7 @@
 
     function populateInfoWindow(marker, infowindow) {
         // Check to make sure the infowindow is not already opened on this marker.
-        if (infowindow.marker != marker) {
+        if (infowindow.marker !== marker) {
 
 
             //If no climbs set climbTypesString to null
@@ -267,9 +267,9 @@
 
             var climbTypesString = ""
 
-            if (marker.typeOfClimbs.length == 0) {
+            if (marker.typeOfClimbs.length === 0) {
                 climbTypesString = null;
-            } else if (marker.typeOfClimbs.length == 1) {
+            } else if (marker.typeOfClimbs.length === 1) {
                 climbTypesString = marker.typeOfClimbs[0]['name'];
             } else {
                 climbTypesString = "Mixed";
@@ -363,8 +363,8 @@
         for (var i = 0; i < markers.length; i++) {
             for (var j = 0; j < markers[i].typeOfClimbs.length; j++) {
 
-                console.log(markers[i].typeOfClimbs[j]);
-                if (markers[i].typeOfClimbs[j]['id'] == 1) {
+                //console.log(markers[i].typeOfClimbs[j]);
+                if (markers[i].typeOfClimbs[j]['id'] === 1) {
                     markers[i].setMap(map);
                     markerCluster.addMarker(markers[i]);
                     bounds.extend(markers[i].getPosition());
@@ -391,8 +391,8 @@
         //Redraw filtered markers
         for (var i = 0; i < markers.length; i++) {
             for (var j = 0; j < markers[i].typeOfClimbs.length; j++) {
-                console.log(markers[i].typeOfClimbs[j]);
-                if (markers[i].typeOfClimbs[j]['id'] == 2) {
+                //console.log(markers[i].typeOfClimbs[j]);
+                if (markers[i].typeOfClimbs[j]['id'] === 2) {
                     markers[i].setMap(map);
                     markerCluster.addMarker(markers[i]);
                     bounds.extend(markers[i].getPosition());
@@ -418,8 +418,8 @@
         //Redraw filtered markers
         for (var i = 0; i < markers.length; i++) {
             for (var j = 0; j < markers[i].typeOfClimbs.length; j++) {
-                console.log(markers[i].typeOfClimbs[j]);
-                if (markers[i].typeOfClimbs[j]['id'] == 3) {
+                //console.log(markers[i].typeOfClimbs[j]);
+                if (markers[i].typeOfClimbs[j]['id'] === 3) {
                     markers[i].setMap(map);
                     bounds.extend(markers[i].getPosition());
                 }

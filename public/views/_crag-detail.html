@@ -29,6 +29,7 @@
                 class="btn btn-default clearfix"
                 data-toggle="modal"
                 data-target="#editModal">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
             Edit
         </button>
         <hr>
@@ -121,18 +122,22 @@
             <p>Length: {{ climb.length}}m</p>
 
             <!--Edit Climb Button-->
-            <!-- Delete Crag and Show Crag Buttons -->
+            <!-- Delete Crag and Show Crag Buttons  -->
             <button class="btn btn-danger"
                     ng-show="editButtonShowing"
                     ng-click="deleteClimb(climb.id)"
                     data-toggle="confirmation">
+                <!--<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>-->
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
                 Delete
+
             </button>
             <button ng-show="editButtonShowing"
                     ng-click="fillClimbForm(climb)"
                     class="btn btn-primary"
                     data-toggle="modal"
                     data-target="#editClimbModal">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
                 Edit
             </button>
 
@@ -147,7 +152,8 @@
                         <button type="button"
                                 class="close"
                                 data-dismiss="modal"
-                                aria-hidden="true">×
+                                aria-hidden="true">
+                            <i class="fa fa-times" aria-hidden="true"></i>
                         </button>
                         <div ng-include="'../views/_contribute-editClimb.html'"></div>
                     </div>
