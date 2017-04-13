@@ -27,6 +27,7 @@ class AreasController extends Controller
             $record = [
                 "id" => $area->id,
                 "name" => $area->name,
+                "description" => $area->description,
                 "parentName" => $area->getParentAreaName(),
                 "parentId" => $area->parentArea];
             $data[] = $record;
