@@ -37,6 +37,12 @@ class AreasController extends Controller
 
     }
 
+    public function app_api_index()
+    {
+        $areas = Area::all();
+        return response()->json($areas);
+    }
+
     //get crags at area
     public function api_getCragsAtArea($area)
     {

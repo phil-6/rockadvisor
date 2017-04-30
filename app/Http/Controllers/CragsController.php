@@ -48,6 +48,12 @@ class CragsController extends Controller
 
     }
 
+    public function app_api_index()
+    {
+        $crags = Crag::all();
+        return response()->json($crags);
+    }
+
     /**
      * Display the specified resource.
      *
