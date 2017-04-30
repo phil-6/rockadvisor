@@ -51,16 +51,17 @@ class Crag extends Model
     {
         $allClimbTypeIdsAndNames = [];
 
+        //for each climb at this crag
         foreach ($this->climbs as $climb) {
+            //call climbTypeIdAndName function on grade of this climb
             $climbTypeIdAndName = $climb->grade->climbTypeIdAndName();
+            //add only unique values to array.
             if (!in_array($climbTypeIdAndName, $allClimbTypeIdsAndNames))
             {
                 $allClimbTypeIdsAndNames[] = $climbTypeIdAndName;
             }
         }
-
         return $allClimbTypeIdsAndNames;
-
     }
 
     public function gradesAtCrag()
@@ -74,7 +75,6 @@ class Crag extends Model
             {
                 $allGradesAtCrag[] = $gradeId;
             }
-
         }
         return array_unique($allGradesAtCrag);
 
