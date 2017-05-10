@@ -157,14 +157,17 @@
                     <a href="#ERDModal"
                        class="btn btn-default btn-xl sr-button btn-zoom"
                        data-toggle="modal">Entity Relationship Diagram</a>
-                    </div>
+                </div>
                 <hr class="light">
-                <p>There are four primary tables in the Rock Advisor Database</p>
+
             </div>
 
 
             <div class="container">
                 <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <p>There are four primary tables in the Rock Advisor Database</p>
+                    </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <a href="#database">
                             <div class="service-box">
@@ -175,7 +178,7 @@
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
-                        <a href="#API">
+                        <a href="#database">
                             <div class="service-box">
                                 <i class="fa fa-4x fa-map-pin  sr-icons"></i>
                                 <h3>Crags</h3>
@@ -184,7 +187,7 @@
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
-                        <a href="#frontEnd">
+                        <a href="#database">
                             <div class="service-box">
                                 <i class="fa fa-4x fa-level-up  sr-icons"></i>
                                 <h3>Climbs</h3>
@@ -193,7 +196,7 @@
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
-                        <a href="/map">
+                        <a href="/api/grades">
                             <div class="service-box">
                                 <i class="fa fa-4x fa-tachometer  sr-icons"></i>
                                 <h3>Grades</h3>
@@ -201,6 +204,35 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <hr class="light">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <p>Each table has a Model and a Controller</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-lg-offset-3 text-center">
+                        <a href="#database">
+                            <div class="service-box">
+                                <i class="fa fa-4x fa-cube  sr-icons"></i>
+                                <h3>Model</h3>
+                                <p class="text-faded">Defines the object. Assigns the corresponding database table, its relationships with other objects, extra properties and functions.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <a href="#database">
+                            <div class="service-box">
+                                <i class="fa fa-4x fa-gamepad  sr-icons"></i>
+                                <h3>Controller</h3>
+                                <p class="text-faded">Controls the passing of information in and out of the database. The API sends requests to the controller and returns data.</p>
+                            </div>
+                        </a>
+                    </div>
+
 
                 </div>
             </div>
@@ -290,113 +322,6 @@
         </div>
     </div>
 </div>
-
-<!--
-    ==========
-    Portfolio // Not used
-    ==========
-              -->
-
-<!--
-<section class="no-padding" id="portfolio">
-    <div class="container-fluid">
-        <div class="row no-gutter popup-gallery">
-            <div class="col-lg-4 col-sm-6">
-                <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
-                    <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="img/portfolio/fullsize/2.jpg" class="portfolio-box">
-                    <img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
-                    <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="img/portfolio/fullsize/4.jpg" class="portfolio-box">
-                    <img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="img/portfolio/fullsize/5.jpg" class="portfolio-box">
-                    <img src="img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="img/portfolio/fullsize/6.jpg" class="portfolio-box">
-                    <img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
--->
-
-
 
 
 <!--
