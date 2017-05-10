@@ -123,7 +123,7 @@ For the "finder" section of the website
                     <a class="page-scroll" href="/map">Crag Map</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="/finder">Crag Finder</a>
+                    <a class="page-scroll" href="/finder#/crags">Crag Finder</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="/blog">Development</a>

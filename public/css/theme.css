@@ -924,6 +924,10 @@ textarea {
 }
 #APIModal .modal-body {
     padding: 0;
+    max-width: 100%;
+}
+#conclusion {
+    padding-bottom: 0;
 }
 
 

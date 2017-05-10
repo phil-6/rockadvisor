@@ -120,7 +120,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
-                <a href="/finder#/crags">
+                <a href="#webApp" class="page-scroll">
                     <div class="service-box">
                         <i class="fa fa-4x fa-space-shuttle fa-spin text-primary sr-icons"></i>
                         <h3>Web App</h3>
@@ -129,7 +129,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
-                <a href="/map">
+                <a href="#map" class="page-scroll">
                     <div class="service-box">
                         <i class="fa fa-4x fa-globe text-primary sr-icons"></i>
                         <h3>Map</h3>
@@ -247,6 +247,63 @@
     </div>
 </section>
 
+
+<!--
+    ==========
+     WEBAPP
+    ==========
+              -->
+<section id="webApp">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h1 class="section-heading">Web Application</h1>
+                <hr>
+                <p class="text-muted">The web application is built using AngularJS and allows the users to explore the crags and find information on the climbs they are interested in. It also allows editing of the existing data and contributions to the database.
+                </p><p class="text-muted">   A lot of different technologies have been used to make the app fast, responsive and dynamic.</p>
+                <div class="about-buttons">
+                    <a href="/finder#/crags"
+                       class="btn btn-primary btn-xl sr-button btn-zoom"
+                       data-toggle="modal">Web Application</a>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="#howItWorks" class="btn btn-primary  page-scroll">
+                <i class="fa fa-2x fa-cog fa-spin sr-icons"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!--
+    ==========
+       MAP
+    ==========
+              -->
+<section class="bg-primarygrad" id="map">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h1 class="section-heading">Crag Map</h1>
+                <hr>
+                <p class="text-muted">Using the Google Maps JavaScript API a map was created to allow users to find crag locations on a familiar map.
+                </p><p class="text-muted">   The map allows users to filter the crags down based on the type of climbing they are looking for. It also clusters markers together to make the map more responsive and user friendly.</p>
+                <div class="about-buttons">
+                    <a href="/map"
+                       class="btn btn-default btn-xl sr-button btn-zoom">Crag Map</a>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="#howItWorks" class="btn btn-default  page-scroll">
+                <i class="fa fa-2x fa-cog text-primary fa-spin sr-icons"></i>
+            </a>
+        </div>
+    </div>
+</section>
 <!--
     ==========
   ERD Modal
@@ -323,14 +380,37 @@
     </div>
 </div>
 
+<!--
+    ==========
+     WEBAPP
+    ==========
+              -->
+<section id="conclusion" >
+    <div class="container" >
+        <div class="row col-lg-8 col-lg-offset-2 text-center">
+
+            <h1 class="section-heading">Conclusion</h1>
+            <hr>
+            <p class="text-muted">Overall the project has been a great success. Although the initial project aims were not achieve, the scope of the project changed drastically and all of the revised aims have been met and many more beside that.</p>
+            <p class="text-muted">What has been achieved is a ready-for-market product. There are many more features that could be added with ease over time should the development continue.</p>
+            <p class="text-muted">More than 9000 lines of code spread over 70 unique files go into making the application run. Not only has a database been created with a powerful back-end but a dynamic AngularJS application has been created on top of that.</p>
+            <p class="text-muted">Rock Advisor is a sophisticated, cutting-edge, full-stack web product that allows access to the database to a companion Android application.</p>
+
+        </div>
+    </div>
+</section>
+
 
 <!--
     ==========
       Footer
     ==========
               --> <!-- as if that wasn't obvious!-->
-<hr>
+
 <footer>
+    <hr>
+    <p class="text-center">More information can be found on the <a href="/blog">Development Blog</a>.</p>
+    <hr>
     <div class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
