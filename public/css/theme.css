@@ -882,4 +882,50 @@ textarea {
     margin-right: 150px;
 }
 
+/**
+**********
+* Presentation *
+**********
+*/
+
+#howItWorks {
+    min-height: 90%;
+
+}
+.ERDImage {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+#ERDModal .modal-dialog {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#ERDModal .modal-content {
+    height: auto;
+    min-height: 100%;
+    border-radius: 0;
+}
+#database .service-box {
+    color: #fff;
+}
+
+#APIModal .modal-dialog {
+    padding: 0;
+}
+#APIModal .modal-content {
+    height: auto;
+    min-height: 100%;
+    border-radius: 0;
+    padding: 0;
+}
+#APIModal .modal-body {
+    padding: 0;
+}
+
+
+
 

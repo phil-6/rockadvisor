@@ -131,6 +131,7 @@
                 <a href="#about" class="page-scroll btn btn-default btn-xl sr-button">About Us</a>
                 <a href="#background" class="page-scroll btn btn-default btn-xl sr-button">Background</a>
                 <a href="#blog" class="page-scroll btn btn-default btn-xl sr-button">Newest Blog</a>
+                <a href="/presentation" class="btn btn btn-default btn-xl page-scroll">Presentation</a>
             </div>
         </div><!-- "header-content-inner" -->
     </div><!-- "header-content" -->

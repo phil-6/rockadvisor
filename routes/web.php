@@ -60,3 +60,10 @@ Route::get('/climbs', function() {
 Route::get('/blog', function() {
     return View::make('blogStatic');
 });
+
+//====================================================================
+//Horrible Static Blog Page
+//====================================================================
+Route::get('/presentation', function(){
+    return View::make('presentation');
+});
