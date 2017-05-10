@@ -31,7 +31,7 @@ class AppController extends Controller
         $data = [$areaTime, $cragTime, $climbTime];
 
         $last_data_object = collect($data)->last();
-        return $last_data_object;
+        return response()->json($last_data_object);
 
 
     }
