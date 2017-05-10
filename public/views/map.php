@@ -399,7 +399,9 @@
                 }
             }
         }
+        //Zoom the map to show remaining markers
         map.fitBounds(bounds);
+        //Repaint any marker clustering.
         markerCluster.repaint();
     }
 

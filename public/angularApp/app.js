@@ -12,7 +12,6 @@ var gradeApp = angular.module('gradeApp', ['gradesCtrl', 'gradeService']);
 var climbApp = angular.module('climbApp', ['climbsCtrl', 'climbService']);
 var contributeApp = angular.module('contributeApp', ['emailCtrl', 'emailService']);
 
-
 var finderApp = angular.module('finderApp', [
     'cragsCtrl', 'cragService',
     'cragDetailCtrl',
@@ -54,7 +53,6 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
             controller: 'areaDetailController'
         })
 
-
         // crag detail
         .state('cragDetail', {
             url: '/crag/:cragID',
@@ -67,7 +65,6 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
             templateUrl: '../views/_area-detail.html',
             controller: 'areaDetailController'
         })
-
 
         // contribute
         .state('contribute',{
@@ -89,12 +86,5 @@ finderApp.config(function($stateProvider, $urlRouterProvider){
             templateUrl: '../views/_contribute-addClimb.html',
             controller: 'climbFormController'
         })
-
-
-
-
     ;
-
-
-
 });

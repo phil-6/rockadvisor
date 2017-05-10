@@ -51,6 +51,12 @@ class ClimbsController extends Controller
 
     }
 
+    public function app_api_index()
+    {
+        $climbs = Climb::all();
+        return response()->json($climbs);
+    }
+
     /*public function api_getGradeDetail()
     {
 
