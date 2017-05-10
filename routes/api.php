@@ -76,3 +76,4 @@ Route::post('/sendMail',            'EmailController@send');
 Route::get('app/areas',            'AreasController@app_api_index');
 Route::get('app/crags',            'CragsController@app_api_index');
 Route::get('app/climbs',           'ClimbsController@app_api_index');
+Route::get('app/lastUpdateTime',     'AppController@app_api_lastUpdateTime');
